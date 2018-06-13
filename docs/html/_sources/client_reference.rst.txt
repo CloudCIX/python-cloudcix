@@ -1,7 +1,0 @@
-Client Method Reference
-================================
-
-.. module:: cloudcix.client
-
-.. autoclass:: cloudcix.client.Client
-   :members: __init__, list, create, read, update, partial_update, delete
