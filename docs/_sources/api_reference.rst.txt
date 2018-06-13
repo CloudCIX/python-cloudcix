@@ -1,0 +1,74 @@
+API Reference
+=============
+
+.. automodule:: cloudcix.api
+
+App Manager
+~~~~~~~~~~~
+
+.. include:: api_docs/app_manager.rst
+
+Asset
+~~~~~
+
+.. include:: api_docs/asset.rst
+
+Circuit
+~~~~~~~
+
+.. include:: api_docs/circuit.rst
+
+Contacts
+~~~~~~~~
+
+.. include:: api_docs/contacts.rst
+
+Financial
+~~~~~~~~~
+
+.. include:: api_docs/financial.rst
+
+Helpdesk
+~~~~~~~~~
+
+.. include:: api_docs/helpdesk.rst
+
+IaaS
+~~~~
+
+.. include:: api_docs/iaas.rst
+
+Membership
+~~~~~~~~~~
+
+.. include:: api_docs/membership.rst
+
+Report Engine
+~~~~~~~~~~~~~
+
+.. include:: api_docs/reporting.rst
+
+Repository
+~~~~~~~~~~
+
+.. include:: api_docs/repository.rst
+
+Scheduler
+~~~~~~~~~
+
+.. include:: api_docs/scheduler.rst
+
+SCM
+~~~
+
+.. include:: api_docs/scm.rst
+
+Security
+~~~~~~~~
+
+.. include:: api_docs/security.rst
+
+Training
+~~~~~~~~
+
+.. include:: api_docs/training.rst

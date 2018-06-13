@@ -1,0 +1,931 @@
+The Financial Application exposes a suite of services that together implement a
+full accounting system based on double entry bookkeeping
+
+.. seealso:: For more information on entities and transactions, please see the
+    FinancialApplication section of the `HTTP API Reference <https://docs.cloudcix.com/>`_
+
+**Basic Usage**: ``cloudcix.api.Financial.<service>.<method>``
+
+Services
+--------
+
+Account Purchase Adjustment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Purchase Adjustments.
+
+An Account Purchase Adjustment (10005) is a transaction with the purpose of adjusting and conciliating nominal accounts.
+
+A set of nominal accounts will be debited and credited.
+
+The balance of debits and credits must be equal.
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_adjustment.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_adjustment.create``
+        - This method allows the User to create a new Account Purchase Adjustment transaction.
+    - ``cloudcix.api.Financial.account_purchase_adjustment.read``
+        - This method allows the User to get an Account Purchase Adjustment transaction and its details
+    - ``cloudcix.api.Financial.account_purchase_adjustment.update``
+        - This method allows the User to update some details of an Account Purchase Adjustment transaction
+        - A transaction can be only updated if there's no Period End after the effective Transaction Date
+
+Account Purchase Adjustment Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Purchase Adjustment from an Account Sale Adjustment created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_adjustment_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_adjustment_contra.create``
+        - This method allows the User to create an Account Purchase Adjustment from an Account Sale Adjustment belonging to another Address
+        - The lines of the Account Purchase Adjustment must match the lines of the Account Sale Adjustment, with the exception of the Nominal Account Number
+        - This number must be a valid Purchases Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_purchase_adjustment_contra.read``
+        - This method allows the User to get an Account Purchase Adjustment transaction created by the target Address for the User's acting Address
+
+Account Purchase Debit Note
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Purchase Debit Notes
+
+An Account Purchase Debit Note (10003) is a transaction in which a purchase has not been immediately debited
+
+The debit note has an unallocated balance until it has been fully allocated through the Allocation service
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_debit_note.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_debit_note.create``
+        - This method allows the User to create a new Account Purchase Debit Note transaction
+    - ``cloudcix.api.Financial.account_purchase_debit_note.read``
+        - This method allows the User to get an Account Purchase Debit Note transaction and its details
+    - ``cloudcix.api.Financial.account_purchase_debit_note.update``
+        - This method allows the User to update some details of an Account Purchase Debit Note transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Account Purchase Debit Note Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Purchase Debit Note from an Account Sale Credit Note create by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_debit_note_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_debit_note_contra.create``
+        - This method allows the User to create an Account Purchase Debit Note from an Account Sale Credit Note created by the target Address
+        - The lines of the Account Purchase Debit Note must match the lines of the Account Sale Credit Note, with the exception of the Nominal Account Number
+        - This number must be a valid Purchases Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_purchase_debit_note_contra.read``
+        - This method allows the User to get an Account Purchase Debit Note transaction created by the target Address for the User's acting Address
+
+Account Purchase Invoice
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Purchase Invoices
+
+An Account Purchase Invoice (10002) is a transaction in which a purchase has not been paid immediately
+
+The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_invoice.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_invoice.create``
+        - This method allows the User to create a new Account Purchase Invoice transaction
+    - ``cloudcix.api.Financial.account_purchase_invoice.read``
+        - This method allows the User to get an Account Purchase Invoice transaction and its details
+    - ``cloudcix.api.Financial.account_purchase_invoice.update``
+        - This method allows the User to update some details of an Account Purchase Invoice transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Account Purchase Invoice Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Purchase Invoice from an Account Sale Invoice created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_invoice_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_invoice_contra.create``
+        - This method allows the User to create an Account Purchase Invoice from an Account Sale Invoice created by the target Address
+        - The lines of the Account Purchase Invoice must match the lines of the Account Sale Invoice, with the exception of the Nominal Account Number
+        - This number must be a valid Purchases Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_purchase_invoice_contra.read``
+        - This method allows the User to get an Account Purchase Invoice transaction created by the target Address for the User's acting Address
+
+Account Purchase Payment
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Purchase Payments
+
+An Account Purchase Payment (10004) is a transaction in which a purchase is being paid.
+
+The payment has an unallocated balance until the payment has been fully allocated through the Allocation service
+
+.. note:: A Nominal Contra must be associated with the selected Payment Method and this transaction type in order to get the Nominal Account which will be credited
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_payment.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_payment.create``
+        - This method allows the User to create a new Account Purchase Payment transaction
+    - ``cloudcix.api.Financial.account_purchase_payment.read``
+        - This method allows the User to get an Account Purchase Payment transaction and its details
+    - ``cloudcix.api.Financial.account_purchase_payment.update``
+        - This method allows the User to update some details of an Account Purchase Payment transaction
+        - A transaction can be only updated if there's no Period End after the effective Transaction Date
+
+Account Purchase Payment Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Purchase Payment from an Account Sale Payment created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_purchase_payment_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_purchase_payment_contra.create``
+        - This method allows the User to create an Account Purchase Payment from an Account Sale Payment created by the target Address
+    - ``cloudcix.api.Financial.account_purchase_payment_contra.read``
+        - This method allows the User to fet an Account Purchase Payment transaction created by the target Address for the User's acting Address
+
+Account Sale Adjustment
+^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Sale Adjustments
+
+An Account Sale Adjustment (11005) is a transaction with the purpose of adjusting and conciliating nominal accounts
+
+A set of nominal accounts will be debited and credited
+
+The balance of debits and credits must be the same amount
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_adjustment.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_adjustment.create``
+        - This method allows the User to create a new Account Sale Adjustment transaction
+    - ``cloudcix.api.Financial.account_sale_adjustment.read``
+        - This method allows the User to get an Account Sale Adjustment transaction and its details
+    - ``cloudcix.api.Financial.account_sale_adjustment.update``
+        - This method allows the User to update some details of an Account Sale Adjustment transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Account Sale Adjustment Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Sale Adjustment from an Account Purchase Adjustment created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_adjustment_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_adjustment_contra.create``
+        - This method allows the User to create an Account Sale Adjustment from an Account Purchase Adjustment created by the target Address
+        - The lines of the Account Sale Adjustment must match the lines of the Account Purchase Adjustment, with the exception of the Nominal Account Number
+        - This must be a valid Sales Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_sale_adjustment_contra.read``
+        - This method allows the User to get an Account Sale Adjustment transaction created by the target Address for the User's acting Address
+
+Account Sale Credit Note
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Sale Credit Notes
+
+An Account Sale Credit Note (11003) is a transaction in which a sale has not been credited immediately.
+
+The credit note has an unallocated balance until it has been fully allocated through the Allocation service
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_credit_note.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_credit_note.create``
+        - This method allows the User to create a new Account Sale Credit Note transaction
+    - ``cloudcix.api.Financial.account_sale_credit_note.read``
+        - This method allows the User to get an Account Sale Credit Note transaction and its details
+    - ``cloudcix.api.Financial.account_sale_credit_note.update``
+        - This method allows the User to update some details of an Account Sale Credit Note transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Account Sale Credit Note Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read an Account Sale Credit Note transaction from an Account Purchase Debit Note created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_credit_note_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_credit_note_contra.create``
+        - This method allows the User to create an Account Sale Credit Note from an Account Purchase Debit Note created by the target Address
+        - The lines of the Account Sale Credit Note must match the lines of the Account Purchase Debit Note, with the exception of the Nominal Account Number
+        - This must be a valid Sales Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_sale_credit_note_contra.read``
+        - This method allows the User to get an Account Sale Credit Note transaction created by the target Address for the User's acting Address
+
+Account Sale Invoice
+^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Sale Invoices
+
+An Account Sale Invoice (11002) is a transaction in which a sale has not been paid immediately.
+
+The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service.
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_invoice.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_invoice.create``
+        - This method allows the User to create a new Account Sale Invoice transaction
+    - ``cloudcix.api.Financial.account_sale_invoice.read``
+        - This method allows the User to get an Account sale Invoice transaction and its details
+    - ``cloudcix.api.Financial.account_sale_invoice.update``
+        - This method allows the User to update some details of an Account Sale Invoice transaction.
+        - A transaction can only be updated if there' no Period End after the effective Transaction Date
+
+Account Sale Invoice Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read an Account Sale Invoice from an Account Purchase Invoice created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_invoice_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_invoice_contra.create``
+        - This method allows the User to create an Account Sale Invoice from an Account Purchase Invoice created by the target Address
+        - The lines of the Account Sale Invoice must match the lines of the Account Purchase Invoice, with the exception of the Nominal Account Number
+        - This must be a valid Sales Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.account_sale_invoice_contra.read``
+        - This method allows the User to get an Account Sale Invoice transaction created by the target Address for the User's acting Address
+
+Account Sale Payment
+^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Account Sale Payments
+
+An Account Sale Payment (11004) is a transaction in which a sale is being paid
+
+The payment has an unallocated balance until the payment has been fully allocated through the Allocation service.
+
+.. note:: A Nominal Contra must be associated to the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_payment.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_payment.create``
+        - This method allows the User to create a new Account Sale Payment transaction
+    - ``cloudcix.api.Financial.account_sale_payment.read``
+        - This method allows the User to get an Account Sale Payment transaction and its details
+    - ``cloudcix.api.Financial.account_sale_payment.update``
+        - This method allows the User to update some details of an Account Sale Payment transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Account Sale Payment Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and read an Account Sale Payment from an Account Purchase Payment transaction created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.account_sale_payment_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.account_sale_payment_contra.create``
+        - This method allows the User to create an Account Sale Payment from an Account Purchase Payment created by the target Address
+    - ``cloudcix.api.Financial.account_sale_payment_contra.read``
+        - This method allows the User to get an Account Sale Payment created by the target Address for the User's acting Address
+
+Allocation
+^^^^^^^^^^
+This service allows the User to manage its Allocations
+
+An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other.
+
+**Basic Usage**: ``cloudcix.api.Financial.allocation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.allocation.list``
+        - This method allows the User to get a list of Allocations
+        - If the User is acting as global, the list will return the Allocation for all its Addresses
+        - Otherwise it will return the list for its acting Address
+    - ``cloudcix.api.Financial.allocation.create``
+        - This method allows the User to create a new Allocation
+        - The total amount of Debits and Credits must balance to 0
+        - Also the allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater than the Unallocated Balance of the Transaction
+        - Finally, the allocated Transactions must be compatible between them
+    - ``cloudcix.api.Financial.allocation.delete``
+        - This method allows the User to delete an Allocation
+        - When an Allocation is deleted the Transactions involved in the Allocation will automatically have their Unallocated Balances restored by the allocated amount
+
+Business Logic
+^^^^^^^^^^^^^^
+This service allows the User to manage its Financial Business Logic
+
+The Financial Business Logic determines how the Financial Application will behave depending on the parameters set up
+
+**Basic Usage**: ``cloudcix.api.Financial.business_logic.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.business_logic.read``
+        - This method allows the User to get the current Business Logic for its active Address
+    - ``cloudcix.api.Financial.business_logic.update``
+        - This method allows the User to update the current Business Logic for its active Address
+
+Cash Purchase Debit Note
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Cash Purchase Debit Notes
+
+A Cash Purchase Debit Note (10001) is a transaction in which a purchase has been debited in cash
+
+.. note:: A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_purchase_debit_note.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_purchase_debit_note.create``
+        - This method allows the User to create a new Cash Purchase Debit Note transaction
+    - ``cloudcix.api.Financial.cash_purchase_debit_note.read``
+        - This method allows the User to get a Cash Purchase Debit Note transaction and its details
+    - ``cloudcix.api.Financial.cash_purchase_debit_note.update``
+        - This method allows the User to update some details of a Cash Purchase Debit Note transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Cash Purchase Debit Note Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read a Cash Purchase Debit Note from a Cash Sale Credit Note created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_purchase_debit_note_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_purchase_debit_note_contra.create``
+        - This method allows the User to create a Cash Purchase Debit Note from a Cash Sale Credit Note created by the target Address
+        - The lines of the Cash Purchase Debit Note must match the lines of the Cash Sale Credit Note, with the exception of the Nominal Account Number
+        - This must be a valid Purchases Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.cash_purchase_debit_note_contra.read``
+        - This method allows the User to get a Cash Purchase Debit Note transaction created by the target Address for the User's acting Address
+
+Cash Purchase Invoice
+^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Cash Sale Credit Notes
+
+A Cash Purchase Invoice (10000) is a transaction in which a purchase has been paid in cash
+
+.. note:: A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be credited
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_purchase_invoice.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_purchase_invoice.create``
+        - This method allows the User to create a new Cash Purchase Invoice transaction
+    - ``cloudcix.api.Financial.cash_purchase_invoice.read``
+        - This method allows the User to get a Cash Purchase Invoice transaction and its details
+    - ``cloudcix.api.Financial.cash_purchase_invoice.update``
+        - This method allows the User to update some details of a Cash Purchase Invoice transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Cash Purchase Invoice Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read a Cash Purchase Invoice from a Cash Sale Invoice created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_purchase_invoice_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_purchase_invoice_contra.create``
+        - This method allows the User to create a Cash Purchase Invoice from a Cash Sale Invoice created by the target Address
+        - The lines of the Cash Purchase Invoice must match the lines of the Cash Sale Invoice, with the exception of the Nominal Account Number
+        - This must be a valid Purchases Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.cash_purchase_invoice_contra.read``
+        - This method allows the User to get a Cash Purchase Invoice transaction created by the target Address for the User's acting Address
+
+Cash Sale Credit Note
+^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Cash Sale Credit Notes
+
+A Cash Sale Credit Note (11001) is a transaction in which a sale has been credited in cash
+
+.. note:: A Nominal Contra must be associated with the selected Payment Type and this Transaction Type in order to get the Nominal Account which will be credited
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_sale_credit_note.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_sale_credit_note.create``
+        - This method allows the User to create a new Cash Sale Credit Note
+    - ``cloudcix.api.Financial.cash_sale_credit_note.read``
+        - This method allows the User to get a Cash Sale Credit Note transaction and its details
+    - ``cloudcix.api.Financial.cash_sale_credit_note.update``
+        - This method allows the User to update some details of a Cash Sale Credit Note transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Cash Sale Credit Note Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read a Cash Sale Credit Note from a Cash Purchase Debit Note created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_sale_credit_note_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_sale_credit_note_contra.create``
+        - This method allows the User to create a Cash Sale Credit Note from a Cash Purchase Debit Note create by the target Address
+        - The lines of the Cash Sale Credit Note must match the lines of the Cash Purchase Debit Note, with the exception of the Nominal Account Number
+        - This must be a valid Sales Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.cash_sale_credit_note_contra.read``
+        - This method allows the User to get a Cash Sale Credit Note transaction created by the target Address for the User's acting Address
+
+Cash Sale Invoice
+^^^^^^^^^^^^^^^^^
+This service allows the User to create and manage Cash Sale Invoices
+
+A Cash Sale Invoice (11000) is a transaction in which a sale has been paid in cash
+
+.. note:: A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_sale_invoice.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_sale_invoice.create``
+        - This method allows the User to create a new Cash Sale Invoice transaction
+    - ``cloudcix.api.Financial.cash_sale_invoice.read``
+        - This method allows the User to get a Cash Sale Invoice transaction and its details
+    - ``cloudcix.api.Financial.cash_sale_invoice.update``
+        - This method allows the User to update some details of a Cash Sale Invoice transaction
+        - A transaction can only be updated if there's no Period End after the effective Transaction Date
+
+Cash Sale Invoice Contra
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to create or read a Cash Sale Invoice from a Cash Purchase Invoice created by the target Address
+
+**Basic Usage**: ``cloudcix.api.Financial.cash_sale_invoice_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.cash_sale_invoice_contra.create``
+        - This method allows the User to create a Cash Sale Invoice from a Cash Purchase Invoice created by the target Address
+        - The lines of the Cash Sale Invoice must match the lines of the Cash Purchase Invoice, with the exception of the Nominal Account Number
+        - This must be a valid Sales Nominal Account belonging to the User's acting Address
+    - ``cloudcix.api.Financial.cash_sale_invoice_contra.read``
+        - This method allows the User to get a Cash Sale Invoice transaction created by the target Address for the User's acting Address
+
+Creditor Account History
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Transactions for a given Creditor
+
+It also returns the Creditor's current balance
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_account_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_account_history.list``
+        - This method returns the User to get a list of transactions for a given Creditor
+
+Creditor Account Statement
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to see a Statement for a given Address
+
+A Statement is a list of unallocated transactions
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_account_statement.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_account_statement.list``
+        - This method returns a list of unallocated Transactions for the target Address
+        - This method returns Transactions whose idTransactionType values are in the range 10000-10005 inclusive
+
+Creditor Account Statement Log
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to see a list of Statement Logs
+
+A Statement Log is a record that gets generated automatically every time a statement is sent automatically by the system
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_account_statement_log.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_account_statement_log.list``
+        - This method allows the User to get a list of Creditor Statement Logs
+
+Creditor Ledger
+^^^^^^^^^^^^^^^
+This service allows the User to get a list of Creditors who are owed money by the User's Address
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_ledger.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_ledger.list``
+        - This method allows the User to get a list of Creditors and their balances
+        - Only Creditors whose balance is not 0 will be returned
+
+Creditor Ledger Aged
+^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Creditors with their current balance, as well as their balances at 30, 60, and 90 days and older
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_ledger_aged.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_ledger_aged.list``
+        - This method allows the User to get a list of Creditors with their current and aged balances
+
+Creditor Ledger Transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Creditor Transactions for their acting Address
+
+If the User is acting Global, the service will return the Creditor Transactions for all the Addresses in their Member instead
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_ledger_transaction.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_ledger_transaction.list``
+        - This method allows the User to get a list of Creditor Transactions
+        - The method also returns the current total amount of Debits and Credits
+
+Creditor Ledger Transaction Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Creditor Contra Transactions
+
+A Contra Transaction is a Transaction created by the Creditor for the User's Address
+
+**Basic Usage**: ``cloudcix.api.Financial.creditor_ledger_transaction_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.creditor_ledger_transaction_contra.list``
+        - This method allows the User to get a list of Creditor Contra Transactions
+        - If the User is acting Global, the list will contain Transactions for all of the Addresses in the User's Member
+        - If the User is acting Local, the list will only contain Transactions for the User's current acting Address
+
+Debtor Account History
+^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Transactions for a given Debtor
+
+It also returns the Debtor's current balance
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_account_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_account_history.list``
+        - This method allows the User to get the list of transactions for a given Debtor
+
+Debtor Account Statement
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to see a Statement for a given Address
+
+A Statement is a list of unallocated Transactions
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_account_statement.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_account_statement.list``
+        - This method returns a list of unallocated Transactions for the target Address
+        - This method returns Transactions whose idTransactionType values are in the range 11000-11005 inclusive
+
+Debtor Account Statement Log
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to see a list of Statement Logs
+
+A Statement Log is a record that gets generated automatically every time a statement is sent automatically by the system
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_account_statement_log.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_account_statement_log.list``
+        - This method allows the User to get a list of Debtor Statement Logs
+
+Debtor Ledger
+^^^^^^^^^^^^^
+This service allows the User to get a list of Debtors who owe money to the User's Address
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_ledger.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_ledger.list``
+        - This method allows the User to get a list of Debtors and their balances
+        - Only Debtors whose balance is not 0 will be returned
+
+Debtor Ledger Aged
+^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Debtors with their current balance, as well as their balances at 30, 60, 90 days and older
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_ledger_aged.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_ledger_aged.list``
+        - This method allows the User to get a list of Debtors with their current and aged balances
+
+Debtor Ledger Transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Debtor Transactions for their acting Address
+
+If the User is acting Global, the service will return the Debtor Transactions for all the Address in their Member instead
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_ledger_transaction.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_ledger_transaction.list``
+        - This method allows the User to get a list of Debtor Transactions
+        - It also returns the current total amount of Debits and Credits
+
+Debtor Ledger Transaction Contra
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Debtor Contra Transactions
+
+A Contra Transaction is a Transaction created by the Debtor for the User's Address
+
+**Basic Usage**: ``cloudcix.api.Financial.debtor_ledger_transaction_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.debtor_ledger_transaction_contra.list``
+        - This method allows the User to get a list of Debtor Contra Transactions
+        - If the User is acting Global, the list will contain Transactions for all of the Addresses in the User's Member
+        - If the User is acting Local, the list will only contain Transactions for the User's current acting Address
+
+Journal Entry
+^^^^^^^^^^^^^
+This service allows the User to manage its Nominal Ledger's Journal Entries
+
+A Journal Entry (12000) is an internal transaction with the purpose of adjusting Nominal Accounts
+
+**Basic Usage**: ``cloudcix.api.Financial.journal_entry.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.journal_entry.list``
+        - This method allows the User to get a list of Journal Entry Transactions
+        - It also returns the current total amount of Debits and Credits
+    - ``cloudcix.api.Financial.journal_entry.create``
+        - This method allows the User to create a new Journal Entry transaction
+    - ``cloudcix.api.Financial.journal_entry.read``
+        - This method allows the User to get the details of a Journal Entry Transaction
+    - ``cloudcix.api.Financial.journal_entry.update``
+        - This method allows the User to update some details of the Journal Entry
+
+Nominal Account
+^^^^^^^^^^^^^^^
+This service allows the User to manage its Nominal Accounts
+
+A Nominal Account stores accounting Transactions for a fiscal year
+
+A Member can have a set of Nominal Accounts
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_account.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_account.list``
+        - This method allows the User to get a list of Nominal Accounts
+        - If the User is acting Local, the method will return the list of Nominal Accounts for the User's acting Address
+        - If the User is acting Global, the method will return the list of Nominal Accounts for all Addresses in the User's Member
+    - ``cloudcix.api.Financial.nominal_account.create``
+        - This method allows the User to create a new Nominal Account for its Member and/or Address
+        - If the idAddress is specified the Nominal Account will be created for the Member if it does not exist, and created for the specified Address
+        - .. note:: Pay attention to the ``validPurchasesAccount`` and ``validSalesAccount``:
+
+            Both will be required if the selected ``idNominalAccountType`` is 1.
+
+            ``validSalesAccount`` will be True and ``validPurchasesAccount`` will be False if the selected ``idNominalAccountType`` is 4000. Sent values will be ignored.
+
+            ``validPurchasesAccount`` will be True and ``validSalesAccount`` will be False if the selected ``idNominalAccountType`` is 5000. Sent values will be ignored.
+
+            Both parameters will be False for any other ``idNominalAccountType``. Sent values will be ignored.
+    - ``cloudcix.api.Financial.nominal_account.read``
+        - This method allows the User to get a Nominal Account for its Member and/or Address
+        - If the ``idAddress`` is not specified, the Nominal Account for the Member will be returned
+    - ``cloudcix.api.Financial.nominal_account.update``
+        - This method allows the User to update a Nominal Account
+        - If the ``idAddress`` is not specified, the Nominal Account for the Member will be updated
+        - .. note:: The same note about ``validSalesAccount`` and ``validPurchasesAccount`` as in the ``create`` method must be taken into account for ``update``
+
+            Also note that any change in these values will affect the Member's Nominal Account as well as all Addresses who have that Nominal Account set up.
+    - ``cloudcix.api.Financial.nominal_account.delete``
+        - This method allows the User to delete a Nominal Account for its Member and/or Address
+        - If the ``idAddress`` is not specified, the Nominal Account will be deleted for the Member and all Addresses within the Member
+        - A Nominal Account can only be deleted if it has not been used in a Transaction
+
+Nominal Account History
+^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a Nominal Account balance in a given period of time, as well as the list of transactions in which the Account has been used
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_account_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_account_history.read``
+        - This method allows the User to read the History of a given Nominal Account
+
+Nominal Account Type
+^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of supported Nominal Account Types
+
+Nominal Accounts are classified within different Types
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_account_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_account_type.list``
+        - This method returns the list of supported Nominal Account Types
+
+Nominal Contra
+^^^^^^^^^^^^^^
+This service allows the User to manage its Nominal Contra Accounts
+
+A Nominal Contra Account is an association between a Transaction Type, a Payment Method and a Nominal Account
+
+The Nominal Contra is used in conjunction with the Payment Method and Transaction Type to determine with Nominal Account the lines of Debits or Credits will be matched with
+
+.. seealso:: For information on the supported Transaction Types, see the Financial Application section of the `HTTP API Reference <https://docs.cloudcix.com/>`_
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_contra.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_contra.list``
+        - This method allows the User to get a list of Nominal Contra Accounts
+        - Only owners can list the Nominal Contras
+    - ``cloudcix.api.Financial.nominal_contra.create``
+        - This method allows the User to create a new Nominal Contra Account
+        - .. note:: The selected Nominal Account must be of the **Cash & Bank** type (Number between 1000 and 1299 inclusive)
+    - ``cloudcix.api.Financial.nominal_contra.read``
+        - This method allows the User to read a Nominal Contra Account
+        - Only owners can read the Nominal Contra
+    - ``cloudcix.api.Financial.nominal_contra.update``
+        - This method allows the User to update a Nominal Contra Account
+        - Only owners can updated the Nominal Contra
+        - .. note:: The selected Nominal Account must be of the **Cash & Bank** type (Number between 1000 and 1299 inclusive)
+    - ``cloudcix.api.Financial.nominal_contra.delete``
+        - This method allows the User to delete a Nominal Contra Account
+        - Only owners can delete a Nominal Contra Account
+
+Nominal Ledger Balance Sheet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to generate a Balance Sheet
+
+The Balance Sheet presents a company's Financial position at the end of a specified date.
+Therefore, it is a list of Nominal Accounts with their total Debits, Credits and balance at a given date.
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_balance_sheet.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_balance_sheet.list``
+        - This method allows the User to get the Balance Sheet at a certain date
+        - If the User is acting Global, the Balance Sheet is calculated for all Addresses in its Member
+        - Otherwise, the Balance Sheet is calculated for its acting Address
+
+Nominal Ledger Profit & Loss
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to generate a Profit & Loss account.
+
+The Profit & Loss shows the company's revenues and expenses during a particular period.
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_profit_loss.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_profit_loss.list``
+        - This method allows the User to get the Profit & Loss in a range of dates
+        - If the User is acting Global, the Profit & Loss will be calculated for all its Addresses
+        - Otherwise, the Profit & Loss will be calculated for its Local Address
+
+Nominal Ledger Purchases By Country
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period of time
+
+Each Country will have the total amount excluding VAT, and the total amount of VAT spent, as well as the Currency
+
+A Country may appear more than once if there are Nominal Accounts with different Currencies
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_purchases_by_country.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_purchases_by_country.list``
+        - This method allows the User to get a list of Purchases broken down by Country
+
+Nominal Ledger Sales By Country
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of time
+
+Each Country will have the total amount excluding VAT, and the total amount of VAT spent, as well as the Currency
+
+A Country may appear more than once if there are Nominal Accounts with different Currencies
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_sales_by_country.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_sales_by_country.list``
+        - This method allows the User to get a list of Sales broken down by Country
+
+Nominal Ledger Trial Balance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to generate a Trial Balance
+
+A Trial Balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a business
+
+This list will contain the name of each Nominal Ledger account, and the value of that Nominal Ledger balance
+
+Each Nominal Ledger account will hold either a Debit or Credit balance
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_trial_balance.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_trial_balance.list``
+        - This method allows the User to get the Trial Balance on a certain date
+        - If the User is acting as Global, the Trial Balance will be calculated for all Addresses in its Member
+        - Otherwise, the Trial Balance will be calculated for its local Address
+
+Nominal Ledger VIES Purchases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of VIES Purchases
+
+The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT registration of companies registered in the EU
+
+EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where the purchaser resides
+
+For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_VIES_purchases.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_VIES_purchases.list``
+        - This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Purchases for each Tax Rate
+
+Nominal Ledger VIES Sales
+^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of VIES Sales
+
+The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT registration of companies registered in the EU
+
+EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where the purchaser resides
+
+For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES
+
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_VIES_sales.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.nominal_ledger_VIES_sales.list``
+        - This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Sales for each Tax Rate
+
+Payment Method
+^^^^^^^^^^^^^^
+This service allows the User to manage its Payment Methods
+
+A Payment Method is one of the ways to pay for a Transaction
+
+**Basic Usage**: ``cloudcix.api.Financial.payment_method.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.payment_method.list``
+        - This method allows the User to get a list of Payment Methods
+        - Only Payment Methods belonging to the User will be returned
+    - ``cloudcix.api.Financial.payment_method.create``
+        - This method allows the User to create a new Payment Method
+    - ``cloudcix.api.Financial.payment_method.read``
+        - This method allows the User to get a Payment Method and its details
+        - Only owners of a Payment Method can read it
+    - ``cloudcix.api.Financial.payment_method.update``
+        - This method allows the User to update details of a Payment Method
+        - Only owners of the Payment Method can update it
+    - ``cloudcix.api.Financial.payment_method.delete``
+        - This method allows the User to delete a Payment Method
+        - Only owners of the Payment Method can delete it
+
+Period End
+^^^^^^^^^^
+This service allows the User to manage its Period End Transactions
+
+A Period End Transaction (12001) calculates the balance from the previous Period End (or the oldest Transaction if none exists) and the given transaction date
+
+Creating a Period End will disallow any modification or creation of Transactions with a date before the Period End's transaction date
+
+**Basic Usage**: ``cloudcix.api.Financial.period_end.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.period_end.list``
+        - This method allows the User to get a list of Period End Transactions
+    - ``cloudcix.api.Financial.period_end.create``
+        - This method allows the User to create a new Period End Transaction
+        - The Period End's ``transactionDate`` cannot be set to be in any time the future
+    - ``cloudcix.api.Financial.period_end.read``
+        - This method allows the User to get the details of a Period End Transaction
+    - ``cloudcix.api.Financial.period_end.delete``
+        - This method allows the User to delete a Period End Transaction
+        - Only the latest Period End can be deleted
+        - If there's a Year End Transaction associated with the Period End, it will be deleted also
+
+Tax Rate
+^^^^^^^^
+This service allows the User to manage its Tax Rates
+
+In a tax system, the Tax Rate describes a ratio (usually expressed as a percentage) at which a business or person is taxed
+
+**Basic Usage**: ``cloudcix.api.Financial.tax_rate.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.tax_rate.list``
+        - This method allows the User to get a list of Tax Rates
+        - Only Tax Rates belonging to the User will be returned
+        - If the User is acting as Global, the method will return all Tax Rates belonging to all Addresses in the User's Member
+        - Otherwise, only the Tax Rates belonging to the User's current Address will be returned
+    - ``cloudcix.api.Financial.tax_rate.create``
+        - This method allows the User to create a new Tax Rate for one of its Addresses
+    - ``cloudcix.api.Financial.tax_rate.read``
+        - This method allows the User to get a Tax Rate, and its details
+        - Only the owners of the Tax Rate can read it
+    - ``cloudcix.api.Financial.tax_rate.update``
+        - This method allows the User to update details of a Tax Rate
+        - Only the owners of the Tax Rate can read it
+    - ``cloudcix.api.Financial.tax_rate.delete``
+        - This method allows the User to delete a Tax Rate
+        - Only the owners of the Tax Rate can delete it
+
+Year End
+^^^^^^^^
+This service allows the User to manage its Year End transactions
+
+A Year End Transaction (12002) is a transaction which will calculate the balance between the previous Year End (or the oldest transaction if none exists) and the given transaction date
+
+A Year End Transaction is always associated with a Period End Transaction
+
+**Basic Usage**: ``cloudcix.api.Financial.year_end.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.year_end.list``
+        - This method allows the User to get a list of Year End transactions
+    - ``cloudcix.api.Financial.year_end.create``
+        - This method allows the User to create a new Year End Transaction
+        - If there is no Period End Transaction at the given ``transactionDate``, one will be created
+        - The Year End's ``transactionDate`` can not be set to be any time in the future
+    - ``cloudcix.api.Financial.year_end.read``
+        - This method allows the User to get a Year End Transaction and its details
+    - ``cloudcix.api.Financial.year_end.delete``
+        - This method allows the User to delete a Year End Transaction, and its associated Period End Transaction
+        - The Year End Transaction can only be deleted if the associated Period End transaction is the latest one

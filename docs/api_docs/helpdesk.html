@@ -1,0 +1,1386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Services &mdash; CloudCIX API Python Module 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CloudCIX API Python Module
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../client_reference.html">Client Method Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CloudCIX API Python Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Services</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api_docs/helpdesk.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>The Helpdesk application is both a ticketing system, and a returns management system</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Ticketing System</strong></p>
+<p>A Ticketing System has two parties, each with a different role.</p>
+<p class="last">A Warrantor offers support, and a Client requires support</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Returns Management</strong></p>
+<p class="last">If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved</p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="iris-condition">
+<h2>IRIS Condition<a class="headerlink" href="#iris-condition" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS Condition codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Condition codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Condition code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Condition</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Condition Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Condition code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Condition</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Condition code and all its translations</li>
+<li>The IRIS Condition code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-defect">
+<h2>IRIS Defect<a class="headerlink" href="#iris-defect" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS Defect Codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Defect codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Defect code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Defect</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Defect Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Defect code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Defect</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Defect code and all its translations</li>
+<li>The IRIS Defect code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-extended-condition">
+<h2>IRIS Extended Condition<a class="headerlink" href="#iris-extended-condition" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS Extended Condition codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Extended Condition codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Extended Condition code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Extended</span> <span class="pre">Condition</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Extended Condition Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Extended Condition code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Extended</span> <span class="pre">Condition</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Extended Condition code and all its translations</li>
+<li>The IRIS Extended Condition code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-ntf">
+<h2>IRIS NTF<a class="headerlink" href="#iris-ntf" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS NTF codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS NTF codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS NTF code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">NTF</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS NTF Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS NTF code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">NTF</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS NTF code and all its translations</li>
+<li>The IRIS NTF code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-repair">
+<h2>IRIS Repair<a class="headerlink" href="#iris-repair" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS NTF codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Repair codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Repair code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Repair</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Repair Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Repair code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Repair</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Repair code and all its translations</li>
+<li>The IRIS Repair code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-section">
+<h2>IRIS Section<a class="headerlink" href="#iris-section" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS Section codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Section codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Section code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Section</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Section Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Section code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Section</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Section code and all its translations</li>
+<li>The IRIS Section code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="iris-symptom">
+<h2>IRIS Symptom<a class="headerlink" href="#iris-symptom" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle its IRIS Symptom codes</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of IRIS Symptom codes for the selected linked Member, or the User’s own Member by default</li>
+<li>The descriptions are in the User’s language by default, or in English if no translation can be found</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an IRIS Symptom code for its Member</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Symptom</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns an IRIS Symptom Code in English</li>
+<li>Codes can be read by the owner and by linked Members</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an IRIS Symptom code</li>
+<li>The description parameter must be in the English language</li>
+<li>To add translations, you must use the <code class="docutils literal notranslate"><span class="pre">IRIS</span> <span class="pre">Symptom</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IRIS Symptom code and all its translations</li>
+<li>The IRIS Symptom code cannot be deleted if it is used (i.e. assigned to an item)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="item">
+<h2>Item<a class="headerlink" href="#item" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket can have a set of Items</p>
+<p>This service allows the User to manage those Items</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Items associated with a Ticket</li>
+<li>Items can only be read by the Warrantor, Client or Service Centre associated with the Ticket</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to add an Item to a Ticket</li>
+<li>Depending on the SKU Type, the serial number, batch number, date of manufacture and date of purchase may be required</li>
+<li>Items can only be added by the Warrantor, Client or Service Centre associated with the Ticket</li>
+<li>When an Item is added, the fields with “Initial” are automatically taken from the initial values in the passed in fields, including the questions’ initial answers</li>
+<li>An Item History is automatically created by the system to reflect who added the Item, along with the current and initial values</li>
+<li>A Warrantor can set up any of the Users associated with the Ticket</li>
+<li>A Client can only manage its associated Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read an Item associated with a Ticket</li>
+<li>Items can only be read by the Warrantor, Client or Service Centre associated with the Ticket</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update an Item associated with a Ticket</li>
+<li>Depending on the SKU Type, the serial number, batch number, date of manufacture and date of purchase may be required</li>
+<li>Items can only be added by the Warrantor, Client or Service Centre associated with the Ticket</li>
+<li>When an Item is added, the fields with “Initial” are automatically taken from the initial values in the passed in fields, including the questions’ initial answers</li>
+<li>An Item History is automatically created by the system to reflect who added the Item, along with the current and initial values</li>
+<li>A Warrantor can set up any of the Users associated with the Ticket</li>
+<li>A Client can only manage its associated Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="item-history">
+<h2>Item History<a class="headerlink" href="#item-history" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket can have a set of Items, and every Item has its own History log</p>
+<p>This service allows the Users to handle the History log for their Items</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_history.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_history.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of History logs for the given Item in the selected Transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_history.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new History log for the given Item in a Ticket</li>
+<li>Only Users under the addresses involved in the Ticket can create these logs</li>
+<li><dl class="first docutils">
+<dt>There are two log types;</dt>
+<dd><ul class="first last">
+<li><strong>Note</strong>: A standard history log is generated</li>
+<li><strong>Email</strong>: A standard history log is generated and is sent by email to these specified in the <code class="docutils literal notranslate"><span class="pre">email_to</span></code> and <code class="docutils literal notranslate"><span class="pre">email_cc</span></code> fields.
+Emails will always be sent by CloudCIX Notifications, and the sender will be specified in the body of the email.
+Reply-To will be the User’s email unless it is set.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="item-part-used">
+<h2>Item Part Used<a class="headerlink" href="#item-part-used" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket can have a set of Items, and every Item can have a set of Parts Used to fix an issue</p>
+<p>This service allows the Users to handle the Parts Used for their Items</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_part_used.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_part_used.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of the Parts Used to fix an Item</li>
+<li>Only Users belonging to the Addresses involved in the Ticket can list these objects</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_part_used.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a Part Used to fix an Item, along with its details</li>
+<li>Only Users belonging to the Addresses involved in the Ticket can read this object</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="item-status">
+<h2>Item Status<a class="headerlink" href="#item-status" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the Users to determine the at what stage of the customer service process an Item is</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_status.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_status.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Item Statuses in the selected language for any Items it has</li>
+<li>If there’s no translation for an Item, the English version will be returned instead</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="reason-for-return">
+<h2>Reason For Return<a class="headerlink" href="#reason-for-return" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle the different Reasons For Return that can be associated with Items in a Ticket</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Reasons For Return with the default English description</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Reason For Return</li>
+<li>This method creates the default English Reason For Return</li>
+<li>To create a Reason For Return in a different language, use the <code class="docutils literal notranslate"><span class="pre">Reason</span> <span class="pre">For</span> <span class="pre">Return</span> <span class="pre">Translation</span></code> service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a Reason For Return and its English description</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some of the details of a Reason For Return</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Reason For Return and all its translations</li>
+<li>If a Reason For Returns is currently in use (i.e. assigned to an Item) then it cannot be deleted</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="reason-for-return-translation">
+<h2>Reason For Return Translation<a class="headerlink" href="#reason-for-return-translation" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to handle translations for Reason For Return descriptions</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of translations for a Reason For Return</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to add a translation for a Reason For Return</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a Reason For Return in a particular language</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update a Reason For Return translation</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a translation for a Reason For Return</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="service-centre-logic">
+<h2>Service Centre Logic<a class="headerlink" href="#service-centre-logic" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the Service Centre to specify the Business Logic for one of its Addresses</p>
+<p>Only Administrators can create or modify the Business Logic</p>
+<p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
+<p>Otherwise, the local Address will be used</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_logic.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_logic.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a default Business Logic for a specific Address</li>
+<li>This method can only be run by an Administrator</li>
+<li>Only Addresses belonging to the User’s Member can be managed</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_logic.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns the default Business Logic for a Service Centre Address</li>
+<li>Users can only read the default Business Logic for Addresses in their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_logic.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the default Business Logic for a given Address</li>
+<li>This method can only be run by an Administrator</li>
+<li>Only Addresses belonging to the User’s Member can be managed</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_logic.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete the default Business Logic for a given Address</li>
+<li>This method can only be run by an Administrator</li>
+<li>Only Addresses belonging to the User’s Member can be managed</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="service-centre-warrantor">
+<h2>Service Centre Warrantor<a class="headerlink" href="#service-centre-warrantor" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to specify the Business Logic between a Service Centre’s Address and a Warrantor’s Address</p>
+<p>Only Administrators can create or modify the Business Logic</p>
+<p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
+<p>Otherwise, the local Address will be used</p>
+<p>Only Addresses belonging to the User’s Member can be managed</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of associations between a Service Centre’s Address and many Warrantor Addresses</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an association between a Service Centre’s Address and a Warrantor’s Address</li>
+<li>Even if the Warrantor created the link in the first place, this method must be used to store the Service Centre’s values in the link</li>
+<li>If there are already values in the Service Centre’s side, an exception will be raised and <code class="docutils literal notranslate"><span class="pre">update</span></code> will need to be used instead</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the details of an association between a Service Centre’s Address and a Warrantor’s Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update an association between a Service Centre’s Address and a Warrantor’s Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.service_centre_warrantor.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an association between a Service Centre’s Address and a Warrantor’s Address</li>
+<li>The Service Centre values will be set to null</li>
+<li>If both the Warrantor and Service Centre values are null, the link will be marked for deletion</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>The Status service denotes at what stage of the customer service process a ticket is</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.status.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.status.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of available Statuses in the selected language, or in English if there’s no translation available</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ticket">
+<h2>Ticket<a class="headerlink" href="#ticket" title="Permalink to this headline">¶</a></h2>
+<p>A Ticket is a set of instructions from a Customer</p>
+<p>A Ticket has a Transaction Type, that can have one of the following values depending on who created it</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="54%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">idTransactionType</th>
+<th class="head">Created By</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>40000</td>
+<td>Warrantor</td>
+</tr>
+<tr class="row-odd"><td>41000</td>
+<td>Client</td>
+</tr>
+<tr class="row-even"><td>42000</td>
+<td>Service Centre</td>
+</tr>
+</tbody>
+</table>
+<p>When reading a Ticket, the User must specify if they are a Client, Warrantor, or Service Centre, and the corresponding <code class="docutils literal notranslate"><span class="pre">idAddress</span></code></p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Tickets</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a Ticket</li>
+<li>A Warrantor can set up any of the Users associated with a Ticket</li>
+<li>A Client and a Service Centre can only managed their associated Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a Ticket</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of a Ticket</li>
+<li>A Warrantor can set up any of the Users associated with a Ticket</li>
+<li>A Client and a Service Centre can only managed their associated Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ticket-history">
+<h2>Ticket History<a class="headerlink" href="#ticket-history" title="Permalink to this headline">¶</a></h2>
+<p>The Ticket History service allows the User to create separate snippets of information on a ticket relating to the customer query/issue</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_history.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_history.list</span></code></dt>
+<dd><ul class="first last">
+<li>Thie method allows the User to get a list of history logs for a given Transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_history.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new history log for the given Ticket</li>
+<li>Only Users under the Addresses involved in the Ticket can create these logs</li>
+<li><dl class="first docutils">
+<dt>There are two log types;</dt>
+<dd><ul class="first last">
+<li><strong>Note</strong>: A standard history log is generated</li>
+<li><strong>Email</strong>: A standard history log is generated and is sent by email to these specified in the <code class="docutils literal notranslate"><span class="pre">email_to</span></code> and <code class="docutils literal notranslate"><span class="pre">email_cc</span></code> fields.
+Emails will always be sent by CloudCIX Notifications, and the sender will be specified in the body of the email.
+Reply-To will be the User’s email unless it is set.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ticket-question">
+<h2>Ticket Question<a class="headerlink" href="#ticket-question" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket can have a set of questions defined by default</p>
+<p>This service allows the users to handle these questions</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.list</span></code></dt>
+<dd><ul class="first last simple">
+<li>This method allows the User to get a list of Ticket Questions for a given Ticket</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.create</span></code></dt>
+<dd><ul class="first last simple">
+<li>This method allows the User to create a Ticket Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.read</span></code></dt>
+<dd><ul class="first last simple">
+<li>This method allows the User to get a Ticket Question and its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.update</span></code></dt>
+<dd><ul class="first last">
+<li><p class="first">This method allows the User to update some details of a Ticket Question</p>
+</li>
+<li><div class="first admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When a Question is updated, Questions that are already associated to Tickets won’t change</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.delete</span></code></dt>
+<dd><ul class="first last">
+<li><p class="first">This method allows the User to delete a Ticket Question</p>
+</li>
+<li><p class="first">Associations with Ticket Types will be deleted</p>
+</li>
+<li><div class="first admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If this Question was already associated with a Ticket, this won’t be deleted in the Ticket</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ticket-type">
+<h2>Ticket Type<a class="headerlink" href="#ticket-type" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket can have a type defined by default</p>
+<p>If a Ticket Type has questions associated with it at the time a Ticket with that Type is created, those questions will be associated with the Ticket</p>
+<p>This service allows the User to manage the different Ticket Types</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Ticket Types available for the Warrantor</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Ticket Type</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a Ticket Type and its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some of the details of a Ticket Type</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Ticket Type</li>
+<li>A Ticket Type can only be deleted if there are no Tickets associated with it</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ticket-type-question">
+<h2>Ticket Type Question<a class="headerlink" href="#ticket-type-question" title="Permalink to this headline">¶</a></h2>
+<p>Every Ticket Type can have one or more questions associated with it</p>
+<p>This service allows the User to manage those questions</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type_question.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type_question.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an association between a Ticket Type and a Ticket Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type_question.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an association between a Ticket Type and a Ticket Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="warrantor-logic">
+<h2>Warrantor Logic<a class="headerlink" href="#warrantor-logic" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the Warrantor to specify the Business Logic for one of its Addresses</p>
+<p>Only Administrators can create or modify the Business Logic</p>
+<p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
+<p>Otherwise, the local Address will be used</p>
+<p>Only Addresses belonging to the User’s Member can be managed</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_logic.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_logic.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a default Business Logic for a specified Address</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_logic.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a default Business Logic for a Warrantor Address</li>
+<li>Users can only read the default Business Logic for Addresses belonging to their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_logic.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some of the details of a default Business Logic for a given Address</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_logic.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a default Business Logic for a given Address</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="warrantor-service-centre">
+<h2>Warrantor Service Centre<a class="headerlink" href="#warrantor-service-centre" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to specify the Business Logic between a Warrantor’s Address and a Service Centre’s Address</p>
+<p>Only Administrators can create or modify the Business Logic</p>
+<p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
+<p>Otherwise, the local Address will be used</p>
+<p>Only Addresses belonging to the User’s Member can be managed</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of associations between a Warrantor’s Address and many Service Centre Addresses</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an association between a Warrantor’s Address and a Service Centre’s Address</li>
+<li>Even if the Service Centre created the link in the first place, this method must be used to store the Warrantor’s values in the link</li>
+<li>If there are already values in the Warrantor’s side, an exception will be raised and <code class="docutils literal notranslate"><span class="pre">update</span></code> must be used instead</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the details between a Warrantor’s Address and a Service Centre’s Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update an association between a Warrantor’s Address and a Service Centre’s Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.warrantor_service_centre.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an association between a Warrantor’s Address and a Service Centre’s Address</li>
+<li>The Warrantor values will be set to null</li>
+<li>If both the Warrantor and Service Centre values are null, the link will be marked for deletion</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CloudCIX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

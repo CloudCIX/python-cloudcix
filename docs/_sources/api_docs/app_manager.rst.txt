@@ -1,0 +1,72 @@
+The App Manager Application is a software system that manages CloudCIX Apps
+
+It allows Users to select and use apps, and allows Administrators to select
+which apps to deploy and give permissions to other Users.
+
+**Basic Usage**: ``cloudcix.api.AppManager.<service>.<method>``
+
+Services
+--------
+
+App
+^^^
+An App is a web Application available through CloudCIX website
+
+**Basic Usage**: ``cloudcix.api.AppManager.app.<method>``
+
+Available Methods
+    - ``cloudcix.api.AppManager.app.list``
+        - Return a list of all Apps available.
+    - ``cloudcix.api.AppManager.app.read``
+        - Returns an App and its details if the Member invoking this
+          method has the App associated
+
+App Member Link
+^^^^^^^^^^^^^^^
+An App Member Link is an association between a Member and an App they are
+allowed to use
+
+**Basic Usage**: ``cloudcix.api.AppManager.app_member.<method>``
+
+Available Methods
+    - ``cloudcix.api.AppManager.app_member.create``
+        - Create a link between the Member calling the method and the
+          selected App
+        - This method can only be run be an Administrator
+    - ``cloudcix.api.AppManager.app_member.delete``
+        - Delete a link between the Member calling the method and the
+          selected App
+        - This method can only be run be an Administrator
+
+Menu Item
+^^^^^^^^^
+This service provides methods to interact with an App's Menu Items
+
+**Basic Usage**: ``cloudcix.api.AppManager.app_menu.<method>``
+
+Available Methods
+    - ``cloudcix.api.AppManager.app_menu.list``
+        - Returns a list of Menu Items that belong to a given App.
+        - This list will be filtered based on the permissions of the
+          User making the request
+    - ``cloudcix.api.AppManager.app_menu.read``
+        - Returns a Menu Item with all its details
+
+Menu Item User Link
+^^^^^^^^^^^^^^^^^^^
+An App Menu Item User Link is an association between a User and a Menu Item
+they're allowed to use/see
+
+**Basic Usage**: ``cloudcix.api.AppManager.menu_item_user.<method>``
+
+Available Methods:
+    - ``cloudcix.api.AppManager.menu_item_user.list``
+        - Returns a list of Menu Item IDs that the given User has
+          associated.
+        - These items define the front end permissions for the given
+          User
+    - ``cloudcix.api.AppManager.menu_item_user.update``
+        - Updates the front end permissions for a given User
+        - Only Administrators from the same Member are able to run this
+          me
+        - This method can only be run be an Administrator

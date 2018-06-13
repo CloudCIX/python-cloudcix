@@ -1,0 +1,90 @@
+The Reporting Engine is a powerful service allowing users to generate HTML and PDF documents from templates
+
+**Basic Usage**: ``cloudcix.api.Reporting.<service>.<method>``
+
+Services
+--------
+
+Export
+^^^^^^
+This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported
+
+**Basic Usage**: ``cloudcix.api.Reporting.export.<method>``
+
+Available Methods
+    - ``cloudcix.api.Reporting.export.list``
+        - This method allows the User to get a list of all files that have been exported that are either pending generation or ready to download
+    - ``cloudcix.api.Reporting.export.create``
+        - This method allows the User to request that a file be exported
+        - This method collects a bunch of data to export into a file
+        - The request is put into a queue, and a global id will be returned in the response
+        - This global id can then be used to download the exported file
+    - ``cloudcix.api.Reporting.export.read``
+        - This method allows the User to get the details of a file being exported
+        - The details will include the status of the export, the date when the file will expire, and a path to the generated document
+    - ``cloudcix.api.Reporting.export.delete``
+        - Allows the User to remove an Export and exported documents
+
+Package
+^^^^^^^
+This service allows Users to create Packages of Reports and download a single file instead of a large number of files
+
+The workflow for this method is as follows:
+1. Create a Package
+2. Create Report(s), passing in the idPackage each time
+3. Update the Package and set its status to closed
+4. When the status becomes closed, the report generation will begin
+5. When the Package is ready, download your reports
+
+**Basic Usage**: ``cloudcix.api.Reporting.package.<method>``
+
+Available Methods
+    - ``cloudcix.api.Reporting.package.list``
+        - This method allows the User to get a list of all Packages that are either being created or are ready to download
+    - ``cloudcix.api.Reporting.package.create``
+        - This method allows the User to create a new Package
+        - The response should contain an ``idPackage`` which can be used to put requested reports into a Package
+    - ``cloudcix.api.Reporting.package.read``
+        - This method allows the User to read the details of a Package, including its status, any error messages and the date when it will expire
+    - ``cloudcix.api.Reporting.package.update``
+        - This method allows the User to set the Package status to closed
+        - This will start a background process of gathering and packaging documents for download
+    - ``cloudcix.api.Reporting.package.delete``
+        - This method allows the User to delete a Package and all its associated documents
+
+Report
+^^^^^^
+This service is used to create PDF or HTML documents from existing Templates by passing in the data to populate the Template
+
+**Basic Usage**: ``cloudcix.api.Reporting.report.<method>``
+
+Available Methods
+    - ``cloudcix.api.Reporting.report.list``
+        - This method allows the User to get a list of all Reports that are either pending generation or are ready for download
+    - ``cloudcix.api.Reporting.report.create``
+        - This method allows the User to request a new Report to be generated using a specified ``idReportTemplate`` and the given data
+        - This request will be put into a Queue and the response will contain an ``idReport``
+        - If ``idPackage`` is passed as part of the request, the report will be removed only after the Package's status has been updated to "closed"
+    - ``cloudcix.api.Reporting.report.read``
+        - This method allows the User to get the details of a Report
+        - This includes the status, the date at which the Report will expire and a path to the generated document
+    - ``cloudcix.api.Reporting.report.delete``
+        - This method allows the User to delete a Report and its generated documents
+
+Report Template
+^^^^^^^^^^^^^^^
+This service allows Users to manage the Templates that they can use to generate HTML or PDF documents
+
+**Basic Usage**: ``cloudcix.api.Reporting.report_template.<method>``
+
+Available Methods
+    - ``cloudcix.api.Reporting.report_template.list``
+        - This method allows the User to get a list of the Report Templates available to their Address
+    - ``cloudcix.api.Reporting.report_template.create``
+        - This method allows the User to create a new Report Template for their Address
+    - ``cloudcix.api.Reporting.report_template.read``
+        - This method allows the User to get the details of a Report Template
+    - ``cloudcix.api.Reporting.report_template.update``
+        - This method allows the User to update an existing Report Template with new content
+    - ``cloudcix.api.Reporting.report_template.delete``
+        - This method allows the User to delete an existing Report Template

@@ -1,0 +1,329 @@
+Membership is a CloudCIX Application that exposes a REST API capable of managing CloudCIX Members and relationships between those Members
+
+It is the cornerstone of CloudCIX
+
+It controls Membership, and manages both secure login and granular access
+
+The Membership Application also gives CloudCIX true multi-tenanted capability to allow you to transact, and securely share information, with your partner Members
+
+For more information on the key aspects of this Application, see **Member**, **Address**, and **User**
+
+**Basic Usage**: ``cloudcix.api.Membership.<service>.<method>``
+
+Services
+--------
+
+Address
+^^^^^^^
+An Address points to a physical location where an organisation conducts their business
+
+Each Member can have one or more Addresses
+
+Trading transactions occur between a Supplier and Customer Address, while some other transactions occur at a single Address, e.g. depreciation
+
+This service allows the User to manage their Addresses
+
+**Basic Usage**: ``cloudcix.api.Membership.address.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.address.list``
+        - Allows the User to get a list of Addresses associated with a Member
+        - Addresses returned belong to either the User's Member, or a Member linked with the User's Member
+    - ``cloudcix.api.Membership.address.create``
+        - Allows the User to create a new Address
+        - The Address can be created for either the User's own Member, or one that is linked to the User's Member
+        - In order to create an Address for a linked Member, the linked Member must not be self managed
+        - The Address created will automatically be linked to the Address of the User creating it
+    - ``cloudcix.api.Membership.address.read``
+        - Allows the User to get the details of an Address
+    - ``cloudcix.api.Membership.address.update``
+        - Allows the User to update the details of an Address
+
+Address Link
+^^^^^^^^^^^^
+An Address Link object represents a link between two Addresses, which allows transactions to be performed between them
+
+Addresses must be linked in order to conduct business between them
+
+The link allows each Address to have particular details about the Contra Address (the Address to which the Link is to)
+
+**Basic Usage**: ``cloudcix.api.Membership.address_link.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.address_link.create``
+        - Allows the User to create a Link between two Addresses
+        - A Link can only be created between Addresses in Members that are already linked, or Addresses in the same Member
+    - ``cloudcix.api.Membership.address_link.read``
+        - Allows the User to get the details of an Address Link
+    - ``cloudcix.api.Membership.address_link.update``
+        - Allows the User to update the details of an Address Link record
+
+Country
+^^^^^^^
+This service allows the User to get Country information in accordance with ISO 3166-1
+
+**Basic Usage**: ``cloudcix.api.Membership.country.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.country.list``
+        - Allows the User to get a full list of Countries in ISO 3166-1 format
+    - ``cloudcix.api.Membership.country.read``
+        - Allows the User to get the details of a specific Country
+
+Currency
+^^^^^^^^
+This service allows the User to get information about the different Currencies supported by CloudCIX
+
+**Basic Usage**: ``cloudcix.api.Membership.currency.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.currency.list``
+        - Allows the User to get the full list of Currencies supported by CloudCIX
+    - ``cloudcix.api.Membership.currency.read``
+        - Allows the User to get the details of a specific Currency
+
+Department
+^^^^^^^^^^
+A Department is a specialized division of a large organisation that groups Users together
+
+Example Departments can include:
+- Design
+- IT
+- Software Development
+- Sales
+
+This service provides methods to manage the Departments in an organisation
+
+**Basic Usage**: ``cloudcix.api.Membership.department.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.department.list``
+        - Allows the User to get a list of Departments available for the User's Member
+    - ``cloudcix.api.Membership.department.create``
+        - Allows the User to create a new Department for their Member
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.department.read``
+        - Allows the User to get the details of a specific Department
+    - ``cloudcix.api.Membership.department.update``
+        - Allows the User to update the details of a specific Department
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.department.delete``
+        - Allows the User to delete a specific Department record
+        - A Department can only be deleted if there are no Users assigned to it
+        - This method can only be run by an Administrator
+
+Language
+^^^^^^^^
+This service allows the User to get information about the languages that are available for use in CloudCIX
+
+**Basic Usage**: ``cloudcix.api.Membership.language.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.language.list``
+        - Allows the User to get the full list of Languages supported by CloudCIX
+    - ``cloudcix.api.Membership.language.read``
+        - Allows the User to get the details of specific Language
+
+Member
+^^^^^^
+A Member can be a company, brand, multinational corporation or a sole trader, but a Member is always a business
+
+A Member may be Self Managed or not
+
+A Self Managed Member is run by an Administrator inside the Member and is responsible for themselves
+
+If a Member is not Self Managed, that means there is another Member which is responsible for managing it
+
+This service provides methods to manage Member records
+
+**Basic Usage**: ``cloudcix.api.Membership.member.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.member.list``
+        - Allows the User to get a list of Members that are linked to the given Member
+    - ``cloudcix.api.Membership.member.create``
+        - Allows the User to create a new Member
+        - The created Member will automatically be linked to the Member of the User
+        - If the Member is Self Managed, it will also be linked to CloudCIX
+    - ``cloudcix.api.Membership.member.read``
+        - Allows the User to get the details of a given Member
+    - ``cloudcix.api.Membership.member.update``
+        - Allows the User to update the details of a given Member
+        - If the Member becomes Self Managed, then it will automatically be linked to CloudCIX
+
+
+Member Link
+^^^^^^^^^^^
+A Member Link represents a Link between two Members
+
+This service provides a method to see if the User's Member is linked to another Member
+
+**Basic Usage**: ``cloudcix.api.Membership.member_link.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.member_link.read``
+        - Allows the User to check if their Member is linked to a given Member
+        - Returns HTTP 204 is a Link between the Members exists
+
+Notification
+^^^^^^^^^^^^
+A Notification record takes account of all the Users in an Address who should be notified about transactions
+
+**Basic Usage**: ``cloudcix.api.Membership.notification.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.notification.read``
+        - Allows the User to get a list of User records within an Address who have Notifications active for the given Transaction Type
+
+Profile
+^^^^^^^
+A Profile can be a group of nurses (Users) in a hospital (Member).
+
+Profiles are a custom or default classification for a User for a particular Member
+
+**Basic Usage**: ``cloudcix.api.Membership.profile.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.profile.list``
+        - Allows the User to get a list of Profiles belonging to the specified Member
+    - ``cloudcix.api.Membership.profile.create``
+        - Allows the User to create a new Profile record for the given Member
+        - Members can create Profiles for other Linked Members if the Linked Member is not Self Managed
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.profile.read``
+        - Allows the User to get the details of a given Profile, including the Users that are in that Profile
+    - ``cloudcix.api.Membership.profile.update``
+        - Allows the User to update the details of a given Profile
+        - Members can update Profiles for other Linked Members if the Linked Member is not Self Managed
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.profile.delete``
+        - Allows the User to delete a given Profile
+        - Members can update Profiles for other Linked Members if the Linked Member is not Self Managed
+        - Profiles can only be deleted when they are not assigned to any User
+        - This method can only be run by an Administrator
+
+Subdivision
+^^^^^^^^^^^
+The Subdivision service contains methods to get data about Subdivisions in accordance with ISO 3166-2
+
+An example of a Subdivision is a County in Ireland
+
+**Basic Usage**: ``cloudcix.api.Membership.subdivision.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.subdivision.list``
+        - Allows the User to get a list of all Subdivisions for a given Country
+    - ``cloudcix.api.Membership.subdivision.read``
+        - Allows the User to read the details of a given Subdivision
+
+Team
+^^^^
+A Team is a tag describing a group of Users in a Member
+
+For example, a Team can be a group of Users working on a particular project
+
+**Basic Usage**: ``cloudcix.api.Membership.team.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.team.list``
+        - Allows the User to get a list of all Teams in the User's own Member
+    - ``cloudcix.api.Membership.team.create``
+        - Allows the User to create a new Team for their Member
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.team.read``
+        - Allows the User to get the details of a given Team, including the Users who belong to it
+    - ``cloudcix.api.Membership.team.update``
+        - Allows the User to update the details of a given Team record
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Membership.team.delete``
+        - Allows the User to delete a Team record
+        - .. warning:: A Team will be deleted **even if there are Users assigned to it**
+        - This method can only be run by an Administrator
+
+Territory
+^^^^^^^^^
+A Territory is a classification or tag that a Member can use for grouping their business partners
+
+For example, a Member can group partners be location or by what product they sell/purchase
+
+**Basic Usage**: ``cloudcix.api.Membership.territory.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.territory.list``
+        - Allows the User to get a list of Territories available for the given Member
+    - ``cloudcix.api.Membership.territory.create``
+        - Allows the User to create a new Territory record
+        - Members can create a Territory for Linked Members provided the Linked Member is not Self Managed
+    - ``cloudcix.api.Membership.territory.read``
+        - Allows the User to read the details of a given Territory
+    - ``cloudcix.api.Membership.territory.update``
+        - Allows the User to update the details of a given Territory
+        - Members can update a Territory for Linked Members provided the Linked Member is not Self Managed
+    - ``cloudcix.api.Membership.territory.delete``
+        - Allows the User to delete a given Territory
+        - A Territory can only be deleted if there are no Addresses assigned to it
+
+Timezone
+^^^^^^^^
+This service contains methods to get Timezone information from Timezones all around the world
+
+**Basic Usage**: ``cloudcix.api.Membership.timezone.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.timezone.list``
+        - Allows the User to get a full list of all Timezones available in the world
+    - ``cloudcix.api.Membership.timezone.read``
+        - Allows the User to get the details of a Timezone
+        - In order to get a Timezone, the User must specify its zone, i.e. "Europe/Dublin"
+
+Transaction Type
+^^^^^^^^^^^^^^^^
+The TransactionType service contains methods that give information about the types of transactions supported by CloudCIX
+
+Most services in CloudCIX work using transactions;
+- ``financial.account_sale_invoice``
+- ``financial.cash_sale_invoice``
+- ``helpdesk.ticket``
+
+are all examples of Transaction based services, and each of these services has their own ``idTransactionType``
+
+Transaction Types identify each one in a unique way, and along with the Transaction Sequence Number it makes a transaction unique for each Address of a Member
+
+**Basic Usage**: ``cloudcix.api.Membership.transaction_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.transaction_type.list``
+        - Allows the User to get the full list of Transaction Types available in CloudCIX
+    - ``cloudcix.api.Membership.transaction_type.read``
+        - Allows the User to read the details of a given Transaction Type
+
+User
+^^^^
+A User record represents a person located at an Address of a Member that can log in to the CloudCIX system
+
+A User can either be Local to one Address, or Global within a Member, and Global Users can choose to act as a Local or Global at any time
+- When acting as a Global User, they see all data from each Address in the Member simultaneously
+- When acting as a Local User, they only see information relating to their current Address
+
+A User can also be an Administrator, which is a special User account that has privileges that enable it to manage other User accounts, change system configuration and perform critical actions
+
+Administrators also set the permissions for other Users in the Member
+
+In order to create additional Administrators for your Member, it is necessary to contact CloudCIX support directly
+
+**Basic Usage**: ``cloudcix.api.Membership.user.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.user.list``
+        - Allows the User to get a list of Users linked to their Member
+    - ``cloudcix.api.Membership.user.create``
+        - Allows the User to create a new User record for the specified Member and Address that is either an Administrator or a normal User
+        - The first User in a Member automatically becomes an Administrator
+        - The User can create Users in other Members if the Members are linked, the requesting User's Address is linked to the target Address, and the target Member is not Self Managed
+    - ``cloudcix.api.Membership.user.read``
+        - Allows the User to read the details of a given User
+    - ``cloudcix.api.Membership.user.update``
+        - Allows the User to update the details of a given User
+        - Only Global Users who are acting Global are able to change their idAddress
+        - .. warning:: A User cannot update the following fields: ``idProfile``, ``idDepartment``, ``jobTitle``, ``startDate``, ``expiryDate``, ``notifications``.
+             These fields can only be updated by an Administrator
