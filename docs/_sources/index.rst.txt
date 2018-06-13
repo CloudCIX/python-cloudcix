@@ -18,11 +18,3 @@ CloudCIX API Python Module Documentation
 
 
 .. note:: If you notice anything wrong with the documentation, please email Ciaran Broderick at ``cb at cix dot ie`` and let him know the issue(s) you found so that we can fix them as soon as possible
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

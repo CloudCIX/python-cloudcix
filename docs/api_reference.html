@@ -415,12 +415,6 @@ CloudCIX services</p>
 <p>To see more information about the various methods (list, read, etc.), see the
 <a class="reference internal" href="client_reference.html"><span class="doc">Client Method Reference</span></a> page</p>
 <p>For examples of a call for each of these methods, see the <span class="xref std std-doc">examples</span> page</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>Some applications and/or services are private and can only be used
-by Users in the CloudCIX Member.</p>
-<p class="last">These are still documented here but will be marked clearly</p>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Any service that implements the <code class="docutils literal notranslate"><span class="pre">update</span></code> method also implements the
@@ -4806,32 +4800,53 @@ Reply-To will be the User’s email unless it is set.</li>
 <h4>Record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h4>
 <p>The Record service is used to manage Forward DNS entries that are tied to Domains.</p>
 <p>Records for a particular Domain can only be managed by the Member that owns that Domain.</p>
-<p><strong>Record Types</strong>
-+————-+—-+
-| Record Type | ID |
-+=============+====+
-| NS          | 1  |
-+————-+—-+
-| A           | 2  |
-+————-+—-+
-| AAAA        | 3  |
-+————-+—-+
-| CNAME       | 4  |
-+————-+—-+
-| MX          | 5  |
-+————-+—-+
-| TXT         | 6  |
-+————-+—-+
-| SRV         | 7  |
-+————-+—-+
-| SPF         | 9  |
-+————-+—-+
-| SSHFP       | 10 |
-+————-+—-+
-| LOC         | 11 |
-+————-+—-+
-| NAPTR       | 12 |
-+————-+—-+</p>
+<p><strong>Record Types</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="76%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Record Type</th>
+<th class="head">ID</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NS</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>A</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>AAAA</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>CNAME</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>MX</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td>TXT</td>
+<td>6</td>
+</tr>
+<tr class="row-even"><td>SRV</td>
+<td>7</td>
+</tr>
+<tr class="row-odd"><td>SPF</td>
+<td>9</td>
+</tr>
+<tr class="row-even"><td>SSHFP</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>LOC</td>
+<td>11</td>
+</tr>
+<tr class="row-even"><td>NAPTR</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.&lt;method&gt;</span></code></p>
 <dl class="docutils">
 <dt>Available Methods</dt>

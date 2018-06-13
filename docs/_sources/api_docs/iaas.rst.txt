@@ -157,6 +157,7 @@ The Record service is used to manage Forward DNS entries that are tied to Domain
 Records for a particular Domain can only be managed by the Member that owns that Domain.
 
 **Record Types**
+
 +-------------+----+
 | Record Type | ID |
 +=============+====+
