@@ -1,0 +1,70 @@
+The Circuit Application allows for the management of circuits and devices.
+
+**Basic Usage**: ``cloudcix.api.Circuit.<service>.<method>``
+
+Services
+--------
+
+Circuit
+^^^^^^^
+This service allows Users to manage their Circuits
+
+A Circuit is a device installed in your active Address
+
+**Basic Usage**: ``cloudcix.api.Circuit.circuit.<method>``
+
+Available Methods
+    - ``cloudcix.api.Circuit.circuit.list``
+        - Returns a list of Circuits by owner, customer and supplier
+          based on the User's Address
+    - ``cloudcix.api.Circuit.circuit.create``
+        - This method allows the User to add a Circuit to a Circuit
+          Class
+    - ``cloudcix.api.Circuit.circuit.read``
+        - This method allows the User to get the details of a given
+          Circuit
+        - Only owners, customers and suppliers are allowed to read a
+          Circuit
+    - ``cloudcix.api.Circuit.circuit.update``
+        - Allows the User to update a Circuit
+    - ``cloudcix.api.Circuit.circuit.delete``
+        - Allows the User to delete a Circuit
+        - Note that the Circuit will no longer be available to update.
+        - If a Circuit has been removed but the User wants to maintain
+          it in the list, it should be updated with a decommission date
+
+Circuit Class
+^^^^^^^^^^^^^
+This service allows for the management of Circuit Classes
+
+A Circuit Class is a classification for the Circuits
+
+**Basic Usage**: ``cloudcix.api.Circuit.circuit_class.<method>``
+
+Available Methods
+    - ``cloudcix.api.Circuit.circuit_class.list``
+        - Returns a list of Circuit Classes and their supported
+          Properties
+    - ``cloudcix.api.Circuit.circuit_class.create``
+        - Allows the User to create a new Circuit Class for its Member
+    - ``cloudcix.api.Circuit.circuit_class.read``
+        - Allows the User to get the details of a given Circuit Class
+    - ``cloudcix.api.Circuit.circuit_class.update``
+        - Allows the User to update a Circuit Class.
+        - If there are Circuits under the Circuit Class, new properties
+          cannot be required and old properties cannot be removed or
+          renamed
+
+
+Property Type
+^^^^^^^^^^^^^
+This service is in place to offer a list of the supported Property Types
+
+A Property Type is an identification of the expected input value for a given
+property.
+
+**Basic Usage**: ``cloudcix.api.Circuit.property_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.Circuit.property_type.list``
+        - Returns a list of Property Types

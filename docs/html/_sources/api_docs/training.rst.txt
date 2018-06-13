@@ -1,0 +1,70 @@
+The Training Application exposes a REST API capable of managing Training
+records
+
+**Basic Usage**: ``cloudcix.api.Training.<service>.<method>``
+
+Services
+--------
+
+Class
+^^^^^
+This services allows for the management of Class records.
+
+A Class record represents a Class in a Syllabus, and each one has a trainer
+assigned, as well as both a start and end date
+
+**Basic Usage**: ``cloudcix.api.Training.cls.<method>``
+
+Available Methods
+    - ``cloudcix.api.Training.cls.list``
+        - Return a list of all classes in a selected Syllabus
+    - ``cloudcix.api.Training.cls.create``
+        - Allows the Use to create a new Class record
+    - ``cloudcix.api.Training.cls.read``
+        - Returns the selected Class, along with its details
+    - ``cloudcix.api.Training.cls.update``
+        - Allows the User to update the details of a Class record
+    - ``cloudcix.api.Training.cls.delete``
+        - Allows the User to delete a Class record
+
+Student
+^^^^^^^
+This service allows for the management of Student records.
+
+Students are Users that are enrolled for one or more Classes
+
+**Basic Usage**: ``cloudcix.api.Training.student.<method>``
+
+Available Methods
+    - ``cloudcix.api.Training.student.list``
+        - Returns a list of Students in a selected Class
+    - ``cloudcix.api.Training.student.create``
+        - Allows a User to create a Student record by adding a User to
+          a Class
+    - ``cloudcix.api.Training.student.read``
+        - Returns the selected Student record with all its details
+    - ``cloudcix.api.Training.student.update``
+        - Allows a User to update a Student's records.
+        - Students can become Self Managed which means they can manage
+          themselves
+    - ``cloudcix.api.Training.student.delete``
+        - Allows a User to delete a Student record
+
+Syllabus
+^^^^^^^^
+This service allows for the management of Syllabus records.
+
+**Basic Usage**: ``cloudcix.api.Training.syllabus.<method>``
+
+Available Methods
+    - ``cloudcix.api.Training.syllabus.list``
+        - Returns a list of all Syllabus records available for a
+          Student
+    - ``cloudcix.api.Training.syllabus.create``
+        - Allows a User to create a new Syllabus
+    - ``cloudcix.api.Training.syllabus.read``
+        - Returns the details of the selected Syllabus
+    - ``cloudcix.api.Training.syllabus.update``
+        - Allows a User to update the details of a given Syllabus
+    - ``cloudcix.api.Training.syllabus.delete``
+        - Allows a User to delete a given Syllabus

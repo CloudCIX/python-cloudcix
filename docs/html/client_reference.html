@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Client Method Reference &mdash; CloudCIX API Python Module 0.4.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api_reference.html" />
+    <link rel="prev" title="License" href="license.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CloudCIX API Python Module
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client Method Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CloudCIX API Python Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Client Method Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/client_reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cloudcix.client">
+<span id="client-method-reference"></span><h1>Client Method Reference<a class="headerlink" href="#module-cloudcix.client" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cloudcix.client.Client">
+<em class="property">class </em><code class="descclassname">cloudcix.client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>application</em>, <em>service_uri</em>, <em>version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>CloudCIX API Client</p>
+<p>The underlying class to generate the services in the <a class="reference internal" href="api_reference.html"><span class="doc">API Reference</span></a></p>
+<p>There are a couple of things to note about some of the methods, namely
+<cite>create</cite>, <cite>update</cite>, and <cite>partial_update</cite></p>
+<ul class="simple">
+<li>The <code class="docutils literal notranslate"><span class="pre">data</span></code> parameter to these methods is for passing the json data to
+use for the creation or updating of an object in the database</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">params</span></code> parameter is simply for filtering lists or specifying only
+certain object fields to be returned</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> parameter for the methods can be used to specify
+any other ids that are needed in the URL</p>
+</div>
+<dl class="method">
+<dt id="cloudcix.client.Client.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>application</em>, <em>service_uri</em>, <em>version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>application</strong> – Application Name</li>
+<li><strong>service_uri</strong> – URI of the service under the Application URL</li>
+<li><strong>version</strong> – Optional API version, defaults to v1</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new resource using the API service
+(using HTTP POST)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>token</strong> – The user’s authentication token</li>
+<li><strong>data</strong> – Any POST data to send in the request</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The response from the API Service to this POST request in the
+form of a <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a resource identified by the given pk
+(using HTTP DELETE)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pk</strong> – The id of the resource to delete</li>
+<li><strong>token</strong> – The user’s authentication token</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The response from the API Service to this DELETE method in the
+form of a <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of resources from the API service
+(using HTTP GET without a resource id)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>token</strong> – The user’s authentication token</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of resources in the form of a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.partial_update">
+<code class="descname">partial_update</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.partial_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a resource identified by the given pk with the sent data.
+The difference between this and <cite>update</cite> is that this method does not
+require an entire object be sent
+(using HTTP PATCH)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pk</strong> – The id of the resource to update</li>
+<li><strong>token</strong> – The user’s authentication token</li>
+<li><strong>data</strong> – The data to be sent in the PUT request</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The response from the API Service to this PATCH request in the
+form of a <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a resource from the API service identified by the given pk
+(using HTTP GET with a resource id)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pk</strong> – The id of the resource to read</li>
+<li><strong>token</strong> – The User’s authentication token</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The read resource in the form of a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.client.Client.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a resource identified by the given pk with the sent data
+(using HTTP PUT)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pk</strong> – The id of the resource to update</li>
+<li><strong>token</strong> – The user’s authentication token</li>
+<li><strong>data</strong> – The data to be sent in the PUT request</li>
+<li><strong>params</strong> – Any parameters to include in the query string. These
+will be passed as parameters after the ‘?’ in the URL</li>
+<li><strong>kwargs</strong> – Any other kwargs for the method</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The response from the API Service to this PUT request in the
+form of a <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.Response</span></code> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CloudCIX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

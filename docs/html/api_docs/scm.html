@@ -1,0 +1,986 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Services &mdash; CloudCIX API Python Module 0.4.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CloudCIX API Python Module
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../client_reference.html">Client Method Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CloudCIX API Python Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Services</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api_docs/scm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>SCM is an Application to manage the planning, procurement, storage,
+distribution, service and return of inventory</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bin">
+<h2>Bin<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the Users to manage their Bins. A Bin is a classification
+for SKUs used to manage their inventory</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to get a list of Bins.</li>
+<li>Users acting as Global can get any Bin under any of their
+Addresses.</li>
+<li>Users acting as Local can only get Bins under their active
+Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Bin for its
+active Address.</li>
+<li>The name must be unique per Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to get the details of a specific
+Bin</li>
+<li>Users acting as Global can read any Bin under any of their
+Addresses</li>
+<li>Users acting as Local can only read any Bin under their
+active Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a Bin</li>
+<li>Only Bins under the User’s active Address can be updated</li>
+<li>The name must be unique per Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Bin</li>
+<li>Only Bins under the User’s active Address can be deleted.</li>
+<li>Every SKU associated with this Bin will no longer be
+associated</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="bin-sku">
+<h2>Bin SKU<a class="headerlink" href="#bin-sku" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to associate their SKUs with their Bins</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin_sku.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin_sku.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to associate one or several SKUs
+with a Bin</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin_sku.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete the associations
+between one or several SKUs with a Bin</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="brand">
+<h2>Brand<a class="headerlink" href="#brand" title="Permalink to this headline">¶</a></h2>
+<p>A Brand is an optional classification for a SKU</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Brand records</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Brand for its
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read a Brand belonging to its
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update a Brand belonging to
+its Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Brand belonging to
+its Member</li>
+<li>A Brand cannot be deleted it is has been used in an SKU</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="critical-bom">
+<h2>Critical BOM<a class="headerlink" href="#critical-bom" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to manage an SKU’s Bill of Materials (BOM)</p>
+<p>A BOM is a list of the raw materials, sub-assemblies, intermediate assemblies,
+sub-components, parts, and the quantities of each needed to manufacture an end
+product</p>
+<p>This service requires an idSKU for each method</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of associations
+between an SKU and sub-components.</li>
+<li>Only owners or linked Members can list BOMs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an association between
+an SKU and a sub-component</li>
+<li>A sub-component can never be any parent or even the selected
+SKU.</li>
+<li>Sub-components must be unique</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read an association between an
+SKU and a sub-component</li>
+<li>Only owners or linked Members can list BOMs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update an association between
+an SKU and a sub-component</li>
+<li>A sub-component can never be any parent or even the selected
+SKU</li>
+<li>Sub-components must be unique</li>
+<li>Only owners of the SKUs can update the BOM</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an association between
+an SKU and sub-components.</li>
+<li>Only owners can delete the BOM</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="critical-bom-for-member">
+<h2>Critical BOM (For Member)<a class="headerlink" href="#critical-bom-for-member" title="Permalink to this headline">¶</a></h2>
+<p>This service provides a method to list all BOM records belonging to the Member
+of the User making the request</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom_for_member.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom_for_member.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of all BOM records belonging to the Member of
+the User making the request</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="manufactured-item">
+<h2>Manufactured Item<a class="headerlink" href="#manufactured-item" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to manage Manufactured Items</p>
+<p>A Manufactured Item is an SKU with a serial number</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Manufactured
+Items for the SKUs it owns.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a Manufactured Item.</li>
+<li>If the SKU Type is set to No Identifier (0), the User can’t
+create a Manufactured Item.</li>
+<li>Only the owners of an SKU can create Manufactured Items.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read details of a Manufactured
+Item</li>
+<li>Only owners and linked Members can read a Manufactured Item</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a Manufactured Item.</li>
+<li>If the SKU Type is set to No Identifier (0), the User can’t
+create a Manufactured Item.</li>
+<li>Only the owners of an SKU can create Manufactured Items.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to delete a Manufactured Item.</li>
+<li><dl class="first docutils">
+<dt>A Manufactured Item can only be deleted under the following conditions:</dt>
+<dd><ul class="first last">
+<li>The User’s Member is the owner of the associated SKU</li>
+<li>The Manufactured Item hasn’t been used in any transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="return-question">
+<h2>Return Question<a class="headerlink" href="#return-question" title="Permalink to this headline">¶</a></h2>
+<p>Every SKU Category can have a set of questions defined by default and used for
+certain transactions</p>
+<p>This service allows the Users to handle these questions</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Return Questions</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a Return Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a Return Question and its details</li>
+<li>The Return Question must belong to the User’s Member for it
+to be read</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update a Return Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Return Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="return-question-field-type">
+<h2>Return Question Field Type<a class="headerlink" href="#return-question-field-type" title="Permalink to this headline">¶</a></h2>
+<p>A Return Question supports several types for its answer</p>
+<p>This service will have a list method to return all supported types</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The types are natural types supported by Python</p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question_field_type.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.return_question_field_type.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of the supported
+field types for the Return Question answers</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="service-group">
+<h2>Service Group<a class="headerlink" href="#service-group" title="Permalink to this headline">¶</a></h2>
+<p>Service Groups are used to put Model Numbers into groups with the same repair
+complexity and therefore cost</p>
+<p>Service Groups facilitate the simplification of contracts between Warrantors
+and Service Centers by basing contracts on a small list of Service Groups
+rather than the complete list of Model Numbers</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a list of Service Groups belonging to the
+Member of the User making the request</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a Service Group for
+their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns details of the selected Service Group for
+its Member</li>
+<li>If the Service Group belongs to a different Member, a link
+between the current User’s Address and one of the selected
+Member’s Addresses must exist, with the required permissions</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update a Service Group for
+their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.service_group.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Service Group for
+their Member</li>
+<li>All SKUs assigned to the Service Group being deleted will
+have no assigned Service Group after the deletion</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku">
+<h2>SKU<a class="headerlink" href="#sku" title="Permalink to this headline">¶</a></h2>
+<p>A Stock Keeping Unit (SKU) is the unit by which stock is managed.</p>
+<p>Two manufactured items of the same SKU are identical in every way (with the
+possible exception of a label containing a unique serial number)</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a list of SKU records for a particular
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create an SKU belonging to its
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read an SKU for a particular
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update an SKU belonging to its
+Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an SKU belonging to its
+Member</li>
+<li><dl class="first docutils">
+<dt>An SKU cannot be deleted under the following conditions</dt>
+<dd><ul class="first last">
+<li>The SKU is a property of a Manufactured Item</li>
+<li>The SKU has been used in a transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku-category">
+<h2>SKU Category<a class="headerlink" href="#sku-category" title="Permalink to this headline">¶</a></h2>
+<p>An SKU Category is a classification for an SKU</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a list of Categories</li>
+<li>Only addresses acting as Service Centres can read other Member’s
+categories if they have the User’s Address as a Service Centre</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows Users to create a Category for his Member</li>
+<li>Each SKU belongs to a Category</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method will read an SKU Category for the Member of the User who
+made the request</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows Users to update a Category for their Member</li>
+<li>Category names must be unique for Categories with no Master Category
+or within the same Master Category</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method will delete a Category for his member</li>
+<li>All associations with Return Questions will be deleted</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku-category-return-question">
+<h2>SKU Category Return Question<a class="headerlink" href="#sku-category-return-question" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to associate Return Questions with SKU Categories</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category_return_question.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category_return_question.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a relationship between an SKU Category and
+a Return Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category_return_question.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a relationship between an SKU Category and
+a Return Question</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku-stock">
+<h2>SKU Stock<a class="headerlink" href="#sku-stock" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to see SKU Stock values</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the full Stock of the SKU in the
+different Addresses it is in.</li>
+<li>If the Stock belongs to a different Address than the requesting User,
+a Link between them must exist.</li>
+<li>If the User is acting as Local and the SKU belongs to their Member,
+only the Stock at the User’s Address will be shown</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read the Stock of an SKU in a given
+Address</li>
+<li>If the SKU belongs to an Address in a different Member than the
+requesting User, a link between the Members must exist</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku-stock-adjustment">
+<h2>SKU Stock Adjustment<a class="headerlink" href="#sku-stock-adjustment" title="Permalink to this headline">¶</a></h2>
+<p>This service allows Users to manage their SKU Stock by making adjustments to it</p>
+<p>A SKU Stock Adjustment Transaction allows Users to adjust the SKU inventory by
+increasing or decreasing the amount of items or volume in stock</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock_adjustment.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock_adjustment.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of SKU Stock Adjustment
+Transactions</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock_adjustment.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new SKU Stock Adjustment
+Transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock_adjustment.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get an SKU Stock Adjustment
+Transaction and its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock_adjustment.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update some details of an SKU Stock
+Adjustment Transaction</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sku-value">
+<h2>SKU Value<a class="headerlink" href="#sku-value" title="Permalink to this headline">¶</a></h2>
+<p>This service allows Users to manage the values for an SKU on each class</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get all the values for an SKU in all
+their Addresses.</li>
+<li>If the User is acting Local, it will only return the values in their
+own Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create the values for an SKU in a
+given Address</li>
+<li>If no Address is specified, the Address of the requesting User will
+be used</li>
+<li><dl class="first docutils">
+<dt>If the given Address is not the User’s Address, then the following conditions must be met in order to continue:</dt>
+<dd><ul class="first last">
+<li>The given Address belongs to the User’s Member</li>
+<li>The User is acting Global</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read the values for an SKU in a given
+Address.</li>
+<li><dl class="first docutils">
+<dt>If the specified Address is not the requesting User’s Address, the following conditions must be met:</dt>
+<dd><ul class="first last">
+<li>The specified Address belongs to the requesting User’s Member</li>
+<li>The User is acting Global</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the values for an SKU in a
+given Address</li>
+<li>If the User has permission to Read the SKU, the User can also
+Update it</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CloudCIX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

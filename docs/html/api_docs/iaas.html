@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Services &mdash; CloudCIX API Python Module 0.4.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CloudCIX API Python Module
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../client_reference.html">Client Method Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CloudCIX API Python Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Services</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api_docs/iaas.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>The IAAS application provides services that allow for interaction with infrastructure for purposes such as black/whitelisting IP addresses, adding DNS entries, and more.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aggregated-blacklist">
+<h2>Aggregated Blacklist<a class="headerlink" href="#aggregated-blacklist" title="Permalink to this headline">¶</a></h2>
+<p>Provides information about all CIDRs that are currently marked as malicious and are routed into a blackhole</p>
+<p>Aggregated Blacklist = (CIDRs from external sources + CIDRs from CIX Blacklist service) - CIDRs from CIX Whitelist service.</p>
+<p>This list is updated every hour by CIX and is provided to customers as a read-only searchable list of CIDRs.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Both the <code class="docutils literal notranslate"><span class="pre">create</span></code> and <code class="docutils literal notranslate"><span class="pre">delete</span></code> methods do not announce the new configuration to the network devices. This is done separately to the creation or deletion of CIDRs.</p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.aggregated_blacklist.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.aggregated_blacklist.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of CIDRs that were identified as suspicious or having malicious activities.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="allocation">
+<h2>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline">¶</a></h2>
+<p>An Allocation is an IP address range that was assigned to an ASN by an RIR such as RIPE.</p>
+<p>Allocations can be freely managed by the Member that owns a particular ASN.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only Users in the CIX Member are able to create new Allocations</p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method lists all Allocations that are associated with the Member of the User calling the method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method creates a new Allocation for a specified Member.</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the information of a given Allocation that belongs to their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a given Allocation that belongs to their Member</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.allocation.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a given Allocation that belongs to their Member</li>
+<li>An Allocation can only be deleted when it is empty</li>
+<li>This method can only be run by an Administrator</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="asn">
+<h2>ASN<a class="headerlink" href="#asn" title="Permalink to this headline">¶</a></h2>
+<p>Autonomous System Numbers (ASNs) are assigned in blocks by the Internet Assigned Numbers Authority (IANA) to Regional Internet Registries (RIRs).</p>
+<p>The appropriate RIR then assigns ASNs to entities within its designated area from the block assigned to them by the IANA.</p>
+<p>ASNs can be assigned to a CloudCIX Member who then becomes the owner of the ASN and is granted the ability to manage its contents.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">While the ASN service provides a full set of CRUDL methods, Create, Update and Delete can only be used by Users within the CIX Member. Please contact support if you need to run one of these methods</p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method returns a list of all ASNs that belong to the User’s Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to create an ASN belonging to a specified Member</li>
+<li>This method can only be run by CIX Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to read the details of a particular ASN belonging to their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a specified ASN</li>
+<li>This method can only be run by CIX Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.asn.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a specified ASN</li>
+<li>ASNs can only be deleted when they are empty</li>
+<li>This method can only be run by CIX Users</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="domain">
+<h2>Domain<a class="headerlink" href="#domain" title="Permalink to this headline">¶</a></h2>
+<p>Any CloudCIX Member is able to create a Domain and manage its DNS records through the API.</p>
+<p>CIX uses the Rage4 DNS Service to propogate DNS records to DNS servers.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to use DNS records set up through this service, please set your domain’s nameservers to <code class="docutils literal notranslate"><span class="pre">ns1.r4ns.com</span></code> and <code class="docutils literal notranslate"><span class="pre">ns2.r4ns.com</span></code></p>
+</div>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of Domains owned by its Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Domain record</li>
+<li>This record is stored locally and also announced to the Rage4 DNS service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read the details of a specific Domain record that is owned by its Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a specific Domain record owned by its Member</li>
+<li>This update is reflected both locally and on the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.domain.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a specific Domain record from both the IAAS Application and the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="image">
+<h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<p>This service provides access to a list of Images or Operating Systems that we can currently provide in deployed VMs</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.image.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.image.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of supported Images</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.image.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the details of a specific Image</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ip-address">
+<h2>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this headline">¶</a></h2>
+<p>CloudCIX allows its Users to organise IP Addresses by creating a clean structure of <code class="docutils literal notranslate"><span class="pre">ASN</span> <span class="pre">&gt;</span> <span class="pre">Allocation</span> <span class="pre">&gt;</span> <span class="pre">Subnet</span> <span class="pre">&gt;</span> <span class="pre">IPAddress</span></code>.</p>
+<p>Additionally, IP Addresses are used to organise Reverse DNS records.</p>
+<p>An IP Address can only be managed by the Member who owns the Subnet that contains it.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of IP Addresses belonging to their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new IP Address for their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve the details of a specific IP Address record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a given IP Address record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an IP Address record from the IAAS database</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ip-validator">
+<h2>IP Validator<a class="headerlink" href="#ip-validator" title="Permalink to this headline">¶</a></h2>
+<p>A utility service that can validate any number of address ranges and/or ip addresses.</p>
+<p>It provides various details about the supplied parameters.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_validator.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_validator.list</span></code></dt>
+<dd><ul class="first last">
+<li>Given <code class="docutils literal notranslate"><span class="pre">addressRanges</span></code> and/or <code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code>, this method will validate all of the supplied information.</li>
+<li>Multiple <code class="docutils literal notranslate"><span class="pre">addressRanges</span></code> and <code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> should be comma separated; e.g. <code class="docutils literal notranslate"><span class="pre">ipAddresses=192.168.0.2,192.168.0.3,192.168.0.3</span></code></li>
+<li>If both the <code class="docutils literal notranslate"><span class="pre">addressRanges</span></code> and <code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> parameters are passed, this method will also check to make sure that each <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> belongs to at least one of the supplied <code class="docutils literal notranslate"><span class="pre">addressRanges</span></code></li>
+<li>If none of the passed parameters are valid, the method will return HTTP 400 - Bad Request</li>
+<li>If one or more parameters are valid, the method will respond with HTTP 200 - Success</li>
+<li>Each individual <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> and <code class="docutils literal notranslate"><span class="pre">addressRange</span></code> are returned with a <code class="docutils literal notranslate"><span class="pre">valid</span></code> flag, stating if they were valid or not.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="record">
+<h2>Record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h2>
+<p>The Record service is used to manage Forward DNS entries that are tied to Domains.</p>
+<p>Records for a particular Domain can only be managed by the Member that owns that Domain.</p>
+<p><strong>Record Types</strong>
++————-+—-+
+| Record Type | ID |
++=============+====+
+| NS          | 1  |
++————-+—-+
+| A           | 2  |
++————-+—-+
+| AAAA        | 3  |
++————-+—-+
+| CNAME       | 4  |
++————-+—-+
+| MX          | 5  |
++————-+—-+
+| TXT         | 6  |
++————-+—-+
+| SRV         | 7  |
++————-+—-+
+| SPF         | 9  |
++————-+—-+
+| SSHFP       | 10 |
++————-+—-+
+| LOC         | 11 |
++————-+—-+
+| NAPTR       | 12 |
++————-+—-+</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to list all Records belonging to a Domain</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Record for a Domain</li>
+<li>This new Record is saved locally and announce to the Rage4 service</li>
+<li>The name and content of the Record vary depending on type (see Record Types table above)</li>
+<li>Depending on the type, parameters are checked against the Domain name and the IP Addresses owned by the User’s Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve the details of a single Record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a specific Record instance</li>
+<li>Updates are stored locally and announced to the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.record.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Record</li>
+<li>Records are deleted locally and from the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ptr-record">
+<h2>PTR Record<a class="headerlink" href="#ptr-record" title="Permalink to this headline">¶</a></h2>
+<p>The PTR Record service is used to manage PTR type DNS Records, also known as Reverse DNS records.</p>
+<p>The User is required to provide an IPAddress that the Record will target, and the content that should be stored with the Record.</p>
+<p>The service will select the correct reverse domain correctly based on the IP Address and will automatically populate the name field of the record which will be the reversed IP Address.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of PTR Records belonging to their Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a PTR Record</li>
+<li>The Record will be created both locally and on the Rage4 service</li>
+<li>The User’s Member must own the supplied IP Address for the method to be successful</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.read</span></code></dt>
+<dd><ul class="first last">
+<li>Thie method allows the User to read the details of a specified PTR Record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a specified PTR Record</li>
+<li>The Record will be updated both locally and on the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.recordptr.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a specified PTR Record</li>
+<li>The Record will be deleted both locally and on the Rage4 service</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="subnet">
+<h2>Subnet<a class="headerlink" href="#subnet" title="Permalink to this headline">¶</a></h2>
+<p>The IAAS Application allows for the modelling of a one level network setup, and for the storage of information about subnets and machines located at specific IP Addresses.</p>
+<p>Subnets can be created by ASN owners and managed by either ASN owners or their clients.</p>
+<p>Once a Subnet is created for a customer of the ASN owner, both the Customer and the ASN Owner can manage it.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to list all the Subnets associated with a particular Member</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Subnet for a particular Member</li>
+<li>Only administrators can use this method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve the information of a particular Subnet</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of a given Subnet</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete a Subnet from the list of a Member’s Subnets</li>
+<li>A Subnet can only be deleted if all its IP Addresses have already been deleted</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CloudCIX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

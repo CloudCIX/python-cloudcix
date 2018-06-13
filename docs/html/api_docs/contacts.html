@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Services &mdash; CloudCIX API Python Module 0.4.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CloudCIX API Python Module
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../client_reference.html">Client Method Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CloudCIX API Python Module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Services</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api_docs/contacts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>The Contacts Application is a CRM application that exposes a REST API to
+manage a shared address book between Users in the same Member</p>
+<p>Contacts can be used as a sales and marketing tool or just as a general
+purpose address book.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="activity">
+<h2>Activity<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the user to manage the various Activities</p>
+<p>An Activity is a sub category of an Activity Type</p>
+<p>Each Activity has only one ActivityType but an ActivityType may have many
+Activities</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of all Activities in your Member</li>
+<li>If no Activities exist, a default list will be created and
+returned</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.create</span></code></dt>
+<dd><ul class="first last">
+<li>Creates one new Activity record for the selected Activity
+Type</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns an Activity with all its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.update</span></code></dt>
+<dd><ul class="first last">
+<li>Updates an Activity record for the selected Activity Type</li>
+<li>The properties can only be updated if there are no Campaign
+records associated with the Activity</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Deletes an Activity record for the selected Activity Type</li>
+<li>An Activity can only be deleted if there are no Campaigns
+associated with it</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="activity-type">
+<h2>Activity Type<a class="headerlink" href="#activity-type" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to manage Activity Types</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of supported Activity Types</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new Activity Type record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns the selected Activity Type with all its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update the details of an Activity Type
+record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete one Activity Type record.</li>
+<li>An Activity Type can only be deleted if there are no
+Activities linked to the Activity Type</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="campaign">
+<h2>Campaign<a class="headerlink" href="#campaign" title="Permalink to this headline">¶</a></h2>
+<p>This service allows for management of Campaigns</p>
+<p>Campaigns are a many to many classification of Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of all Campaigns associated with the Member of
+the User calling this method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new Campaign record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns the details of one Campaign, including a list of
+Contacts belonging to that Campaign</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update a Campaign record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete one Campaign record, which includes
+the links between the Campaign and any Contacts.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="campaign-activity">
+<h2>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Permalink to this headline">¶</a></h2>
+<p>This service manages Campaign Activities related to a Campaign and an Activity</p>
+<p>The Campaign Activity allows Users to organize Activities into further
+subcategories</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.list</span></code></dt>
+<dd><ul class="first last">
+<li>Return a list of Activities associated with a Campaign</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create an Activity related to a Campaign
+and an Activity Type.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns the details of a relation between a Campaign and an
+Activity</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update the relation between one Campaign
+and one Activity</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_activity.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete an Activity related to a Campaign</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="campaign-contact">
+<h2>Campaign Contact<a class="headerlink" href="#campaign-contact" title="Permalink to this headline">¶</a></h2>
+<p>This service manages the many to many links between Campaigns and Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a relation between a Campaign and
+a Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update the details of a relation between
+a Campaign and a Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a relation between a Campaign and a
+Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>This service allows for management of Contacts</p>
+<p>Contacts are people that are potential customers</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of all Contacts associated with the Member of
+the User calling the method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new Contact record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns the details of a given Contact record including a
+list of Campaigns and Groups to which that Contact belongs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update a Contact record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a Contact record, including any
+links between that Contact and any Campaigns or Groups</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="group">
+<h2>Group<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h2>
+<p>This service allows for management of Groups</p>
+<p>Groups are many to many classifications of Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of all Groups belonging to the Member of the
+User calling the method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new Group record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a Group record with all its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update the details of a Group record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a Group record, including any links
+between that Group and any Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="group-contact">
+<h2>Group Contact<a class="headerlink" href="#group-contact" title="Permalink to this headline">¶</a></h2>
+<p>This service manages the many to many links between Groups and Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group_contact.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group_contact.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a relation between a Group and a
+Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group_contact.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a relation between a Group and a
+Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="opportunity">
+<h2>Opportunity<a class="headerlink" href="#opportunity" title="Permalink to this headline">¶</a></h2>
+<p>This service allows for the management of Opportunity records</p>
+<p>Opportunities are the estimated chances of getting into business with one more
+Contacts with its possible marketing value</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.list</span></code></dt>
+<dd><ul class="first last">
+<li>Return a list of all Opportunity records associated with the
+User calling the method</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new Opportunity record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.read</span></code></dt>
+<dd><ul class="first last">
+<li>Returns an Opportunity record along with all its details</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.update</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to update the details of an Opportunity
+record</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete an Opportunity record</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="opportunity-contact">
+<h2>Opportunity Contact<a class="headerlink" href="#opportunity-contact" title="Permalink to this headline">¶</a></h2>
+<p>This service manages the many to many links between Opportunities and Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_contact.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_contact.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a relation between an Opportunity
+and a Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_contact.delete</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to delete a relation between an Opportunity
+and a Contact</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="opportunity-history">
+<h2>Opportunity History<a class="headerlink" href="#opportunity-history" title="Permalink to this headline">¶</a></h2>
+<p>This service allows Users to log updates on an Opportunity, as well as sending
+emails to the associated Contacts</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_history.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_history.list</span></code></dt>
+<dd><ul class="first last">
+<li>Returns a list of history log entries for an Opportunity</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_history.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the User to create a new history log for an
+Opportunity</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CloudCIX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
