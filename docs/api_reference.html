@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; CloudCIX API Python Module 0.7.3 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Module 0.7.4 documentation</title>
   
 
   
@@ -251,7 +251,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#currency">Currency</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#department">Department</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language">Language</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#login">Login</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#member">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#member-link">Member Link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#notification">Notification</a></li>
@@ -260,6 +259,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#team">Team</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#territory">Territory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#timezone">Timezone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#token">Token</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transaction-type">Transaction Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#user">User</a></li>
 </ul>
@@ -5252,50 +5252,6 @@ Reply-To will be the User’s email unless it is set.</li>
 </dd>
 </dl>
 </div>
-<div class="section" id="login">
-<h4>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h4>
-<p>This service allows the User to validate credentials, or generate a token used to access the rest of the API.</p>
-<p>If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
-If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key</p>
-<p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.login.post</span></code></p>
-<dl class="docutils">
-<dt>Necessary Data</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">email</span></code></dt>
-<dd><ul class="first last">
-<li>The email of the user</li>
-<li><strong>Required</strong></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt>
-<dd><ul class="first last">
-<li>The password of the user</li>
-<li><strong>Required</strong></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">api_key</span></code></dt>
-<dd><ul class="first last">
-<li>The api_key of the member the user wants a token for</li>
-<li><strong>Required to generate a token, not to validate auth</strong></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The usual <code class="docutils literal notranslate"><span class="pre">token</span></code> parameter is not required for this method.</p>
-</div>
-</div>
 <div class="section" id="member">
 <h4>Member<a class="headerlink" href="#member" title="Permalink to this headline">¶</a></h4>
 <p>A Member can be a company, brand, multinational corporation or a sole trader, but a Member is always a business</p>
@@ -5617,6 +5573,65 @@ If an api_key is supplied alongside the email and password, if the email and pas
 </ul>
 </dd>
 </dl>
+</div>
+<div class="section" id="token">
+<h4>Token<a class="headerlink" href="#token" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to validate credentials, or generate a token used to access the rest of the API.</p>
+<p>If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
+If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key</p>
+<p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token.create</span></code></dt>
+<dd><ul class="first last">
+<li>Allows the user to create an authentication token</li>
+<li><dl class="first docutils">
+<dt>Necessary Data</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">email</span></code></dt>
+<dd><ul class="first last">
+<li>The email of the user</li>
+<li><strong>Required</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt>
+<dd><ul class="first last">
+<li>The password of the user</li>
+<li><strong>Required</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">api_key</span></code></dt>
+<dd><ul class="first last">
+<li>The api_key of the member the user wants a token for</li>
+<li><strong>Required to generate a token, not to validate auth</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The usual <code class="docutils literal notranslate"><span class="pre">token</span></code> parameter is not required for these methods.</p>
+</div>
 </div>
 <div class="section" id="transaction-type">
 <h4>Transaction Type<a class="headerlink" href="#transaction-type" title="Permalink to this headline">¶</a></h4>
@@ -7586,7 +7601,7 @@ Student</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.7.3',
+            VERSION:'0.7.4',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
