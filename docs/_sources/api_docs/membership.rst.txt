@@ -124,6 +124,28 @@ Available Methods
     - ``cloudcix.api.Membership.language.read``
         - Allows the User to get the details of specific Language
 
+Login
+^^^^^
+This service allows the User to validate credentials, or generate a token used to access the rest of the API.
+
+If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
+If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key
+
+**Usage**: ``cloudcix.api.Membership.login.post``
+
+Necessary Data
+    - ``email``
+        - The email of the user
+        - **Required**
+    - ``password``
+        - The password of the user
+        - **Required**
+    - ``api_key``
+        - The api_key of the member the user wants a token for
+        - **Required to generate a token, not to validate auth**
+
+.. note:: The usual ``token`` parameter is not required for this method.
+
 Member
 ^^^^^^
 A Member can be a company, brand, multinational corporation or a sole trader, but a Member is always a business
