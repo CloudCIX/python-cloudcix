@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; CloudCIX API Python Module 0.7.4 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Module 0.7.5 documentation</title>
   
 
   
@@ -225,12 +225,6 @@ exist.</p>
 <li>Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_AUTH_URL</span></code><ul>
-<li>The base url of the auth server</li>
-<li>Usually <code class="docutils literal notranslate"><span class="pre">https://keystone.cloudcix.com:5000/v3/</span></code> but could
-change over time</li>
-</ul>
-</li>
 <li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code><ul>
 <li>The email of the account that you signed up with</li>
 </ul>
@@ -240,15 +234,14 @@ change over time</li>
 </ul>
 </li>
 <li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code><ul>
-<li>The API key associated with your CloudCIX Member (see
-<strong>Prerequisites</strong>)</li>
+<li>The API key associated with your CloudCIX Member (see <strong>Prerequisites</strong>)</li>
 </ul>
 </li>
 </ul>
 <p>These variables can be declared in a settings file, as follows</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># In main python script</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;CLOUDCIX_SETTINGS_MODULE&quot;</span><span class="p">,</span> <span class="s2">&quot;my_project.my_settings&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;CLOUDCIX_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;my_project.my_settings&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># In my_project/my_settings.py</span>
@@ -256,18 +249,16 @@ change over time</li>
 <span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;EMAIL&#39;</span>               <span class="c1"># CloudCIX login</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;PASSWORD&#39;</span>            <span class="c1"># CloudCIX password</span>
 <span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;NUMBER/CHARACTER STRING&#39;</span>  <span class="c1"># CloudCIX api key</span>
-<span class="n">CLOUDCIX_AUTH_URL</span> <span class="o">=</span> <span class="s1">&#39;https://keystone.cloudcix.com:5000/v3&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="small-example">
 <h2>Small Example<a class="headerlink" href="#small-example" title="Permalink to this headline">¶</a></h2>
-<p><strong>Pull a list of Countries from the CloudCIX API</strong> <em>Assume the above
-settings file is available</em></p>
+<p><strong>Pull a list of Countries from the CloudCIX API</strong> <em>Assume the above settings file is available</em></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;CLOUDCIX_SETTINGS_MODULE&quot;</span><span class="p">,</span> <span class="s2">&quot;my_project.my_settings&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;CLOUDCIX_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;my_project.my_settings&#39;</span><span class="p">)</span>
 
 <span class="c1"># NOTE: environ variables must be set before importing cloudcix</span>
 
@@ -325,7 +316,7 @@ settings file is available</em></p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.7.4',
+            VERSION:'0.7.5',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
