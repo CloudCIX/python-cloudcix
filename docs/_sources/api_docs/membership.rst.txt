@@ -57,6 +57,8 @@ Available Methods
         - Allows the User to get the details of an Address Link
     - ``cloudcix.api.Membership.address_link.update``
         - Allows the User to update the details of an Address Link record
+        
+.. note:: Based on how the URLs for ``read`` and ``update`` are structured, it is required you pass ``pk=None`` to both of these methods
 
 Country
 ^^^^^^^
