@@ -11,9 +11,14 @@ CloudCIX API Python Module Documentation
    :caption: Contents:
 
    readme
-   license
-   client_reference
    api_reference
+   auth
+   client
+   conf
+   examples
+   exceptions
+   utils
+   license
    changelog
 
 

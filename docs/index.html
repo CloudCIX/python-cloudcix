@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CloudCIX API Python Module Documentation &mdash; CloudCIX API Python Module 0.7.7 documentation</title>
+  <title>CloudCIX API Python Module Documentation &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -47,7 +47,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> CloudCIX API Python Module
+            <a href="#" class="icon icon-home"> CloudCIX API Python Library
           
 
           
@@ -57,7 +57,7 @@
             
             
               <div class="version">
-                0.7
+                0.7.8
               </div>
             
           
@@ -84,9 +84,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client_reference.html">Client Method Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -102,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">CloudCIX API Python Module</a>
+          <a href="#">CloudCIX API Python Library</a>
         
       </nav>
 
@@ -159,12 +164,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="readme.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="readme.html#small-example">Small Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#small-example-retrieve-a-list-of-countries-from-the-api">Small Example - Retrieve a list of Countries from the API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme.html#more-examples">More Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client_reference.html">Client Method Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api_reference.html#app-manager">App Manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_reference.html#asset">Asset</a></li>
@@ -182,37 +186,48 @@
 <li class="toctree-l2"><a class="reference internal" href="api_reference.html#training">Training</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#get-a-list-of-countries">1. Get a list of Countries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">0.7.7</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">0.7.6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">0.7.5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id4">0.7.4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id5">0.7.3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">0.7.2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id7">0.7.1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id8">0.7.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">0.5.6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id10">0.5.5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id11">0.5.4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id12">0.5.3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">0.5.2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id14">0.5.1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id15">0.5.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id16">0.4.14</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id17">0.4.13</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id18">0.4.12</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id19">0.4.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id20">0.4.10</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id21">0.4.9</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id22">0.4.8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id23">0.4.7</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id24">0.4.6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id25">0.4.5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id26">0.4.4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id27">0.4.3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id28">0.4.2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id29">0.4.1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id30">0.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">0.7.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">0.7.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">0.7.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id4">0.7.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id5">0.7.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">0.7.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id7">0.7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id8">0.7.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id9">0.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id10">0.5.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id11">0.5.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id12">0.5.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">0.5.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id14">0.5.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id15">0.5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id16">0.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id17">0.4.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id18">0.4.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id19">0.4.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id20">0.4.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id21">0.4.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id22">0.4.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id23">0.4.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id24">0.4.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id25">0.4.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id26">0.4.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id27">0.4.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id28">0.4.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id29">0.4.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id30">0.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id31">0.4.0</a></li>
 </ul>
 </li>
 </ul>

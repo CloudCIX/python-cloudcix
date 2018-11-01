@@ -1,0 +1,9 @@
+Auth
+====
+
+.. automodule:: cloudcix.auth
+
+.. automethod:: cloudcix.auth.get_admin_token
+
+.. autoclass:: cloudcix.auth.TokenAuth
+   :members: __init__, __call__, __eq__

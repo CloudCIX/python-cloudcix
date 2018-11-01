@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>License &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
+  <title>Conf &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="Utils" href="utils.html" /> 
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Client" href="client.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -88,11 +88,11 @@
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -139,13 +139,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>License</li>
+      <li>Conf</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/license.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/conf.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,21 +158,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>Copyright 2015 CloudCIX</p>
-<blockquote>
-<div><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<blockquote>
-<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
-</div></blockquote>
+  <div class="section" id="module-cloudcix.conf">
+<span id="conf"></span><h1>Conf<a class="headerlink" href="#module-cloudcix.conf" title="Permalink to this headline">¶</a></h1>
+<p>This file contains an implementation of the CloudCIX API configurations module</p>
+<p>This conf object lazyly loads the <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_SETTINGS_MODULE</span></code>, and falls back on the
+<code class="docutils literal notranslate"><span class="pre">DJANGO_SETTINGS_MODULE</span></code> for Django apps</p>
+<p>Example:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cloudcix.conf</span> <span class="k">import</span> <span class="n">settings</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">CLOUDCIX_API_URL</span>
+</pre></div>
+</div>
+<p>Any variables in the file specified that start with <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_</span></code> will be loaded into this module and accessible in a
+similar way, so it is possible to store more than just the required settings if necessary.</p>
 </div>
 
 

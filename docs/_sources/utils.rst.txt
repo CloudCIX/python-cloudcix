@@ -1,0 +1,10 @@
+Utils
+=====
+
+.. automodule:: cloudcix.utils
+
+.. autoclass:: cloudcix.utils.JSONEncoder
+   :members: default
+
+.. autoclass:: cloudcix.utils.JSONDecoder
+   :members: __init__, parse

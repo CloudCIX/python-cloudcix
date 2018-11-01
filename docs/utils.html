@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>License &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
+  <title>Utils &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="Utils" href="utils.html" /> 
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Exceptions" href="exceptions.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,8 +91,8 @@
 <li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -139,13 +139,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>License</li>
+      <li>Utils</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/license.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/utils.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,21 +158,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>Copyright 2015 CloudCIX</p>
-<blockquote>
-<div><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<blockquote>
-<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
-</div></blockquote>
+  <div class="section" id="module-cloudcix.utils">
+<span id="utils"></span><h1>Utils<a class="headerlink" href="#module-cloudcix.utils" title="Permalink to this headline">¶</a></h1>
+<p>This module implements the CloudCIX API JSON Encodes and Decoders, along with other utilities to improve the quality of
+life for anyone using the CloudCIX library.</p>
+<dl class="class">
+<dt id="cloudcix.utils.JSONEncoder">
+<em class="property">class </em><code class="descclassname">cloudcix.utils.</code><code class="descname">JSONEncoder</code><span class="sig-paren">(</span><em>*</em>, <em>skipkeys=False</em>, <em>ensure_ascii=True</em>, <em>check_circular=True</em>, <em>allow_nan=True</em>, <em>sort_keys=False</em>, <em>indent=None</em>, <em>separators=None</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSONEncoder that can encode date/time/timedelta, decimal and other python objects into JSON.</p>
+<p>Inspired by Django Rest Framework</p>
+<dl class="method">
+<dt id="cloudcix.utils.JSONEncoder.default">
+<code class="descname">default</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the passed object into its JSON representation, usually by converting them into a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>object</em>) – The object to be converted into JSON</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cloudcix.utils.JSONDecoder">
+<em class="property">class </em><code class="descclassname">cloudcix.utils.</code><code class="descname">JSONDecoder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSONDecoder that can decode date/time/timedelta, decimal and other strings into python objects.</p>
+<p>Inspired by Django Rest Framework.</p>
+<dl class="method">
+<dt id="cloudcix.utils.JSONDecoder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an instance of the Decoder.</p>
+<p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">json.JSONDecoder</span></code> for the constructor parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.utils.JSONDecoder.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a JSON value into its python equivalent.</p>
+<p>If the value is an iterable, this method will be called recursively on every item contained within the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>Any</em>) – The JSON object to be decoded into Python.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

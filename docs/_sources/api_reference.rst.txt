@@ -9,7 +9,7 @@ More detailed usage information will be available under each of the above terms
 
 To see even more details about the API you can visit our `HTTP API Reference <https://docs.cloudcix.com/>`_
 
-To see more information about the various methods (list, read, etc.), see the :doc:`client_reference` page
+To see more information about the various methods (list, read, etc.), see the :doc:`client` page
 
 For examples of a call for each of these methods, see the :doc:`examples` page
 

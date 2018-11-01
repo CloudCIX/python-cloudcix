@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>License &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
+  <title>Auth &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="Utils" href="utils.html" /> 
+    <link rel="next" title="Client" href="client.html" />
+    <link rel="prev" title="API Reference" href="api_reference.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,13 +86,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Auth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -139,13 +139,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>License</li>
+      <li>Auth</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/license.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/auth.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,21 +158,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>Copyright 2015 CloudCIX</p>
-<blockquote>
-<div><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<blockquote>
-<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
-</div></blockquote>
+  <div class="section" id="module-cloudcix.auth">
+<span id="auth"></span><h1>Auth<a class="headerlink" href="#module-cloudcix.auth" title="Permalink to this headline">¶</a></h1>
+<p>This file implements features related to Authentication for the CloudCIX API.</p>
+<dl class="method">
+<dt id="cloudcix.auth.get_admin_token">
+<code class="descclassname">auth.</code><code class="descname">get_admin_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_admin_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates an <cite>admin</cite> token using the credentials specified in the settings module
+(<code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>, and <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cloudcix.auth.TokenAuth">
+<em class="property">class </em><code class="descclassname">cloudcix.auth.</code><code class="descname">TokenAuth</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper around <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.auth.AuthBase</span></code> that is designed to put a token into the correct header for use
+with our API.</p>
+<dl class="method">
+<dt id="cloudcix.auth.TokenAuth.__call__">
+<code class="descname">__call__</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to set the correct header in the request when the request is about to be sent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<em>requests.Request</em>) – The request that this TokenAuth instance has been used for.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.auth.TokenAuth.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares two instances of the TokenAuth class to check if they have the same token.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#cloudcix.auth.TokenAuth" title="cloudcix.auth.TokenAuth"><em>cloudcix.auth.TokenAuth</em></a>) – Another instance of TokenAuth that will be compared against this one.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudcix.auth.TokenAuth.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an instance of the TokenAuth class with a specified token</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>token</strong> (<em>str</em>) – The token that will be used to authenticate the request.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

@@ -1,0 +1,9 @@
+Exceptions
+==========
+
+.. automodule:: cloudcix.exceptions
+
+.. autoclass:: cloudcix.exceptions.ImproperlyConfiguredException
+
+.. autoclass:: cloudcix.exceptions.MissingClientKeywordArgumentException
+   :members: __init__

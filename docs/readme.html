@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; CloudCIX API Python Module 0.7.7 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="License" href="license.html" />
+    <link rel="next" title="API Reference" href="api_reference.html" />
     <link rel="prev" title="CloudCIX API Python Module Documentation" href="index.html" /> 
 
   
@@ -48,7 +48,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> CloudCIX API Python Module
+            <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
           
 
           
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.7
+                0.7.8
               </div>
             
           
@@ -91,13 +91,19 @@
 <li class="toctree-l3"><a class="reference internal" href="#required-settings">Required settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#small-example">Small Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#small-example-retrieve-a-list-of-countries-from-the-api">Small Example - Retrieve a list of Countries from the API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#more-examples">More Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client_reference.html">Client Method Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -113,7 +119,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">CloudCIX API Python Module</a>
+          <a href="index.html">CloudCIX API Python Library</a>
         
       </nav>
 
@@ -165,10 +171,8 @@
             
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> is a Python client for the CloudCIX REST API for rapidly
-building secure, scalable CloudCIX applications.</p>
-<p>For more information about CloudCIX, see
-<a class="reference external" href="http://www.cix.ie/#/services/saas">here</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> is a Python client for the CloudCIX REST API for rapidly building secure, scalable CloudCIX applications.</p>
+<p>For more information about CloudCIX, see <a class="reference external" href="http://www.cix.ie/#/services/saas">here</a>.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prerequisites">
@@ -179,16 +183,13 @@ building secure, scalable CloudCIX applications.</p>
 </ul>
 </li>
 <li>Retrieve your API Key<ul>
-<li>Under the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Membership</span></code> tab in the sidebar, click on
-<code class="docutils literal notranslate"><span class="pre">Member</span> <span class="pre">Details</span></code></li>
+<li>Under the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Membership</span></code> tab in the sidebar, click on <code class="docutils literal notranslate"><span class="pre">Member</span> <span class="pre">Details</span></code></li>
 <li>The <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Key</span></code> should be available at the top of the form</li>
 </ul>
 </li>
 <li>Ensure that you have both Python and pip installed<ul>
-<li>As of right now, the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module is available at different
-versions for Python2 and Python3</li>
-<li>We recommend you use Python3 and the latest version of the
-<code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module</li>
+<li>As of right now, the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module is available at different versions for Python2 and Python3</li>
+<li>We recommend you use Python3 and the latest version of the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module</li>
 <li><a class="reference external" href="http://docs.python-guide.org/en/latest/starting/installation/">Python</a></li>
 <li><a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip</a></li>
 </ul>
@@ -198,45 +199,42 @@ versions for Python2 and Python3</li>
 <div class="section" id="installing-the-cloudcix-library">
 <h3>Installing the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> library<a class="headerlink" href="#installing-the-cloudcix-library" title="Permalink to this headline">¶</a></h3>
 <p>The cloudcix library is installed using the <code class="docutils literal notranslate"><span class="pre">pip</span></code> module.</p>
-<p>Depending on your version of Python, you need to install different
-versions of <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code></p>
+<p>Depending on your version of Python, you need to install different versions of <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code></p>
 <ul class="simple">
-<li>Python3<ul>
+<li><dl class="first docutils">
+<dt>Python3</dt>
+<dd><ul class="first last">
 <li><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">cloudcix</span></code></li>
 </ul>
+</dd>
+</dl>
 </li>
-<li>Python2<ul>
+<li><dl class="first docutils">
+<dt>Python2</dt>
+<dd><ul class="first last">
 <li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">'cloudcix&lt;0.3'</span></code></li>
 </ul>
+</dd>
+</dl>
 </li>
 </ul>
-<p>The 0.2 releases are the last to support Python2. If you still use
-Python2 we recommend you upgrade to Python3 as support will be dropped
-for these versions in time.</p>
+<p>The 0.2 releases are the last to support Python2.
+If you still use Python2 we recommend you upgrade to Python3 as support will be dropped for these versions in time.</p>
 </div>
 <div class="section" id="required-settings">
 <h3>Required settings<a class="headerlink" href="#required-settings" title="Permalink to this headline">¶</a></h3>
-<p>In order to run a project, the module requires some setting variables to
-exist.</p>
+<p>In order to run a project, the module requires some settings to exist.</p>
 <p>The variables required are as follows:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code><ul>
-<li>The base url of the api</li>
-<li>Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</li>
-</ul>
-</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code><ul>
-<li>The email of the account that you signed up with</li>
-</ul>
-</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code><ul>
-<li>The password associated with your CloudCIX account</li>
-</ul>
-</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code><ul>
-<li>The API key associated with your CloudCIX Member (see <strong>Prerequisites</strong>)</li>
-</ul>
-</li>
+<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
+- The base url of the api
+- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</li>
+<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>
+- The email of the account that you signed up with</li>
+<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>
+- The password associated with your CloudCIX account</li>
+<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>
+- The API key associated with your CloudCIX Member (see <strong>Prerequisites</strong>)</li>
 </ul>
 <p>These variables can be declared in a settings file, as follows</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># In main python script</span>
@@ -253,10 +251,11 @@ exist.</p>
 </div>
 </div>
 </div>
-<div class="section" id="small-example">
-<h2>Small Example<a class="headerlink" href="#small-example" title="Permalink to this headline">¶</a></h2>
-<p><strong>Pull a list of Countries from the CloudCIX API</strong> <em>Assume the above settings file is available</em></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="section" id="small-example-retrieve-a-list-of-countries-from-the-api">
+<h2>Small Example - Retrieve a list of Countries from the API<a class="headerlink" href="#small-example-retrieve-a-list-of-countries-from-the-api" title="Permalink to this headline">¶</a></h2>
+<p><em>Assuming the above settings file is available</em></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># python3 example</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;CLOUDCIX_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;my_project.my_settings&#39;</span><span class="p">)</span>
 
@@ -265,21 +264,25 @@ exist.</p>
 <span class="kn">from</span> <span class="nn">cloudcix</span> <span class="k">import</span> <span class="n">api</span>
 
 <span class="c1"># Get a util function to get a session using the credentials in your settings file</span>
-<span class="kn">from</span> <span class="nn">cloudcix.utils</span> <span class="k">import</span> <span class="n">get_admin_session</span>
+<span class="kn">from</span> <span class="nn">cloudcix.auth</span> <span class="k">import</span> <span class="n">get_admin_token</span>
 
 <span class="c1"># Get your authentication token for your login</span>
-<span class="n">token</span> <span class="o">=</span> <span class="n">get_admin_session</span><span class="p">()</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">get_admin_token</span><span class="p">()</span>
 <span class="c1"># Get a list of the countries from the Membership Application passing your token for authentication</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
 
 <span class="c1"># Print out the json of the response data</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="more-examples">
 <h2>More Examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h2>
 <p>For more examples, see the examples file</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://cloudcix.github.io/python-cloudcix/examples.html">here</a> for examples on how to use this library.</p>
 </div>
 </div>
 

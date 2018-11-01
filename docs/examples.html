@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>License &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
+  <title>Examples &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="Utils" href="utils.html" /> 
+    <link rel="next" title="Exceptions" href="exceptions.html" />
+    <link rel="prev" title="Conf" href="conf.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -89,10 +89,13 @@
 <li class="toctree-l1"><a class="reference internal" href="auth.html">Auth</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-a-list-of-countries">1. Get a list of Countries</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -139,13 +142,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>License</li>
+      <li>Examples</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/license.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,21 +161,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>Copyright 2015 CloudCIX</p>
-<blockquote>
-<div><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<blockquote>
-<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
-</div></blockquote>
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>All examples in this page assume you have the following settings file correctly set up;</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com&#39;</span>
+<span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;me@gmail.com&#39;</span>
+<span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;my_password&#39;</span>
+<span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;abcde...&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="get-a-list-of-countries">
+<h2>1. Get a list of Countries<a class="headerlink" href="#get-a-list-of-countries" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># python3 example</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;CLOUDCIX_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;settings&#39;</span><span class="p">)</span>
+
+<span class="c1"># NOTE: environ variables must be set before importing cloudcix</span>
+
+<span class="kn">from</span> <span class="nn">cloudcix</span> <span class="k">import</span> <span class="n">api</span>
+
+<span class="c1"># Get a util function to get a session using the credentials in your settings file</span>
+<span class="kn">from</span> <span class="nn">cloudcix.auth</span> <span class="k">import</span> <span class="n">get_admin_token</span>
+
+<span class="c1"># Get your authentication token for your login</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">get_admin_token</span><span class="p">()</span>
+<span class="c1"># Get a list of the countries from the Membership Application passing your token for authentication</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
+
+<span class="c1"># Print out the json of the response data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
