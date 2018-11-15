@@ -98,6 +98,17 @@ Available Methods
         - This update is reflected both locally and on the Rage4 service
     - ``cloudcix.api.IAAS.domain.delete``
         - This method allows the User to delete a specific Domain record from both the IAAS Application and the Rage4 service
+IKE
+^^^^
+This service provides access to a list of IKE security options that we can currently provide for VPNs
+
+**Basic Usage**: ``cloudcix.api.IAAS.ike.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.ike.list``
+        - This method allows the User to retrieve a list of supported IKEs
+    - ``cloudcix.api.IAAS.ike.read``
+        - This method allows the User to get the details of a specific IKE
 
 Image
 ^^^^^
@@ -149,6 +160,18 @@ Available Methods
         - If none of the passed parameters are valid, the method will return HTTP 400 - Bad Request
         - If one or more parameters are valid, the method will respond with HTTP 200 - Success
         - Each individual ``ipAddress`` and ``addressRange`` are returned with a ``valid`` flag, stating if they were valid or not.
+
+IpSec
+^^^^^
+This service provides access to a list of IpSec security options that we can currently provide for VPNs
+
+**Basic Usage**: ``cloudcix.api.IAAS.ipsec.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.ipsec.list``
+        - This method allows the User to retrieve a list of supported IpSecs
+    - ``cloudcix.api.IAAS.ipsec.read``
+        - This method allows the User to get the details of a specific IpSec
 
 Record
 ^^^^^^

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.7.8 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.7.9 documentation</title>
   
 
   
@@ -56,7 +56,7 @@
             
             
               <div class="version">
-                0.7.8
+                0.7.9
               </div>
             
           
@@ -364,6 +364,33 @@
 </dd>
 </dl>
 </div>
+<div class="section" id="ike">
+<h2>IKE<a class="headerlink" href="#ike" title="Permalink to this headline">¶</a></h2>
+<p>This service provides access to a list of IKE security options that we can currently provide for VPNs</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ike.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ike.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of supported IKEs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ike.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the details of a specific IKE</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="image">
 <h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
 <p>This service provides access to a list of Images or Operating Systems that we can currently provide in deployed VMs</p>
@@ -461,6 +488,33 @@
 <li>If none of the passed parameters are valid, the method will return HTTP 400 - Bad Request</li>
 <li>If one or more parameters are valid, the method will respond with HTTP 200 - Success</li>
 <li>Each individual <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> and <code class="docutils literal notranslate"><span class="pre">addressRange</span></code> are returned with a <code class="docutils literal notranslate"><span class="pre">valid</span></code> flag, stating if they were valid or not.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="ipsec">
+<h2>IpSec<a class="headerlink" href="#ipsec" title="Permalink to this headline">¶</a></h2>
+<p>This service provides access to a list of IpSec security options that we can currently provide for VPNs</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipsec.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipsec.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to retrieve a list of supported IpSecs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipsec.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get the details of a specific IpSec</li>
 </ul>
 </dd>
 </dl>
@@ -723,7 +777,6 @@
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
   
