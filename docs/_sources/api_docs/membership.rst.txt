@@ -57,7 +57,7 @@ Available Methods
         - Allows the User to get the details of an Address Link
     - ``cloudcix.api.Membership.address_link.update``
         - Allows the User to update the details of an Address Link record
-        
+
 .. note:: Based on how the URLs for ``read`` and ``update`` are structured, it is required you pass ``pk=None`` to both of these methods
 
 Country
@@ -264,19 +264,6 @@ Available Methods
     - ``cloudcix.api.Membership.territory.delete``
         - Allows the User to delete a given Territory
         - A Territory can only be deleted if there are no Addresses assigned to it
-
-Timezone
-^^^^^^^^
-This service contains methods to get Timezone information from Timezones all around the world
-
-**Basic Usage**: ``cloudcix.api.Membership.timezone.<method>``
-
-Available Methods
-    - ``cloudcix.api.Membership.timezone.list``
-        - Allows the User to get a full list of all Timezones available in the world
-    - ``cloudcix.api.Membership.timezone.read``
-        - Allows the User to get the details of a Timezone
-        - In order to get a Timezone, the User must specify its zone, i.e. "Europe/Dublin"
 
 Token
 ^^^^^
