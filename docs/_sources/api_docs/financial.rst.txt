@@ -812,10 +812,10 @@ EU law requires that, where goods or services are procured with the EU, VAT must
 
 For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES
 
-**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_VIES_purchases.<method>``
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_vies_purchases.<method>``
 
 Available Methods
-    - ``cloudcix.api.Financial.nominal_ledger_VIES_purchases.list``
+    - ``cloudcix.api.Financial.nominal_ledger_vies_purchases.list``
         - This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Purchases for each Tax Rate
 
 Nominal Ledger VIES Sales
@@ -828,10 +828,10 @@ EU law requires that, where goods or services are procured with the EU, VAT must
 
 For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES
 
-**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_VIES_sales.<method>``
+**Basic Usage**: ``cloudcix.api.Financial.nominal_ledger_vies_sales.<method>``
 
 Available Methods
-    - ``cloudcix.api.Financial.nominal_ledger_VIES_sales.list``
+    - ``cloudcix.api.Financial.nominal_ledger_vies_sales.list``
         - This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Sales for each Tax Rate
 
 Payment Method
