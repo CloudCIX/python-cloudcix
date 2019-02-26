@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; CloudCIX API Python Library 0.7.17 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.7.18 documentation</title>
   
 
   
@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Auth" href="auth.html" />
     <link rel="prev" title="Overview" href="readme.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -58,7 +60,7 @@
             
             
               <div class="version">
-                0.7.17
+                0.7.18
               </div>
             
           
@@ -303,6 +305,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scm">SCM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id18">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agreed-price">Agreed Price</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin">Bin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin-sku">Bin SKU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#brand">Brand</a></li>
@@ -6666,6 +6669,70 @@ distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <div class="section" id="id18">
 <h3>Services<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="agreed-price">
+<h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to manage the agreed prices for SKUs between
+addresses they are linked to</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to get a list of Agreed Prices.</li>
+<li>Users acting as Global can get any Agreed Price under any of
+their Addresses.</li>
+<li>Users acting as Local can only get Agreed Prices under their
+active Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Agreed Price between
+its active Address and an address they are linked to for a SKU.</li>
+<li>The Agreed Price must be unique for a SKU betwwen the two
+addresses</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows a User to get the details of a specific
+Agreed Price for their active address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of an Agreed
+Price</li>
+<li>Only Agreed Prices under the User’s active Address can be updated</li>
+<li>The name must be unique per Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.delete</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to delete an Agreed Price</li>
+<li>Only Agreed Prices under the User’s active Address can be deleted.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="bin">
 <h4>Bin<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the Users to manage their Bins. A Bin is a classification
@@ -7706,26 +7773,16 @@ Student</li>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

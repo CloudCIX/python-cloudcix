@@ -6,6 +6,37 @@ distribution, service and return of inventory
 Services
 --------
 
+Agreed Price
+^^^^^^^^^^^^^
+This service allows the User to manage the agreed prices for SKUs between
+addresses they are linked to
+
+**Basic Usage**: ``cloudcix.api.SCM.agreed_price.<method>``
+
+Available Methods
+    - ``cloudcix.api.SCM.agreed_price.list``
+        - This method allows a User to get a list of Agreed Prices.
+        - Users acting as Global can get any Agreed Price under any of 
+          their Addresses.
+        - Users acting as Local can only get Agreed Prices under their
+          active Address
+    - ``cloudcix.api.SCM.agreed_price.create``
+        - This method allows the User to create a new Agreed Price between 
+          its active Address and an address they are linked to for a SKU.
+        - The Agreed Price must be unique for a SKU betwwen the two
+          addresses
+    - ``cloudcix.api.SCM.agreed_price.read``
+        - This method allows a User to get the details of a specific
+          Agreed Price for their active address
+    - ``cloudcix.api.SCM.agreed_price.update``
+        - This method allows the User to update the details of an Agreed
+          Price
+        - Only Agreed Prices under the User's active Address can be updated
+        - The name must be unique per Address
+    - ``cloudcix.api.SCM.agreed_price.delete``
+        - This method allows the User to delete an Agreed Price
+        - Only Agreed Prices under the User's active Address can be deleted.
+
 Bin
 ^^^
 This service allows the Users to manage their Bins. A Bin is a classification
