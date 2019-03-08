@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.7.18 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.7.19 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.7.18
+                0.7.19
               </div>
             
           
@@ -613,6 +613,55 @@ to be read</li>
 <dd><ul class="first last">
 <li>This method allows the User to get a list of the supported
 field types for the Return Question answers</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sales-order">
+<h2>Sales Order<a class="headerlink" href="#sales-order" title="Permalink to this headline">¶</a></h2>
+<p>A Sales Order is a record of an order of stock elements by a certain Address.</p>
+<p>Sales Orders can be used to create Invoices, and maintain records of price and
+quantities of SKUs that were ordered.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sales_order.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available Methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sales_order.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Sales Orders belonging to
+their acting Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sales_order.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Sales Order for a
+specified address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sales_order.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read the details of specified Sales
+Order</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sales_order.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details of the lines of a
+Sales Order</li>
 </ul>
 </dd>
 </dl>

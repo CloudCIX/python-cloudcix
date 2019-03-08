@@ -229,6 +229,29 @@ Available Methods
     - ``cloudcix.api.SCM.return_question_field_type.list``
         - This method allows the User to get a list of the supported
           field types for the Return Question answers
+          
+Sales Order
+^^^^^^^^^^^
+A Sales Order is a record of an order of stock elements by a certain Address.
+
+Sales Orders can be used to create Invoices, and maintain records of price and
+quantities of SKUs that were ordered.
+
+**Basic Usage**: ``cloudcix.api.SCM.sales_order.<method>``
+
+Available Methods
+    - ``cloudcix.api.SCM.sales_order.list``
+        - This method allows the User to get a list of Sales Orders belonging to
+          their acting Address
+    - ``cloudcix.api.SCM.sales_order.create``
+        - This method allows the User to create a new Sales Order for a
+          specified address
+    - ``cloudcix.api.SCM.sales_order.read``
+        - This method allows the User to read the details of specified Sales
+          Order
+    - ``cloudcix.api.SCM.sales_order.update``
+        - This method allows the User to update the details of the lines of a
+          Sales Order
 
 Service Group
 ^^^^^^^^^^^^^
