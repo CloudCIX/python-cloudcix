@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; CloudCIX API Python Library 0.7.19 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.7.19
+                0.7.20
               </div>
             
           
@@ -312,6 +312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#critical-bom">Critical BOM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#critical-bom-for-member">Critical BOM (For Member)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#manufactured-item">Manufactured Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#purchase-order">Purchase Order</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#return-question">Return Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#return-question-field-type">Return Question Field Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sales-order">Sales Order</a></li>
@@ -7040,6 +7041,55 @@ create a Manufactured Item.</li>
 </dd>
 </dl>
 </li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="purchase-order">
+<h4>Purchase Order<a class="headerlink" href="#purchase-order" title="Permalink to this headline">¶</a></h4>
+<p>This is a record of a request made to another Address for stock elements.</p>
+<p>Purchase Orders can be used to maintain records of stock quantities of SKUs
+that were ordered.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.purchase_order.&lt;method&gt;</span></code></p>
+<dl class="docutils">
+<dt>Available methods</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.purchase_order.list</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to get a list of Purchase Orders
+belonging to their acting Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.purchase_order.create</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to create a new Purchase Order for a
+specified Address</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.purchase_order.read</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to read the details and the lines of a
+specified Purchase Order</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.purchase_order.update</span></code></dt>
+<dd><ul class="first last">
+<li>This method allows the User to update the details and the lines of a
+specified Purchase Order</li>
 </ul>
 </dd>
 </dl>

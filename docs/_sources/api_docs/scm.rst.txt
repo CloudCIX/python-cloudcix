@@ -192,6 +192,29 @@ Available Methods
             - The User's Member is the owner of the associated SKU
             - The Manufactured Item hasn't been used in any transaction
 
+Purchase Order
+^^^^^^^^^^^^^^
+This is a record of a request made to another Address for stock elements.
+
+Purchase Orders can be used to maintain records of stock quantities of SKUs
+that were ordered.
+
+**Basic Usage**: ``cloudcix.api.SCM.purchase_order.<method>``
+
+Available methods
+    - ``cloudcix.api.SCM.purchase_order.list``
+        - This method allows the User to get a list of Purchase Orders
+          belonging to their acting Address
+    - ``cloudcix.api.SCM.purchase_order.create``
+        - This method allows the User to create a new Purchase Order for a
+          specified Address
+    - ``cloudcix.api.SCM.purchase_order.read``
+        - This method allows the User to read the details and the lines of a
+          specified Purchase Order
+    - ``cloudcix.api.SCM.purchase_order.update``
+        - This method allows the User to update the details and the lines of a
+          specified Purchase Order
+
 Return Question
 ^^^^^^^^^^^^^^^
 Every SKU Category can have a set of questions defined by default and used for
