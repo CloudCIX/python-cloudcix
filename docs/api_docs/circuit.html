@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.7.20
+                0.8.0
               </div>
             
           
@@ -167,53 +167,47 @@
 <p>This service allows Users to manage their Circuits</p>
 <p>A Circuit is a device installed in your active Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.list</span></code></dt>
-<dd><ul class="first last">
-<li>Returns a list of Circuits by owner, customer and supplier
-based on the User’s Address</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.list</span></code></dt><dd><ul>
+<li><p>Returns a list of Circuits by owner, customer and supplier
+based on the User’s Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.create</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to add a Circuit to a Circuit
-Class</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to add a Circuit to a Circuit
+Class</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.read</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get the details of a given
-Circuit</li>
-<li>Only owners, customers and suppliers are allowed to read a
-Circuit</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the details of a given
+Circuit</p></li>
+<li><p>Only owners, customers and suppliers are allowed to read a
+Circuit</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update a Circuit</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update a Circuit</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.delete</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to delete a Circuit</li>
-<li>Note that the Circuit will no longer be available to update.</li>
-<li>If a Circuit has been removed but the User wants to maintain
-it in the list, it should be updated with a decommission date</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a Circuit</p></li>
+<li><p>Note that the Circuit will no longer be available to update.</p></li>
+<li><p>If a Circuit has been removed but the User wants to maintain
+it in the list, it should be updated with a decommission date</p></li>
 </ul>
 </dd>
 </dl>
@@ -227,41 +221,36 @@ it in the list, it should be updated with a decommission date</li>
 <p>This service allows for the management of Circuit Classes</p>
 <p>A Circuit Class is a classification for the Circuits</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.list</span></code></dt>
-<dd><ul class="first last">
-<li>Returns a list of Circuit Classes and their supported
-Properties</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.list</span></code></dt><dd><ul>
+<li><p>Returns a list of Circuit Classes and their supported
+Properties</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Circuit Class for its Member</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Circuit Class for its Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a given Circuit Class</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a given Circuit Class</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update a Circuit Class.</li>
-<li>If there are Circuits under the Circuit Class, new properties
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update a Circuit Class.</p></li>
+<li><p>If there are Circuits under the Circuit Class, new properties
 cannot be required and old properties cannot be removed or
-renamed</li>
+renamed</p></li>
 </ul>
 </dd>
 </dl>
@@ -276,13 +265,11 @@ renamed</li>
 <p>A Property Type is an identification of the expected input value for a given
 property.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.property_type.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.property_type.list</span></code></dt>
-<dd><ul class="first last">
-<li>Returns a list of Property Types</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.property_type.list</span></code></dt><dd><ul>
+<li><p>Returns a list of Property Types</p></li>
 </ul>
 </dd>
 </dl>

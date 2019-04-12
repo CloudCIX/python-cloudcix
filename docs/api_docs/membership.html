@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.7.20
+                0.8.0
               </div>
             
           
@@ -173,41 +173,36 @@
 <p>Trading transactions occur between a Supplier and Customer Address, while some other transactions occur at a single Address, e.g. depreciation</p>
 <p>This service allows the User to manage their Addresses</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of Addresses associated with a Member</li>
-<li>Addresses returned belong to either the User’s Member, or a Member linked with the User’s Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Addresses associated with a Member</p></li>
+<li><p>Addresses returned belong to either the User’s Member, or a Member linked with the User’s Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Address</li>
-<li>The Address can be created for either the User’s own Member, or one that is linked to the User’s Member</li>
-<li>In order to create an Address for a linked Member, the linked Member must not be self managed</li>
-<li>The Address created will automatically be linked to the Address of the User creating it</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Address</p></li>
+<li><p>The Address can be created for either the User’s own Member, or one that is linked to the User’s Member</p></li>
+<li><p>In order to create an Address for a linked Member, the linked Member must not be self managed</p></li>
+<li><p>The Address created will automatically be linked to the Address of the User creating it</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of an Address</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of an Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of an Address</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of an Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -222,30 +217,26 @@
 <p>Addresses must be linked in order to conduct business between them</p>
 <p>The link allows each Address to have particular details about the Contra Address (the Address to which the Link is to)</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a Link between two Addresses</li>
-<li>A Link can only be created between Addresses in Members that are already linked, or Addresses in the same Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a Link between two Addresses</p></li>
+<li><p>A Link can only be created between Addresses in Members that are already linked, or Addresses in the same Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of an Address Link</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of an Address Link</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of an Address Link record</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.address_link.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of an Address Link record</p></li>
 </ul>
 </dd>
 </dl>
@@ -254,29 +245,26 @@
 </dd>
 </dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Based on how the URLs for <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code> are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">pk=None</span></code> to both of these methods</p>
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code> are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">pk=None</span></code> to both of these methods</p>
 </div>
 </div>
 <div class="section" id="country">
 <h2>Country<a class="headerlink" href="#country" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get Country information in accordance with ISO 3166-1</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a full list of Countries in ISO 3166-1 format</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a full list of Countries in ISO 3166-1 format</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a specific Country</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a specific Country</p></li>
 </ul>
 </dd>
 </dl>
@@ -289,21 +277,18 @@
 <h2>Currency<a class="headerlink" href="#currency" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get information about the different Currencies supported by CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the full list of Currencies supported by CloudCIX</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get the full list of Currencies supported by CloudCIX</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a specific Currency</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a specific Currency</p></li>
 </ul>
 </dd>
 </dl>
@@ -322,49 +307,43 @@
 - Sales</p>
 <p>This service provides methods to manage the Departments in an organisation</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of Departments available for the User’s Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Departments available for the User’s Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Department for their Member</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Department for their Member</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a specific Department</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a specific Department</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of a specific Department</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a specific Department</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.delete</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to delete a specific Department record</li>
-<li>A Department can only be deleted if there are no Users assigned to it</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.department.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a specific Department record</p></li>
+<li><p>A Department can only be deleted if there are no Users assigned to it</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
@@ -377,21 +356,18 @@
 <h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get information about the languages that are available for use in CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the full list of Languages supported by CloudCIX</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get the full list of Languages supported by CloudCIX</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of specific Language</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of specific Language</p></li>
 </ul>
 </dd>
 </dl>
@@ -408,40 +384,35 @@
 <p>If a Member is not Self Managed, that means there is another Member which is responsible for managing it</p>
 <p>This service provides methods to manage Member records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of Members that are linked to the given Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Members that are linked to the given Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Member</li>
-<li>The created Member will automatically be linked to the Member of the User</li>
-<li>If the Member is Self Managed, it will also be linked to CloudCIX</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Member</p></li>
+<li><p>The created Member will automatically be linked to the Member of the User</p></li>
+<li><p>If the Member is Self Managed, it will also be linked to CloudCIX</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a given Member</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a given Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of a given Member</li>
-<li>If the Member becomes Self Managed, then it will automatically be linked to CloudCIX</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given Member</p></li>
+<li><p>If the Member becomes Self Managed, then it will automatically be linked to CloudCIX</p></li>
 </ul>
 </dd>
 </dl>
@@ -455,14 +426,12 @@
 <p>A Member Link represents a Link between two Members</p>
 <p>This service provides a method to see if the User’s Member is linked to another Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member_link.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member_link.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to check if their Member is linked to a given Member</li>
-<li>Returns HTTP 204 is a Link between the Members exists</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member_link.read</span></code></dt><dd><ul>
+<li><p>Allows the User to check if their Member is linked to a given Member</p></li>
+<li><p>Returns HTTP 204 is a Link between the Members exists</p></li>
 </ul>
 </dd>
 </dl>
@@ -475,13 +444,11 @@
 <h2>Notification<a class="headerlink" href="#notification" title="Permalink to this headline">¶</a></h2>
 <p>A Notification record takes account of all the Users in an Address who should be notified about transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.notification.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.notification.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of User records within an Address who have Notifications active for the given Transaction Type</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.notification.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of User records within an Address who have Notifications active for the given Transaction Type</p></li>
 </ul>
 </dd>
 </dl>
@@ -495,52 +462,46 @@
 <p>A Profile can be a group of nurses (Users) in a hospital (Member).</p>
 <p>Profiles are a custom or default classification for a User for a particular Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of Profiles belonging to the specified Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Profiles belonging to the specified Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Profile record for the given Member</li>
-<li>Members can create Profiles for other Linked Members if the Linked Member is not Self Managed</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Profile record for the given Member</p></li>
+<li><p>Members can create Profiles for other Linked Members if the Linked Member is not Self Managed</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the details of a given Profile, including the Users that are in that Profile</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a given Profile, including the Users that are in that Profile</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of a given Profile</li>
-<li>Members can update Profiles for other Linked Members if the Linked Member is not Self Managed</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given Profile</p></li>
+<li><p>Members can update Profiles for other Linked Members if the Linked Member is not Self Managed</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.delete</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to delete a given Profile</li>
-<li>Members can update Profiles for other Linked Members if the Linked Member is not Self Managed</li>
-<li>Profiles can only be deleted when they are not assigned to any User</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a given Profile</p></li>
+<li><p>Members can update Profiles for other Linked Members if the Linked Member is not Self Managed</p></li>
+<li><p>Profiles can only be deleted when they are not assigned to any User</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
@@ -554,21 +515,18 @@
 <p>The Subdivision service contains methods to get data about Subdivisions in accordance with ISO 3166-2</p>
 <p>An example of a Subdivision is a County in Ireland</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of all Subdivisions for a given Country</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of all Subdivisions for a given Country</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to read the details of a given Subdivision</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.read</span></code></dt><dd><ul>
+<li><p>Allows the User to read the details of a given Subdivision</p></li>
 </ul>
 </dd>
 </dl>
@@ -582,55 +540,47 @@
 <p>A Team is a tag describing a group of Users in a Member</p>
 <p>For example, a Team can be a group of Users working on a particular project</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.list</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to get a list of all Teams in the User’s own Member</li>
+<dl>
+<dt>Available Methods</dt><dd><ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.list</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to get a list of all Teams in the User’s own Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.create</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to create a new Team for their Member</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.create</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to create a new Team for their Member</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.read</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to get the details of a given Team, including the Users who belong to it</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.read</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to get the details of a given Team, including the Users who belong to it</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.update</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to update the details of a given Team record</li>
-<li>This method can only be run by an Administrator</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.update</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to update the details of a given Team record</p></li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.delete</span></code></dt>
-<dd><ul class="first last">
-<li><p class="first">Allows the User to delete a Team record</p>
-</li>
-<li><div class="first admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">A Team will be deleted <strong>even if there are Users assigned to it</strong></p>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a Team record</p></li>
+<li><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A Team will be deleted <strong>even if there are Users assigned to it</strong></p>
 </div>
 </li>
-<li><p class="first">This method can only be run by an Administrator</p>
-</li>
+<li><p>This method can only be run by an Administrator</p></li>
 </ul>
 </dd>
 </dl>
@@ -644,48 +594,42 @@
 <p>A Territory is a classification or tag that a Member can use for grouping their business partners</p>
 <p>For example, a Member can group partners be location or by what product they sell/purchase</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get a list of Territories available for the given Member</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Territories available for the given Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to create a new Territory record</li>
-<li>Members can create a Territory for Linked Members provided the Linked Member is not Self Managed</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Territory record</p></li>
+<li><p>Members can create a Territory for Linked Members provided the Linked Member is not Self Managed</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to read the details of a given Territory</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.read</span></code></dt><dd><ul>
+<li><p>Allows the User to read the details of a given Territory</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.update</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to update the details of a given Territory</li>
-<li>Members can update a Territory for Linked Members provided the Linked Member is not Self Managed</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given Territory</p></li>
+<li><p>Members can update a Territory for Linked Members provided the Linked Member is not Self Managed</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.delete</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to delete a given Territory</li>
-<li>A Territory can only be deleted if there are no Addresses assigned to it</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a given Territory</p></li>
+<li><p>A Territory can only be deleted if there are no Addresses assigned to it</p></li>
 </ul>
 </dd>
 </dl>
@@ -700,39 +644,33 @@
 <p>If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
 If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key</p>
 <p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token.create</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the user to create an authentication token</li>
-<li><dl class="first docutils">
-<dt>Necessary Data</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">email</span></code></dt>
-<dd><ul class="first last">
-<li>The email of the user</li>
-<li><strong>Required</strong></li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token.create</span></code></dt><dd><ul>
+<li><p>Allows the user to create an authentication token</p></li>
+<li><dl class="simple">
+<dt>Necessary Data</dt><dd><ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">email</span></code></dt><dd><ul>
+<li><p>The email of the user</p></li>
+<li><p><strong>Required</strong></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt>
-<dd><ul class="first last">
-<li>The password of the user</li>
-<li><strong>Required</strong></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt><dd><ul>
+<li><p>The password of the user</p></li>
+<li><p><strong>Required</strong></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">api_key</span></code></dt>
-<dd><ul class="first last">
-<li>The api_key of the member the user wants a token for</li>
-<li><strong>Required to generate a token, not to validate auth</strong></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">api_key</span></code></dt><dd><ul>
+<li><p>The api_key of the member the user wants a token for</p></li>
+<li><p><strong>Required to generate a token, not to validate auth</strong></p></li>
 </ul>
 </dd>
 </dl>
@@ -749,8 +687,8 @@ If an api_key is supplied alongside the email and password, if the email and pas
 </dd>
 </dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The usual <code class="docutils literal notranslate"><span class="pre">token</span></code> parameter is not required for these methods.</p>
+<p class="admonition-title">Note</p>
+<p>The usual <code class="docutils literal notranslate"><span class="pre">token</span></code> parameter is not required for these methods.</p>
 </div>
 </div>
 <div class="section" id="transaction-type">
@@ -763,21 +701,18 @@ If an api_key is supplied alongside the email and password, if the email and pas
 <p>are all examples of Transaction based services, and each of these services has their own <code class="docutils literal notranslate"><span class="pre">idTransactionType</span></code></p>
 <p>Transaction Types identify each one in a unique way, and along with the Transaction Sequence Number it makes a transaction unique for each Address of a Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.transaction_type.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.transaction_type.list</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to get the full list of Transaction Types available in CloudCIX</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.transaction_type.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get the full list of Transaction Types available in CloudCIX</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.transaction_type.read</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to read the details of a given Transaction Type</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.transaction_type.read</span></code></dt><dd><ul>
+<li><p>Allows the User to read the details of a given Transaction Type</p></li>
 </ul>
 </dd>
 </dl>
@@ -796,45 +731,38 @@ If an api_key is supplied alongside the email and password, if the email and pas
 <p>Administrators also set the permissions for other Users in the Member</p>
 <p>In order to create additional Administrators for your Member, it is necessary to contact CloudCIX support directly</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.list</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to get a list of Users linked to their Member</li>
+<dl>
+<dt>Available Methods</dt><dd><ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.list</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to get a list of Users linked to their Member</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.create</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to create a new User record for the specified Member and Address that is either an Administrator or a normal User</li>
-<li>The first User in a Member automatically becomes an Administrator</li>
-<li>The User can create Users in other Members if the Members are linked, the requesting User’s Address is linked to the target Address, and the target Member is not Self Managed</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.create</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to create a new User record for the specified Member and Address that is either an Administrator or a normal User</p></li>
+<li><p>The first User in a Member automatically becomes an Administrator</p></li>
+<li><p>The User can create Users in other Members if the Members are linked, the requesting User’s Address is linked to the target Address, and the target Member is not Self Managed</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.read</span></code></dt>
-<dd><ul class="first last simple">
-<li>Allows the User to read the details of a given User</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.read</span></code></dt><dd><ul class="simple">
+<li><p>Allows the User to read the details of a given User</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.update</span></code></dt>
-<dd><ul class="first last">
-<li><p class="first">Allows the User to update the details of a given User</p>
-</li>
-<li><p class="first">Only Global Users who are acting Global are able to change their idAddress</p>
-</li>
-<li><div class="first admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">A User cannot update the following fields: <code class="docutils literal notranslate"><span class="pre">idProfile</span></code>, <code class="docutils literal notranslate"><span class="pre">idDepartment</span></code>, <code class="docutils literal notranslate"><span class="pre">jobTitle</span></code>, <code class="docutils literal notranslate"><span class="pre">startDate</span></code>, <code class="docutils literal notranslate"><span class="pre">expiryDate</span></code>, <code class="docutils literal notranslate"><span class="pre">notifications</span></code>.
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.user.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given User</p></li>
+<li><p>Only Global Users who are acting Global are able to change their idAddress</p></li>
+<li><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A User cannot update the following fields: <code class="docutils literal notranslate"><span class="pre">idProfile</span></code>, <code class="docutils literal notranslate"><span class="pre">idDepartment</span></code>, <code class="docutils literal notranslate"><span class="pre">jobTitle</span></code>, <code class="docutils literal notranslate"><span class="pre">startDate</span></code>, <code class="docutils literal notranslate"><span class="pre">expiryDate</span></code>, <code class="docutils literal notranslate"><span class="pre">notifications</span></code>.
 These fields can only be updated by an Administrator</p>
 </div>
 </li>

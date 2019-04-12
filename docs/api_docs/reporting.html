@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.7.20
+                0.8.0
               </div>
             
           
@@ -166,41 +166,36 @@
 <h2>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h2>
 <p>This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.list</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get a list of all files that have been exported that are either pending generation or ready to download</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of all files that have been exported that are either pending generation or ready to download</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.create</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to request that a file be exported</li>
-<li>This method collects a bunch of data to export into a file</li>
-<li>The request is put into a queue, and a global id will be returned in the response</li>
-<li>This global id can then be used to download the exported file</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to request that a file be exported</p></li>
+<li><p>This method collects a bunch of data to export into a file</p></li>
+<li><p>The request is put into a queue, and a global id will be returned in the response</p></li>
+<li><p>This global id can then be used to download the exported file</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.read</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get the details of a file being exported</li>
-<li>The details will include the status of the export, the date when the file will expire, and a path to the generated document</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the details of a file being exported</p></li>
+<li><p>The details will include the status of the export, the date when the file will expire, and a path to the generated document</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.delete</span></code></dt>
-<dd><ul class="first last">
-<li>Allows the User to remove an Export and exported documents</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to remove an Export and exported documents</p></li>
 </ul>
 </dd>
 </dl>
@@ -219,47 +214,41 @@
 4. When the status becomes closed, the report generation will begin
 5. When the Package is ready, download your reports</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.list</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get a list of all Packages that are either being created or are ready to download</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of all Packages that are either being created or are ready to download</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.create</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to create a new Package</li>
-<li>The response should contain an <code class="docutils literal notranslate"><span class="pre">idPackage</span></code> which can be used to put requested reports into a Package</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Package</p></li>
+<li><p>The response should contain an <code class="docutils literal notranslate"><span class="pre">idPackage</span></code> which can be used to put requested reports into a Package</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.read</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to read the details of a Package, including its status, any error messages and the date when it will expire</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to read the details of a Package, including its status, any error messages and the date when it will expire</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.update</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to set the Package status to closed</li>
-<li>This will start a background process of gathering and packaging documents for download</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to set the Package status to closed</p></li>
+<li><p>This will start a background process of gathering and packaging documents for download</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.delete</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to delete a Package and all its associated documents</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.package.delete</span></code></dt><dd><ul>
+<li><p>This method allows the User to delete a Package and all its associated documents</p></li>
 </ul>
 </dd>
 </dl>
@@ -272,40 +261,35 @@
 <h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
 <p>This service is used to create PDF or HTML documents from existing Templates by passing in the data to populate the Template</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.list</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get a list of all Reports that are either pending generation or are ready for download</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of all Reports that are either pending generation or are ready for download</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.create</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to request a new Report to be generated using a specified <code class="docutils literal notranslate"><span class="pre">idReportTemplate</span></code> and the given data</li>
-<li>This request will be put into a Queue and the response will contain an <code class="docutils literal notranslate"><span class="pre">idReport</span></code></li>
-<li>If <code class="docutils literal notranslate"><span class="pre">idPackage</span></code> is passed as part of the request, the report will be removed only after the Package’s status has been updated to “closed”</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to request a new Report to be generated using a specified <code class="docutils literal notranslate"><span class="pre">idReportTemplate</span></code> and the given data</p></li>
+<li><p>This request will be put into a Queue and the response will contain an <code class="docutils literal notranslate"><span class="pre">idReport</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">idPackage</span></code> is passed as part of the request, the report will be removed only after the Package’s status has been updated to “closed”</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.read</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get the details of a Report</li>
-<li>This includes the status, the date at which the Report will expire and a path to the generated document</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the details of a Report</p></li>
+<li><p>This includes the status, the date at which the Report will expire and a path to the generated document</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.delete</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to delete a Report and its generated documents</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.delete</span></code></dt><dd><ul>
+<li><p>This method allows the User to delete a Report and its generated documents</p></li>
 </ul>
 </dd>
 </dl>
@@ -318,45 +302,39 @@
 <h2>Report Template<a class="headerlink" href="#report-template" title="Permalink to this headline">¶</a></h2>
 <p>This service allows Users to manage the Templates that they can use to generate HTML or PDF documents</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.&lt;method&gt;</span></code></p>
-<dl class="docutils">
-<dt>Available Methods</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.list</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get a list of the Report Templates available to their Address</li>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of the Report Templates available to their Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.create</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to create a new Report Template for their Address</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Report Template for their Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.read</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to get the details of a Report Template</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the details of a Report Template</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.update</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to update an existing Report Template with new content</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update an existing Report Template with new content</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.delete</span></code></dt>
-<dd><ul class="first last">
-<li>This method allows the User to delete an existing Report Template</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.delete</span></code></dt><dd><ul>
+<li><p>This method allows the User to delete an existing Report Template</p></li>
 </ul>
 </dd>
 </dl>

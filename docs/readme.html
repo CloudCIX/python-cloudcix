@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.8.0 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.7.20
+                0.8.0
               </div>
             
           
@@ -178,20 +178,23 @@
 <div class="section" id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Create an account on the CloudCIX Platform<ul>
-<li><a class="reference external" href="https://auth.cloudcix.com/register">Register</a></li>
+<li><p>Create an account on the CloudCIX Platform</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://auth.cloudcix.com/register">Register</a></p></li>
 </ul>
 </li>
-<li>Retrieve your API Key<ul>
-<li>Under the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Membership</span></code> tab in the sidebar, click on <code class="docutils literal notranslate"><span class="pre">Member</span> <span class="pre">Details</span></code></li>
-<li>The <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Key</span></code> should be available at the top of the form</li>
+<li><p>Retrieve your API Key</p>
+<ul class="simple">
+<li><p>Under the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Membership</span></code> tab in the sidebar, click on <code class="docutils literal notranslate"><span class="pre">Member</span> <span class="pre">Details</span></code></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Key</span></code> should be available at the top of the form</p></li>
 </ul>
 </li>
-<li>Ensure that you have both Python and pip installed<ul>
-<li>As of right now, the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module is available at different versions for Python2 and Python3</li>
-<li>We recommend you use Python3 and the latest version of the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module</li>
-<li><a class="reference external" href="http://docs.python-guide.org/en/latest/starting/installation/">Python</a></li>
-<li><a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip</a></li>
+<li><p>Ensure that you have both Python and pip installed</p>
+<ul class="simple">
+<li><p>As of right now, the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module is available at different versions for Python2 and Python3</p></li>
+<li><p>We recommend you use Python3 and the latest version of the <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> module</p></li>
+<li><p><a class="reference external" href="http://docs.python-guide.org/en/latest/starting/installation/">Python</a></p></li>
+<li><p><a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip</a></p></li>
 </ul>
 </li>
 </ol>
@@ -201,18 +204,16 @@
 <p>The cloudcix library is installed using the <code class="docutils literal notranslate"><span class="pre">pip</span></code> module.</p>
 <p>Depending on your version of Python, you need to install different versions of <code class="docutils literal notranslate"><span class="pre">cloudcix</span></code></p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Python3</dt>
-<dd><ul class="first last">
-<li><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">cloudcix</span></code></li>
+<li><dl class="simple">
+<dt>Python3</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">cloudcix</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Python2</dt>
-<dd><ul class="first last">
-<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">'cloudcix&lt;0.3'</span></code></li>
+<li><dl class="simple">
+<dt>Python2</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">'cloudcix&lt;0.3'</span></code></p></li>
 </ul>
 </dd>
 </dl>
@@ -226,23 +227,23 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <p>In order to run a project, the module requires some settings to exist.</p>
 <p>The variables required are as follows:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
 - The base url of the api
-- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>
-- The email of the account that you signed up with</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>
-- The password associated with your CloudCIX account</li>
-<li><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>
-- The API key associated with your CloudCIX Member (see <strong>Prerequisites</strong>)</li>
+- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>
+- The email of the account that you signed up with</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>
+- The password associated with your CloudCIX account</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>
+- The API key associated with your CloudCIX Member (see <strong>Prerequisites</strong>)</p></li>
 </ul>
 <p>These variables can be declared in a settings file, as follows</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># In main python script</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In main python script</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;CLOUDCIX_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;my_project.my_settings&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># In my_project/my_settings.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In my_project/my_settings.py</span>
 <span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com&#39;</span>
 <span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;EMAIL&#39;</span>               <span class="c1"># CloudCIX login</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;PASSWORD&#39;</span>            <span class="c1"># CloudCIX password</span>

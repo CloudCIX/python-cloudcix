@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Changelog &mdash; CloudCIX API Python Library 0.7.20 documentation</title>
+  <title>Changelog &mdash; CloudCIX API Python Library 0.8.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.7.20
+                0.8.0
               </div>
             
           
@@ -206,116 +206,122 @@
             
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>0.8.0
+- <code class="docutils literal notranslate"><span class="pre">cloudcix.client.Client</span></code> request methods now take an optional <code class="docutils literal notranslate"><span class="pre">span</span></code> parameter.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This should be an instance of an <code class="docutils literal notranslate"><span class="pre">opentracing</span></code> span</p></li>
+<li><p>If the client finds this keyword argument, it will automatically inject the span headers into the request, enabling cross application tracing</p></li>
+</ul>
+</div></blockquote>
 <div class="section" id="id1">
 <h2>0.7.20<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">purchase_order</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">purchase_order</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="id2">
 <h2>0.7.19<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">sales_order</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">sales_order</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="id3">
 <h2>0.7.18<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">agreed_price</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">agreed_price</span></code> to <code class="docutils literal notranslate"><span class="pre">SCM</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="id4">
 <h2>0.7.17<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Removed checking if the Membership application is running in Python2 or Python3 as the Python3 version has been deployed in every environment</dt>
-<dd><ul class="first last">
-<li>This should lead to a speed improvement within the library</li>
+<li><dl class="simple">
+<dt>Removed checking if the Membership application is running in Python2 or Python3 as the Python3 version has been deployed in every environment</dt><dd><ul>
+<li><p>This should lead to a speed improvement within the library</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Changed <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_VIES_purchases</span></code> to <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_vies_purchases</span></code> to be pep8 compliant</li>
-<li>Changed <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_VIES_sales</span></code> to <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_vies_sales</span></code> to be pep8 compliant</li>
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_VIES_purchases</span></code> to <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_vies_purchases</span></code> to be pep8 compliant</p></li>
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_VIES_sales</span></code> to <code class="docutils literal notranslate"><span class="pre">Financial.nominal_ledger_vies_sales</span></code> to be pep8 compliant</p></li>
 </ul>
 </div>
 <div class="section" id="id5">
 <h2>0.7.16<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id6">
 <h2>0.7.15<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id7">
 <h2>0.7.14<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id8">
 <h2>0.7.13<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id9">
 <h2>0.7.12<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">storage_type</span></code> : list of Storage Type options for a VM</li>
-<li>Added <code class="docutils literal notranslate"><span class="pre">storage</span></code> : list of Storages in a VM</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">storage_type</span></code> : list of Storage Type options for a VM</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">storage</span></code> : list of Storages in a VM</p></li>
 </ul>
 </div>
 <div class="section" id="id10">
 <h2>0.7.11<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Removed <code class="docutils literal notranslate"><span class="pre">Membership.timezone</span></code> as it was only a wrapper around <code class="docutils literal notranslate"><span class="pre">pytz</span></code> and has been removed from the API.</li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">Membership.timezone</span></code> as it was only a wrapper around <code class="docutils literal notranslate"><span class="pre">pytz</span></code> and has been removed from the API.</p></li>
 </ul>
 </div>
 <div class="section" id="id11">
 <h2>0.7.10<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id12">
 <h2>0.7.9<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">ike</span></code> : list of IKE security options for vpntunnel</li>
-<li>Added <code class="docutils literal notranslate"><span class="pre">ipsec</span></code> : list of IpSec security options for vpntunnel</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">ike</span></code> : list of IKE security options for vpntunnel</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">ipsec</span></code> : list of IpSec security options for vpntunnel</p></li>
 </ul>
 </div>
 <div class="section" id="id13">
 <h2>0.7.8<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed issues regarding importing of the <code class="docutils literal notranslate"><span class="pre">cloudcix.client.Client</span></code> class</li>
-<li>Added documentation about more parts of the library</li>
-<li>Started an examples file to show more examples of using the library</li>
+<li><p>Fixed issues regarding importing of the <code class="docutils literal notranslate"><span class="pre">cloudcix.client.Client</span></code> class</p></li>
+<li><p>Added documentation about more parts of the library</p></li>
+<li><p>Started an examples file to show more examples of using the library</p></li>
 </ul>
 </div>
 <div class="section" id="id14">
 <h2>0.7.7<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an issue with documentation, where the client reference file was not being rendered properly</li>
+<li><p>Fixed an issue with documentation, where the client reference file was not being rendered properly</p></li>
 </ul>
 </div>
 <div class="section" id="id15">
 <h2>0.7.6<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed a syntax error in the library for Python version 3.4</li>
+<li><p>Fixed a syntax error in the library for Python version 3.4</p></li>
 </ul>
 </div>
 <div class="section" id="id16">
 <h2>0.7.5<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Removed keystone as a requirement</dt>
-<dd><ul class="first last">
-<li>We’re moving away from using keystone in the Python3 API and as such all keystone imports and utilities have been removed from the lib</li>
+<li><dl class="simple">
+<dt>Removed keystone as a requirement</dt><dd><ul>
+<li><p>We’re moving away from using keystone in the Python3 API and as such all keystone imports and utilities have been removed from the lib</p></li>
 </ul>
 </dd>
 </dl>
@@ -325,24 +331,23 @@
 <div class="section" id="id17">
 <h2>0.7.4<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed a bug when importing <code class="docutils literal notranslate"><span class="pre">api</span></code></li>
-<li>Renamed <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.login</span></code> to <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token</span></code> to generalise the service name in case extensions need to be made</li>
+<li><p>Fixed a bug when importing <code class="docutils literal notranslate"><span class="pre">api</span></code></p></li>
+<li><p>Renamed <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.login</span></code> to <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.token</span></code> to generalise the service name in case extensions need to be made</p></li>
 </ul>
 </div>
 <div class="section" id="id18">
 <h2>0.7.3<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.get_admin_token()</span></code> which generates an auth token using the admin credentials in the SETTINGS module</li>
-<li>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.login</span></code> which allows a general creation of auth tokens using the Membership api</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.get_admin_token()</span></code> which generates an auth token using the admin credentials in the SETTINGS module</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.login</span></code> which allows a general creation of auth tokens using the Membership api</p></li>
 </ul>
 </div>
 <div class="section" id="id19">
 <h2>0.7.2<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Changed Client URLs in the <code class="docutils literal notranslate"><span class="pre">Membership</span></code> class to use the Python3 urls instead of calling <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> on the Python2 ones</dt>
-<dd><ul class="first last">
-<li>Client still has to call <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> for now though</li>
+<li><dl class="simple">
+<dt>Changed Client URLs in the <code class="docutils literal notranslate"><span class="pre">Membership</span></code> class to use the Python3 urls instead of calling <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> on the Python2 ones</dt><dd><ul>
+<li><p>Client still has to call <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> for now though</p></li>
 </ul>
 </dd>
 </dl>
@@ -352,24 +357,22 @@
 <div class="section" id="id20">
 <h2>0.7.1<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">Client.get_all</span></code> method which takes in similar parameters to <code class="docutils literal notranslate"><span class="pre">Client.list</span></code> but returns all the items from the API given those parameters</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">Client.get_all</span></code> method which takes in similar parameters to <code class="docutils literal notranslate"><span class="pre">Client.list</span></code> but returns all the items from the API given those parameters</p></li>
 </ul>
 </div>
 <div class="section" id="id21">
 <h2>0.7.0<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Changed URL parameters to match the new format</dt>
-<dd><ul class="first last">
-<li>i.e. <code class="docutils literal notranslate"><span class="pre">idMember</span></code> became <code class="docutils literal notranslate"><span class="pre">member_id</span></code></li>
+<li><dl class="simple">
+<dt>Changed URL parameters to match the new format</dt><dd><ul>
+<li><p>i.e. <code class="docutils literal notranslate"><span class="pre">idMember</span></code> became <code class="docutils literal notranslate"><span class="pre">member_id</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Added <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_V2_URL</span></code> setting to handle the different URL patterns between old and new API URL patterns</dt>
-<dd><ul class="first last">
-<li>This is temporary and will be removed when all applications have been ported to Python3</li>
+<li><dl class="simple">
+<dt>Added <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_V2_URL</span></code> setting to handle the different URL patterns between old and new API URL patterns</dt><dd><ul>
+<li><p>This is temporary and will be removed when all applications have been ported to Python3</p></li>
 </ul>
 </dd>
 </dl>
@@ -379,42 +382,41 @@
 <div class="section" id="id22">
 <h2>0.5.6<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>More fixes to make it work in the Py3 API</li>
+<li><p>More fixes to make it work in the Py3 API</p></li>
 </ul>
 </div>
 <div class="section" id="id23">
 <h2>0.5.5<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed issue where settings was being subscripted when it shouldn’t have been</li>
+<li><p>Fixed issue where settings was being subscripted when it shouldn’t have been</p></li>
 </ul>
 </div>
 <div class="section" id="id24">
 <h2>0.5.4<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Unpinned some versions of required libraries</li>
+<li><p>Unpinned some versions of required libraries</p></li>
 </ul>
 </div>
 <div class="section" id="id25">
 <h2>0.5.3<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Removed positional decorators that are no longer needed</li>
+<li><p>Removed positional decorators that are no longer needed</p></li>
 </ul>
 </div>
 <div class="section" id="id26">
 <h2>0.5.2<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Removed unnecessary requirements such as Django and coverage</li>
+<li><p>Removed unnecessary requirements such as Django and coverage</p></li>
 </ul>
 </div>
 <div class="section" id="id27">
 <h2>0.5.1<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added preparatory URL handling for the Python3 API handling</li>
-<li><dl class="first docutils">
-<dt>Added a <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_VERSION</span></code> setting that tells the system which version of the API you want to use</dt>
-<dd><ul class="first last">
-<li>Defaults to version 1</li>
-<li>Version 2 tries to use the Python3 API and if that doesn’t work it falls back to the Python2 API instead</li>
+<li><p>Added preparatory URL handling for the Python3 API handling</p></li>
+<li><dl class="simple">
+<dt>Added a <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_VERSION</span></code> setting that tells the system which version of the API you want to use</dt><dd><ul>
+<li><p>Defaults to version 1</p></li>
+<li><p>Version 2 tries to use the Python3 API and if that doesn’t work it falls back to the Python2 API instead</p></li>
 </ul>
 </dd>
 </dl>
@@ -424,23 +426,22 @@
 <div class="section" id="id28">
 <h2>0.5.0<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Renamed all of the applications to follow PEP8 Class naming rules;</dt>
-<dd><ul class="first last">
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.app_manager</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.asset</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.circuit</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contacts</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.financial</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.helpdesk</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.iaas</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.membership</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.reporting</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.repository</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.scheduler</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.scm</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.security</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix.api.training</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training</span></code></li>
+<li><dl class="simple">
+<dt>Renamed all of the applications to follow PEP8 Class naming rules;</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.app_manager</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.asset</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.circuit</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contacts</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.financial</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.helpdesk</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.iaas</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.membership</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.reporting</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.repository</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.scheduler</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.scm</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.security</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.training</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training</span></code></p></li>
 </ul>
 </dd>
 </dl>
@@ -450,96 +451,96 @@
 <div class="section" id="id29">
 <h2>0.4.14<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Changed an incorrect URL for one of the Client instances</li>
+<li><p>Changed an incorrect URL for one of the Client instances</p></li>
 </ul>
 </div>
 <div class="section" id="id30">
 <h2>0.4.13<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Changed an incorrect URL for one of the Client instances</li>
+<li><p>Changed an incorrect URL for one of the Client instances</p></li>
 </ul>
 </div>
 <div class="section" id="id31">
 <h2>0.4.12<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an issue arising from an incorrectly named variable when sending requests</li>
+<li><p>Fixed an issue arising from an incorrectly named variable when sending requests</p></li>
 </ul>
 </div>
 <div class="section" id="id32">
 <h2>0.4.11<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an issue with url parsing in one of the Client instances</li>
+<li><p>Fixed an issue with url parsing in one of the Client instances</p></li>
 </ul>
 </div>
 <div class="section" id="id33">
 <h2>0.4.10<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an issue with an invalid kwarg in the creation of a Client object</li>
+<li><p>Fixed an issue with an invalid kwarg in the creation of a Client object</p></li>
 </ul>
 </div>
 <div class="section" id="id34">
 <h2>0.4.9<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id35">
 <h2>0.4.8<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an issue where some IP addresses were getting parsed into <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> instances when calling <code class="docutils literal notranslate"><span class="pre">.json()</span></code> on a Client’s response object</li>
+<li><p>Fixed an issue where some IP addresses were getting parsed into <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> instances when calling <code class="docutils literal notranslate"><span class="pre">.json()</span></code> on a Client’s response object</p></li>
 </ul>
 </div>
 <div class="section" id="id36">
 <h2>0.4.7<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minor bugfixes</li>
+<li><p>Minor bugfixes</p></li>
 </ul>
 </div>
 <div class="section" id="id37">
 <h2>0.4.6<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.utils.get_admin_client</span></code> method which generates a <code class="docutils literal notranslate"><span class="pre">keystoneclient.v3.Client</span></code> instance authenticated with the user details provided in the settings file.</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">cloudcix.utils.get_admin_client</span></code> method which generates a <code class="docutils literal notranslate"><span class="pre">keystoneclient.v3.Client</span></code> instance authenticated with the user details provided in the settings file.</p></li>
 </ul>
 </div>
 <div class="section" id="id38">
 <h2>0.4.5<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Returned the <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.CloudCIXAuthMethod</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.CloudCIXAuth</span></code> classes as they were needed in some legacy code. These might be deprecated again soon.</li>
+<li><p>Returned the <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.CloudCIXAuthMethod</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudcix.auth.CloudCIXAuth</span></code> classes as they were needed in some legacy code. These might be deprecated again soon.</p></li>
 </ul>
 </div>
 <div class="section" id="id39">
 <h2>0.4.4<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed a small issue regarding imports.</li>
+<li><p>Fixed a small issue regarding imports.</p></li>
 </ul>
 </div>
 <div class="section" id="id40">
 <h2>0.4.3<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Renamed <code class="docutils literal notranslate"><span class="pre">virtualrouter</span></code> to <code class="docutils literal notranslate"><span class="pre">vrf</span></code>.</li>
-<li>Removed <code class="docutils literal notranslate"><span class="pre">nat</span></code> as it has been depracted.</li>
-<li>Removed <code class="docutils literal notranslate"><span class="pre">vm_ipaddress</span></code> as it has been depracated.</li>
+<li><p>Renamed <code class="docutils literal notranslate"><span class="pre">virtualrouter</span></code> to <code class="docutils literal notranslate"><span class="pre">vrf</span></code>.</p></li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">nat</span></code> as it has been depracted.</p></li>
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">vm_ipaddress</span></code> as it has been depracated.</p></li>
 </ul>
 </div>
 <div class="section" id="id41">
 <h2>0.4.2<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed a rarely occurring issue in the JSONDecoder regarding kwargs.</li>
+<li><p>Fixed a rarely occurring issue in the JSONDecoder regarding kwargs.</p></li>
 </ul>
 </div>
 <div class="section" id="id42">
 <h2>0.4.1<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Added ip_validator: Lists properties of an IP Address.</li>
+<li><p>Added ip_validator: Lists properties of an IP Address.</p></li>
 </ul>
 </div>
 <div class="section" id="id43">
 <h2>0.4.0<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> now completely works in Python3.</li>
-<li>Changed <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_ID_MEMBER</span></code> to <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code> in the settings.</li>
-<li>Wrote all new documentation with in depth reference and examples.</li>
-<li>Deprecated Python2 support. Move to Python3 and <code class="docutils literal notranslate"><span class="pre">cloudcix&gt;=0.4.0</span></code> to receive the latest module and api methods.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> now completely works in Python3.</p></li>
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_ID_MEMBER</span></code> to <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code> in the settings.</p></li>
+<li><p>Wrote all new documentation with in depth reference and examples.</p></li>
+<li><p>Deprecated Python2 support. Move to Python3 and <code class="docutils literal notranslate"><span class="pre">cloudcix&gt;=0.4.0</span></code> to receive the latest module and api methods.</p></li>
 </ul>
 </div>
 </div>
