@@ -3,6 +3,8 @@ Auth
 
 .. automodule:: cloudcix.auth
 
+.. automethod:: cloudcix.auth.get_token
+
 .. automethod:: cloudcix.auth.get_admin_token
 
 .. autoclass:: cloudcix.auth.TokenAuth

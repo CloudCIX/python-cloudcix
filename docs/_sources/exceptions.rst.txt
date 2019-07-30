@@ -3,6 +3,8 @@ Exceptions
 
 .. automodule:: cloudcix.exceptions
 
+.. autoclass:: cloudcix.exceptions.CloudCIXAuthException
+
 .. autoclass:: cloudcix.exceptions.ImproperlyConfiguredException
 
 .. autoclass:: cloudcix.exceptions.MissingClientKeywordArgumentException

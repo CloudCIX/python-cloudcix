@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Utils &mdash; CloudCIX API Python Library 0.8.2 documentation</title>
+  <title>Utils &mdash; CloudCIX API Python Library 0.8.3 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.2
+                0.8.3
               </div>
             
           
@@ -166,12 +166,12 @@
 life for anyone using the CloudCIX library.</p>
 <dl class="class">
 <dt id="cloudcix.utils.JSONEncoder">
-<em class="property">class </em><code class="descclassname">cloudcix.utils.</code><code class="descname">JSONEncoder</code><span class="sig-paren">(</span><em>*</em>, <em>skipkeys=False</em>, <em>ensure_ascii=True</em>, <em>check_circular=True</em>, <em>allow_nan=True</em>, <em>sort_keys=False</em>, <em>indent=None</em>, <em>separators=None</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">cloudcix.utils.</code><code class="sig-name descname">JSONEncoder</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">skipkeys=False</em>, <em class="sig-param">ensure_ascii=True</em>, <em class="sig-param">check_circular=True</em>, <em class="sig-param">allow_nan=True</em>, <em class="sig-param">sort_keys=False</em>, <em class="sig-param">indent=None</em>, <em class="sig-param">separators=None</em>, <em class="sig-param">default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>JSONEncoder that can encode date/time/timedelta, decimal and other python objects into JSON.</p>
 <p>Inspired by Django Rest Framework</p>
 <dl class="method">
 <dt id="cloudcix.utils.JSONEncoder.default">
-<code class="descname">default</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder.default" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default</code><span class="sig-paren">(</span><em class="sig-param">obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONEncoder.default" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts the passed object into its JSON representation, usually by converting them into a string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -184,19 +184,19 @@ life for anyone using the CloudCIX library.</p>
 
 <dl class="class">
 <dt id="cloudcix.utils.JSONDecoder">
-<em class="property">class </em><code class="descclassname">cloudcix.utils.</code><code class="descname">JSONDecoder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">cloudcix.utils.</code><code class="sig-name descname">JSONDecoder</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>JSONDecoder that can decode date/time/timedelta, decimal and other strings into python objects.</p>
 <p>Inspired by Django Rest Framework.</p>
 <dl class="method">
 <dt id="cloudcix.utils.JSONDecoder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an instance of the Decoder.</p>
 <p>See <code class="xref py py-class docutils literal notranslate"><span class="pre">json.JSONDecoder</span></code> for the constructor parameters.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cloudcix.utils.JSONDecoder.parse">
-<code class="descname">parse</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.parse" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">obj</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.utils.JSONDecoder.parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a JSON value into its python equivalent.</p>
 <p>If the value is an iterable, this method will be called recursively on every item contained within the value.</p>
 <dl class="field-list simple">

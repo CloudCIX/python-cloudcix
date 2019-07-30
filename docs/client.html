@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Client &mdash; CloudCIX API Python Library 0.8.2 documentation</title>
+  <title>Client &mdash; CloudCIX API Python Library 0.8.3 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.2
+                0.8.3
               </div>
             
           
@@ -166,7 +166,7 @@
 <p>The Client defines methods which can be used to run REST methods on the CloudCIX API as if they were Python methods.</p>
 <dl class="class">
 <dt id="cloudcix.client.Client">
-<em class="property">class </em><code class="descclassname">cloudcix.client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>application</em>, <em>service_uri</em>, <em>version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">cloudcix.client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">application</em>, <em class="sig-param">service_uri</em>, <em class="sig-param">version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>CloudCIX API Client</p>
 <p>The underlying class to generate the services in the <a class="reference internal" href="api_reference.html"><span class="doc">API Reference</span></a></p>
 <p>There are a couple of things to note about some of the methods, namely <cite>create</cite>, <cite>update</cite>, and <cite>partial_update</cite></p>
@@ -181,7 +181,7 @@ object in the database</p></li>
 </div>
 <dl class="method">
 <dt id="cloudcix.client.Client.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>application</em>, <em>service_uri</em>, <em>version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">application</em>, <em class="sig-param">service_uri</em>, <em class="sig-param">version='v1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Client instance to interact with a specified Service in an Application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -196,7 +196,7 @@ object in the database</p></li>
 
 <dl class="method">
 <dt id="cloudcix.client.Client.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">token=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new resource using the API service (using HTTP <code class="docutils literal notranslate"><span class="pre">POST</span></code>)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -219,7 +219,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">pk</em>, <em class="sig-param">token=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a resource identified by the given pk (using HTTP <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -241,7 +241,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.get_all">
-<code class="descname">get_all</code><span class="sig-paren">(</span><em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.get_all" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_all</code><span class="sig-paren">(</span><em class="sig-param">token=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.get_all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given some parameters, retrieves all of the resources from the API that match the passed parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -262,7 +262,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">token=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a list of resources from the API service (using HTTP <code class="docutils literal notranslate"><span class="pre">GET</span></code> without a resource id)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -283,7 +283,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.partial_update">
-<code class="descname">partial_update</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.partial_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">partial_update</code><span class="sig-paren">(</span><em class="sig-param">pk</em>, <em class="sig-param">token=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.partial_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a resource identified by the given pk with the sent data (using HTTP <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>).
 The difference between this and <code class="docutils literal notranslate"><span class="pre">update</span></code> is that this method will ignore any fields not sent in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <dl class="field-list simple">
@@ -308,7 +308,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.read">
-<code class="descname">read</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">pk</em>, <em class="sig-param">token=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a resource from the API service identified by the given pk (using HTTP <code class="docutils literal notranslate"><span class="pre">GET</span></code> with a resource id)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -331,7 +331,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>pk</em>, <em>token=None</em>, <em>data=None</em>, <em>params=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">pk</em>, <em class="sig-param">token=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a resource identified by the given pk with the sent data (using HTTP <code class="docutils literal notranslate"><span class="pre">PUT</span></code>)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

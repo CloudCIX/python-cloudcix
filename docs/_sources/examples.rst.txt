@@ -5,10 +5,11 @@ All examples in this page assume you have the following settings file correctly 
 
 .. code:: python
 
-    CLOUDCIX_API_URL = 'https://api.cloudcix.com'
+    CLOUDCIX_API_URL = 'https://api.cloudcix.com/'
     CLOUDCIX_API_USERNAME = 'me@gmail.com'
     CLOUDCIX_API_PASSWORD = 'my_password'
     CLOUDCIX_API_KEY = 'abcde...'
+    CLOUDCIX_API_VERSION = 2
 
 1. Get a list of Countries
 --------------------------
@@ -31,6 +32,35 @@ All examples in this page assume you have the following settings file correctly 
     token = get_admin_token()
     # Get a list of the countries from the Membership Application passing your token for authentication
     response = api.Membership.country.list(token=token)
+
+    # Print out the json of the response data
+    print(response.json())  # {'content': [...], '_metadata': {...}}
+
+1. Get a list of 10 Countries
+-----------------------------
+
+.. code:: python
+
+    # python3 example
+    import os
+
+    os.environ.setdefault('CLOUDCIX_SETTINGS_MODULE', 'settings')
+
+    # NOTE: environ variables must be set before importing cloudcix
+
+    from cloudcix import api
+
+    # Get a util function to get a session using the credentials in your settings file
+    from cloudcix.auth import get_admin_token
+
+    # Get your authentication token for your login
+    token = get_admin_token()
+
+    # By default limit is set to 50 ...
+    params = {'limit': 10}
+
+    # Get a list of the countries from the Membership Application passing your token for authentication
+    response = api.Membership.country.list(token=token, params=params)
 
     # Print out the json of the response data
     print(response.json())  # {'content': [...], '_metadata': {...}}
