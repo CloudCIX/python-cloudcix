@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.8.4 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.5 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8.4
+                0.8.5
               </div>
             
           
@@ -158,28 +158,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>The Financial Application exposes a suite of services that together implement a
-full accounting system based on double entry bookkeeping</p>
+  <p>The Financial Application exposes a suite of services that together implement a full accounting system based on double
+entry bookkeeping</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>For more information on entities and transactions, please see the
-FinancialApplication section of the <a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
+<p>For more information on entities and transactions, please see the Financial Application section of the
+<a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <div class="section" id="services">
 <h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="account-purchase-adjustment">
 <h2>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Account Purchase Adjustments.</p>
-<p>An Account Purchase Adjustment (10005) is a transaction with the purpose of adjusting and conciliating nominal accounts.</p>
-<p>A set of nominal accounts will be debited and credited.</p>
-<p>The balance of debits and credits must be equal.</p>
+<p>This service allows the User to create and read Account Purchase Adjustments</p>
+<p>An Account Purchase Adjustment (10005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
+<p>A set of nominal accounts will be debited and credited</p>
+<p>The balance of debits and credits must be equal</p>
+<p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a new Account Purchase Adjustment transaction.</p></li>
+<li><p>This method allows the User to create a new Account Purchase Adjustment transaction</p></li>
 </ul>
 </dd>
 </dl>
@@ -191,36 +192,33 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Purchase Adjustment transaction</p></li>
-<li><p>A transaction can be only updated if there’s no Period End after the effective Transaction Date</p></li>
-</ul>
-</dd>
-</dl>
-</li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="account-purchase-adjustment-contra">
 <h2>Account Purchase Adjustment Contra<a class="headerlink" href="#account-purchase-adjustment-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Purchase Adjustment from an Account Sale Adjustment created by the target Address</p>
+<p>This service allows the User to create and read an Account Purchase Adjustment from an Account Sale Adjustment created
+by the target Address</p>
+<p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Purchase Adjustment from an Account Sale Adjustment belonging to another Address</p></li>
-<li><p>The lines of the Account Purchase Adjustment must match the lines of the Account Sale Adjustment, with the exception of the Nominal Account Number</p></li>
-<li><p>This number must be a valid Purchases Nominal Account belonging to the User’s acting Address</p></li>
+<li><p>This method allows the User to create an Account Purchase Adjustment from an Account Sale Adjustment created
+by the target Address</p></li>
+<li><p>The lines of the Account Purchase Adjustment must match the lines of the Account Sale Adjustment, with the
+exception of the Nominal Account Number</p></li>
+<li><p>This number must be a valid Purchases Nominal Account belonging to the User’s acting Address.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_adjustment_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Purchase Adjustment transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Purchase Adjustment transaction created by the target Address
+for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -253,7 +251,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_debit_note.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Purchase Debit Note transaction</p></li>
+<li><p>This method allows the User to update the external reference of an Account Purchase Debit Note transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -265,14 +263,18 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-purchase-debit-note-contra">
 <h2>Account Purchase Debit Note Contra<a class="headerlink" href="#account-purchase-debit-note-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Purchase Debit Note from an Account Sale Credit Note create by the target Address</p>
+<p>This service allows the User to create and read an Account Purchase Debit Note from an Account Sale Credit Note created
+by the target Address</p>
+<p>The debit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_debit_note_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_debit_note_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Purchase Debit Note from an Account Sale Credit Note created by the target Address</p></li>
-<li><p>The lines of the Account Purchase Debit Note must match the lines of the Account Sale Credit Note, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create an Account Purchase Debit Note from an Account Sale Credit Note created
+by the target Address</p></li>
+<li><p>The lines of the Account Purchase Debit Note must match the lines of the Account Sale Credit Note, with the
+exception of the Nominal Account Number</p></li>
 <li><p>This number must be a valid Purchases Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -280,7 +282,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_debit_note_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Purchase Debit Note transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Purchase Debit Note transaction created by the target Address
+for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -313,7 +316,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_invoice.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Purchase Invoice transaction</p></li>
+<li><p>This method allows the User to update an external reference of an Account Purchase Invoice transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -325,14 +328,18 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-purchase-invoice-contra">
 <h2>Account Purchase Invoice Contra<a class="headerlink" href="#account-purchase-invoice-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Purchase Invoice from an Account Sale Invoice created by the target Address</p>
+<p>This service allows the User to create and read an Account Purchase Invoice from an Account Sale Invoice created by
+the target Address</p>
+<p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_invoice_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_invoice_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Purchase Invoice from an Account Sale Invoice created by the target Address</p></li>
-<li><p>The lines of the Account Purchase Invoice must match the lines of the Account Sale Invoice, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create an Account Purchase Invoice from an Account Sale Invoice created by the
+target Address</p></li>
+<li><p>The lines of the Account Purchase Invoice must match the lines of the Account Sale Invoice, with the exception
+of the Nominal Account Number</p></li>
 <li><p>This number must be a valid Purchases Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -340,7 +347,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_invoice_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Purchase Invoice transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Purchase Invoice transaction created by the target Address for
+the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -351,12 +359,13 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-purchase-payment">
 <h2>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Account Purchase Payments</p>
-<p>An Account Purchase Payment (10004) is a transaction in which a purchase is being paid.</p>
+<p>This service allows the User to create and read Account Purchase Payments</p>
+<p>An Account Purchase Payment (10004) is a transaction in which a purchase is being paid</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated with the selected Payment Method and this transaction type in order to get the Nominal Account which will be credited</p>
+<p>A Nominal Contra must be associated with the selected Payment Method and this transaction type in order to get
+the Nominal Account which will be credited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_payment.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -375,34 +384,30 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_payment.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Purchase Payment transaction</p></li>
-<li><p>A transaction can be only updated if there’s no Period End after the effective Transaction Date</p></li>
-</ul>
-</dd>
-</dl>
-</li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="account-purchase-payment-contra">
 <h2>Account Purchase Payment Contra<a class="headerlink" href="#account-purchase-payment-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Purchase Payment from an Account Sale Payment created by the target Address</p>
+<p>This service allows the User to create and read an Account Purchase Payment from an Account Sale Payment created by the
+target Address</p>
+<p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_payment_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_payment_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Purchase Payment from an Account Sale Payment created by the target Address</p></li>
+<li><p>This method allows the User to create an Account Purchase Payment from an Account Sale Payment created by the
+target Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_purchase_payment_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to fet an Account Purchase Payment transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Purchase Payment transaction created by the target Address for
+the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -413,10 +418,11 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-sale-adjustment">
 <h2>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Account Sale Adjustments</p>
+<p>This service allows the User to create and read Account Sale Adjustments</p>
 <p>An Account Sale Adjustment (11005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
 <p>A set of nominal accounts will be debited and credited</p>
 <p>The balance of debits and credits must be the same amount</p>
+<p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_adjustment.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -434,28 +440,24 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_adjustment.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Sale Adjustment transaction</p></li>
-<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
-</ul>
-</dd>
-</dl>
-</li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="account-sale-adjustment-contra">
 <h2>Account Sale Adjustment Contra<a class="headerlink" href="#account-sale-adjustment-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Sale Adjustment from an Account Purchase Adjustment created by the target Address</p>
+<p>This service allows the User to create and read an Account Sale Adjustment from an Account Purchase Adjustment created
+by the target Address</p>
+<p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_adjustment_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_adjustment_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Sale Adjustment from an Account Purchase Adjustment created by the target Address</p></li>
-<li><p>The lines of the Account Sale Adjustment must match the lines of the Account Purchase Adjustment, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create an Account Sale Adjustment from an Account Purchase Adjustment created
+by the target Address</p></li>
+<li><p>The lines of the Account Sale Adjustment must match the lines of the Account Purchase Adjustment, with the
+exception of the Nominal Account Number</p></li>
 <li><p>This must be a valid Sales Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -463,7 +465,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_adjustment_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Sale Adjustment transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Sale Adjustment transaction created by the target Address for
+the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -475,7 +478,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 <div class="section" id="account-sale-credit-note">
 <h2>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to create and manage Account Sale Credit Notes</p>
-<p>An Account Sale Credit Note (11003) is a transaction in which a sale has not been credited immediately.</p>
+<p>An Account Sale Credit Note (11003) is a transaction in which a sale has not been credited immediately</p>
 <p>The credit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -496,7 +499,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Sale Credit Note transaction</p></li>
+<li><p>This method allows the User to update the external reference of an Account Sale Credit Note transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -508,14 +511,17 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-sale-credit-note-contra">
 <h2>Account Sale Credit Note Contra<a class="headerlink" href="#account-sale-credit-note-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read an Account Sale Credit Note transaction from an Account Purchase Debit Note created by the target Address</p>
+<p>This service allows the User to create or read an Account Sale Credit Note transaction from an Account Purchase Debit
+Note created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Sale Credit Note from an Account Purchase Debit Note created by the target Address</p></li>
-<li><p>The lines of the Account Sale Credit Note must match the lines of the Account Purchase Debit Note, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create an Account Sale Credit Note from an Account Purchase Debit Note created
+by the target Address</p></li>
+<li><p>The lines of the Account Sale Credit Note must match the lines of the Account Purchase Debit Note, with the
+exception of the Nominal Account Number</p></li>
 <li><p>This must be a valid Sales Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -523,7 +529,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Sale Credit Note transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Sale Credit Note transaction created by the target Address for
+the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -535,8 +542,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 <div class="section" id="account-sale-invoice">
 <h2>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to create and manage Account Sale Invoices</p>
-<p>An Account Sale Invoice (11002) is a transaction in which a sale has not been paid immediately.</p>
-<p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service.</p>
+<p>An Account Sale Invoice (11002) is a transaction in which a sale has not been paid immediately</p>
+<p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_invoice.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -556,7 +563,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_invoice.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Sale Invoice transaction.</p></li>
+<li><p>This method allows the User to update an external reference of an Account Sale Invoice transaction</p></li>
 <li><p>A transaction can only be updated if there’ no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -568,14 +575,18 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-sale-invoice-contra">
 <h2>Account Sale Invoice Contra<a class="headerlink" href="#account-sale-invoice-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read an Account Sale Invoice from an Account Purchase Invoice created by the target Address</p>
+<p>This service allows the User to create or read an Account Sale Invoice from an Account Purchase Invoice created by
+the target Address</p>
+<p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_invoice_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_invoice_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Sale Invoice from an Account Purchase Invoice created by the target Address</p></li>
-<li><p>The lines of the Account Sale Invoice must match the lines of the Account Purchase Invoice, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create an Account Sale Invoice from an Account Purchase Invoice created by the
+target Address</p></li>
+<li><p>The lines of the Account Sale Invoice must match the lines of the Account Purchase Invoice, with the exception
+of the Nominal Account Number</p></li>
 <li><p>This must be a valid Sales Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -583,7 +594,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_invoice_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Sale Invoice transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Sale Invoice transaction created by the target Address for the
+User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -594,12 +606,13 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="account-sale-payment">
 <h2>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Account Sale Payments</p>
+<p>This service allows the User to create and read Account Sale Payments</p>
 <p>An Account Sale Payment (11004) is a transaction in which a sale is being paid</p>
-<p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service.</p>
+<p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated to the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited</p>
+<p>A Nominal Contra must be associated to the selected Payment Method and this Transaction Type in order to get
+the Nominal Account which will be debited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -618,34 +631,29 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of an Account Sale Payment transaction</p></li>
-<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
-</ul>
-</dd>
-</dl>
-</li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="account-sale-payment-contra">
 <h2>Account Sale Payment Contra<a class="headerlink" href="#account-sale-payment-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and read an Account Sale Payment from an Account Purchase Payment transaction created by the target Address</p>
+<p>This service allows the User to create and read an Account Sale Payment from an Account Purchase Payment transaction
+created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create an Account Sale Payment from an Account Purchase Payment created by the target Address</p></li>
+<li><p>This method allows the User to create an Account Sale Payment from an Account Purchase Payment created by the
+target Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get an Account Sale Payment created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get an Account Sale Payment created by the target Address for the User’s acting
+Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -657,33 +665,36 @@ FinancialApplication section of the <a class="reference external" href="https://
 <div class="section" id="allocation">
 <h2>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Allocations</p>
-<p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other.</p>
+<p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
+<dl>
+<dt>Available Methods</dt><dd><ul>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Allocations</p></li>
-<li><p>If the User is acting as global, the list will return the Allocation for all its Addresses</p></li>
-<li><p>Otherwise it will return the list for its acting Address</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul class="simple">
+<li><p>This method allows the User to get a list of Allocations for its acting Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul class="simple">
 <li><p>This method allows the User to create a new Allocation</p></li>
 <li><p>The total amount of Debits and Credits must balance to 0</p></li>
-<li><p>Also the allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater than the Unallocated Balance of the Transaction</p></li>
-<li><p>Finally, the allocated Transactions must be compatible between them</p></li>
+<li><p>The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater</p></li>
 </ul>
+<p>  than the Unallocated Balance of the Transaction
+- Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,</p>
+<blockquote>
+<div><p>adjustment or a credit/debit note</p>
+</div></blockquote>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul class="simple">
 <li><p>This method allows the User to delete an Allocation</p></li>
-<li><p>When an Allocation is deleted the Transactions involved in the Allocation will automatically have their Unallocated Balances restored by the allocated amount</p></li>
+<li><p>When an Allocation is deleted the Transactions involved in the Allocation will automatically have their
+Unallocated Balances restored by the allocated amount</p></li>
 </ul>
 </dd>
 </dl>
@@ -692,23 +703,20 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="business-logic">
-<h2>Business Logic<a class="headerlink" href="#business-logic" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to manage its Financial Business Logic</p>
-<p>The Financial Business Logic determines how the Financial Application will behave depending on the parameters set up</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.business_logic.&lt;method&gt;</span></code></p>
+<div class="section" id="balance-sheet">
+<h2>Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to generate a Balance Sheet</p>
+<p>The Balance Sheet presents a company’s Financial position at the end of a specified date
+Therefore, it is a list of Nominal Accounts with their total Debits, Credits and balance at a given date</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.balance_sheet.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.business_logic.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get the current Business Logic for its active Address</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.business_logic.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update the current Business Logic for its active Address</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_balance_sheet.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the Balance Sheet at a certain date</p></li>
+<li><p>If the User is acting Global and no <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is specified, the Balance Sheet is calculated for all
+Addresses in its Member</p></li>
+<li><p>Otherwise, the Balance Sheet is calculated for its acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -719,11 +727,12 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-purchase-debit-note">
 <h2>Cash Purchase Debit Note<a class="headerlink" href="#cash-purchase-debit-note" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Cash Purchase Debit Notes</p>
+<p>This service allows the User to create and manage Cash Purchase Debit Notes.</p>
 <p>A Cash Purchase Debit Note (10001) is a transaction in which a purchase has been debited in cash</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited</p>
+<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to
+get the Nominal Account which will be debited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -744,7 +753,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of a Cash Purchase Debit Note transaction</p></li>
+<li><p>This method allows the User to update the external reference of a Cash Purchase Debit Note transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -756,22 +765,26 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-purchase-debit-note-contra">
 <h2>Cash Purchase Debit Note Contra<a class="headerlink" href="#cash-purchase-debit-note-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read a Cash Purchase Debit Note from a Cash Sale Credit Note created by the target Address</p>
+<p>This service allows the User to create or read a Cash Purchase Debit Note from a Cash Sale Credit Note created by the
+target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a Cash Purchase Debit Note from a Cash Sale Credit Note created by the target Address</p></li>
-<li><p>The lines of the Cash Purchase Debit Note must match the lines of the Cash Sale Credit Note, with the exception of the Nominal Account Number</p></li>
-<li><p>This must be a valid Purchases Nominal Account belonging to the User’s acting Address</p></li>
+<li><p>This method allows the User to create a Cash Purchase Debit Note from a Cash Sale Credit Note created by the
+target Address</p></li>
+<li><p>The lines of the Cash Purchase Debit Note must match the lines of the Cash Sale Credit Note, with the
+exception of the Nominal Account Number</p></li>
+<li><p>This must be a valid Purchases Nominal Account belonging to the User’s acting Address.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a Cash Purchase Debit Note transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get a Cash Purchase Debit Note transaction created by the target Address for
+the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -782,11 +795,12 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-purchase-invoice">
 <h2>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create and manage Cash Sale Credit Notes</p>
+<p>This service allows the User to create and manage Cash Purchase Inovoices</p>
 <p>A Cash Purchase Invoice (10000) is a transaction in which a purchase has been paid in cash</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be credited</p>
+<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get
+the Nominal Account which will be credited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -807,7 +821,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of a Cash Purchase Invoice transaction</p></li>
+<li><p>This method allows the User to update an external reference of a Cash Purchase Invoice transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -819,14 +833,17 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-purchase-invoice-contra">
 <h2>Cash Purchase Invoice Contra<a class="headerlink" href="#cash-purchase-invoice-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read a Cash Purchase Invoice from a Cash Sale Invoice created by the target Address</p>
+<p>This service allows the User to create or read a Cash Purchase Invoice from a Cash Sale Invoice created by the target
+Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a Cash Purchase Invoice from a Cash Sale Invoice created by the target Address</p></li>
-<li><p>The lines of the Cash Purchase Invoice must match the lines of the Cash Sale Invoice, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create a Cash Purchase Invoice from a Cash Sale Invoice created by the target
+Address</p></li>
+<li><p>The lines of the Cash Purchase Invoice must match the lines of the Cash Sale Invoice, with the exception of
+the Nominal Account Number</p></li>
 <li><p>This must be a valid Purchases Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -834,7 +851,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a Cash Purchase Invoice transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get a Cash Purchase Invoice transaction created by the target Address for the
+User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -849,7 +867,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 <p>A Cash Sale Credit Note (11001) is a transaction in which a sale has been credited in cash</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated with the selected Payment Type and this Transaction Type in order to get the Nominal Account which will be credited</p>
+<p>A Nominal Contra must be associated with the selected Payment Type and this Transaction Type in order to get
+the Nominal Account which will be credited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -870,7 +889,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of a Cash Sale Credit Note transaction</p></li>
+<li><p>This method allows the User to update the external reference of a Cash Sale Credit Note transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -882,14 +901,17 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-sale-credit-note-contra">
 <h2>Cash Sale Credit Note Contra<a class="headerlink" href="#cash-sale-credit-note-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read a Cash Sale Credit Note from a Cash Purchase Debit Note created by the target Address</p>
+<p>This service allows the User to create or read a Cash Sale Credit Note from a Cash Purchase Debit Note created by the
+target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a Cash Sale Credit Note from a Cash Purchase Debit Note create by the target Address</p></li>
-<li><p>The lines of the Cash Sale Credit Note must match the lines of the Cash Purchase Debit Note, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create a Cash Sale Credit Note from a Cash Purchase Debit Note create by the
+target Address</p></li>
+<li><p>The lines of the Cash Sale Credit Note must match the lines of the Cash Purchase Debit Note, with the
+exception of the Nominal Account Number</p></li>
 <li><p>This must be a valid Sales Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -897,7 +919,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a Cash Sale Credit Note transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get a Cash Sale Credit Note transaction created by the target Address for the
+User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -912,7 +935,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 <p>A Cash Sale Invoice (11000) is a transaction in which a sale has been paid in cash</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to get the Nominal Account which will be debited</p>
+<p>A Nominal Contra must be associated with the selected Payment Method and this Transaction Type in order to
+get the Nominal Account which will be debited</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -933,7 +957,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update some details of a Cash Sale Invoice transaction</p></li>
+<li><p>This method allows the User to update an external reference of a Cash Sale Invoice transaction</p></li>
 <li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
 </ul>
 </dd>
@@ -945,14 +969,17 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="cash-sale-invoice-contra">
 <h2>Cash Sale Invoice Contra<a class="headerlink" href="#cash-sale-invoice-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to create or read a Cash Sale Invoice from a Cash Purchase Invoice created by the target Address</p>
+<p>This service allows the User to create or read a Cash Sale Invoice from a Cash Purchase Invoice created by the target
+Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice_contra.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice_contra.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a Cash Sale Invoice from a Cash Purchase Invoice created by the target Address</p></li>
-<li><p>The lines of the Cash Sale Invoice must match the lines of the Cash Purchase Invoice, with the exception of the Nominal Account Number</p></li>
+<li><p>This method allows the User to create a Cash Sale Invoice from a Cash Purchase Invoice created by the target
+Address</p></li>
+<li><p>The lines of the Cash Sale Invoice must match the lines of the Cash Purchase Invoice, with the exception of
+the Nominal Account Number</p></li>
 <li><p>This must be a valid Sales Nominal Account belonging to the User’s acting Address</p></li>
 </ul>
 </dd>
@@ -960,7 +987,34 @@ FinancialApplication section of the <a class="reference external" href="https://
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice_contra.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a Cash Sale Invoice transaction created by the target Address for the User’s acting Address</p></li>
+<li><p>This method allows the User to get a Cash Sale Invoice transaction created by the target Address for the
+User’s acting Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="credit-limit">
+<h2>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline">¶</a></h2>
+<p>This service allows a User to read or list Credit Limits for their customers</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.credit_limit.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.credit_limit.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve a list of Credit Limit details set by their Address for Addresses
+they are linked to</p></li>
+<li></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.credit_limit.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the Credit Limit set for the target Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -1006,24 +1060,6 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="creditor-account-statement-log">
-<h2>Creditor Account Statement Log<a class="headerlink" href="#creditor-account-statement-log" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to see a list of Statement Logs</p>
-<p>A Statement Log is a record that gets generated automatically every time a statement is sent automatically by the system</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_statement_log.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_statement_log.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Creditor Statement Logs</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="creditor-ledger">
 <h2>Creditor Ledger<a class="headerlink" href="#creditor-ledger" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get a list of Creditors who are owed money by the User’s Address</p>
@@ -1044,7 +1080,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="creditor-ledger-aged">
 <h2>Creditor Ledger Aged<a class="headerlink" href="#creditor-ledger-aged" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Creditors with their current balance, as well as their balances at 30, 60, and 90 days and older</p>
+<p>This service allows the User to get a list of Creditors with their current balance, as well as their balances at 30, 60,
+90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_aged.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1059,17 +1096,16 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="creditor-ledger-transaction">
-<h2>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Creditor Transactions for their acting Address</p>
-<p>If the User is acting Global, the service will return the Creditor Transactions for all the Addresses in their Member instead</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.&lt;method&gt;</span></code></p>
+<div class="section" id="creditor-ledger-contra-transaction">
+<h2>Creditor Ledger Contra Transaction<a class="headerlink" href="#creditor-ledger-contra-transaction" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Creditor Contra Transactions</p>
+<p>A Contra Transaction is a Transaction created by the Creditor for the User’s Address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_contra_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Creditor Transactions</p></li>
-<li><p>The method also returns the current total amount of Debits and Credits</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_contra_transaction.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Creditor Contra Transactions for the User’s Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -1078,18 +1114,16 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="creditor-ledger-transaction-contra">
-<h2>Creditor Ledger Transaction Contra<a class="headerlink" href="#creditor-ledger-transaction-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Creditor Contra Transactions</p>
-<p>A Contra Transaction is a Transaction created by the Creditor for the User’s Address</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction_contra.&lt;method&gt;</span></code></p>
+<div class="section" id="creditor-ledger-transaction">
+<h2>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Creditor Transactions for their acting Address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction_contra.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Creditor Contra Transactions</p></li>
-<li><p>If the User is acting Global, the list will contain Transactions for all of the Addresses in the User’s Member</p></li>
-<li><p>If the User is acting Local, the list will only contain Transactions for the User’s current acting Address</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Creditor Transactions</p></li>
+<li><p>The method also returns the current total amount of Debits and Credits</p></li>
 </ul>
 </dd>
 </dl>
@@ -1135,24 +1169,6 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="debtor-account-statement-log">
-<h2>Debtor Account Statement Log<a class="headerlink" href="#debtor-account-statement-log" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to see a list of Statement Logs</p>
-<p>A Statement Log is a record that gets generated automatically every time a statement is sent automatically by the system</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_statement_log.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_statement_log.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Debtor Statement Logs</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="debtor-ledger">
 <h2>Debtor Ledger<a class="headerlink" href="#debtor-ledger" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get a list of Debtors who owe money to the User’s Address</p>
@@ -1173,7 +1189,8 @@ FinancialApplication section of the <a class="reference external" href="https://
 </div>
 <div class="section" id="debtor-ledger-aged">
 <h2>Debtor Ledger Aged<a class="headerlink" href="#debtor-ledger-aged" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Debtors with their current balance, as well as their balances at 30, 60, 90 days and older</p>
+<p>This service allows the User to get a list of Debtors with their current balance, as well as their balances at 30, 60,
+90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_aged.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1188,10 +1205,27 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
+<div class="section" id="debtor-ledger-contra-transaction">
+<h2>Debtor Ledger Contra Transaction<a class="headerlink" href="#debtor-ledger-contra-transaction" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Debtor Contra Transactions</p>
+<p>A Contra Transaction is a Transaction created by the Debtor for the User’s Address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Debtor Contra Transactions for the User’s Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="debtor-ledger-transaction">
 <h2>Debtor Ledger Transaction<a class="headerlink" href="#debtor-ledger-transaction" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get a list of Debtor Transactions for their acting Address</p>
-<p>If the User is acting Global, the service will return the Debtor Transactions for all the Address in their Member instead</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1207,18 +1241,73 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="debtor-ledger-transaction-contra">
-<h2>Debtor Ledger Transaction Contra<a class="headerlink" href="#debtor-ledger-transaction-contra" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Debtor Contra Transactions</p>
-<p>A Contra Transaction is a Transaction created by the Debtor for the User’s Address</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
+<div class="section" id="global-nominal-account">
+<h2>Global Nominal Account<a class="headerlink" href="#global-nominal-account" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to manage its Global Nominal Accounts.</p>
+<p>A Nominal Account stores accounting Transactions for a fiscal year.</p>
+<p>A Member can have a set of Global Nominal Accounts.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.&lt;method&gt;</span></code></p>
+<dl>
+<dt>Available Methods</dt><dd><ul>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Debtor Contra Transactions</p></li>
-<li><p>If the User is acting Global, the list will contain Transactions for all of the Addresses in the User’s Member</p></li>
-<li><p>If the User is acting Local, the list will only contain Transactions for the User’s current acting Address</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.list</span></code></dt><dd><ul class="simple">
+<li><p>This method allows the User to get a list of Nominal Accounts.</p></li>
+<li><p>If the User is acting Local, the method will return the list of Nominal Accounts for the User’s acting Address</p></li>
+<li><p>If the User is acting Global, the method will return the list of Global Nominal Accounts in the User’s Member</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Nominal Account for its Member and/or Address</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is specified the Global Nominal Account will be created for the Member if it does not
+exist, and created for the specified Address</p></li>
+<li><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pay attention to the <code class="docutils literal notranslate"><span class="pre">valid_purchases_account</span></code> and <code class="docutils literal notranslate"><span class="pre">valid_sales_account</span></code>:</p>
+<p>Both will be required if the selected <code class="docutils literal notranslate"><span class="pre">nominal_account_type_id</span></code> is 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">valid_sales_account</span></code> will be True and <code class="docutils literal notranslate"><span class="pre">valid_purchases_account</span></code> will be False if the selected
+<code class="docutils literal notranslate"><span class="pre">nominal_account_type_id</span></code> is 4000. Sent values will be ignored</p>
+<p><code class="docutils literal notranslate"><span class="pre">valid_purchases_account</span></code> will be True and <code class="docutils literal notranslate"><span class="pre">valid_sales_account</span></code> will be False if the selected
+<code class="docutils literal notranslate"><span class="pre">nominal_account_type_id</span></code> is 5000. Sent values will be ignored</p>
+<p>Both parameters will be False for any other <code class="docutils literal notranslate"><span class="pre">nominal_account_type_id</span></code>, sent values will be ignored</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.read</span></code></dt><dd><ul class="simple">
+<li><p>This method allows the User to get a Nominal Account for its Member and/or Address</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is not specified, the Global Nominal Account for the Member will be returned</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update a Nominal Account</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is not specified, the Global Nominal Account for the Member will be updated</p></li>
+<li><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The same note about <code class="docutils literal notranslate"><span class="pre">valid_sales_account</span></code> and <code class="docutils literal notranslate"><span class="pre">valid_purchases_account</span></code> as in the <code class="docutils literal notranslate"><span class="pre">create</span></code>
+method must be taken into account for <code class="docutils literal notranslate"><span class="pre">update</span></code></p>
+<p>Also note that any change in these values will affect the Member’s Global Nominal Account as well as all
+Addresses who have that Nominal Account set up</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.global_nominal_account.delete</span></code></dt><dd><ul class="simple">
+<li><p>This method allows the User to delete a Nominal Account for its Member and/or Address</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is not specified, the Nominal Account will be deleted for the Member and all Addresses
+within the Member.</p></li>
+<li><p>A Nominal Account can only be deleted if it has not been used in a Transaction</p></li>
 </ul>
 </dd>
 </dl>
@@ -1267,84 +1356,16 @@ FinancialApplication section of the <a class="reference external" href="https://
 </dd>
 </dl>
 </div>
-<div class="section" id="nominal-account">
-<h2>Nominal Account<a class="headerlink" href="#nominal-account" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to manage its Nominal Accounts</p>
-<p>A Nominal Account stores accounting Transactions for a fiscal year</p>
-<p>A Member can have a set of Nominal Accounts</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.&lt;method&gt;</span></code></p>
-<dl>
-<dt>Available Methods</dt><dd><ul>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.list</span></code></dt><dd><ul class="simple">
-<li><p>This method allows the User to get a list of Nominal Accounts</p></li>
-<li><p>If the User is acting Local, the method will return the list of Nominal Accounts for the User’s acting Address</p></li>
-<li><p>If the User is acting Global, the method will return the list of Nominal Accounts for all Addresses in the User’s Member</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a new Nominal Account for its Member and/or Address</p></li>
-<li><p>If the idAddress is specified the Nominal Account will be created for the Member if it does not exist, and created for the specified Address</p></li>
-<li><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Pay attention to the <code class="docutils literal notranslate"><span class="pre">validPurchasesAccount</span></code> and <code class="docutils literal notranslate"><span class="pre">validSalesAccount</span></code>:</p>
-<p>Both will be required if the selected <code class="docutils literal notranslate"><span class="pre">idNominalAccountType</span></code> is 1.</p>
-<p><code class="docutils literal notranslate"><span class="pre">validSalesAccount</span></code> will be True and <code class="docutils literal notranslate"><span class="pre">validPurchasesAccount</span></code> will be False if the selected <code class="docutils literal notranslate"><span class="pre">idNominalAccountType</span></code> is 4000. Sent values will be ignored.</p>
-<p><code class="docutils literal notranslate"><span class="pre">validPurchasesAccount</span></code> will be True and <code class="docutils literal notranslate"><span class="pre">validSalesAccount</span></code> will be False if the selected <code class="docutils literal notranslate"><span class="pre">idNominalAccountType</span></code> is 5000. Sent values will be ignored.</p>
-<p>Both parameters will be False for any other <code class="docutils literal notranslate"><span class="pre">idNominalAccountType</span></code>. Sent values will be ignored.</p>
-</div>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.read</span></code></dt><dd><ul class="simple">
-<li><p>This method allows the User to get a Nominal Account for its Member and/or Address</p></li>
-<li><p>If the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> is not specified, the Nominal Account for the Member will be returned</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.update</span></code></dt><dd><ul>
-<li><p>This method allows the User to update a Nominal Account</p></li>
-<li><p>If the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> is not specified, the Nominal Account for the Member will be updated</p></li>
-<li><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The same note about <code class="docutils literal notranslate"><span class="pre">validSalesAccount</span></code> and <code class="docutils literal notranslate"><span class="pre">validPurchasesAccount</span></code> as in the <code class="docutils literal notranslate"><span class="pre">create</span></code> method must be taken into account for <code class="docutils literal notranslate"><span class="pre">update</span></code></p>
-<p>Also note that any change in these values will affect the Member’s Nominal Account as well as all Addresses who have that Nominal Account set up.</p>
-</div>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account.delete</span></code></dt><dd><ul class="simple">
-<li><p>This method allows the User to delete a Nominal Account for its Member and/or Address</p></li>
-<li><p>If the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> is not specified, the Nominal Account will be deleted for the Member and all Addresses within the Member</p></li>
-<li><p>A Nominal Account can only be deleted if it has not been used in a Transaction</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="nominal-account-history">
 <h2>Nominal Account History<a class="headerlink" href="#nominal-account-history" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a Nominal Account balance in a given period of time, as well as the list of transactions in which the Account has been used</p>
+<p>This service allows the User to get a Nominal Account balance in a given period of time, as well as the list of
+transactions in which the Account has been used</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_history.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_history.read</span></code></dt><dd><ul>
-<li><p>This method allows the User to read the History of a given Nominal Account</p></li>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_history.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to list the transaction History of a given Nominal Account</p></li>
 </ul>
 </dd>
 </dl>
@@ -1375,10 +1396,12 @@ FinancialApplication section of the <a class="reference external" href="https://
 <h2>Nominal Contra<a class="headerlink" href="#nominal-contra" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Nominal Contra Accounts</p>
 <p>A Nominal Contra Account is an association between a Transaction Type, a Payment Method and a Nominal Account</p>
-<p>The Nominal Contra is used in conjunction with the Payment Method and Transaction Type to determine with Nominal Account the lines of Debits or Credits will be matched with</p>
+<p>The Nominal Contra is used in conjunction with the Payment Method and Transaction Type to determine with Nominal Account
+the lines of Debits or Credits will be matched with</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>For information on the supported Transaction Types, see the Financial Application section of the <a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
+<p>For information on the supported Transaction Types, see the Financial Application section of the
+<a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_contra.&lt;method&gt;</span></code></p>
 <dl>
@@ -1396,7 +1419,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 <li><p>This method allows the User to create a new Nominal Contra Account</p></li>
 <li><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The selected Nominal Account must be of the <strong>Cash &amp; Bank</strong> type (Number between 1000 and 1299 inclusive)</p>
+<p>The selected Nominal Account Number must be between 1000 and 2999 inclusive</p>
 </div>
 </li>
 </ul>
@@ -1417,7 +1440,7 @@ FinancialApplication section of the <a class="reference external" href="https://
 <li><p>Only owners can updated the Nominal Contra</p></li>
 <li><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The selected Nominal Account must be of the <strong>Cash &amp; Bank</strong> type (Number between 1000 and 1299 inclusive)</p>
+<p>The selected Nominal Account Number must be between 1000 and 2999 inclusive</p>
 </div>
 </li>
 </ul>
@@ -1428,147 +1451,6 @@ FinancialApplication section of the <a class="reference external" href="https://
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_contra.delete</span></code></dt><dd><ul class="simple">
 <li><p>This method allows the User to delete a Nominal Contra Account</p></li>
 <li><p>Only owners can delete a Nominal Contra Account</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-balance-sheet">
-<h2>Nominal Ledger Balance Sheet<a class="headerlink" href="#nominal-ledger-balance-sheet" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to generate a Balance Sheet</p>
-<p>The Balance Sheet presents a company’s Financial position at the end of a specified date.
-Therefore, it is a list of Nominal Accounts with their total Debits, Credits and balance at a given date.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_balance_sheet.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_balance_sheet.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get the Balance Sheet at a certain date</p></li>
-<li><p>If the User is acting Global, the Balance Sheet is calculated for all Addresses in its Member</p></li>
-<li><p>Otherwise, the Balance Sheet is calculated for its acting Address</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-profit-loss">
-<h2>Nominal Ledger Profit &amp; Loss<a class="headerlink" href="#nominal-ledger-profit-loss" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to generate a Profit &amp; Loss account.</p>
-<p>The Profit &amp; Loss shows the company’s revenues and expenses during a particular period.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_profit_loss.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_profit_loss.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get the Profit &amp; Loss in a range of dates</p></li>
-<li><p>If the User is acting Global, the Profit &amp; Loss will be calculated for all its Addresses</p></li>
-<li><p>Otherwise, the Profit &amp; Loss will be calculated for its Local Address</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-purchases-by-country">
-<h2>Nominal Ledger Purchases By Country<a class="headerlink" href="#nominal-ledger-purchases-by-country" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period of time</p>
-<p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent, as well as the Currency</p>
-<p>A Country may appear more than once if there are Nominal Accounts with different Currencies</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_purchases_by_country.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_purchases_by_country.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Purchases broken down by Country</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-sales-by-country">
-<h2>Nominal Ledger Sales By Country<a class="headerlink" href="#nominal-ledger-sales-by-country" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of time</p>
-<p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent, as well as the Currency</p>
-<p>A Country may appear more than once if there are Nominal Accounts with different Currencies</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_sales_by_country.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_sales_by_country.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Sales broken down by Country</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-trial-balance">
-<h2>Nominal Ledger Trial Balance<a class="headerlink" href="#nominal-ledger-trial-balance" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to generate a Trial Balance</p>
-<p>A Trial Balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a business</p>
-<p>This list will contain the name of each Nominal Ledger account, and the value of that Nominal Ledger balance</p>
-<p>Each Nominal Ledger account will hold either a Debit or Credit balance</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_trial_balance.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_trial_balance.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get the Trial Balance on a certain date</p></li>
-<li><p>If the User is acting as Global, the Trial Balance will be calculated for all Addresses in its Member</p></li>
-<li><p>Otherwise, the Trial Balance will be calculated for its local Address</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-vies-purchases">
-<h2>Nominal Ledger VIES Purchases<a class="headerlink" href="#nominal-ledger-vies-purchases" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of VIES Purchases</p>
-<p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT registration of companies registered in the EU</p>
-<p>EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where the purchaser resides</p>
-<p>For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_vies_purchases.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_vies_purchases.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Purchases for each Tax Rate</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="nominal-ledger-vies-sales">
-<h2>Nominal Ledger VIES Sales<a class="headerlink" href="#nominal-ledger-vies-sales" title="Permalink to this headline">¶</a></h2>
-<p>This service allows the User to get a list of VIES Sales</p>
-<p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT registration of companies registered in the EU</p>
-<p>EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where the purchaser resides</p>
-<p>For this reason, suppliers need an easy way to validate the VAR numbers presented by purchasers. This validation is performed through VIES</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_vies_sales.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_ledger_vies_sales.list</span></code></dt><dd><ul>
-<li><p>This method allows the User to get a list of Addresses grouped by Tax Rates, and the total amount spent in Sales for each Tax Rate</p></li>
 </ul>
 </dd>
 </dl>
@@ -1630,8 +1512,10 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 <div class="section" id="period-end">
 <h2>Period End<a class="headerlink" href="#period-end" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Period End Transactions</p>
-<p>A Period End Transaction (12001) calculates the balance from the previous Period End (or the oldest Transaction if none exists) and the given transaction date</p>
-<p>Creating a Period End will disallow any modification or creation of Transactions with a date before the Period End’s transaction date</p>
+<p>A Period End Transaction (12001) calculates the balance from the previous Period End (or the oldest Transaction if none
+exists) and the given transaction date</p>
+<p>Creating a Period End will disallow any modification or creation of Transactions with a date before the Period End’s
+transaction date</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.period_end.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1661,7 +1545,127 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.period_end.delete</span></code></dt><dd><ul>
 <li><p>This method allows the User to delete a Period End Transaction</p></li>
 <li><p>Only the latest Period End can be deleted</p></li>
-<li><p>If there’s a Year End Transaction associated with the Period End, it will be deleted also</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="profit-loss">
+<h2>Profit &amp; Loss<a class="headerlink" href="#profit-loss" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to generate a Profit &amp; Loss account</p>
+<p>The Profit &amp; Loss shows the company’s revenues and expenses during a particular period</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.profit_loss.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.profit_loss.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the Profit &amp; Loss in a range of dates</p></li>
+<li><p>If the User is acting Global and no <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is specified, the Profit &amp; Loss will be calculated for all
+its Addresses</p></li>
+<li><p>Otherwise, the Profit &amp; Loss will be calculated for its Local Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="purchases-by-country">
+<h2>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period
+of time</p>
+<p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_country.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_country.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Purchases broken down by Country</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sales-by-country">
+<h2>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
+time</p>
+<p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_country.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_country.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Sales broken down by Country</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="sales-by-territory">
+<h2>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of Addressesin the given Territory</p>
+<p>Each Address will have the total value of goods sold to them</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Sales broken down by Territory</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="statement-log">
+<h2>Statement Log<a class="headerlink" href="#statement-log" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to see a list of Statement Logs.</p>
+<p>A Statement Log is a record that gets generated every time a statement is requested to be sent automatically by the
+system</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_log.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_log.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Statement Logs</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="statement-settings">
+<h2>Statement Settings<a class="headerlink" href="#statement-settings" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to manage its Statement Settings</p>
+<p>The Statement Settings define the paramaters for if and when a Statement will be sent to an Address’s Debtors</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_settings.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_settings.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the current Statement Settings for its active Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_settings.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the current Statement Settings for its active Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -1673,7 +1677,8 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 <div class="section" id="tax-rate">
 <h2>Tax Rate<a class="headerlink" href="#tax-rate" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Tax Rates</p>
-<p>In a tax system, the Tax Rate describes a ratio (usually expressed as a percentage) at which a business or person is taxed</p>
+<p>In a tax system, the Tax Rate describes a ratio (usually expressed as a percentage) at which a business or person is
+taxed</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.tax_rate.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1681,15 +1686,13 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.tax_rate.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Tax Rates</p></li>
 <li><p>Only Tax Rates belonging to the User will be returned</p></li>
-<li><p>If the User is acting as Global, the method will return all Tax Rates belonging to all Addresses in the User’s Member</p></li>
-<li><p>Otherwise, only the Tax Rates belonging to the User’s current Address will be returned</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.tax_rate.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a new Tax Rate for one of its Addresses</p></li>
+<li><p>This method allows the User to create a new Tax Rate for its Address</p></li>
 </ul>
 </dd>
 </dl>
@@ -1722,10 +1725,83 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 </dd>
 </dl>
 </div>
+<div class="section" id="trial-balance">
+<h2>Trial Balance<a class="headerlink" href="#trial-balance" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to generate a Trial Balance</p>
+<p>A Trial Balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a
+business</p>
+<p>This list will contain the name of each Nominal Ledger account, and the value of that Nominal Ledger balance</p>
+<p>Each Nominal Ledger account will hold either a Debit or Credit balance</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.trial_balance.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.trial_balance.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get the Trial Balance on a certain date</p></li>
+<li><p>If the User is acting as Global no <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is specified, the Trial Balance will be calculated for all
+Addresses in its Member</p></li>
+<li><p>Otherwise, the Trial Balance will be calculated for its local Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="vies-purchases">
+<h2>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of VIES Purchases</p>
+<p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
+registration of companies registered in the EU</p>
+<p>EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where
+the purchaser resides</p>
+<p>For this reason, suppliers need an easy way to validate the VAT numbers presented by purchasers. This validation is
+performed through VIES</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vies_purchases.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vies_purchases.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Addresses from within the EU where the Tax Rate on transactions
+was zero and return the total amount spent in Purchases.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="vies-sales">
+<h2>VIES Sales<a class="headerlink" href="#vies-sales" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to get a list of VIES Sales</p>
+<p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
+registration of companies registered in the EU</p>
+<p>EU law requires that, where goods or services are procured with the EU, VAT must only be paid in the member state where
+the purchaser resides</p>
+<p>For this reason, suppliers need an easy way to validate the VAT numbers presented by purchasers. This validation is
+performed through VIES</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vies_sales.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vies_sales.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Addresses from within the EU where the Tax Rate on transactions
+was zero and return the total amount spent in Sales</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="year-end">
 <h2>Year End<a class="headerlink" href="#year-end" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Year End transactions</p>
-<p>A Year End Transaction (12002) is a transaction which will calculate the balance between the previous Year End (or the oldest transaction if none exists) and the given transaction date</p>
+<p>A Year End Transaction (12002) is a transaction which will calculate the balance between the previous Year End (or the
+oldest transaction if none exists) and the given transaction date</p>
 <p>A Year End Transaction is always associated with a Period End Transaction</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.year_end.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1739,9 +1815,9 @@ Therefore, it is a list of Nominal Accounts with their total Debits, Credits and
 </li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.year_end.create</span></code></dt><dd><ul>
-<li><p>This method allows the User to create a new Year End Transaction</p></li>
-<li><p>If there is no Period End Transaction at the given <code class="docutils literal notranslate"><span class="pre">transactionDate</span></code>, one will be created</p></li>
-<li><p>The Year End’s <code class="docutils literal notranslate"><span class="pre">transactionDate</span></code> can not be set to be any time in the future</p></li>
+<li><p>This method allows the User to create a new Year End Transaction.</p></li>
+<li><p>If there is no Period End Transaction at the given <code class="docutils literal notranslate"><span class="pre">transaction_date</span></code>, one will be created</p></li>
+<li><p>The Year End’s <code class="docutils literal notranslate"><span class="pre">transaction_date</span></code> can not be set to be any time in the future</p></li>
 </ul>
 </dd>
 </dl>
