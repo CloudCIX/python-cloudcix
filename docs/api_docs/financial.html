@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.8.7 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8.7
+                0.8.8
               </div>
             
           
@@ -226,6 +226,12 @@ for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Adjustment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-debit-note">
 <h2>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this headline">¶</a></h2>
@@ -291,6 +297,12 @@ for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-invoice">
 <h2>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this headline">¶</a></h2>
@@ -356,6 +368,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-payment">
 <h2>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this headline">¶</a></h2>
@@ -415,6 +433,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Payment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-adjustment">
 <h2>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this headline">¶</a></h2>
@@ -474,6 +498,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Adjustment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-credit-note">
 <h2>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this headline">¶</a></h2>
@@ -538,6 +568,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-invoice">
 <h2>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this headline">¶</a></h2>
@@ -603,6 +639,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-payment">
 <h2>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this headline">¶</a></h2>
@@ -661,37 +703,41 @@ Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Payment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="allocation">
 <h2>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to manage its Allocations</p>
 <p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.&lt;method&gt;</span></code></p>
-<dl>
-<dt>Available Methods</dt><dd><ul>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Allocations for its acting Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul>
 <li><p>This method allows the User to create a new Allocation</p></li>
 <li><p>The total amount of Debits and Credits must balance to 0</p></li>
-<li><p>The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater</p></li>
+<li><p>The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater
+than the Unallocated Balance of the Transaction</p></li>
+<li><p>Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,
+adjustment or a credit/debit note</p></li>
 </ul>
-<p>  than the Unallocated Balance of the Transaction
-- Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,</p>
-<blockquote>
-<div><p>adjustment or a credit/debit note</p>
-</div></blockquote>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul>
 <li><p>This method allows the User to delete an Allocation</p></li>
 <li><p>When an Allocation is deleted the Transactions involved in the Allocation will automatically have their
 Unallocated Balances restored by the allocated amount</p></li>
@@ -792,6 +838,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-purchase-invoice">
 <h2>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this headline">¶</a></h2>
@@ -860,6 +912,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-sale-credit-note">
 <h2>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this headline">¶</a></h2>
@@ -928,6 +986,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-sale-invoice">
 <h2>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this headline">¶</a></h2>
@@ -996,6 +1060,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="credit-limit">
 <h2>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline">¶</a></h2>
@@ -1593,6 +1663,27 @@ of time</p>
 </dd>
 </dl>
 </div>
+<div class="section" id="rtd-return-of-trading-details">
+<h2>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this headline">¶</a></h2>
+<p>This service aggregates all the transactions in an Address for a year and calculates the total Sales, Purchases from
+the EU (excluding Ireland), Purchases for Resale, and Purchases not for Resale. Each of these totals are broken down
+according to the percentage tax that were applied to the transactions.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.rtd.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.rtd.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to see their sales and purchases for the year, grouped by the tax rates in use by
+their Address</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">year</span></code> parameter is required for this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="sales-by-country">
 <h2>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
@@ -1622,6 +1713,24 @@ time</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Sales broken down by Territory</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="statement">
+<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to issue Statements to each of their debtors.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.create</span></code></dt><dd><ul>
+<li><p>This method generates and emails a Statement to each of the requesting User’s debtors</p></li>
+<li><p>A User can specify an <strong>address_id</strong> in the post data to only send statements to one debtor</p></li>
 </ul>
 </dd>
 </dl>
@@ -1749,6 +1858,25 @@ Addresses in its Member</p></li>
 </dd>
 </dl>
 </div>
+<div class="section" id="vat3">
+<h2>VAT3<a class="headerlink" href="#vat3" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to generate the data for a VAT3 report</p>
+<p>A VAT3 report is a summary of all VAT incurred by an Address on all Sales and Purchases for a given date range</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to view the sum total VAT incurred by their Address for Sale, Purchases, EU
+Sales, and EU Purchases</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="vies-purchases">
 <h2>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to get a list of VIES Purchases</p>
@@ -1854,7 +1982,7 @@ oldest transaction if none exists) and the given transaction date</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CloudCIX
+        &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>

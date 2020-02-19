@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Examples &mdash; CloudCIX API Python Library 0.8.7 documentation</title>
+  <title>Examples &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.7
+                0.8.8
               </div>
             
           
@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="conf.html">Conf</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#get-a-list-of-countries">1. Get a list of Countries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#get-a-list-of-10-countries">1. Get a list of 10 Countries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-a-list-of-10-countries">2. Get a list of 10 Countries</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
@@ -194,12 +194,12 @@
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
 
 <span class="c1"># Print out the json of the response data</span>
-<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="get-a-list-of-10-countries">
-<h2>1. Get a list of 10 Countries<a class="headerlink" href="#get-a-list-of-10-countries" title="Permalink to this headline">¶</a></h2>
+<h2>2. Get a list of 10 Countries<a class="headerlink" href="#get-a-list-of-10-countries" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># python3 example</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
@@ -222,7 +222,7 @@
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
 
 <span class="c1"># Print out the json of the response data</span>
-<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>
 </pre></div>
 </div>
 </div>
@@ -239,7 +239,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CloudCIX
+        &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>

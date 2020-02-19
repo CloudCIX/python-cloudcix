@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.8.7 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8.7
+                0.8.8
               </div>
             
           
@@ -158,29 +158,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>Scheduler is an application that allows the User to create recurring
-transactions. A recurring transaction is a transaction that will be
-recreated one or several times according to the rules the User gives.</p>
+  <p>The Scheduler application allows the User to define tasks for duplicating
+existing transactions. A task contains information regarding when and how
+often it should be repeated. This can be used for monthly invoicing for
+example. Scheduler on its own does not create the new transactions and needs
+other software to read and execute the tasks from the Scheduler API. CloudCIX
+uses its own software for this called Routine which relies on Celery for
+creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <div class="section" id="services">
 <h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="execute-task">
-<h2>Execute Task<a class="headerlink" href="#execute-task" title="Permalink to this headline">¶</a></h2>
-<p>This service allows for the instant execution of a scheduled task</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.execute_task.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.execute_task.create</span></code></dt><dd><ul>
-<li><p>Requests that the Task instance with the given ID is run now</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="task">
 <h2>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h2>
 <p>The Task service allows Users to manage their recurring transactions.</p>
@@ -217,9 +204,20 @@ a set of rules defined by the User.</p>
 </dd>
 </dl>
 </li>
+</ul>
+</dd>
+<dt>Supported Transactions</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.task.delete</span></code></dt><dd><ul>
-<li><p>This method allows the User to delete a recurring transaction</p></li>
+<dt>Account Sale Invoices</dt><dd><ul>
+<li><p>cloudcix.api.Financial.account_sale_invoice</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Warrantor Tickets</dt><dd><ul>
+<li><p>cloudcix.api.Helpdesk.ticket</p></li>
+<li><p>transaction_type_id=40000</p></li>
 </ul>
 </dd>
 </dl>
@@ -263,7 +261,7 @@ specific Task.</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CloudCIX
+        &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>

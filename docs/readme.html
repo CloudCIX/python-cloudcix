@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; CloudCIX API Python Library 0.8.7 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.7
+                0.8.8
               </div>
             
           
@@ -180,7 +180,7 @@
 <ol class="arabic simple">
 <li><p>Create an account on the CloudCIX Platform</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://auth.cloudcix.com/register">Register</a></p></li>
+<li><p><a class="reference external" href="https://saas.cloudcix.com/auth/register">Register</a></p></li>
 </ul>
 </li>
 <li><p>Retrieve your API Key</p>
@@ -230,6 +230,8 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
 - The base url of the api
 - Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_VERSION</span></code> = 2
+- The version of the api</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>
 - The email of the account that you signed up with</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>
@@ -248,6 +250,7 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;EMAIL&#39;</span>               <span class="c1"># CloudCIX login</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;PASSWORD&#39;</span>            <span class="c1"># CloudCIX password</span>
 <span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;NUMBER/CHARACTER STRING&#39;</span>  <span class="c1"># CloudCIX api key</span>
+<span class="n">CLOUDCIX_API_VERSION</span> <span class="o">=</span> <span class="mi">2</span>                      <span class="c1"># CloudCIX version</span>
 </pre></div>
 </div>
 </div>
@@ -269,7 +272,7 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CloudCIX
+        &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>

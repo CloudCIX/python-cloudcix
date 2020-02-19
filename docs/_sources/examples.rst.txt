@@ -36,7 +36,7 @@ All examples in this page assume you have the following settings file correctly 
     # Print out the json of the response data
     print(response.json())  # {'content': [...], '_metadata': {...}}
 
-1. Get a list of 10 Countries
+2. Get a list of 10 Countries
 -----------------------------
 
 .. code:: python

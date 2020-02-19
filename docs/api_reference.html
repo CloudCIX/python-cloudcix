@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; CloudCIX API Python Library 0.8.7 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.7
+                0.8.8
               </div>
             
           
@@ -186,12 +186,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#period-end">Period End</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#profit-loss">Profit &amp; Loss</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#purchases-by-country">Purchases By Country</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rtd-return-of-trading-details">RTD (Return of Trading Details)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sales-by-country">Sales By Country</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sales-by-territory">Sales By Territory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statement">Statement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#statement-log">Statement Log</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#statement-settings">Statement Settings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tax-rate">Tax Rate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#trial-balance">Trial Balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vat3">VAT3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vies-purchases">VIES Purchases</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vies-sales">VIES Sales</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#year-end">Year End</a></li>
@@ -297,7 +300,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scheduler">Scheduler</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id17">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#execute-task">Execute Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task-log">Task Log</a></li>
 </ul>
@@ -341,6 +343,18 @@
 <li class="toctree-l4"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#student">Student</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syllabus">Syllabus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vault">Vault</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bucket">Bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#region">Region</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#share">Share</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shared-bucket">Shared Bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shared-object">Shared Object</a></li>
 </ul>
 </li>
 </ul>
@@ -1483,6 +1497,12 @@ for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Adjustment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-debit-note">
 <h4>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this headline">¶</a></h4>
@@ -1548,6 +1568,12 @@ for the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-invoice">
 <h4>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this headline">¶</a></h4>
@@ -1613,6 +1639,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-purchase-payment">
 <h4>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this headline">¶</a></h4>
@@ -1672,6 +1704,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Purchase Payment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-adjustment">
 <h4>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this headline">¶</a></h4>
@@ -1731,6 +1769,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Adjustment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-credit-note">
 <h4>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this headline">¶</a></h4>
@@ -1795,6 +1839,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-invoice">
 <h4>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this headline">¶</a></h4>
@@ -1860,6 +1910,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="account-sale-payment">
 <h4>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this headline">¶</a></h4>
@@ -1918,37 +1974,41 @@ Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Account Sale Payment Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="allocation">
 <h4>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the User to manage its Allocations</p>
 <p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.&lt;method&gt;</span></code></p>
-<dl>
-<dt>Available Methods</dt><dd><ul>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Allocations for its acting Address</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.create</span></code></dt><dd><ul>
 <li><p>This method allows the User to create a new Allocation</p></li>
 <li><p>The total amount of Debits and Credits must balance to 0</p></li>
-<li><p>The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater</p></li>
+<li><p>The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater
+than the Unallocated Balance of the Transaction</p></li>
+<li><p>Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,
+adjustment or a credit/debit note</p></li>
 </ul>
-<p>  than the Unallocated Balance of the Transaction
-- Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,</p>
-<blockquote>
-<div><p>adjustment or a credit/debit note</p>
-</div></blockquote>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.delete</span></code></dt><dd><ul>
 <li><p>This method allows the User to delete an Allocation</p></li>
 <li><p>When an Allocation is deleted the Transactions involved in the Allocation will automatically have their
 Unallocated Balances restored by the allocated amount</p></li>
@@ -2049,6 +2109,12 @@ the User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-purchase-invoice">
 <h4>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this headline">¶</a></h4>
@@ -2117,6 +2183,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-sale-credit-note">
 <h4>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this headline">¶</a></h4>
@@ -2185,6 +2257,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="cash-sale-invoice">
 <h4>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this headline">¶</a></h4>
@@ -2253,6 +2331,12 @@ User’s acting Address</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cash Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
+the id of the Address where the transaction should be read from.</p>
+</div>
 </div>
 <div class="section" id="credit-limit">
 <h4>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline">¶</a></h4>
@@ -2850,6 +2934,27 @@ of time</p>
 </dd>
 </dl>
 </div>
+<div class="section" id="rtd-return-of-trading-details">
+<h4>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this headline">¶</a></h4>
+<p>This service aggregates all the transactions in an Address for a year and calculates the total Sales, Purchases from
+the EU (excluding Ireland), Purchases for Resale, and Purchases not for Resale. Each of these totals are broken down
+according to the percentage tax that were applied to the transactions.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.rtd.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.rtd.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to see their sales and purchases for the year, grouped by the tax rates in use by
+their Address</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">year</span></code> parameter is required for this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="sales-by-country">
 <h4>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
@@ -2879,6 +2984,24 @@ time</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Sales broken down by Territory</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="statement">
+<h4>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to issue Statements to each of their debtors.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.create</span></code></dt><dd><ul>
+<li><p>This method generates and emails a Statement to each of the requesting User’s debtors</p></li>
+<li><p>A User can specify an <strong>address_id</strong> in the post data to only send statements to one debtor</p></li>
 </ul>
 </dd>
 </dl>
@@ -2998,6 +3121,25 @@ business</p>
 <li><p>If the User is acting as Global no <code class="docutils literal notranslate"><span class="pre">address_id</span></code> is specified, the Trial Balance will be calculated for all
 Addresses in its Member</p></li>
 <li><p>Otherwise, the Trial Balance will be calculated for its local Address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="vat3">
+<h4>VAT3<a class="headerlink" href="#vat3" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to generate the data for a VAT3 report</p>
+<p>A VAT3 report is a summary of all VAT incurred by an Address on all Sales and Purchases for a given date range</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to view the sum total VAT incurred by their Address for Sale, Purchases, EU
+Sales, and EU Purchases</p></li>
 </ul>
 </dd>
 </dl>
@@ -6018,29 +6160,16 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </div>
 <div class="section" id="scheduler">
 <h2>Scheduler<a class="headerlink" href="#scheduler" title="Permalink to this headline">¶</a></h2>
-<p>Scheduler is an application that allows the User to create recurring
-transactions. A recurring transaction is a transaction that will be
-recreated one or several times according to the rules the User gives.</p>
+<p>The Scheduler application allows the User to define tasks for duplicating
+existing transactions. A task contains information regarding when and how
+often it should be repeated. This can be used for monthly invoicing for
+example. Scheduler on its own does not create the new transactions and needs
+other software to read and execute the tasks from the Scheduler API. CloudCIX
+uses its own software for this called Routine which relies on Celery for
+creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <div class="section" id="id17">
 <h3>Services<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="execute-task">
-<h4>Execute Task<a class="headerlink" href="#execute-task" title="Permalink to this headline">¶</a></h4>
-<p>This service allows for the instant execution of a scheduled task</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.execute_task.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.execute_task.create</span></code></dt><dd><ul>
-<li><p>Requests that the Task instance with the given ID is run now</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="task">
 <h4>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h4>
 <p>The Task service allows Users to manage their recurring transactions.</p>
@@ -6077,9 +6206,20 @@ a set of rules defined by the User.</p>
 </dd>
 </dl>
 </li>
+</ul>
+</dd>
+<dt>Supported Transactions</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.task.delete</span></code></dt><dd><ul>
-<li><p>This method allows the User to delete a recurring transaction</p></li>
+<dt>Account Sale Invoices</dt><dd><ul>
+<li><p>cloudcix.api.Financial.account_sale_invoice</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Warrantor Tickets</dt><dd><ul>
+<li><p>cloudcix.api.Helpdesk.ticket</p></li>
+<li><p>transaction_type_id=40000</p></li>
 </ul>
 </dd>
 </dl>
@@ -7177,6 +7317,396 @@ Student</p></li>
 </div>
 </div>
 </div>
+<div class="section" id="vault">
+<h2>Vault<a class="headerlink" href="#vault" title="Permalink to this headline">¶</a></h2>
+<p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
+available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="id21">
+<h3>Services<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bucket">
+<h4>Bucket<a class="headerlink" href="#bucket" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Buckets in the MinIO object store.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Bucket in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Bucket exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Bucket exists.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrieve a list of Objects in the Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.create</span></code></dt><dd><ul>
+<li><p>Allows the user to create a Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete a Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="object">
+<h4>Object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Objects in the MinIO object store.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of an Object in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="simple">
+<dt>Returned with the <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">read</span></code> method requests will be the following metadata in <code class="docutils literal notranslate"><span class="pre">_headers</span></code>:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_length</span></code></dt><dd><ul>
+<li><p>The size of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_type</span></code></dt><dd><ul>
+<li><p>The Content-Type of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">etag</span></code></dt><dd><ul>
+<li><p>The ETag of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">last_modified</span></code></dt><dd><ul>
+<li><p>The time in UTC of when the Object was last modified.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if an Object exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Object exists.</p></li>
+<li><p>Also returned in the response will be <code class="docutils literal notranslate"><span class="pre">_headers</span></code> where the metadata for each Object will be recorded</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrive an Object from the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.create</span></code></dt><dd><ul>
+<li><p>Allows the user to upload (create or update) an Object into MinIO on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete an Object from MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="region">
+<h4>Region<a class="headerlink" href="#region" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Regions in the Vault Application.</p>
+<p>A Region is a public cloud address that has a MinIO instance set up for
+linked addresses to utilize.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.region.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.region.list</span></code></dt><dd><ul>
+<li><p>This method returns a list of Regions</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="share">
+<h4>Share<a class="headerlink" href="#share" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Shares in the Vault Application.</p>
+<p>A Share record holds the permission an address can have on a path in your MinIO bucket or to a specific object. A Share
+allows an Address to access Objects owned by another Address. By default an address is granted read permissions.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Shares associated with an Address.</p></li>
+<li><p>Shares returned where the User’s Address is the <code class="docutils literal notranslate"><span class="pre">owner</span></code> or the <code class="docutils literal notranslate"><span class="pre">address_id</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Share.</p></li>
+<li><p>Share can be created to give an address read, upload(create and update) or delete permissions for a
+specified path.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.read</span></code></dt><dd><ul>
+<li><p>Allows the user to read the details of a Share record.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.update</span></code></dt><dd><ul>
+<li><p>Allows the user to update the details of a Share record.</p></li>
+<li><p>Only a user from the <code class="docutils literal notranslate"><span class="pre">owner</span></code> address can execute this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to read the details of a Share record.</p></li>
+<li><p>Only a user from the <code class="docutils literal notranslate"><span class="pre">owner</span></code> address can execute this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="shared-bucket">
+<h4>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Shared Buckets in the MinIO object store.</p>
+<p>A user can read and delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
+bucket has given them.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Shared Bucket in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Shared Bucket exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Bucket exists.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.read</span></code></dt><dd><ul>
+<li><p>This method will return a list of Objects in the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="shared-object">
+<h4>Shared Object<a class="headerlink" href="#shared-object" title="Permalink to this headline">¶</a></h4>
+<p>This services allows for the management of Shared Objects in the MinIO object store.</p>
+<p>A user can read, upload or delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
+Object has given them.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Shared Object in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="simple">
+<dt>Returned with the <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">read</span></code> method requests will be the following metadata in <code class="docutils literal notranslate"><span class="pre">_headers</span></code>:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_length</span></code></dt><dd><ul>
+<li><p>The size of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_type</span></code></dt><dd><ul>
+<li><p>The Content-Type of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">etag</span></code></dt><dd><ul>
+<li><p>The ETag of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">last_modified</span></code></dt><dd><ul>
+<li><p>The time in UTC of when the Object was last modified.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Shared Object exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Object exists.</p></li>
+<li><p>Also returned in the response will be <code class="docutils literal notranslate"><span class="pre">_headers</span></code> where the metadata for each Shared Object will be recorded</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrive a Shared Object from the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.create</span></code></dt><dd><ul>
+<li><p>Allows the user to upload (create or update) a Shared Object into MinIO on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -7190,7 +7720,7 @@ Student</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, CloudCIX
+        &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>

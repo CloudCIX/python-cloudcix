@@ -49,6 +49,11 @@ Available Methods
         - This method allows the User to get an Account Purchase Adjustment transaction created by the target Address
           for the User's acting Address
 
+.. note::
+    The Account Purchase Adjustment Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Account Purchase Debit Note
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This service allows the User to create and manage Account Purchase Debit Notes
@@ -87,6 +92,11 @@ Available Methods
     - ``cloudcix.api.Financial.account_purchase_debit_note_contra.read``
         - This method allows the User to get an Account Purchase Debit Note transaction created by the target Address
           for the User's acting Address
+
+.. note::
+    The Account Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
 
 Account Purchase Invoice
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -127,6 +137,11 @@ Available Methods
         - This method allows the User to get an Account Purchase Invoice transaction created by the target Address for
           the User's acting Address
 
+.. note::
+    The Account Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Account Purchase Payment
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This service allows the User to create and read Account Purchase Payments
@@ -162,6 +177,11 @@ Available Methods
     - ``cloudcix.api.Financial.account_purchase_payment_contra.read``
         - This method allows the User to get an Account Purchase Payment transaction created by the target Address for
           the User's acting Address
+
+.. note::
+    The Account Purchase Payment Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
 
 Account Sale Adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,6 +223,11 @@ Available Methods
         - This method allows the User to get an Account Sale Adjustment transaction created by the target Address for
           the User's acting Address
 
+.. note::
+    The Account Sale Adjustment Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Account Sale Credit Note
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This service allows the User to create and manage Account Sale Credit Notes
@@ -239,6 +264,11 @@ Available Methods
     - ``cloudcix.api.Financial.account_sale_credit_note_contra.read``
         - This method allows the User to get an Account Sale Credit Note transaction created by the target Address for
           the User's acting Address
+
+.. note::
+    The Account Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
 
 Account Sale Invoice
 ^^^^^^^^^^^^^^^^^^^^
@@ -279,6 +309,11 @@ Available Methods
         - This method allows the User to get an Account Sale Invoice transaction created by the target Address for the
           User's acting Address
 
+.. note::
+    The Account Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Account Sale Payment
 ^^^^^^^^^^^^^^^^^^^^
 This service allows the User to create and read Account Sale Payments
@@ -313,6 +348,11 @@ Available Methods
         - This method allows the User to get an Account Sale Payment created by the target Address for the User's acting
           Address
 
+.. note::
+    The Account Sale Payment Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Allocation
 ^^^^^^^^^^
 This service allows the User to manage its Allocations
@@ -328,7 +368,7 @@ Available Methods
         - This method allows the User to create a new Allocation
         - The total amount of Debits and Credits must balance to 0
         - The allocated Transactions must belong to the same Contra Address, and the allocated amount cannot be greater
-          than the Unallocated Balance of the Transaction
+          than the Unallocated Balance of the Transaction
         - Finally, the allocated Transactions must be compatible i.e. an invoice can be allocated against a payment,
           adjustment or a credit/debit note
     - ``cloudcix.api.Financial.allocation.delete``
@@ -390,6 +430,11 @@ Available Methods
         - This method allows the User to get a Cash Purchase Debit Note transaction created by the target Address for
           the User's acting Address
 
+.. note::
+    The Cash Purchase Debit Note Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Cash Purchase Invoice
 ^^^^^^^^^^^^^^^^^^^^^
 This service allows the User to create and manage Cash Purchase Inovoices
@@ -427,6 +472,11 @@ Available Methods
     - ``cloudcix.api.Financial.cash_purchase_invoice_contra.read``
         - This method allows the User to get a Cash Purchase Invoice transaction created by the target Address for the
           User's acting Address
+
+.. note::
+    The Cash Purchase Invoice Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
 
 Cash Sale Credit Note
 ^^^^^^^^^^^^^^^^^^^^^
@@ -466,6 +516,11 @@ Available Methods
         - This method allows the User to get a Cash Sale Credit Note transaction created by the target Address for the
           User's acting Address
 
+.. note::
+    The Cash Sale Credit Note Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
+
 Cash Sale Invoice
 ^^^^^^^^^^^^^^^^^
 This service allows the User to create and manage Cash Sale Invoices
@@ -503,6 +558,11 @@ Available Methods
     - ``cloudcix.api.Financial.cash_sale_invoice_contra.read``
         - This method allows the User to get a Cash Sale Invoice transaction created by the target Address for the
           User's acting Address
+
+.. note::
+    The Cash Sale Invoice Contra service requires the user to specify a transaction from a linked Address for
+    both the create and read methods. The User is required to pass a **source_id** kwarg to these methods specifying
+    the id of the Address where the transaction should be read from.
 
 Credit Limit
 ^^^^^^^^^^^^
@@ -856,6 +916,20 @@ Available Methods
     - ``cloudcix.api.Financial.purchases_by_country.list``
         - This method allows the User to get a list of Purchases broken down by Country
 
+RTD (Return of Trading Details)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service aggregates all the transactions in an Address for a year and calculates the total Sales, Purchases from
+the EU (excluding Ireland), Purchases for Resale, and Purchases not for Resale. Each of these totals are broken down
+according to the percentage tax that were applied to the transactions.
+
+**Basic Usage**: ``cloudcix.api.Financial.rtd.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.rtd.list``
+        - This method allows the User to see their sales and purchases for the year, grouped by the tax rates in use by
+          their Address
+        - A ``year`` parameter is required for this method
+
 Sales By Country
 ^^^^^^^^^^^^^^^^
 This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
@@ -880,6 +954,17 @@ Each Address will have the total value of goods sold to them
 Available Methods
     - ``cloudcix.api.Financial.sales_by_territory.list``
         - This method allows the User to get a list of Sales broken down by Territory
+
+Statement
+^^^^^^^^^
+This service allows the User to issue Statements to each of their debtors.
+
+**Basic Usage**: ``cloudcix.api.Financial.statement.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.statement.create``
+        - This method generates and emails a Statement to each of the requesting User's debtors
+        - A User can specify an **address_id** in the post data to only send statements to one debtor
 
 Statement Log
 ^^^^^^^^^^^^^
@@ -952,6 +1037,19 @@ Available Methods
         - If the User is acting as Global no ``address_id`` is specified, the Trial Balance will be calculated for all
           Addresses in its Member
         - Otherwise, the Trial Balance will be calculated for its local Address
+
+VAT3
+^^^^
+This service allows the User to generate the data for a VAT3 report
+
+A VAT3 report is a summary of all VAT incurred by an Address on all Sales and Purchases for a given date range
+
+**Basic Usage**: ``cloudcix.api.Financial.vat3.<method>``
+
+Available Methods:
+    - ``cloudcix.api.Financial.vat3.list``
+        - This method allows the User to view the sum total VAT incurred by their Address for Sale, Purchases, EU
+          Sales, and EU Purchases
 
 VIES Purchases
 ^^^^^^^^^^^^^^

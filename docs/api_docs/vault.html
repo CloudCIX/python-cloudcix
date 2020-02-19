@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Services &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CloudCIX API Python Library
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth.html">Auth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conf.html">Conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CloudCIX API Python Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Services</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api_docs/vault.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
+available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bucket">
+<h2>Bucket<a class="headerlink" href="#bucket" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Buckets in the MinIO object store.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Bucket in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Bucket exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Bucket exists.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrieve a list of Objects in the Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.create</span></code></dt><dd><ul>
+<li><p>Allows the user to create a Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.bucket.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete a Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="object">
+<h2>Object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Objects in the MinIO object store.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of an Object in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="simple">
+<dt>Returned with the <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">read</span></code> method requests will be the following metadata in <code class="docutils literal notranslate"><span class="pre">_headers</span></code>:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_length</span></code></dt><dd><ul>
+<li><p>The size of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_type</span></code></dt><dd><ul>
+<li><p>The Content-Type of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">etag</span></code></dt><dd><ul>
+<li><p>The ETag of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">last_modified</span></code></dt><dd><ul>
+<li><p>The time in UTC of when the Object was last modified.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if an Object exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Object exists.</p></li>
+<li><p>Also returned in the response will be <code class="docutils literal notranslate"><span class="pre">_headers</span></code> where the metadata for each Object will be recorded</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrive an Object from the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.create</span></code></dt><dd><ul>
+<li><p>Allows the user to upload (create or update) an Object into MinIO on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.object.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete an Object from MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="region">
+<h2>Region<a class="headerlink" href="#region" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Regions in the Vault Application.</p>
+<p>A Region is a public cloud address that has a MinIO instance set up for
+linked addresses to utilize.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.region.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.region.list</span></code></dt><dd><ul>
+<li><p>This method returns a list of Regions</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="share">
+<h2>Share<a class="headerlink" href="#share" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Shares in the Vault Application.</p>
+<p>A Share record holds the permission an address can have on a path in your MinIO bucket or to a specific object. A Share
+allows an Address to access Objects owned by another Address. By default an address is granted read permissions.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Shares associated with an Address.</p></li>
+<li><p>Shares returned where the User’s Address is the <code class="docutils literal notranslate"><span class="pre">owner</span></code> or the <code class="docutils literal notranslate"><span class="pre">address_id</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Share.</p></li>
+<li><p>Share can be created to give an address read, upload(create and update) or delete permissions for a
+specified path.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.read</span></code></dt><dd><ul>
+<li><p>Allows the user to read the details of a Share record.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.update</span></code></dt><dd><ul>
+<li><p>Allows the user to update the details of a Share record.</p></li>
+<li><p>Only a user from the <code class="docutils literal notranslate"><span class="pre">owner</span></code> address can execute this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.share.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to read the details of a Share record.</p></li>
+<li><p>Only a user from the <code class="docutils literal notranslate"><span class="pre">owner</span></code> address can execute this method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="shared-bucket">
+<h2>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Shared Buckets in the MinIO object store.</p>
+<p>A user can read and delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
+bucket has given them.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Shared Bucket in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Shared Bucket exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Bucket exists.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.read</span></code></dt><dd><ul>
+<li><p>This method will return a list of Objects in the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_bucket.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+<div class="section" id="shared-object">
+<h2>Shared Object<a class="headerlink" href="#shared-object" title="Permalink to this headline">¶</a></h2>
+<p>This services allows for the management of Shared Objects in the MinIO object store.</p>
+<p>A user can read, upload or delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
+Object has given them.</p>
+<p>For each method request the following paramaters must be sent:
+- <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This paramater is used to create the MinIO client for the region.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><ul>
+<li><p>This paramater is used to specify the location of a Shared Object in the region’s MinIO.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="simple">
+<dt>Returned with the <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">read</span></code> method requests will be the following metadata in <code class="docutils literal notranslate"><span class="pre">_headers</span></code>:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_length</span></code></dt><dd><ul>
+<li><p>The size of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">content_type</span></code></dt><dd><ul>
+<li><p>The Content-Type of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">etag</span></code></dt><dd><ul>
+<li><p>The ETag of the Object.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">last_modified</span></code></dt><dd><ul>
+<li><p>The time in UTC of when the Object was last modified.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.head</span></code></dt><dd><ul>
+<li><p>Allows the user to verify if a Shared Object exists on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+<li><p>A 200 will be returned if the Object exists.</p></li>
+<li><p>Also returned in the response will be <code class="docutils literal notranslate"><span class="pre">_headers</span></code> where the metadata for each Shared Object will be recorded</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.read</span></code></dt><dd><ul>
+<li><p>Allows the user to retrive a Shared Object from the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the Minio on the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.create</span></code></dt><dd><ul>
+<li><p>Allows the user to upload (create or update) a Shared Object into MinIO on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> and in the sent
+<code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.shared_object.delete</span></code></dt><dd><ul>
+<li><p>Allows the user to delete the Shared Bucket on the sent <code class="docutils literal notranslate"><span class="pre">path</span></code> in the Minio on the sent <code class="docutils literal notranslate"><span class="pre">region_name.</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Based on how the URLs for are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">region_name='name_of_region'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path='mybucket'</span></code> to these methods</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CloudCIX
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

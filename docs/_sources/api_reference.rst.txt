@@ -86,3 +86,8 @@ Training
 ~~~~~~~~
 
 .. include:: api_docs/training.rst
+
+Vault
+~~~~~
+
+.. include:: api_docs/vault.rst

@@ -4,4 +4,4 @@ Client
 .. automodule:: cloudcix.client
 
 .. autoclass:: cloudcix.client.Client
-   :members: __init__, list, get_all, create, read, update, partial_update, delete
+   :members: __init__, head, list, get_all, create, read, update, partial_update, delete

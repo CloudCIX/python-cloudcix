@@ -1,21 +1,15 @@
-Scheduler is an application that allows the User to create recurring
-transactions. A recurring transaction is a transaction that will be
-recreated one or several times according to the rules the User gives.
+The Scheduler application allows the User to define tasks for duplicating
+existing transactions. A task contains information regarding when and how
+often it should be repeated. This can be used for monthly invoicing for
+example. Scheduler on its own does not create the new transactions and needs
+other software to read and execute the tasks from the Scheduler API. CloudCIX
+uses its own software for this called Routine which relies on Celery for
+creating transactions on a schedule.
 
 **Basic Usage**: ``cloudcix.api.Scheduler.<service>.<method>``
 
 Services
 --------
-
-Execute Task
-^^^^^^^^^^^^
-This service allows for the instant execution of a scheduled task
-
-**Basic Usage**: ``cloudcix.api.Scheduler.execute_task.<method>``
-
-Available Methods
-    - ``cloudcix.api.Scheduler.execute_task.create``
-        - Requests that the Task instance with the given ID is run now
 
 Task
 ^^^^
@@ -35,8 +29,14 @@ Available Methods
         - This method returns a Task and its details
     - ``cloudcix.api.Scheduler.task.update``
         - This method allows the User to update a Task
-    - ``cloudcix.api.Scheduler.task.delete``
-        - This method allows the User to delete a recurring transaction
+
+Supported Transactions
+    - Account Sale Invoices
+        - cloudcix.api.Financial.account_sale_invoice
+    - Warrantor Tickets
+        - cloudcix.api.Helpdesk.ticket
+        - transaction_type_id=40000
+
 
 Task Log
 ^^^^^^^^
