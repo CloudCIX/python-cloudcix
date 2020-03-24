@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Client &mdash; CloudCIX API Python Library 0.8.8 documentation</title>
+  <title>Client &mdash; CloudCIX API Python Library 0.8.9 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.8
+                0.8.9
               </div>
             
           
@@ -262,7 +262,7 @@ accessible through <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="cloudcix.client.Client.head">
-<code class="sig-name descname">head</code><span class="sig-paren">(</span><em class="sig-param">token=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.head" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">head</code><span class="sig-paren">(</span><em class="sig-param">token=None</em>, <em class="sig-param">pk=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.client.Client.head" title="Permalink to this definition">¶</a></dt>
 <dd><p>The HEAD method retrieves metadata from an object without returning the object itself. This method is useful
 if you’re only interested in an object’s metadata.
 The HEAD is also used to check existence of a resource/collection.
@@ -277,7 +277,7 @@ To use HEAD, you must have READ access to the object. (using HTTP <code class="d
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A</p>
+<dd class="field-even"><p>A status code and metadata if params sent in request</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>requests.Response</p>
