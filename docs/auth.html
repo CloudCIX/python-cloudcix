@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Auth &mdash; CloudCIX API Python Library 0.8.9 documentation</title>
+  <title>Auth &mdash; CloudCIX API Python Library 0.8.10 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.8.9
+                0.8.10
               </div>
             
           
@@ -163,9 +163,9 @@
   <div class="section" id="module-cloudcix.auth">
 <span id="auth"></span><h1>Auth<a class="headerlink" href="#module-cloudcix.auth" title="Permalink to this headline">¶</a></h1>
 <p>This file implements features related to Authentication for the CloudCIX API.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="cloudcix.auth.get_token">
-<code class="sig-prename descclassname">auth.</code><code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param">password</em>, <em class="sig-param">api_key</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">auth.</code><code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">password</span></em>, <em class="sig-param"><span class="n">api_key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempts to generate a CloudCIX token for any given email, password, and api_key combination.
 This method will return the token if it was successfully created.
 If any errors are returned from the API, a <cite>CloudCIXAuthException</cite> will be raised by this method.</p>
@@ -182,21 +182,21 @@ This Exception will contain the content of the response as its message.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="cloudcix.auth.get_admin_token">
 <code class="sig-prename descclassname">auth.</code><code class="sig-name descname">get_admin_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_admin_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an <cite>admin</cite> token using the credentials specified in the settings module
 (<code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>, and <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>).</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="cloudcix.auth.TokenAuth">
-<em class="property">class </em><code class="sig-prename descclassname">cloudcix.auth.</code><code class="sig-name descname">TokenAuth</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">cloudcix.auth.</code><code class="sig-name descname">TokenAuth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper around <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.auth.AuthBase</span></code> that is designed to put a token into the correct header for use
 with our API.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="cloudcix.auth.TokenAuth.__call__">
-<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__call__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to set the correct header in the request when the request is about to be sent.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -205,9 +205,9 @@ with our API.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="cloudcix.auth.TokenAuth.__eq__">
-<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__eq__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__eq__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compares two instances of the TokenAuth class to check if they have the same token.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -216,9 +216,9 @@ with our API.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="cloudcix.auth.TokenAuth.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">token</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.TokenAuth.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an instance of the TokenAuth class with a specified token</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

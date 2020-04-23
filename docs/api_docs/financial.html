@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.8.9 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.10 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.8.9
+                0.8.10
               </div>
             
           
@@ -919,6 +919,72 @@ both the create and read methods. The User is required to pass a <strong>source_
 the id of the Address where the transaction should be read from.</p>
 </div>
 </div>
+<div class="section" id="cash-purchase-receipts">
+<h2>Cash Purchase Receipts<a class="headerlink" href="#cash-purchase-receipts" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to create and manage Cash Purchase Receipts</p>
+<p>A Cash Purchase Receipt (10006) is a transaction in which a purchase has been credited in cash and does not take a contra address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Cash Purchase Receipt transaction</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get an Cash Purchase Receipt transaction and its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a Cash Purchase Receipt transaction</p></li>
+<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="cash-purchase-refund">
+<h2>Cash Purchase Refund<a class="headerlink" href="#cash-purchase-refund" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to create and manage Cash Purchase Refunds</p>
+<p>A Cash Purchase Refund (10007) is a transaction in which a purchase has been debited in cash and does not take a contra address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Cash Purchase Refund transaction</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get an Cash Purchase Refund transaction and its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a Cash Purchase Refund transaction</p></li>
+<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="cash-sale-credit-note">
 <h2>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this headline">¶</a></h2>
 <p>This service allows the User to create and manage Cash Sale Credit Notes</p>
@@ -1066,6 +1132,72 @@ User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
+</div>
+<div class="section" id="cash-sale-receipts">
+<h2>Cash Sale Receipts<a class="headerlink" href="#cash-sale-receipts" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to create and manage Cash Sale Receipts</p>
+<p>A Cash Sale Receipt (11006) is a transaction in which a sale has been debited in cash and does not take a contra address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Cash Sale Receipt transaction</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get an Cash Sale Receipt transaction and its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a Cash Sale Receipt transaction</p></li>
+<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="cash-sale-refund">
+<h2>Cash Sale Refund<a class="headerlink" href="#cash-sale-refund" title="Permalink to this headline">¶</a></h2>
+<p>This service allows the User to create and manage Cash Sale Refunds</p>
+<p>A Cash sale Refund (11007) is a transaction in which a sale has been credited in cash and does not take a contra address</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Cash Sale Refund transaction</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to get an Cash Sale Refund transaction and its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a Cash Sale Refund transaction</p></li>
+<li><p>A transaction can only be updated if there’s no Period End after the effective Transaction Date</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="credit-limit">
 <h2>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline">¶</a></h2>
