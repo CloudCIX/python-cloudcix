@@ -306,3 +306,79 @@ Available Methods
         - This method allows the User to list all the Storage Types available to build a VM
     - ``cloudcix.api.IAAS.storage_type.read``
         - This method allows the User to retrieve the information of a particular Storage Type
+
+VM
+^^
+This service provides methods used to manage a VM.
+
+**Basic Usage**: ``cloudcix.api.IAAS.vm.<method>``
+
+Available Methods
+    - ``cloudcix.api.Compute.vm.list``
+        - This method allows the User to list all the VMs that they own
+    - ``cloudcix.api.Compute.vm.create``
+        - This method allows the User to create a new VM in a Project that they own
+    - ``cloudcix.api.Compute.vm.read``
+        - This method allows the User to retrieve the information of a given VM
+    - ``cloudcix.api.Compute.vm.update``
+        - This method allows the User to update the details of a given VM
+
+VM History
+^^^^^^^^^^
+This service allows the User to retrieve the History for their VMs.
+
+VM History records are created whenever important details about the VM are changed, like the VM's state for example. These records have a user attached to them, so that all changes can be traced back to the User that made them.
+
+**Basic Usage**: ``cloudcix.api.IAAS.vm_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Compute.vm_history.list``
+        - This method retrieves a list of History records for a user's address VMs
+
+VPN History
+^^^^^^^^^^
+This service allows the User to retrieve the History for their VPNs.
+
+VPN History records are created whenever important details about the VPN are changed, like when the VPN is built for example. These records have a user attached to them, so that all changes can be traced back to the User that made them.
+
+**Basic Usage**: ``cloudcix.api.IAAS.vpn_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Compute.vpn_history.list``
+        - This method retrieves a list of History records for a user's address VPNs
+
+VPN Tunnel
+^^^^^^^^^^
+This service provides methods used to manage a VPN Tunnel.
+
+A VPN record is used to create a VPN Tunnel between the User's local network(s) and a local network in a Project.
+
+**Basic Usage**: ``cloudcix.api.IAAS.vpn_tunnel.<method>``
+
+Available Methods
+    - ``cloudcix.api.Compute.vpn.list``
+        - This method allows the User to list all the VPN Tunnels that they own
+    - ``cloudcix.api.Compute.vpn.create``
+        - This method allows the User to create a new VPN Tunnel in a Virtual Router that they own
+    - ``cloudcix.api.Compute.vpn.read``
+        - This method allows the User to retrieve the information of a given VPN Tunnel
+    - ``cloudcix.api.Compute.vpn.update``
+        - This method allows the User to update the details of a given VPN Tunnel
+    - ``cloudcix.api.Compute.vpn.delete``
+        - This method allows the User to delete a VPN Tunnel
+
+VRF
+^^^
+This service provides methods used to manage a VRF.
+
+A VRF is a software based Router built specifically for a Cloud Project.
+
+**Basic Usage**: ``cloudcix.api.Compute.vrf.<method>``
+
+Available Methods
+    - ``cloudcix.api.Compute.vrf.list``
+        - This method allows the User to list all the VRFs that they own
+    - ``cloudcix.api.Compute.vrf.read``
+        - This method allows the User to retrieve the information of a given VRF
+    - ``cloudcix.api.Compute.vrf.update``
+        - This method allows the User to update the details of a given VRF
