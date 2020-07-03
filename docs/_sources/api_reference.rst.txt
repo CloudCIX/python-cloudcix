@@ -57,6 +57,11 @@ Membership
 
 .. include:: api_docs/membership.rst
 
+OTP
+~~~
+
+.. include:: api_docs/otp.rst
+
 Report Engine
 ~~~~~~~~~~~~~
 

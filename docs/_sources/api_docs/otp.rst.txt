@@ -1,0 +1,23 @@
+
+**Basic Usage**: ``cloudcix.api.OTP.<service>.<method>``
+
+Services
+--------
+
+OTP
+^^^
+This service is used in the OTP authentication to save the OTP details and validate them
+**Basic Usage**: ``cloudcix.api.OTP.otp.<method>``
+
+Available Methods
+    - ``cloudcix.api.OTP.otp.create``  
+        -This method creates or updates the users secret that is used in the OTP login
+
+OTPAuth
+^^^^^^^
+This service is used in the OTP authentication to save the OTP details and validate them
+**Basic Usage**: ``cloudcix.api.OTP.otp_auth.<method>``
+
+Available Methods
+       - ``cloudcix.api.OTP.otp_auth.read``  
+        - This method validates a users OTP of a specific email

@@ -1,15 +1,18 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; CloudCIX API Python Library 0.8.12 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.8.13 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
   
   
@@ -17,7 +20,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -29,10 +34,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Auth" href="auth.html" />
@@ -50,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CloudCIX API Python Library
           
 
           
@@ -60,7 +61,7 @@
             
             
               <div class="version">
-                0.8.12
+                0.8.13
               </div>
             
           
@@ -77,6 +78,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -282,8 +284,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#otp">OTP</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id14">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">OTP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otpauth">OTPAuth</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#export">Export</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#package">Package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#report">Report</a></li>
@@ -293,13 +303,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id15">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#application">Application</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto">DTO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto-parameter">DTO Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exception-code">Exception Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language-exception-code">Language Exception Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">Member</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-parameter">Method Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#service">Service</a></li>
@@ -308,7 +318,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scheduler">Scheduler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id17">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task-log">Task Log</a></li>
 </ul>
@@ -316,7 +326,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scm">SCM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id18">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#agreed-price">Agreed Price</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin">Bin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin-sku">Bin SKU</a></li>
@@ -340,7 +350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id19">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#security-event">Security Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#security-event-logout">Security Event Logout</a></li>
 </ul>
@@ -348,7 +358,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#training">Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id20">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#student">Student</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syllabus">Syllabus</a></li>
@@ -357,7 +367,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#vault">Vault</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id21">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bucket">Bucket</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#region">Region</a></li>
@@ -383,6 +393,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -421,7 +432,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>API Reference</li>
     
@@ -5809,12 +5820,50 @@ These fields can only be updated by an Administrator</p>
 </div>
 </div>
 </div>
+<div class="section" id="otp">
+<h2>OTP<a class="headerlink" href="#otp" title="Permalink to this headline">¶</a></h2>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<div class="section" id="id14">
+<h3>Services<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>OTP<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>This service is used in the OTP authentication to save the OTP details and validate them
+<strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp.create</span></code></dt><dd><p>-This method creates or updates the users secret that is used in the OTP login</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="otpauth">
+<h4>OTPAuth<a class="headerlink" href="#otpauth" title="Permalink to this headline">¶</a></h4>
+<p>This service is used in the OTP authentication to save the OTP details and validate them
+<strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp_auth.&lt;method&gt;</span></code></p>
+<dl>
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp_auth.read</span></code></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>This method validates a users OTP of a specific email</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 <div class="section" id="report-engine">
 <h2>Report Engine<a class="headerlink" href="#report-engine" title="Permalink to this headline">¶</a></h2>
 <p>The Reporting Engine is a powerful service allowing users to generate HTML and PDF documents from templates</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id14">
-<h3>Services<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>Services<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="export">
 <h4>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h4>
 <p>This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported</p>
@@ -6008,8 +6057,8 @@ within the CloudCIX company</p>
 <p>The Repository Application is a software system that manages CloudCIX Software Projects</p>
 <p>Projects in the Repository are grouped by the owning Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id15">
-<h3>Services<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Services<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="application">
 <h4>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h4>
 <p>Every Member can have their own set of Applications</p>
@@ -6245,8 +6294,8 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dd>
 </dl>
 </div>
-<div class="section" id="id16">
-<h4>Member<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id18">
+<h4>Member<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p>Every Member can have their own set of Applications</p>
 <p>Only one <code class="docutils literal notranslate"><span class="pre">Repository.Application</span></code> should exist for every <code class="docutils literal notranslate"><span class="pre">membership.Member</span></code></p>
 <div class="admonition note">
@@ -6461,8 +6510,8 @@ other software to read and execute the tasks from the Scheduler API. CloudCIX
 uses its own software for this called Routine which relies on Celery for
 creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id17">
-<h3>Services<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h3>Services<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="task">
 <h4>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h4>
 <p>The Task service allows Users to manage their recurring transactions.</p>
@@ -6550,8 +6599,8 @@ specific Task.</p></li>
 <p>SCM is an Application to manage the planning, procurement, storage,
 distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id18">
-<h3>Services<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h3>Services<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="agreed-price">
 <h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the User to manage the agreed prices for SKUs between
@@ -7401,8 +7450,8 @@ entering and exiting a building.</p>
 <p>Administrators will be able to see where their Users went and when, as well
 as visitors to their own Addresses</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id19">
-<h3>Services<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id21">
+<h3>Services<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="security-event">
 <h4>Security Event<a class="headerlink" href="#security-event" title="Permalink to this headline">¶</a></h4>
 <p>A Security Event is a transaction that occurs when a person enters or exits a
@@ -7464,8 +7513,8 @@ force log out a User currently visiting the Address</p></li>
 <p>The Training Application exposes a REST API capable of managing Training
 records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id20">
-<h3>Services<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3>Services<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="class">
 <h4>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h4>
 <p>This services allows for the management of Class records.</p>
@@ -7615,8 +7664,8 @@ Student</p></li>
 <p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
 available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="id21">
-<h3>Services<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>Services<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="bucket">
 <h4>Bucket<a class="headerlink" href="#bucket" title="Permalink to this headline">¶</a></h4>
 <p>This services allows for the management of Buckets in the MinIO object store.</p>
@@ -8013,11 +8062,19 @@ Object has given them.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, CloudCIX
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -8028,7 +8085,6 @@ Object has given them.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
