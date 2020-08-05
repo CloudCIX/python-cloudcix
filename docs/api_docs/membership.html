@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; CloudCIX API Python Library 0.8.13 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.8.14 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.8.13
+                0.8.14
               </div>
             
           
@@ -213,6 +213,8 @@
 </ul>
 </dd>
 </dl>
+<p>The Address list can also be accessed through a verbose endpoint. This endpoint will return more data than the regular Address list method but will take more time to return a response.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.verbose_address.list</span></code></p>
 </div>
 <div class="section" id="address-link">
 <h2>Address Link<a class="headerlink" href="#address-link" title="Permalink to this headline">¶</a></h2>
@@ -347,6 +349,24 @@
 <li><p>Allows the User to delete a specific Department record</p></li>
 <li><p>A Department can only be deleted if there are no Users assigned to it</p></li>
 <li><p>This method can only be run by an Administrator</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="email-confirmation">
+<h2>Email Confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this headline">¶</a></h2>
+<p>Email Confirmation allows the user to verify their email</p>
+<p>This service provides methods to verify a users email</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.email_confirmation.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.email_confirmation.read</span></code></dt><dd><ul>
+<li><p>Allows the User to verify their email confirmation using the URL sent by email</p></li>
 </ul>
 </dd>
 </dl>

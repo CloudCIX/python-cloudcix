@@ -39,6 +39,10 @@ Available Methods
     - ``cloudcix.api.Membership.address.update``
         - Allows the User to update the details of an Address
 
+The Address list can also be accessed through a verbose endpoint. This endpoint will return more data than the regular Address list method but will take more time to return a response.
+
+**Basic Usage**: ``cloudcix.api.Membership.verbose_address.list``
+
 Address Link
 ^^^^^^^^^^^^
 An Address Link object represents a link between two Addresses, which allows transactions to be performed between them
@@ -113,6 +117,19 @@ Available Methods
         - Allows the User to delete a specific Department record
         - A Department can only be deleted if there are no Users assigned to it
         - This method can only be run by an Administrator
+
+Email Confirmation
+^^^^^^^^^^^^^^^^^^
+Email Confirmation allows the user to verify their email
+
+This service provides methods to verify a users email
+
+**Basic Usage**: ``cloudcix.api.Membership.email_confirmation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.email_confirmation.read``
+        - Allows the User to verify their email confirmation using the URL sent by email
+
 
 Language
 ^^^^^^^^

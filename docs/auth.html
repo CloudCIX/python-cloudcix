@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Auth &mdash; CloudCIX API Python Library 0.8.13 documentation</title>
+  <title>Auth &mdash; CloudCIX API Python Library 0.8.14 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.8.13
+                0.8.14
               </div>
             
           
@@ -168,7 +168,7 @@
 <p>This file implements features related to Authentication for the CloudCIX API.</p>
 <dl class="py method">
 <dt id="cloudcix.auth.get_token">
-<code class="sig-prename descclassname">cloudcix.auth.</code><code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">password</span></em>, <em class="sig-param"><span class="n">api_key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">auth.</code><code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">password</span></em>, <em class="sig-param"><span class="n">api_key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempts to generate a CloudCIX token for any given email, password, and api_key combination.
 This method will return the token if it was successfully created.
 If any errors are returned from the API, a <cite>CloudCIXAuthException</cite> will be raised by this method.</p>
@@ -187,7 +187,7 @@ This Exception will contain the content of the response as its message.</p>
 
 <dl class="py method">
 <dt id="cloudcix.auth.get_admin_token">
-<code class="sig-prename descclassname">cloudcix.auth.</code><code class="sig-name descname">get_admin_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_admin_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">auth.</code><code class="sig-name descname">get_admin_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.auth.get_admin_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an <cite>admin</cite> token using the credentials specified in the settings module
 (<code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_PASSWORD</span></code>, and <code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_KEY</span></code>).</p>
 </dd></dl>
