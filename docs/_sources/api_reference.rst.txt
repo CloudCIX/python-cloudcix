@@ -47,7 +47,7 @@ Helpdesk
 
 .. include:: api_docs/helpdesk.rst
 
-IaaS
+IAAS
 ~~~~
 
 .. include:: api_docs/iaas.rst

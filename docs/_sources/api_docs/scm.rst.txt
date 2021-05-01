@@ -452,3 +452,23 @@ Available Methods
           given Address
         - If the User has permission to Read the SKU, the User can also
           Update it
+
+Validate Purchase Order
+^^^^^^^^^^^^^^^^^^^^^^^
+This service allows Users to validate data before submitting it to modify a Purchase Order
+
+**Basic Usage**: ``cloudcix.api.SCM.validate_purchase_order.<method>``
+
+Available Methods
+    - ``cloudcix.api.SCM.validate_purchase_order.update``
+        - This method allows the User to validate data for updating a Purchase Order
+
+Validate Sale Order
+^^^^^^^^^^^^^^^^^^^
+This service allows Users to validate data before submitting it to modify a Sales Order
+
+**Basic Usage**: ``cloudcix.api.SCM.validate_sales_order.<method>``
+
+Available Methods
+    - ``cloudcix.api.SCM.validate_sales_order.update``
+        - This method allows the User to validate data for updating a Sales Order
