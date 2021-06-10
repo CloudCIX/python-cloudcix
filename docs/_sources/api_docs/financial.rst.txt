@@ -971,6 +971,18 @@ Available Methods
           its Addresses
         - Otherwise, the Profit & Loss will be calculated for its Local Address
 
+Purchases Analysis
+^^^^^^^^^^^^^^
+This service allows the User to view the total Purchased from their partner Addresses
+
+For each Address the service will calculate the total amount Purchased through Invoices less Debit Notes.
+
+**Basic Usage**: ``cloudcix.api.Financial.purchases_analysis.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.purchases_analysis.list``
+        - This method allows the User to get a list of total Purchases with their Addresses
+
 Purchases By Country
 ^^^^^^^^^^^^^^^^^^^^
 This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period
@@ -983,6 +995,18 @@ Each Country will have the total amount excluding VAT, and the total amount of V
 Available Methods
     - ``cloudcix.api.Financial.purchases_by_country.list``
         - This method allows the User to get a list of Purchases broken down by Country
+
+Purchases By Territory
+^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to get a list of Addresses in the given Territory
+
+Each Address will have the total value of goods purchased from them
+
+**Basic Usage**: ``cloudcix.api.Financial.purchases_by_territory.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.purchases_by_territory.list``
+        - This method allows the User to get a list of Purchases broken down by Territory
 
 RTD (Return of Trading Details)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -997,6 +1021,18 @@ Available Methods
         - This method allows the User to see their sales and purchases for the year, grouped by the tax rates in use by
           their Address
         - A ``year`` parameter is required for this method
+
+Sales Analysis
+^^^^^^^^^^^^^^
+This service allows the User to view the total Sales made to their Addresses
+
+For each Address the service will calculate the total amount sold through Invoices less Credit Notes.
+
+**Basic Usage**: ``cloudcix.api.Financial.sales_analysis.<method>``
+
+Available Methods
+    - ``cloudcix.api.Financial.sales_analysis.list``
+        - This method allows the User to get a list of total Sales with their Addresses
 
 Sales By Country
 ^^^^^^^^^^^^^^^^
@@ -1013,7 +1049,7 @@ Available Methods
 
 Sales By Territory
 ^^^^^^^^^^^^^^^^^^
-This service allows the User to get a list of Addressesin the given Territory
+This service allows the User to get a list of Addresses in the given Territory
 
 Each Address will have the total value of goods sold to them
 

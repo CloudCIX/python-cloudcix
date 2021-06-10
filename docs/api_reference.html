@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>API Reference &mdash; CloudCIX API Python Library 0.8.17 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.8.18 documentation</title>
   
 
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                0.8.17
+                0.8.18
               </div>
             
           
@@ -193,8 +196,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#payment-method">Payment Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#period-end">Period End</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#profit-loss">Profit &amp; Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#purchases-analysis">Purchases Analysis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#purchases-by-country">Purchases By Country</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#purchases-by-territory">Purchases By Territory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rtd-return-of-trading-details">RTD (Return of Trading Details)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sales-analysis">Sales Analysis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sales-by-country">Sales By Country</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sales-by-territory">Sales By Territory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#statement">Statement</a></li>
@@ -3084,6 +3090,24 @@ its Addresses</p></li>
 </dd>
 </dl>
 </div>
+<div class="section" id="purchases-analysis">
+<h4>Purchases Analysis<a class="headerlink" href="#purchases-analysis" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to view the total Purchased from their partner Addresses</p>
+<p>For each Address the service will calculate the total amount Purchased through Invoices less Debit Notes.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_analysis.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_analysis.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of total Purchases with their Addresses</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="purchases-by-country">
 <h4>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period
@@ -3095,6 +3119,24 @@ of time</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_country.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to get a list of Purchases broken down by Country</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="purchases-by-territory">
+<h4>Purchases By Territory<a class="headerlink" href="#purchases-by-territory" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to get a list of Addresses in the given Territory</p>
+<p>Each Address will have the total value of goods purchased from them</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_territory.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_territory.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of Purchases broken down by Territory</p></li>
 </ul>
 </dd>
 </dl>
@@ -3124,6 +3166,24 @@ their Address</p></li>
 </dd>
 </dl>
 </div>
+<div class="section" id="sales-analysis">
+<h4>Sales Analysis<a class="headerlink" href="#sales-analysis" title="Permalink to this headline">¶</a></h4>
+<p>This service allows the User to view the total Sales made to their Addresses</p>
+<p>For each Address the service will calculate the total amount sold through Invoices less Credit Notes.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_analysis.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_analysis.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to get a list of total Sales with their Addresses</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="sales-by-country">
 <h4>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline">¶</a></h4>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
@@ -3145,7 +3205,7 @@ time</p>
 </div>
 <div class="section" id="sales-by-territory">
 <h4>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this headline">¶</a></h4>
-<p>This service allows the User to get a list of Addressesin the given Territory</p>
+<p>This service allows the User to get a list of Addresses in the given Territory</p>
 <p>Each Address will have the total value of goods sold to them</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.&lt;method&gt;</span></code></p>
 <dl class="simple">
