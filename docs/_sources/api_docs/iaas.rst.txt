@@ -11,25 +11,25 @@ An Allocation is an IP address range that was assigned to an ASN by an RIR such 
 
 Allocations can be freely managed by the Member that owns a particular ASN.
 
-.. note:: Only Users in the CIX Member are able to create new Allocations
+.. note:: Only Users in the CIX Member are able to create new Allocations.
 
 **Basic Usage**: ``cloudcix.api.IAAS.allocation.<method>``
 
 Available Methods
     - ``cloudcix.api.IAAS.allocation.list``
-        - This method lists all Allocations that are associated with the Member of the User calling the method
+        - This method lists all Allocations that are associated with the Member of the User calling the method.
     - ``cloudcix.api.IAAS.allocation.create``
         - This method creates a new Allocation for a specified Member.
-        - This method can only be run by an Administrator
+        - This method can only be run by an Administrator.
     - ``cloudcix.api.IAAS.allocation.read``
-        - This method allows the User to get the information of a given Allocation that belongs to their Member
+        - This method allows the User to get the information of a given Allocation that belongs to their Member.
     - ``cloudcix.api.IAAS.allocation.update``
-        - This method allows the User to update the details of a given Allocation that belongs to their Member
-        - This method can only be run by an Administrator
+        - This method allows the User to update the details of a given Allocation that belongs to their Member.
+        - This method can only be run by an Administrator.
     - ``cloudcix.api.IAAS.allocation.delete``
-        - This method allows the User to delete a given Allocation that belongs to their Member
-        - An Allocation can only be deleted when it is empty
-        - This method can only be run by an Administrator
+        - This method allows the User to delete a given Allocation that belongs to their Member.
+        - An Allocation can only be deleted when it is empty.
+        - This method can only be run by an Administrator.
 
 ASN
 ^^^
@@ -39,25 +39,25 @@ The appropriate RIR then assigns ASNs to entities within its designated area fro
 
 ASNs can be assigned to a CloudCIX Member who then becomes the owner of the ASN and is granted the ability to manage its contents.
 
-.. note:: While the ASN service provides a full set of CRUDL methods, Create, Update and Delete can only be used by Users within the CIX Member. Please contact support if you need to run one of these methods
+.. note:: While the ASN service provides a full set of CRUDL methods, Create, Update and Delete can only be used by Users within the CIX Member. Please contact support if you need to run one of these methods.
 
 **Basic Usage**: ``cloudcix.api.IAAS.asn.<method>``
 
 Available Methods
     - ``cloudcix.api.IAAS.asn.list``
-        - This method returns a list of all ASNs that belong to the User's Member
+        - This method returns a list of all ASNs that belong to the User's Member.
     - ``cloudcix.api.IAAS.asn.create``
-        - This method allows a User to create an ASN belonging to a specified Member
+        - This method allows a User to create an ASN belonging to a specified Member.
         - This method can only be run by CIX Users
     - ``cloudcix.api.IAAS.asn.read``
-        - This method allows a User to read the details of a particular ASN belonging to their Member
+        - This method allows a User to read the details of a particular ASN belonging to their Member.
     - ``cloudcix.api.IAAS.asn.update``
-        - This method allows the User to update the details of a specified ASN
-        - This method can only be run by CIX Users
+        - This method allows the User to update the details of a specified ASN.
+        - This method can only be run by CIX Users.
     - ``cloudcix.api.IAAS.asn.delete``
-        - This method allows the User to delete a specified ASN
-        - ASNs can only be deleted when they are empty
-        - This method can only be run by CIX Users
+        - This method allows the User to delete a specified ASN.
+        - ASNs can only be deleted when they are empty.
+        - This method can only be run by CIX Users.
 
 CIX Blacklist
 ^^^^^^^^^^^^^
@@ -93,11 +93,11 @@ The biggest benefit of this approach is that nothing will be created in hardware
 
 Available Methods
     - ``cloudcix.api.IAAS.cloud.create``
-        - This method allows the User to safely create all of the infrastructure for a Project in a single request
+        - This method allows the User to safely create all of the infrastructure for a Project in a single request.
     - ``cloudcix.api.IAAS.cloud.read``
-        - This method returns all of the details for a Project, including all of the infrastructure available
+        - This method returns all of the details for a Project, including all of the infrastructure available.
     - ``cloudcix.api.IAAS.cloud.update``
-        - This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request
+        - This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request.
 
 Domain
 ^^^^^^
@@ -111,29 +111,29 @@ CIX uses the Rage4 DNS Service to propogate DNS records to DNS servers.
 
 Available Methods
     - ``cloudcix.api.IAAS.domain.list``
-        - This method allows the User to retrieve a list of Domains owned by its Member
+        - This method allows the User to retrieve a list of Domains owned by its Member.
     - ``cloudcix.api.IAAS.domain.create``
-        - This method allows the User to create a new Domain record
-        - This record is stored locally and also announced to the Rage4 DNS service
+        - This method allows the User to create a new Domain record.
+        - This record is stored locally and also announced to the Rage4 DNS service.
     - ``cloudcix.api.IAAS.domain.read``
-        - This method allows the User to read the details of a specific Domain record that is owned by its Member
+        - This method allows the User to read the details of a specific Domain record that is owned by its Member.
     - ``cloudcix.api.IAAS.domain.update``
-        - This method allows the User to update the details of a specific Domain record owned by its Member
-        - This update is reflected both locally and on the Rage4 service
+        - This method allows the User to update the details of a specific Domain record owned by its Member.
+        - This update is reflected both locally and on the Rage4 service.
     - ``cloudcix.api.IAAS.domain.delete``
-        - This method allows the User to delete a specific Domain record from both the IaaS Application and the Rage4 service
+        - This method allows the User to delete a specific Domain record from both the IaaS Application and the Rage4 service.
 
 Image
 ^^^^^
-This service provides access to a list of Images or Operating Systems that we can currently provide in deployed VMs
+This service provides access to a list of Images or Operating Systems that we can currently provide in deployed VMs.
 
 **Basic Usage**: ``cloudcix.api.IAAS.image.<method>``
 
 Available Methods
     - ``cloudcix.api.IAAS.image.list``
-        - This method allows the User to retrieve a list of supported Images
+        - This method allows the User to retrieve a list of supported Images.
     - ``cloudcix.api.IAAS.image.read``
-        - This method allows the User to get the details of a specific Image
+        - This method allows the User to get the details of a specific Image.
 
 Interface
 ^^^^^^^^^
@@ -146,14 +146,14 @@ Available Methods
         - This method allows the User to list Interfaces in their region
         - If the requesting user is global active they will able to list all Interfaces for all regions.
     - ``cloudcix.api.IAAS.interface.create``
-        - This method allows the User to create an Interface for a Server in their region
+        - This method allows the User to create an Interface for a Server in their region.
     - ``cloudcix.api.IAAS.interface.read``
-        - This method allows the User to retrieve the information of a particular Interface in their region
+        - This method allows the User to retrieve the information of a particular Interface in their region.
         - If the requesting user is global active they will able to retrieve the information for an Interface in another region.
     - ``cloudcix.api.IAAS.interface.update``
-        - This method allows the User to update an Interface for a Server in their region
+        - This method allows the User to update an Interface for a Server in their region.
     - ``cloudcix.api.IAAS.interface.delete``
-        - This method allows the User to delete an Interface for a Server in their region
+        - This method allows the User to delete an Interface for a Server in their region.
 
 IP Address
 ^^^^^^^^^^
@@ -167,15 +167,15 @@ An IP Address can only be managed by the Member who owns the Subnet that contain
 
 Available Methods
     - ``cloudcix.api.IAAS.ipaddress.list``
-        - This method allows the User to retrieve a list of IP Addresses belonging to their Member
+        - This method allows the User to retrieve a list of IP Addresses belonging to their Member.
     - ``cloudcix.api.IAAS.ipaddress.create``
-        - This method allows the User to create a new IP Address for their Member
+        - This method allows the User to create a new IP Address for their Member.
     - ``cloudcix.api.IAAS.ipaddress.read``
-        - This method allows the User to retrieve the details of a specific IP Address record
+        - This method allows the User to retrieve the details of a specific IP Address record.
     - ``cloudcix.api.IAAS.ipaddress.update``
-        - This method allows the User to update the details of a given IP Address record
+        - This method allows the User to update the details of a given IP Address record.
     - ``cloudcix.api.IAAS.ipaddress.delete``
-        - This method allows the User to delete an IP Address record from the IaaS database
+        - This method allows the User to delete an IP Address record from the IaaS database.
 
 IP Validator
 ^^^^^^^^^^^^
@@ -189,10 +189,20 @@ Available Methods
     - ``cloudcix.api.IAAS.ip_validator.list``
         - Given ``addressRanges`` and/or ``ipAddresses``, this method will validate all of the supplied information.
         - Multiple ``addressRanges`` and ``ipAddresses`` should be comma separated; e.g. ``ipAddresses=192.168.0.2,192.168.0.3,192.168.0.3``
-        - If both the ``addressRanges`` and ``ipAddresses`` parameters are passed, this method will also check to make sure that each ``ipAddress`` belongs to at least one of the supplied ``addressRanges``
-        - If none of the passed parameters are valid, the method will return HTTP 400 - Bad Request
-        - If one or more parameters are valid, the method will respond with HTTP 200 - Success
+        - If both the ``addressRanges`` and ``ipAddresses`` parameters are passed, this method will also check to make sure that each ``ipAddress`` belongs to at least one of the supplied ``addressRanges``.
+        - If none of the passed parameters are valid, the method will return HTTP 400 - Bad Request.
+        - If one or more parameters are valid, the method will respond with HTTP 200 - Success.
         - Each individual ``ipAddress`` and ``addressRange`` are returned with a ``valid`` flag, stating if they were valid or not.
+
+Metrics
+^^^^^^^
+This service provides metric information about a given region.
+
+Available Methods
+    - ``cloudcix.api.IAAS.metrics.read``
+       - This method allows the User to read the metrics for the given region.
+       - If no changes have happened since the last time metrics were read, the request will result in a HTTP 204 response.
+       - This check can be skipped if the ``force`` GET parameter is set to ``true``.
 
 Policy Log
 ^^^^^^^^^^
@@ -202,7 +212,7 @@ Retrieves the logs for a Virtual Router for a specified Project.
 
 Available Methods
     - ``cloudcix.api.IAAS.policy_log.list``
-        - This method allows the User to retrieve a list of log items from the Router for the specified Project
+        - This method allows the User to retrieve a list of log items from the Router for the specified Project.
 
 Project
 ^^^^^^^
@@ -214,13 +224,13 @@ This service differs from the ``Cloud`` service because this service deals only 
 
 Available Methods
     - ``cloudcix.api.IAAS.project.list``
-        - This method allows the User to list all the Projects that they own
+        - This method allows the User to list all the Projects that they own.
     - ``cloudcix.api.IAAS.project.create``
-        - This method allows the User to create a new Project
+        - This method allows the User to create a new Project.
     - ``cloudcix.api.IAAS.project.read``
-        - This method allows the User to retrieve the information of a given Project
+        - This method allows the User to retrieve the information of a given Project.
     - ``cloudcix.api.IAAS.project.update``
-        - This method allows the User to update the details of a given Project
+        - This method allows the User to update the details of a given Project.
 
 PTR Record
 ^^^^^^^^^^
@@ -234,19 +244,19 @@ The service will select the correct reverse domain correctly based on the IP Add
 
 Available Methods
     - ``cloudcix.api.IAAS.ptr_record.list``
-        - This method allows the User to retrieve a list of PTR Records belonging to their Member
+        - This method allows the User to retrieve a list of PTR Records belonging to their Member.
     - ``cloudcix.api.IAAS.ptr_record.create``
-        - This method allows the User to create a PTR Record
-        - The Record will be created both locally and on the Rage4 service
-        - The User's Member must own the supplied IP Address for the method to be successful
+        - This method allows the User to create a PTR Record.
+        - The Record will be created both locally and on the Rage4 service.
+        - The User's Member must own the supplied IP Address for the method to be successful.
     - ``cloudcix.api.IAAS.ptr_record.read``
-        - Thie method allows the User to read the details of a specified PTR Record
+        - Thie method allows the User to read the details of a specified PTR Record.
     - ``cloudcix.api.IAAS.ptr_record.update``
-        - This method allows the User to update the details of a specified PTR Record
-        - The Record will be updated both locally and on the Rage4 service
+        - This method allows the User to update the details of a specified PTR Record.
+        - The Record will be updated both locally and on the Rage4 service.
     - ``cloudcix.api.IAAS.ptr_record.delete``
-        - This method allows the User to delete a specified PTR Record
-        - The Record will be deleted both locally and on the Rage4 service
+        - This method allows the User to delete a specified PTR Record.
+        - The Record will be deleted both locally and on the Rage4 service.
 
 Record
 ^^^^^^
@@ -286,32 +296,32 @@ Records for a particular Domain can only be managed by the Member that owns that
 
 Available Methods
     - ``cloudcix.api.IAAS.record.list``
-        - This method allows the User to list all Records belonging to a Domain
+        - This method allows the User to list all Records belonging to a Domain.
     - ``cloudcix.api.IAAS.record.create``
-        - This method allows the User to create a new Record for a Domain
-        - This new Record is saved locally and announce to the Rage4 service
-        - The name and content of the Record vary depending on type (see Record Types table above)
-        - Depending on the type, parameters are checked against the Domain name and the IP Addresses owned by the User's Member
+        - This method allows the User to create a new Record for a Domain.
+        - This new Record is saved locally and announce to the Rage4 service.
+        - The name and content of the Record vary depending on type (see Record Types table above).
+        - Depending on the type, parameters are checked against the Domain name and the IP Addresses owned by the User's Member.
     - ``cloudcix.api.IAAS.record.read``
-        - This method allows the User to retrieve the details of a single Record
+        - This method allows the User to retrieve the details of a single Record.
     - ``cloudcix.api.IAAS.record.update``
-        - This method allows the User to update the details of a specific Record instance
-        - Updates are stored locally and announced to the Rage4 service
+        - This method allows the User to update the details of a specific Record instance.
+        - Updates are stored locally and announced to the Rage4 service.
     - ``cloudcix.api.IAAS.record.delete``
-        - This method allows the User to delete a Record
-        - Records are deleted locally and from the Rage4 service
+        - This method allows the User to delete a Record.
+        - Records are deleted locally and from the Rage4 service.
 
 Region Image
 ^^^^^^^^^^^^
-This service allows a user in a region to add/remove supported images to their region
+This service allows a user in a region to add/remove supported images to their region.
 
 **Basic Usage**: ``cloudcix.api.IAAS.region_image.<method>``
 
 Available Methods
     - ``cloudcix.api.IAAS.region_image.create``
-        - This method allows the User to add a supported image to their region
+        - This method allows the User to add a supported image to their region.
     - ``cloudcix.api.IAAS.router.update``
-        - This method allows the User to remove a supported image from their region
+        - This method allows the User to remove a supported image from their region.
 
 Router
 ^^^^^^
@@ -321,23 +331,15 @@ This service provides information regarding Routers.
 
 Available Methods
     - ``cloudcix.api.IAAS.router.list``
-        - This method allows the User to list Routers in their region
+        - This method allows the User to list Routers in their region.
         - If the requesting user is global active they will able to list all Routers for all regions.
     - ``cloudcix.api.IAAS.router.create``
-        - This method allows the User to create a Router in their region
+        - This method allows the User to create a Router in their region.
     - ``cloudcix.api.IAAS.router.read``
-        - This method allows the User to to retrieve the information of a particular Router in their region
+        - This method allows the User to to retrieve the information of a particular Router in their region.
         - If the requesting user is global active they will able to retrieve the information for a Router for another region.
     - ``cloudcix.api.IAAS.router.update``
-        - This method allows the User to update a Router in their region
-
-Run Icarus
-^^^^^^^^^^
-This service provides information on wether there has been any changes to a region and the hardware capacity for the region should be recalculated.
-
-Available Methods
-    - ``cloudcix.api.IAAS.run_icarus.head``
-       - This method allows the User to to retrieve a 200 status code if there has been changes in their region
+        - This method allows the User to update a Router in their region.
 
 Run Robot
 ^^^^^^^^^
@@ -347,7 +349,7 @@ Available Methods
     - ``cloudcix.api.IAAS.run_robot.list``
         - This method allows the User (robot) to retrieve a list of infrastructure for pojects that robot needs to process in their region.
     - ``cloudcix.api.IAAS.run_robot.create``
-        - This method allows the User (robot) to turn run_robot off for a list of project_ids it has processed
+        - This method allows the User (robot) to turn run_robot off for a list of project_ids it has processed.
 
 Server
 ^^^^^^
@@ -357,15 +359,15 @@ This service provides information regarding Servers.
 
 Available Methods
     - ``cloudcix.api.IAAS.server.list``
-        - This method allows the User to list Servers in their region
+        - This method allows the User to list Servers in their region.
         - If the requesting user is global active they will able to list all Servers for all regions.
     - ``cloudcix.api.IAAS.server.create``
-        - This method allows the User to create a Server in their region
+        - This method allows the User to create a Server in their region.
     - ``cloudcix.api.IAAS.server.read``
-        - This method allows the User to to retrieve the information of a particular Server in their region
+        - This method allows the User to to retrieve the information of a particular Server in their region.
         - If the requesting user is global active they will able to retrieve the information for a Server for another region.
     - ``cloudcix.api.IAAS.server.update``
-        - This method allows the User to update a Server in their region
+        - This method allows the User to update a Server in their region.
 
 Server Type
 ^^^^^^^^^^^
@@ -377,7 +379,23 @@ Available Methods
     - ``cloudcix.api.IAAS.server_type.list``
         - This method allows the User to list Server Types available.
     - ``cloudcix.api.IAAS.server_type.read``
-        - This method allows the User to retrieve the information of a particular Server Type
+        - This method allows the User to retrieve the information of a particular Server Type.
+
+Snapshot
+^^^^^^^^
+This service provides methods used to manage a Snapshot of a VM.
+
+**Basic Usage**: ``cloudcix.api.IAAS.snapshot.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.vm.list``
+        - This method allows the User to list all the Snapshots that they own.
+    - ``cloudcix.api.IAAS.vm.create``
+        - This method allows the User to create a new Snapshot of a VM in a Project that they own.
+    - ``cloudcix.api.IAAS.vm.read``
+        - This method allows the User to retrieve the information of a given Snapshot.
+    - ``cloudcix.api.IAAS.vm.update``
+        - This method allows the User to update the details of a given Snapshot.
 
 Storage
 ^^^^^^^
@@ -389,12 +407,12 @@ Storages can be created and managed by the owners of the Project.
 
 Available Methods
     - ``cloudcix.api.IAAS.storage.list``
-        - This method allows the User to list all the Storages associated with a particular VM
+        - This method allows the User to list all the Storages associated with a particular VM.
     - ``cloudcix.api.IAAS.storage.create``
-        - This method allows the User to create a new Storage for a particular VM
-        - Only administrators can use this method
+        - This method allows the User to create a new Storage for a particular VM.
+        - Only administrators can use this method.
     - ``cloudcix.api.IAAS.storage.read``
-        - This method allows the User to retrieve the information of a given Storage
+        - This method allows the User to retrieve the information of a given Storage.
 
 Storage Type
 ^^^^^^^^^^^^
@@ -404,9 +422,9 @@ This service provides access to a list of Storage options that we can currently 
 
 Available Methods
     - ``cloudcix.api.IAAS.storage_type.list``
-        - This method allows the User to list all the Storage Types available to build a VM
+        - This method allows the User to list all the Storage Types available to build a VM.
     - ``cloudcix.api.IAAS.storage_type.read``
-        - This method allows the User to retrieve the information of a particular Storage Type
+        - This method allows the User to retrieve the information of a particular Storage Type.
 
 Subnet
 ^^^^^^
@@ -420,21 +438,21 @@ Once a Subnet is created for a customer of the ASN owner, both the Customer and 
 
 Available Methods
     - ``cloudcix.api.IAAS.subnet.list``
-        - This method allows the User to list all the Subnets associated with a particular Member
+        - This method allows the User to list all the Subnets associated with a particular Member.
     - ``cloudcix.api.IAAS.subnet.create``
-        - This method allows the User to create a new Subnet for a particular Member
-        - Only administrators can use this method
+        - This method allows the User to create a new Subnet for a particular Member.
+        - Only administrators can use this method.
     - ``cloudcix.api.IAAS.subnet.read``
-        - This method allows the User to retrieve the information of a particular Subnet
+        - This method allows the User to retrieve the information of a particular Subnet.
     - ``cloudcix.api.IAAS.subnet.update``
-        - This method allows the User to update the details of a given Subnet
+        - This method allows the User to update the details of a given Subnet.
     - ``cloudcix.api.IAAS.subnet.delete``
-        - This method allows the User to delete a Subnet from the list of a Member's Subnets
-        - A Subnet can only be deleted if all its IP Addresses have already been deleted
+        - This method allows the User to delete a Subnet from the list of a Member's Subnets.
+        - A Subnet can only be deleted if all its IP Addresses have already been deleted.
 
 Subnet Space
 ^^^^^^^^^^^^
-This service will return a list of existing and free subnets avialable for a particular Allocation
+This service will return a list of existing and free subnets avialable for a particular Allocation.
 
 **Basic Usage**: ``cloudcix.api.IAAS.subnet_space.<method>``
 
@@ -452,27 +470,27 @@ A Virtual Router is a software based Router built specifically for a Cloud Proje
 
 Available Methods
     - ``cloudcix.api.IAAS.virtual_router.list``
-        - This method allows the User to list all the Virtual Routers that they own
+        - This method allows the User to list all the Virtual Routers that they own.
     - ``cloudcix.api.IAAS.virtual_router.read``
-        - This method allows the User to retrieve the information of a given Virtual Router
+        - This method allows the User to retrieve the information of a given Virtual Router.
     - ``cloudcix.api.IAAS.virtual_router.update``
-        - This method allows the User to update the details of a given Virtual Router
+        - This method allows the User to update the details of a given Virtual Router.
 
 VM
-^^
+^^^
 This service provides methods used to manage a VM.
 
 **Basic Usage**: ``cloudcix.api.IAAS.vm.<method>``
 
 Available Methods
     - ``cloudcix.api.IAAS.vm.list``
-        - This method allows the User to list all the VMs that they own
+        - This method allows the User to list all the VMs that they own.
     - ``cloudcix.api.IAAS.vm.create``
-        - This method allows the User to create a new VM in a Project that they own
+        - This method allows the User to create a new VM in a Project that they own.
     - ``cloudcix.api.IAAS.vm.read``
-        - This method allows the User to retrieve the information of a given VM
+        - This method allows the User to retrieve the information of a given VM.
     - ``cloudcix.api.IAAS.vm.update``
-        - This method allows the User to update the details of a given VM
+        - This method allows the User to update the details of a given VM.
 
 VM History
 ^^^^^^^^^^
@@ -484,7 +502,7 @@ VM History records are created whenever important details about the VM are chang
 
 Available Methods
     - ``cloudcix.api.IAAS.vm_history.list``
-        - This method retrieves a list of History records for a user's address VMs
+        - This method retrieves a list of History records for a user's address VMs.
 
 VPN
 ^^^
@@ -496,15 +514,15 @@ A VPN record is used to create a VPN between the User's local network(s) and a l
 
 Available Methods
     - ``cloudcix.api.IAAS.vpn.list``
-        - This method allows the User to list all the VPNs that they own
+        - This method allows the User to list all the VPNs that they own.
     - ``cloudcix.api.IAAS.vpn.create``
-        - This method allows the User to create a new VPN in a Virtual Router that they own
+        - This method allows the User to create a new VPN in a Virtual Router that they own.
     - ``cloudcix.api.IAAS.vpn.read``
-        - This method allows the User to retrieve the information of a given VPN
+        - This method allows the User to retrieve the information of a given VPN.
     - ``cloudcix.api.IAAS.vpn.update``
-        - This method allows the User to update the details of a given VPN
+        - This method allows the User to update the details of a given VPN.
     - ``cloudcix.api.IAAS.vpn.delete``
-        - This method allows the User to delete a VPN
+        - This method allows the User to delete a VPN.
 
 VPN History
 ^^^^^^^^^^^
@@ -516,4 +534,14 @@ VPN History records are created whenever important details about the VPN are cha
 
 Available Methods
     - ``cloudcix.api.IAAS.vpn_history.list``
-        - This method retrieves a list of History records for a user's address VPNs
+        - This method retrieves a list of History records for a user's address VPNs.
+
+VPN Status
+^^^^^^^^^^
+Retrieves the vpn status for a specified VPN.
+
+**Basic Usage**: ``cloudcix.api.IAAS.vpn_status.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.vpn_status.read``
+        - This method allows the User to retrieve vpn status information from the Router for the specified VPN.
