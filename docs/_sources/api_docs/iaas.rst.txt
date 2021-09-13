@@ -388,13 +388,13 @@ This service provides methods used to manage a Snapshot of a VM.
 **Basic Usage**: ``cloudcix.api.IAAS.snapshot.<method>``
 
 Available Methods
-    - ``cloudcix.api.IAAS.vm.list``
+    - ``cloudcix.api.IAAS.snapshot.list``
         - This method allows the User to list all the Snapshots that they own.
-    - ``cloudcix.api.IAAS.vm.create``
+    - ``cloudcix.api.IAAS.snapshot.create``
         - This method allows the User to create a new Snapshot of a VM in a Project that they own.
-    - ``cloudcix.api.IAAS.vm.read``
+    - ``cloudcix.api.IAAS.snapshot.read``
         - This method allows the User to retrieve the information of a given Snapshot.
-    - ``cloudcix.api.IAAS.vm.update``
+    - ``cloudcix.api.IAAS.snapshot.update``
         - This method allows the User to update the details of a given Snapshot.
 
 Storage
