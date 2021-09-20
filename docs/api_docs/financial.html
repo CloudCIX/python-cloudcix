@@ -1,75 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Services &mdash; CloudCIX API Python Library 0.8.21 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Services &mdash; CloudCIX API Python Library 0.8.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> CloudCIX API Python Library
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                0.8.21
+                0.8.22
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
@@ -103,71 +52,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">CloudCIX API Python Library</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Services</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/api_docs/financial.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <p>The Financial Application exposes a suite of services that together implement a full accounting system based on double
 entry bookkeeping</p>
 <div class="admonition seealso">
@@ -176,10 +84,10 @@ entry bookkeeping</p>
 <a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="account-purchase-adjustment">
-<h2>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Permalink to this headline">¶</a></h2>
+<section id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline"></a></h1>
+<section id="account-purchase-adjustment">
+<h2>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read Account Purchase Adjustments</p>
 <p>An Account Purchase Adjustment (10005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
 <p>A set of nominal accounts will be debited and credited</p>
@@ -205,9 +113,9 @@ entry bookkeeping</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-purchase-adjustment-contra">
-<h2>Account Purchase Adjustment Contra<a class="headerlink" href="#account-purchase-adjustment-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-adjustment-contra">
+<h2>Account Purchase Adjustment Contra<a class="headerlink" href="#account-purchase-adjustment-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Purchase Adjustment from an Account Sale Adjustment created
 by the target Address</p>
 <p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -242,9 +150,9 @@ for the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-purchase-debit-note">
-<h2>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-debit-note">
+<h2>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Account Purchase Debit Notes</p>
 <p>An Account Purchase Debit Note (10003) is a transaction in which a purchase has not been immediately debited</p>
 <p>The debit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -276,9 +184,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-purchase-debit-note-contra">
-<h2>Account Purchase Debit Note Contra<a class="headerlink" href="#account-purchase-debit-note-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-debit-note-contra">
+<h2>Account Purchase Debit Note Contra<a class="headerlink" href="#account-purchase-debit-note-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Purchase Debit Note from an Account Sale Credit Note created
 by the target Address</p>
 <p>The debit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -313,9 +221,9 @@ for the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-purchase-invoice">
-<h2>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-invoice">
+<h2>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Account Purchase Invoices</p>
 <p>An Account Purchase Invoice (10002) is a transaction in which a purchase has not been paid immediately</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -347,9 +255,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-purchase-invoice-contra">
-<h2>Account Purchase Invoice Contra<a class="headerlink" href="#account-purchase-invoice-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-invoice-contra">
+<h2>Account Purchase Invoice Contra<a class="headerlink" href="#account-purchase-invoice-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Purchase Invoice from an Account Sale Invoice created by
 the target Address</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -384,9 +292,9 @@ the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-purchase-payment">
-<h2>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-payment">
+<h2>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read Account Purchase Payments</p>
 <p>An Account Purchase Payment (10004) is a transaction in which a purchase is being paid</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -415,9 +323,9 @@ the Nominal Account which will be credited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-purchase-payment-contra">
-<h2>Account Purchase Payment Contra<a class="headerlink" href="#account-purchase-payment-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-purchase-payment-contra">
+<h2>Account Purchase Payment Contra<a class="headerlink" href="#account-purchase-payment-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Purchase Payment from an Account Sale Payment created by the
 target Address</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -449,9 +357,9 @@ the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-sale-adjustment">
-<h2>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-adjustment">
+<h2>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read Account Sale Adjustments</p>
 <p>An Account Sale Adjustment (11005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
 <p>A set of nominal accounts will be debited and credited</p>
@@ -477,9 +385,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-sale-adjustment-contra">
-<h2>Account Sale Adjustment Contra<a class="headerlink" href="#account-sale-adjustment-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-adjustment-contra">
+<h2>Account Sale Adjustment Contra<a class="headerlink" href="#account-sale-adjustment-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Sale Adjustment from an Account Purchase Adjustment created
 by the target Address</p>
 <p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -514,9 +422,9 @@ the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-sale-credit-note">
-<h2>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-credit-note">
+<h2>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Account Sale Credit Notes</p>
 <p>An Account Sale Credit Note (11003) is a transaction in which a sale has not been credited immediately</p>
 <p>The credit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -548,9 +456,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-sale-credit-note-contra">
-<h2>Account Sale Credit Note Contra<a class="headerlink" href="#account-sale-credit-note-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-credit-note-contra">
+<h2>Account Sale Credit Note Contra<a class="headerlink" href="#account-sale-credit-note-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read an Account Sale Credit Note transaction from an Account Purchase Debit
 Note created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note_contra.&lt;method&gt;</span></code></p>
@@ -584,9 +492,9 @@ the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-sale-invoice">
-<h2>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-invoice">
+<h2>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Account Sale Invoices</p>
 <p>An Account Sale Invoice (11002) is a transaction in which a sale has not been paid immediately</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -618,9 +526,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-sale-invoice-contra">
-<h2>Account Sale Invoice Contra<a class="headerlink" href="#account-sale-invoice-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-invoice-contra">
+<h2>Account Sale Invoice Contra<a class="headerlink" href="#account-sale-invoice-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read an Account Sale Invoice from an Account Purchase Invoice created by
 the target Address</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -655,9 +563,9 @@ User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="account-sale-payment">
-<h2>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-payment">
+<h2>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read Account Sale Payments</p>
 <p>An Account Sale Payment (11004) is a transaction in which a sale is being paid</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -686,9 +594,9 @@ the Nominal Account which will be debited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="account-sale-payment-contra">
-<h2>Account Sale Payment Contra<a class="headerlink" href="#account-sale-payment-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="account-sale-payment-contra">
+<h2>Account Sale Payment Contra<a class="headerlink" href="#account-sale-payment-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and read an Account Sale Payment from an Account Purchase Payment transaction
 created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment_contra.&lt;method&gt;</span></code></p>
@@ -719,9 +627,9 @@ Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="allocation">
-<h2>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="allocation">
+<h2>Allocation<a class="headerlink" href="#allocation" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Allocations</p>
 <p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.&lt;method&gt;</span></code></p>
@@ -758,9 +666,9 @@ Unallocated Balances restored by the allocated amount</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="balance-sheet">
-<h2>Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="balance-sheet">
+<h2>Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to generate a Balance Sheet</p>
 <p>The Balance Sheet presents a company’s Financial position at the end of a specified date
 Therefore, it is a list of Nominal Accounts with their total Debits, Credits and balance at a given date</p>
@@ -780,9 +688,9 @@ Addresses in its Member</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-purchase-debit-note">
-<h2>Cash Purchase Debit Note<a class="headerlink" href="#cash-purchase-debit-note" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-debit-note">
+<h2>Cash Purchase Debit Note<a class="headerlink" href="#cash-purchase-debit-note" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Purchase Debit Notes.</p>
 <p>A Cash Purchase Debit Note (10001) is a transaction in which a purchase has been debited in cash</p>
 <div class="admonition note">
@@ -818,9 +726,9 @@ get the Nominal Account which will be debited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-purchase-debit-note-contra">
-<h2>Cash Purchase Debit Note Contra<a class="headerlink" href="#cash-purchase-debit-note-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-debit-note-contra">
+<h2>Cash Purchase Debit Note Contra<a class="headerlink" href="#cash-purchase-debit-note-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read a Cash Purchase Debit Note from a Cash Sale Credit Note created by the
 target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note_contra.&lt;method&gt;</span></code></p>
@@ -854,9 +762,9 @@ the User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="cash-purchase-invoice">
-<h2>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-invoice">
+<h2>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Purchase Inovoices</p>
 <p>A Cash Purchase Invoice (10000) is a transaction in which a purchase has been paid in cash</p>
 <div class="admonition note">
@@ -892,9 +800,9 @@ the Nominal Account which will be credited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-purchase-invoice-contra">
-<h2>Cash Purchase Invoice Contra<a class="headerlink" href="#cash-purchase-invoice-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-invoice-contra">
+<h2>Cash Purchase Invoice Contra<a class="headerlink" href="#cash-purchase-invoice-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read a Cash Purchase Invoice from a Cash Sale Invoice created by the target
 Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice_contra.&lt;method&gt;</span></code></p>
@@ -928,9 +836,9 @@ User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="cash-purchase-receipts">
-<h2>Cash Purchase Receipts<a class="headerlink" href="#cash-purchase-receipts" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-receipts">
+<h2>Cash Purchase Receipts<a class="headerlink" href="#cash-purchase-receipts" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Purchase Receipts</p>
 <p>A Cash Purchase Receipt (10006) is a transaction in which a purchase has been credited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.&lt;method&gt;</span></code></p>
@@ -961,9 +869,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-purchase-refund">
-<h2>Cash Purchase Refund<a class="headerlink" href="#cash-purchase-refund" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-purchase-refund">
+<h2>Cash Purchase Refund<a class="headerlink" href="#cash-purchase-refund" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Purchase Refunds</p>
 <p>A Cash Purchase Refund (10007) is a transaction in which a purchase has been debited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.&lt;method&gt;</span></code></p>
@@ -994,9 +902,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-sale-credit-note">
-<h2>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-credit-note">
+<h2>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Sale Credit Notes</p>
 <p>A Cash Sale Credit Note (11001) is a transaction in which a sale has been credited in cash</p>
 <div class="admonition note">
@@ -1032,9 +940,9 @@ the Nominal Account which will be credited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-sale-credit-note-contra">
-<h2>Cash Sale Credit Note Contra<a class="headerlink" href="#cash-sale-credit-note-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-credit-note-contra">
+<h2>Cash Sale Credit Note Contra<a class="headerlink" href="#cash-sale-credit-note-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read a Cash Sale Credit Note from a Cash Purchase Debit Note created by the
 target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note_contra.&lt;method&gt;</span></code></p>
@@ -1068,9 +976,9 @@ User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="cash-sale-invoice">
-<h2>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-invoice">
+<h2>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Sale Invoices</p>
 <p>A Cash Sale Invoice (11000) is a transaction in which a sale has been paid in cash</p>
 <div class="admonition note">
@@ -1106,9 +1014,9 @@ get the Nominal Account which will be debited</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-sale-invoice-contra">
-<h2>Cash Sale Invoice Contra<a class="headerlink" href="#cash-sale-invoice-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-invoice-contra">
+<h2>Cash Sale Invoice Contra<a class="headerlink" href="#cash-sale-invoice-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create or read a Cash Sale Invoice from a Cash Purchase Invoice created by the target
 Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice_contra.&lt;method&gt;</span></code></p>
@@ -1142,9 +1050,9 @@ User’s acting Address</p></li>
 both the create and read methods. The User is required to pass a <strong>source_id</strong> kwarg to these methods specifying
 the id of the Address where the transaction should be read from.</p>
 </div>
-</div>
-<div class="section" id="cash-sale-receipts">
-<h2>Cash Sale Receipts<a class="headerlink" href="#cash-sale-receipts" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-receipts">
+<h2>Cash Sale Receipts<a class="headerlink" href="#cash-sale-receipts" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Sale Receipts</p>
 <p>A Cash Sale Receipt (11006) is a transaction in which a sale has been debited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.&lt;method&gt;</span></code></p>
@@ -1175,9 +1083,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="cash-sale-refund">
-<h2>Cash Sale Refund<a class="headerlink" href="#cash-sale-refund" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cash-sale-refund">
+<h2>Cash Sale Refund<a class="headerlink" href="#cash-sale-refund" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to create and manage Cash Sale Refunds</p>
 <p>A Cash sale Refund (11007) is a transaction in which a sale has been credited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.&lt;method&gt;</span></code></p>
@@ -1208,9 +1116,9 @@ the id of the Address where the transaction should be read from.</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="credit-limit">
-<h2>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="credit-limit">
+<h2>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this headline"></a></h2>
 <p>This service allows a User to read or list Credit Limits for their customers</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.credit_limit.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1234,9 +1142,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-account-history">
-<h2>Creditor Account History<a class="headerlink" href="#creditor-account-history" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-account-history">
+<h2>Creditor Account History<a class="headerlink" href="#creditor-account-history" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Transactions for a given Creditor</p>
 <p>It also returns the Creditor’s current balance</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_history.&lt;method&gt;</span></code></p>
@@ -1252,9 +1160,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-account-statement">
-<h2>Creditor Account Statement<a class="headerlink" href="#creditor-account-statement" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-account-statement">
+<h2>Creditor Account Statement<a class="headerlink" href="#creditor-account-statement" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to see a Statement for a given Address</p>
 <p>A Statement is a list of unallocated transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_statement.&lt;method&gt;</span></code></p>
@@ -1271,9 +1179,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-ledger">
-<h2>Creditor Ledger<a class="headerlink" href="#creditor-ledger" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-ledger">
+<h2>Creditor Ledger<a class="headerlink" href="#creditor-ledger" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Creditors who are owed money by the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1289,9 +1197,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-ledger-aged">
-<h2>Creditor Ledger Aged<a class="headerlink" href="#creditor-ledger-aged" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-ledger-aged">
+<h2>Creditor Ledger Aged<a class="headerlink" href="#creditor-ledger-aged" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Creditors with their current balance, as well as their balances at 30, 60,
 90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_aged.&lt;method&gt;</span></code></p>
@@ -1307,9 +1215,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-ledger-contra-transaction">
-<h2>Creditor Ledger Contra Transaction<a class="headerlink" href="#creditor-ledger-contra-transaction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-ledger-contra-transaction">
+<h2>Creditor Ledger Contra Transaction<a class="headerlink" href="#creditor-ledger-contra-transaction" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Creditor Contra Transactions</p>
 <p>A Contra Transaction is a Transaction created by the Creditor for the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_contra_transaction.&lt;method&gt;</span></code></p>
@@ -1325,9 +1233,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="creditor-ledger-transaction">
-<h2>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creditor-ledger-transaction">
+<h2>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Creditor Transactions for their acting Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1343,9 +1251,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-account-history">
-<h2>Debtor Account History<a class="headerlink" href="#debtor-account-history" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-account-history">
+<h2>Debtor Account History<a class="headerlink" href="#debtor-account-history" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Transactions for a given Debtor</p>
 <p>It also returns the Debtor’s current balance</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_history.&lt;method&gt;</span></code></p>
@@ -1361,9 +1269,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-account-statement">
-<h2>Debtor Account Statement<a class="headerlink" href="#debtor-account-statement" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-account-statement">
+<h2>Debtor Account Statement<a class="headerlink" href="#debtor-account-statement" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to see a Statement for a given Address</p>
 <p>A Statement is a list of unallocated Transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_statement.&lt;method&gt;</span></code></p>
@@ -1380,9 +1288,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-ledger">
-<h2>Debtor Ledger<a class="headerlink" href="#debtor-ledger" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-ledger">
+<h2>Debtor Ledger<a class="headerlink" href="#debtor-ledger" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Debtors who owe money to the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1398,9 +1306,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-ledger-aged">
-<h2>Debtor Ledger Aged<a class="headerlink" href="#debtor-ledger-aged" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-ledger-aged">
+<h2>Debtor Ledger Aged<a class="headerlink" href="#debtor-ledger-aged" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Debtors with their current balance, as well as their balances at 30, 60,
 90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_aged.&lt;method&gt;</span></code></p>
@@ -1416,9 +1324,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-ledger-contra-transaction">
-<h2>Debtor Ledger Contra Transaction<a class="headerlink" href="#debtor-ledger-contra-transaction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-ledger-contra-transaction">
+<h2>Debtor Ledger Contra Transaction<a class="headerlink" href="#debtor-ledger-contra-transaction" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Debtor Contra Transactions</p>
 <p>A Contra Transaction is a Transaction created by the Debtor for the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.&lt;method&gt;</span></code></p>
@@ -1434,9 +1342,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="debtor-ledger-transaction">
-<h2>Debtor Ledger Transaction<a class="headerlink" href="#debtor-ledger-transaction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debtor-ledger-transaction">
+<h2>Debtor Ledger Transaction<a class="headerlink" href="#debtor-ledger-transaction" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Debtor Transactions for their acting Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1452,9 +1360,9 @@ they are linked to</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="global-nominal-account">
-<h2>Global Nominal Account<a class="headerlink" href="#global-nominal-account" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="global-nominal-account">
+<h2>Global Nominal Account<a class="headerlink" href="#global-nominal-account" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Global Nominal Accounts.</p>
 <p>A Nominal Account stores accounting Transactions for a fiscal year.</p>
 <p>A Member can have a set of Global Nominal Accounts.</p>
@@ -1527,9 +1435,9 @@ within the Member.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="journal-entry">
-<h2>Journal Entry<a class="headerlink" href="#journal-entry" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="journal-entry">
+<h2>Journal Entry<a class="headerlink" href="#journal-entry" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Nominal Ledger’s Journal Entries</p>
 <p>A Journal Entry (12000) is an internal transaction with the purpose of adjusting Nominal Accounts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.journal_entry.&lt;method&gt;</span></code></p>
@@ -1567,9 +1475,9 @@ within the Member.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="nominal-account-history">
-<h2>Nominal Account History<a class="headerlink" href="#nominal-account-history" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nominal-account-history">
+<h2>Nominal Account History<a class="headerlink" href="#nominal-account-history" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a Nominal Account balance in a given period of time, as well as the list of
 transactions in which the Account has been used</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_history.&lt;method&gt;</span></code></p>
@@ -1585,9 +1493,9 @@ transactions in which the Account has been used</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="nominal-account-type">
-<h2>Nominal Account Type<a class="headerlink" href="#nominal-account-type" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nominal-account-type">
+<h2>Nominal Account Type<a class="headerlink" href="#nominal-account-type" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of supported Nominal Account Types</p>
 <p>Nominal Accounts are classified within different Types</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_type.&lt;method&gt;</span></code></p>
@@ -1603,9 +1511,9 @@ transactions in which the Account has been used</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="nominal-contra">
-<h2>Nominal Contra<a class="headerlink" href="#nominal-contra" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nominal-contra">
+<h2>Nominal Contra<a class="headerlink" href="#nominal-contra" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Nominal Contra Accounts</p>
 <p>A Nominal Contra Account is an association between a Transaction Type, a Payment Method and a Nominal Account</p>
 <p>The Nominal Contra is used in conjunction with the Payment Method and Transaction Type to determine with Nominal Account
@@ -1670,9 +1578,9 @@ the lines of Debits or Credits will be matched with</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="payment-method">
-<h2>Payment Method<a class="headerlink" href="#payment-method" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="payment-method">
+<h2>Payment Method<a class="headerlink" href="#payment-method" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Payment Methods</p>
 <p>A Payment Method is one of the ways to pay for a Transaction</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.payment_method.&lt;method&gt;</span></code></p>
@@ -1720,9 +1628,9 @@ the lines of Debits or Credits will be matched with</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="period-end">
-<h2>Period End<a class="headerlink" href="#period-end" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="period-end">
+<h2>Period End<a class="headerlink" href="#period-end" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Period End Transactions</p>
 <p>A Period End Transaction (12001) calculates the balance from the previous Period End (or the oldest Transaction if none
 exists) and the given transaction date</p>
@@ -1764,9 +1672,9 @@ transaction date</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="profit-loss">
-<h2>Profit &amp; Loss<a class="headerlink" href="#profit-loss" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="profit-loss">
+<h2>Profit &amp; Loss<a class="headerlink" href="#profit-loss" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to generate a Profit &amp; Loss account</p>
 <p>The Profit &amp; Loss shows the company’s revenues and expenses during a particular period</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.profit_loss.&lt;method&gt;</span></code></p>
@@ -1785,9 +1693,9 @@ its Addresses</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="purchases-analysis">
-<h2>Purchases Analysis<a class="headerlink" href="#purchases-analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="purchases-analysis">
+<h2>Purchases Analysis<a class="headerlink" href="#purchases-analysis" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to view the total Purchased from their partner Addresses</p>
 <p>For each Address the service will calculate the total amount Purchased through Invoices less Debit Notes.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_analysis.&lt;method&gt;</span></code></p>
@@ -1803,9 +1711,9 @@ its Addresses</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="purchases-by-country">
-<h2>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="purchases-by-country">
+<h2>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period
 of time</p>
 <p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
@@ -1822,9 +1730,9 @@ of time</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="purchases-by-territory">
-<h2>Purchases By Territory<a class="headerlink" href="#purchases-by-territory" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="purchases-by-territory">
+<h2>Purchases By Territory<a class="headerlink" href="#purchases-by-territory" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Addresses in the given Territory</p>
 <p>Each Address will have the total value of goods purchased from them</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_territory.&lt;method&gt;</span></code></p>
@@ -1840,9 +1748,9 @@ of time</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="rtd-return-of-trading-details">
-<h2>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="rtd-return-of-trading-details">
+<h2>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this headline"></a></h2>
 <p>This service aggregates all the transactions in an Address for a year and calculates the total Sales, Purchases from
 the EU (excluding Ireland), Purchases for Resale, and Purchases not for Resale. Each of these totals are broken down
 according to the percentage tax that were applied to the transactions.</p>
@@ -1861,9 +1769,9 @@ their Address</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="sales-analysis">
-<h2>Sales Analysis<a class="headerlink" href="#sales-analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sales-analysis">
+<h2>Sales Analysis<a class="headerlink" href="#sales-analysis" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to view the total Sales made to their Addresses</p>
 <p>For each Address the service will calculate the total amount sold through Invoices less Credit Notes.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_analysis.&lt;method&gt;</span></code></p>
@@ -1879,9 +1787,9 @@ their Address</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="sales-by-country">
-<h2>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sales-by-country">
+<h2>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
 time</p>
 <p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
@@ -1898,9 +1806,9 @@ time</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="sales-by-territory">
-<h2>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sales-by-territory">
+<h2>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of Addresses in the given Territory</p>
 <p>Each Address will have the total value of goods sold to them</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.&lt;method&gt;</span></code></p>
@@ -1916,9 +1824,9 @@ time</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="statement">
-<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="statement">
+<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to issue Statements to each of their debtors.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1934,9 +1842,9 @@ time</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="statement-log">
-<h2>Statement Log<a class="headerlink" href="#statement-log" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="statement-log">
+<h2>Statement Log<a class="headerlink" href="#statement-log" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to see a list of Statement Logs.</p>
 <p>A Statement Log is a record that gets generated every time a statement is requested to be sent automatically by the
 system</p>
@@ -1953,9 +1861,9 @@ system</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="statement-settings">
-<h2>Statement Settings<a class="headerlink" href="#statement-settings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="statement-settings">
+<h2>Statement Settings<a class="headerlink" href="#statement-settings" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Statement Settings</p>
 <p>The Statement Settings define the paramaters for if and when a Statement will be sent to an Address’s Debtors</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_settings.&lt;method&gt;</span></code></p>
@@ -1978,9 +1886,9 @@ system</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="tax-rate">
-<h2>Tax Rate<a class="headerlink" href="#tax-rate" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tax-rate">
+<h2>Tax Rate<a class="headerlink" href="#tax-rate" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Tax Rates</p>
 <p>In a tax system, the Tax Rate describes a ratio (usually expressed as a percentage) at which a business or person is
 taxed</p>
@@ -2029,9 +1937,9 @@ taxed</p>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="trial-balance">
-<h2>Trial Balance<a class="headerlink" href="#trial-balance" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="trial-balance">
+<h2>Trial Balance<a class="headerlink" href="#trial-balance" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to generate a Trial Balance</p>
 <p>A Trial Balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a
 business</p>
@@ -2053,9 +1961,9 @@ Addresses in its Member</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="vat3">
-<h2>VAT3<a class="headerlink" href="#vat3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vat3">
+<h2>VAT3<a class="headerlink" href="#vat3" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to generate the data for a VAT3 report</p>
 <p>A VAT3 report is a summary of all VAT incurred by an Address on all Sales and Purchases for a given date range</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.&lt;method&gt;</span></code></p>
@@ -2072,9 +1980,9 @@ Sales, and EU Purchases</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="vies-purchases">
-<h2>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vies-purchases">
+<h2>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of VIES Purchases</p>
 <p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
 registration of companies registered in the EU</p>
@@ -2096,9 +2004,9 @@ was zero and return the total amount spent in Purchases.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="vies-sales">
-<h2>VIES Sales<a class="headerlink" href="#vies-sales" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vies-sales">
+<h2>VIES Sales<a class="headerlink" href="#vies-sales" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get a list of VIES Sales</p>
 <p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
 registration of companies registered in the EU</p>
@@ -2120,9 +2028,9 @@ was zero and return the total amount spent in Sales</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="year-end">
-<h2>Year End<a class="headerlink" href="#year-end" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="year-end">
+<h2>Year End<a class="headerlink" href="#year-end" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to manage its Year End transactions</p>
 <p>A Year End Transaction (12002) is a transaction which will calculate the balance between the previous Year End (or the
 oldest transaction if none exists) and the given transaction date</p>
@@ -2164,51 +2072,35 @@ oldest transaction if none exists) and the given transaction date</p>
 </ul>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2019, CloudCIX.
-
-    </p>
+    <p>&#169; Copyright 2019, CloudCIX.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

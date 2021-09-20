@@ -1,75 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Services &mdash; CloudCIX API Python Library 0.8.21 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Services &mdash; CloudCIX API Python Library 0.8.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> CloudCIX API Python Library
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                0.8.21
+                0.8.22
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
@@ -103,71 +52,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">CloudCIX API Python Library</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Services</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/api_docs/helpdesk.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <p>The Helpdesk application is both a ticketing system, and a returns management system</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -181,10 +89,10 @@
 <p>If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="iris-condition">
-<h2>IRIS Condition<a class="headerlink" href="#iris-condition" title="Permalink to this headline">¶</a></h2>
+<section id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline"></a></h1>
+<section id="iris-condition">
+<h2>IRIS Condition<a class="headerlink" href="#iris-condition" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_condition.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -234,9 +142,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-defect">
-<h2>IRIS Defect<a class="headerlink" href="#iris-defect" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-defect">
+<h2>IRIS Defect<a class="headerlink" href="#iris-defect" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS Defect Codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_defect.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -286,9 +194,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-extended-condition">
-<h2>IRIS Extended Condition<a class="headerlink" href="#iris-extended-condition" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-extended-condition">
+<h2>IRIS Extended Condition<a class="headerlink" href="#iris-extended-condition" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS Extended Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_extended_condition.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -338,9 +246,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-ntf">
-<h2>IRIS NTF<a class="headerlink" href="#iris-ntf" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-ntf">
+<h2>IRIS NTF<a class="headerlink" href="#iris-ntf" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS NTF codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_ntf.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -390,9 +298,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-repair">
-<h2>IRIS Repair<a class="headerlink" href="#iris-repair" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-repair">
+<h2>IRIS Repair<a class="headerlink" href="#iris-repair" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS NTF codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_repair.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -442,9 +350,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-section">
-<h2>IRIS Section<a class="headerlink" href="#iris-section" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-section">
+<h2>IRIS Section<a class="headerlink" href="#iris-section" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS Section codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_section.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -494,9 +402,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="iris-symptom">
-<h2>IRIS Symptom<a class="headerlink" href="#iris-symptom" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iris-symptom">
+<h2>IRIS Symptom<a class="headerlink" href="#iris-symptom" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle its IRIS Symptom codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.iris_symptom.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -546,9 +454,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="item">
-<h2>Item<a class="headerlink" href="#item" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="item">
+<h2>Item<a class="headerlink" href="#item" title="Permalink to this headline"></a></h2>
 <p>Every Ticket can have a set of Items</p>
 <p>This service allows the User to manage those Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item.&lt;method&gt;</span></code></p>
@@ -599,9 +507,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="item-history">
-<h2>Item History<a class="headerlink" href="#item-history" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="item-history">
+<h2>Item History<a class="headerlink" href="#item-history" title="Permalink to this headline"></a></h2>
 <p>Every Ticket can have a set of Items, and every Item has its own History log</p>
 <p>This service allows the Users to handle the History log for their Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_history.&lt;method&gt;</span></code></p>
@@ -635,9 +543,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="item-part-used">
-<h2>Item Part Used<a class="headerlink" href="#item-part-used" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="item-part-used">
+<h2>Item Part Used<a class="headerlink" href="#item-part-used" title="Permalink to this headline"></a></h2>
 <p>Every Ticket can have a set of Items, and every Item can have a set of Parts Used to fix an issue</p>
 <p>This service allows the Users to handle the Parts Used for their Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_part_used.&lt;method&gt;</span></code></p>
@@ -662,9 +570,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="item-status">
-<h2>Item Status<a class="headerlink" href="#item-status" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="item-status">
+<h2>Item Status<a class="headerlink" href="#item-status" title="Permalink to this headline"></a></h2>
 <p>This service allows the Users to determine the at what stage of the customer service process an Item is</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.item_status.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -680,9 +588,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="reason-for-return">
-<h2>Reason For Return<a class="headerlink" href="#reason-for-return" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reason-for-return">
+<h2>Reason For Return<a class="headerlink" href="#reason-for-return" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle the different Reasons For Return that can be associated with Items in a Ticket</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -728,9 +636,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="reason-for-return-translation">
-<h2>Reason For Return Translation<a class="headerlink" href="#reason-for-return-translation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reason-for-return-translation">
+<h2>Reason For Return Translation<a class="headerlink" href="#reason-for-return-translation" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to handle translations for Reason For Return descriptions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.reason_for_return_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -773,9 +681,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="service-centre-logic">
-<h2>Service Centre Logic<a class="headerlink" href="#service-centre-logic" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="service-centre-logic">
+<h2>Service Centre Logic<a class="headerlink" href="#service-centre-logic" title="Permalink to this headline"></a></h2>
 <p>This service allows the Service Centre to specify the Business Logic for one of its Addresses</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
@@ -821,9 +729,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="service-centre-warrantor">
-<h2>Service Centre Warrantor<a class="headerlink" href="#service-centre-warrantor" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="service-centre-warrantor">
+<h2>Service Centre Warrantor<a class="headerlink" href="#service-centre-warrantor" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to specify the Business Logic between a Service Centre’s Address and a Warrantor’s Address</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
@@ -874,9 +782,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="status">
-<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline"></a></h2>
 <p>The Status service denotes at what stage of the customer service process a ticket is</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.status.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -891,9 +799,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="ticket">
-<h2>Ticket<a class="headerlink" href="#ticket" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ticket">
+<h2>Ticket<a class="headerlink" href="#ticket" title="Permalink to this headline"></a></h2>
 <p>A Ticket is a set of instructions from a Customer</p>
 <p>A Ticket has a Transaction Type, that can have one of the following values depending on who created it</p>
 <table class="docutils align-default">
@@ -957,9 +865,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="ticket-history">
-<h2>Ticket History<a class="headerlink" href="#ticket-history" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ticket-history">
+<h2>Ticket History<a class="headerlink" href="#ticket-history" title="Permalink to this headline"></a></h2>
 <p>The Ticket History service allows the User to create separate snippets of information on a ticket relating to the customer query/issue</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_history.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -992,9 +900,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="ticket-question">
-<h2>Ticket Question<a class="headerlink" href="#ticket-question" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ticket-question">
+<h2>Ticket Question<a class="headerlink" href="#ticket-question" title="Permalink to this headline"></a></h2>
 <p>Every Ticket can have a set of questions defined by default</p>
 <p>This service allows the users to handle these questions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_question.&lt;method&gt;</span></code></p>
@@ -1049,9 +957,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="ticket-type">
-<h2>Ticket Type<a class="headerlink" href="#ticket-type" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ticket-type">
+<h2>Ticket Type<a class="headerlink" href="#ticket-type" title="Permalink to this headline"></a></h2>
 <p>Every Ticket can have a type defined by default</p>
 <p>If a Ticket Type has questions associated with it at the time a Ticket with that Type is created, those questions will be associated with the Ticket</p>
 <p>This service allows the User to manage the different Ticket Types</p>
@@ -1097,9 +1005,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="ticket-type-question">
-<h2>Ticket Type Question<a class="headerlink" href="#ticket-type-question" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ticket-type-question">
+<h2>Ticket Type Question<a class="headerlink" href="#ticket-type-question" title="Permalink to this headline"></a></h2>
 <p>Every Ticket Type can have one or more questions associated with it</p>
 <p>This service allows the User to manage those questions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Helpdesk.ticket_type_question.&lt;method&gt;</span></code></p>
@@ -1122,9 +1030,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="warrantor-logic">
-<h2>Warrantor Logic<a class="headerlink" href="#warrantor-logic" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="warrantor-logic">
+<h2>Warrantor Logic<a class="headerlink" href="#warrantor-logic" title="Permalink to this headline"></a></h2>
 <p>This service allows the Warrantor to specify the Business Logic for one of its Addresses</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
@@ -1168,9 +1076,9 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="warrantor-service-centre">
-<h2>Warrantor Service Centre<a class="headerlink" href="#warrantor-service-centre" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="warrantor-service-centre">
+<h2>Warrantor Service Centre<a class="headerlink" href="#warrantor-service-centre" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to specify the Business Logic between a Warrantor’s Address and a Service Centre’s Address</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">idAddress</span></code> can be specified in the request</p>
@@ -1221,51 +1129,35 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2019, CloudCIX.
-
-    </p>
+    <p>&#169; Copyright 2019, CloudCIX.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

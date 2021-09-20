@@ -397,6 +397,17 @@ Available Methods
     - ``cloudcix.api.IAAS.snapshot.update``
         - This method allows the User to update the details of a given Snapshot.
 
+
+Snapshot Tree
+^^^^^^^^^^^^^^
+This service provides methods used to manage a Snapshot Tree of a VM.
+
+**Basic Usage**: ``cloudcix.api.IAAS.snapshot_tree.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.snapshot.read``
+        - This method allows the User to retrieve the information of a given Snapshot Tree for a specific VM.
+
 Storage
 ^^^^^^^
 Provides information regading Storage for a VM.

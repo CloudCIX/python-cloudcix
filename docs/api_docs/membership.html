@@ -1,75 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Services &mdash; CloudCIX API Python Library 0.8.21 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Services &mdash; CloudCIX API Python Library 0.8.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> CloudCIX API Python Library
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                0.8.21
+                0.8.22
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
@@ -103,81 +52,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">CloudCIX API Python Library</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Services</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/api_docs/membership.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <p>Membership is a CloudCIX Application that exposes a REST API capable of managing CloudCIX Members and relationships between those Members</p>
 <p>It is the cornerstone of CloudCIX</p>
 <p>It controls Membership, and manages both secure login and granular access</p>
 <p>The Membership Application also gives CloudCIX true multi-tenanted capability to allow you to transact, and securely share information, with your partner Members</p>
 <p>For more information on the key aspects of this Application, see <strong>Member</strong>, <strong>Address</strong>, and <strong>User</strong></p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<div class="section" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="address">
-<h2>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h2>
+<section id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline"></a></h1>
+<section id="address">
+<h2>Address<a class="headerlink" href="#address" title="Permalink to this headline"></a></h2>
 <p>An Address points to a physical location where an organisation conducts their business</p>
 <p>Each Member can have one or more Addresses</p>
 <p>Trading transactions occur between a Supplier and Customer Address, while some other transactions occur at a single Address, e.g. depreciation</p>
@@ -222,9 +130,9 @@
 </dl>
 <p>The Address list can also be accessed through a verbose endpoint. This endpoint will return more data than the regular Address list method but will take more time to return a response.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.verbose_address.list</span></code></p>
-</div>
-<div class="section" id="address-link">
-<h2>Address Link<a class="headerlink" href="#address-link" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="address-link">
+<h2>Address Link<a class="headerlink" href="#address-link" title="Permalink to this headline"></a></h2>
 <p>An Address Link object represents a link between two Addresses, which allows transactions to be performed between them</p>
 <p>Addresses must be linked in order to conduct business between them</p>
 <p>The link allows each Address to have particular details about the Contra Address (the Address to which the Link is to)</p>
@@ -260,9 +168,9 @@
 <p class="admonition-title">Note</p>
 <p>Based on how the URLs for <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code> are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">pk=None</span></code> to both of these methods</p>
 </div>
-</div>
-<div class="section" id="country">
-<h2>Country<a class="headerlink" href="#country" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="country">
+<h2>Country<a class="headerlink" href="#country" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get Country information in accordance with ISO 3166-1</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -284,9 +192,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="currency">
-<h2>Currency<a class="headerlink" href="#currency" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="currency">
+<h2>Currency<a class="headerlink" href="#currency" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get information about the different Currencies supported by CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -308,9 +216,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="department">
-<h2>Department<a class="headerlink" href="#department" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="department">
+<h2>Department<a class="headerlink" href="#department" title="Permalink to this headline"></a></h2>
 <p>A Department is a specialized division of a large organisation that groups Users together</p>
 <p>Example Departments can include:
 - Design
@@ -363,9 +271,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="email-confirmation">
-<h2>Email Confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="email-confirmation">
+<h2>Email Confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this headline"></a></h2>
 <p>Email Confirmation allows the user to verify their email</p>
 <p>This service provides methods to verify a users email</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.email_confirmation.&lt;method&gt;</span></code></p>
@@ -381,9 +289,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="language">
+<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to get information about the languages that are available for use in CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -405,9 +313,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="member">
-<h2>Member<a class="headerlink" href="#member" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="member">
+<h2>Member<a class="headerlink" href="#member" title="Permalink to this headline"></a></h2>
 <p>A Member can be a company, brand, multinational corporation or a sole trader, but a Member is always a business</p>
 <p>A Member may be Self Managed or not</p>
 <p>A Self Managed Member is run by an Administrator inside the Member and is responsible for themselves</p>
@@ -450,9 +358,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="member-link">
-<h2>Member Link<a class="headerlink" href="#member-link" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="member-link">
+<h2>Member Link<a class="headerlink" href="#member-link" title="Permalink to this headline"></a></h2>
 <p>A Member Link represents a Link between two Members</p>
 <p>This service provides a method to see if the User’s Member is linked to another Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member_link.&lt;method&gt;</span></code></p>
@@ -469,9 +377,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="notification">
-<h2>Notification<a class="headerlink" href="#notification" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="notification">
+<h2>Notification<a class="headerlink" href="#notification" title="Permalink to this headline"></a></h2>
 <p>A Notification record takes account of all the Users in an Address who should be notified about transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.notification.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -486,9 +394,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="profile">
-<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline"></a></h2>
 <p>A Profile can be a group of nurses (Users) in a hospital (Member).</p>
 <p>Profiles are a custom or default classification for a User for a particular Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.&lt;method&gt;</span></code></p>
@@ -539,9 +447,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="subdivision">
-<h2>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="subdivision">
+<h2>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this headline"></a></h2>
 <p>The Subdivision service contains methods to get data about Subdivisions in accordance with ISO 3166-2</p>
 <p>An example of a Subdivision is a County in Ireland</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.&lt;method&gt;</span></code></p>
@@ -564,9 +472,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="team">
-<h2>Team<a class="headerlink" href="#team" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="team">
+<h2>Team<a class="headerlink" href="#team" title="Permalink to this headline"></a></h2>
 <p>A Team is a tag describing a group of Users in a Member</p>
 <p>For example, a Team can be a group of Users working on a particular project</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.&lt;method&gt;</span></code></p>
@@ -618,9 +526,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="territory">
-<h2>Territory<a class="headerlink" href="#territory" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="territory">
+<h2>Territory<a class="headerlink" href="#territory" title="Permalink to this headline"></a></h2>
 <p>A Territory is a classification or tag that a Member can use for grouping their business partners</p>
 <p>For example, a Member can group partners be location or by what product they sell/purchase</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.&lt;method&gt;</span></code></p>
@@ -667,9 +575,9 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="token">
-<h2>Token<a class="headerlink" href="#token" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="token">
+<h2>Token<a class="headerlink" href="#token" title="Permalink to this headline"></a></h2>
 <p>This service allows the User to validate credentials, or generate a token used to access the rest of the API.</p>
 <p>If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
 If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key</p>
@@ -720,9 +628,9 @@ If an api_key is supplied alongside the email and password, if the email and pas
 <p class="admonition-title">Note</p>
 <p>The usual <code class="docutils literal notranslate"><span class="pre">token</span></code> parameter is not required for these methods.</p>
 </div>
-</div>
-<div class="section" id="transaction-type">
-<h2>Transaction Type<a class="headerlink" href="#transaction-type" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="transaction-type">
+<h2>Transaction Type<a class="headerlink" href="#transaction-type" title="Permalink to this headline"></a></h2>
 <p>The TransactionType service contains methods that give information about the types of transactions supported by CloudCIX</p>
 <p>Most services in CloudCIX work using transactions;
 - <code class="docutils literal notranslate"><span class="pre">financial.account_sale_invoice</span></code>
@@ -750,9 +658,9 @@ If an api_key is supplied alongside the email and password, if the email and pas
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="user">
-<h2>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="user">
+<h2>User<a class="headerlink" href="#user" title="Permalink to this headline"></a></h2>
 <p>A User record represents a person located at an Address of a Member that can log in to the CloudCIX system</p>
 <p>A User can either be Local to one Address, or Global within a Member, and Global Users can choose to act as a Local or Global at any time
 - When acting as a Global User, they see all data from each Address in the Member simultaneously
@@ -803,51 +711,35 @@ These fields can only be updated by an Administrator</p>
 </ul>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2019, CloudCIX.
-
-    </p>
+    <p>&#169; Copyright 2019, CloudCIX.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
