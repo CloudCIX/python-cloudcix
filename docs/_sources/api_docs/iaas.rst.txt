@@ -59,6 +59,34 @@ Available Methods
         - ASNs can only be deleted when they are empty.
         - This method can only be run by CIX Users.
 
+Backup
+^^^^^^^^
+This service provides methods used to manage a Backup of a VM.
+
+**Basic Usage**: ``cloudcix.api.IAAS.backup.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.backup.list``
+        - This method allows the User to list all the Backups that they own.
+    - ``cloudcix.api.IAAS.backup.create``
+        - This method allows the User to create a new Backup of a VM in a Project that they own.
+    - ``cloudcix.api.IAAS.backup.read``
+        - This method allows the User to retrieve the information of a given Backup.
+    - ``cloudcix.api.IAAS.backup.update``
+        - This method allows the User to update the details of a given Backup.
+
+Backup History
+^^^^^^^^^^^^^^^^^
+This service allows the User to retrieve the History for their Backup.
+
+Backup History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.
+
+**Basic Usage**: ``cloudcix.api.IAAS.backup_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.backup_history.list``
+        - This method retrieves a list of History records for a user's address Backups.
+
 CIX Blacklist
 ^^^^^^^^^^^^^
 CIX Blacklist is a storage for CIDRs that are recognised by CIX as malicious.
@@ -397,6 +425,17 @@ Available Methods
     - ``cloudcix.api.IAAS.snapshot.update``
         - This method allows the User to update the details of a given Snapshot.
 
+Snapshot History
+^^^^^^^^^^^^^^^^^
+This service allows the User to retrieve the History for their Snapshots.
+
+Snapshot History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.
+
+**Basic Usage**: ``cloudcix.api.IAAS.snapshot_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.snapshot_history.list``
+        - This method retrieves a list of History records for a user's address Snapshots.
 
 Snapshot Tree
 ^^^^^^^^^^^^^^

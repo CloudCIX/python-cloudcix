@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.8.22 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.8.23 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
           </a>
               <div class="version">
-                0.8.22
+                0.8.23
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#id11">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id12">Allocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#asn">ASN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backup-history">Backup History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-blacklist">CIX Blacklist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-whitelist">CIX Whitelist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cloud">Cloud</a></li>
@@ -217,6 +219,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#server">Server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#server-type">Server Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#snapshot">Snapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snapshot-history">Snapshot History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#snapshot-tree">Snapshot Tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#storage">Storage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#storage-type">Storage Type</a></li>
@@ -4555,6 +4558,62 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dd>
 </dl>
 </section>
+<section id="backup">
+<h4>Backup<a class="headerlink" href="#backup" title="Permalink to this headline"></a></h4>
+<p>This service provides methods used to manage a Backup of a VM.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to list all the Backups that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Backup of a VM in a Project that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve the information of a given Backup.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a given Backup.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="backup-history">
+<h4>Backup History<a class="headerlink" href="#backup-history" title="Permalink to this headline"></a></h4>
+<p>This service allows the User to retrieve the History for their Backup.</p>
+<p>Backup History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup_history.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup_history.list</span></code></dt><dd><ul>
+<li><p>This method retrieves a list of History records for a user’s address Backups.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="cix-blacklist">
 <h4>CIX Blacklist<a class="headerlink" href="#cix-blacklist" title="Permalink to this headline"></a></h4>
 <p>CIX Blacklist is a storage for CIDRs that are recognised by CIX as malicious.</p>
@@ -5232,6 +5291,24 @@ Reply-To will be the User’s email unless it is set.</p></li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot.update</span></code></dt><dd><ul>
 <li><p>This method allows the User to update the details of a given Snapshot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="snapshot-history">
+<h4>Snapshot History<a class="headerlink" href="#snapshot-history" title="Permalink to this headline"></a></h4>
+<p>This service allows the User to retrieve the History for their Snapshots.</p>
+<p>Snapshot History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot_history.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot_history.list</span></code></dt><dd><ul>
+<li><p>This method retrieves a list of History records for a user’s address Snapshots.</p></li>
 </ul>
 </dd>
 </dl>
