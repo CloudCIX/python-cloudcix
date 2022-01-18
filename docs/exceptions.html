@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exceptions &mdash; CloudCIX API Python Library 0.8.23 documentation</title>
+  <title>Exceptions &mdash; CloudCIX API Python Library 0.8.24 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
           </a>
               <div class="version">
-                0.8.23
+                0.8.24
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -83,7 +83,7 @@
 <p>This file contains custom Exceptions that are used within the CloudCIX API library</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cloudcix.exceptions.CloudCIXAuthException">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">CloudCIXAuthException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.exceptions.CloudCIXAuthException" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">CloudCIXAuthException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.exceptions.CloudCIXAuthException" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>This exception is raised when there are errors returned from the methods used to generate Tokens;</dt><dd><ul class="simple">
 <li><p><cite>cloudcix.auth.get_token</cite></p></li>
@@ -96,7 +96,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cloudcix.exceptions.ImproperlyConfiguredException">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">ImproperlyConfiguredException</span></span><a class="headerlink" href="#cloudcix.exceptions.ImproperlyConfiguredException" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">ImproperlyConfiguredException</span></span><a class="headerlink" href="#cloudcix.exceptions.ImproperlyConfiguredException" title="Permalink to this definition"></a></dt>
 <dd><p>This exception is raised when the CloudCIX library has not been properly configured.</p>
 <p>This can usually happen in the following ways:</p>
 <blockquote>
@@ -110,7 +110,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cloudcix.exceptions.MissingClientKeywordArgumentException">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">MissingClientKeywordArgumentException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cli</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.exceptions.MissingClientKeywordArgumentException" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cloudcix.exceptions.</span></span><span class="sig-name descname"><span class="pre">MissingClientKeywordArgumentException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cli</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cloudcix.exceptions.MissingClientKeywordArgumentException" title="Permalink to this definition"></a></dt>
 <dd><p>This exception is raised when a method is called on a service that requires one or more keyword arguments that were
 not supplied by the user.</p>
 <p>For example: if a service’s URL is <code class="docutils literal notranslate"><span class="pre">address/{address_id}/link/</span></code>, the call to <code class="docutils literal notranslate"><span class="pre">Membership.address_link.list</span></code> must
