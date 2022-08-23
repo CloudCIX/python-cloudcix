@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.8.26 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.9.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +29,7 @@
             <a href="../index.html" class="icon icon-home"> CloudCIX API Python Library
           </a>
               <div class="version">
-                0.8.26
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -80,9 +81,9 @@
 distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline"></a></h1>
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h1>
 <section id="agreed-price">
-<h2>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this headline"></a></h2>
+<h2>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to manage the agreed prices for SKUs between
 addresses they are linked to</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.&lt;method&gt;</span></code></p>
@@ -140,7 +141,7 @@ Price</p></li>
 </dl>
 </section>
 <section id="bin">
-<h2>Bin<a class="headerlink" href="#bin" title="Permalink to this headline"></a></h2>
+<h2>Bin<a class="headerlink" href="#bin" title="Permalink to this heading"></a></h2>
 <p>This service allows the Users to manage their Bins. A Bin is a classification
 for SKUs used to manage their inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.&lt;method&gt;</span></code></p>
@@ -202,7 +203,7 @@ associated</p></li>
 </dl>
 </section>
 <section id="bin-sku">
-<h2>Bin SKU<a class="headerlink" href="#bin-sku" title="Permalink to this headline"></a></h2>
+<h2>Bin SKU<a class="headerlink" href="#bin-sku" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to associate their SKUs with their Bins</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin_sku.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -228,7 +229,7 @@ between one or several SKUs with a Bin</p></li>
 </dl>
 </section>
 <section id="brand">
-<h2>Brand<a class="headerlink" href="#brand" title="Permalink to this headline"></a></h2>
+<h2>Brand<a class="headerlink" href="#brand" title="Permalink to this heading"></a></h2>
 <p>A Brand is an optional classification for a SKU</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -278,7 +279,7 @@ its Member</p></li>
 </dl>
 </section>
 <section id="critical-bom">
-<h2>Critical BOM<a class="headerlink" href="#critical-bom" title="Permalink to this headline"></a></h2>
+<h2>Critical BOM<a class="headerlink" href="#critical-bom" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to manage an SKU’s Bill of Materials (BOM)</p>
 <p>A BOM is a list of the raw materials, sub-assemblies, intermediate assemblies,
 sub-components, parts, and the quantities of each needed to manufacture an end
@@ -342,7 +343,7 @@ an SKU and sub-components.</p></li>
 </dl>
 </section>
 <section id="critical-bom-for-member">
-<h2>Critical BOM (For Member)<a class="headerlink" href="#critical-bom-for-member" title="Permalink to this headline"></a></h2>
+<h2>Critical BOM (For Member)<a class="headerlink" href="#critical-bom-for-member" title="Permalink to this heading"></a></h2>
 <p>This service provides a method to list all BOM records belonging to the Member
 of the User making the request</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom_for_member.&lt;method&gt;</span></code></p>
@@ -361,7 +362,7 @@ the User making the request</p></li>
 </dl>
 </section>
 <section id="manufactured-item">
-<h2>Manufactured Item<a class="headerlink" href="#manufactured-item" title="Permalink to this headline"></a></h2>
+<h2>Manufactured Item<a class="headerlink" href="#manufactured-item" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to manage Manufactured Items</p>
 <p>A Manufactured Item is an SKU with a serial number</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.&lt;method&gt;</span></code></p>
@@ -424,7 +425,7 @@ create a Manufactured Item.</p></li>
 </dl>
 </section>
 <section id="purchase-order">
-<h2>Purchase Order<a class="headerlink" href="#purchase-order" title="Permalink to this headline"></a></h2>
+<h2>Purchase Order<a class="headerlink" href="#purchase-order" title="Permalink to this heading"></a></h2>
 <p>This is a record of a request made to another Address for stock elements.</p>
 <p>Purchase Orders can be used to maintain records of stock quantities of SKUs
 that were ordered.</p>
@@ -468,7 +469,7 @@ specified Purchase Order</p></li>
 </dl>
 </section>
 <section id="return-question">
-<h2>Return Question<a class="headerlink" href="#return-question" title="Permalink to this headline"></a></h2>
+<h2>Return Question<a class="headerlink" href="#return-question" title="Permalink to this heading"></a></h2>
 <p>Every SKU Category can have a set of questions defined by default and used for
 certain transactions</p>
 <p>This service allows the Users to handle these questions</p>
@@ -517,7 +518,7 @@ to be read</p></li>
 </dl>
 </section>
 <section id="return-question-field-type">
-<h2>Return Question Field Type<a class="headerlink" href="#return-question-field-type" title="Permalink to this headline"></a></h2>
+<h2>Return Question Field Type<a class="headerlink" href="#return-question-field-type" title="Permalink to this heading"></a></h2>
 <p>A Return Question supports several types for its answer</p>
 <p>This service will have a list method to return all supported types</p>
 <div class="admonition note">
@@ -540,7 +541,7 @@ field types for the Return Question answers</p></li>
 </dl>
 </section>
 <section id="sales-order">
-<h2>Sales Order<a class="headerlink" href="#sales-order" title="Permalink to this headline"></a></h2>
+<h2>Sales Order<a class="headerlink" href="#sales-order" title="Permalink to this heading"></a></h2>
 <p>A Sales Order is a record of an order of stock elements by a certain Address.</p>
 <p>Sales Orders can be used to create Invoices, and maintain records of price and
 quantities of SKUs that were ordered.</p>
@@ -584,7 +585,7 @@ Sales Order</p></li>
 </dl>
 </section>
 <section id="service-group">
-<h2>Service Group<a class="headerlink" href="#service-group" title="Permalink to this headline"></a></h2>
+<h2>Service Group<a class="headerlink" href="#service-group" title="Permalink to this heading"></a></h2>
 <p>Service Groups are used to put Model Numbers into groups with the same repair
 complexity and therefore cost</p>
 <p>Service Groups facilitate the simplification of contracts between Warrantors
@@ -643,7 +644,7 @@ have no assigned Service Group after the deletion</p></li>
 </dl>
 </section>
 <section id="sku">
-<h2>SKU<a class="headerlink" href="#sku" title="Permalink to this headline"></a></h2>
+<h2>SKU<a class="headerlink" href="#sku" title="Permalink to this heading"></a></h2>
 <p>A Stock Keeping Unit (SKU) is the unit by which stock is managed.</p>
 <p>Two manufactured items of the same SKU are identical in every way (with the
 possible exception of a label containing a unique serial number)</p>
@@ -703,7 +704,7 @@ Member</p></li>
 </dl>
 </section>
 <section id="sku-category">
-<h2>SKU Category<a class="headerlink" href="#sku-category" title="Permalink to this headline"></a></h2>
+<h2>SKU Category<a class="headerlink" href="#sku-category" title="Permalink to this heading"></a></h2>
 <p>An SKU Category is a classification for an SKU</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -755,7 +756,7 @@ or within the same Master Category</p></li>
 </dl>
 </section>
 <section id="sku-category-return-question">
-<h2>SKU Category Return Question<a class="headerlink" href="#sku-category-return-question" title="Permalink to this headline"></a></h2>
+<h2>SKU Category Return Question<a class="headerlink" href="#sku-category-return-question" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to associate Return Questions with SKU Categories</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category_return_question.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -781,7 +782,7 @@ a Return Question</p></li>
 </dl>
 </section>
 <section id="sku-stock">
-<h2>SKU Stock<a class="headerlink" href="#sku-stock" title="Permalink to this headline"></a></h2>
+<h2>SKU Stock<a class="headerlink" href="#sku-stock" title="Permalink to this heading"></a></h2>
 <p>This service allows the User to see SKU Stock values</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -813,7 +814,7 @@ requesting User, a link between the Members must exist</p></li>
 </dl>
 </section>
 <section id="sku-stock-adjustment">
-<h2>SKU Stock Adjustment<a class="headerlink" href="#sku-stock-adjustment" title="Permalink to this headline"></a></h2>
+<h2>SKU Stock Adjustment<a class="headerlink" href="#sku-stock-adjustment" title="Permalink to this heading"></a></h2>
 <p>This service allows Users to manage their SKU Stock by making adjustments to it</p>
 <p>A SKU Stock Adjustment Transaction allows Users to adjust the SKU inventory by
 increasing or decreasing the amount of items or volume in stock</p>
@@ -857,7 +858,7 @@ Adjustment Transaction</p></li>
 </dl>
 </section>
 <section id="sku-value">
-<h2>SKU Value<a class="headerlink" href="#sku-value" title="Permalink to this headline"></a></h2>
+<h2>SKU Value<a class="headerlink" href="#sku-value" title="Permalink to this heading"></a></h2>
 <p>This service allows Users to manage the values for an SKU on each class</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -921,7 +922,7 @@ Update it</p></li>
 </dl>
 </section>
 <section id="validate-purchase-order">
-<h2>Validate Purchase Order<a class="headerlink" href="#validate-purchase-order" title="Permalink to this headline"></a></h2>
+<h2>Validate Purchase Order<a class="headerlink" href="#validate-purchase-order" title="Permalink to this heading"></a></h2>
 <p>This service allows Users to validate data before submitting it to modify a Purchase Order</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.validate_purchase_order.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -938,7 +939,7 @@ Update it</p></li>
 </dl>
 </section>
 <section id="validate-sale-order">
-<h2>Validate Sale Order<a class="headerlink" href="#validate-sale-order" title="Permalink to this headline"></a></h2>
+<h2>Validate Sale Order<a class="headerlink" href="#validate-sale-order" title="Permalink to this heading"></a></h2>
 <p>This service allows Users to validate data before submitting it to modify a Sales Order</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.validate_sales_order.&lt;method&gt;</span></code></p>
 <dl class="simple">

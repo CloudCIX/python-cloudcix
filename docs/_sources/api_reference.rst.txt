@@ -42,10 +42,6 @@ Financial
 
 .. include:: api_docs/financial.rst
 
-Helpdesk
-~~~~~~~~~
-
-.. include:: api_docs/helpdesk.rst
 
 IAAS
 ~~~~
@@ -86,6 +82,11 @@ Security
 ~~~~~~~~
 
 .. include:: api_docs/security.rst
+
+Support
+~~~~~~~~~
+
+.. include:: api_docs/support.rst
 
 Training
 ~~~~~~~~

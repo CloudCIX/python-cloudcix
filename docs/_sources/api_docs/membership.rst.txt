@@ -312,13 +312,13 @@ Transaction Type
 The TransactionType service contains methods that give information about the types of transactions supported by CloudCIX
 
 Most services in CloudCIX work using transactions;
-- ``financial.account_sale_invoice``
-- ``financial.cash_sale_invoice``
-- ``helpdesk.ticket``
+- ``Financial.account_sale_invoice``
+- ``Financial.cash_sale_invoice``
+- ``Support.ticket``
 
-are all examples of Transaction based services, and each of these services has their own ``idTransactionType``
+are all examples of Transaction based services, and each of these services has their own ``transaction_type_id``
 
-Transaction Types identify each one in a unique way, and along with the Transaction Sequence Number it makes a transaction unique for each Address of a Member
+Transaction Types identify each one in a unique way, and along with the Transaction Sequence Number (TSN) it makes a transaction unique for each Address of a Member
 
 **Basic Usage**: ``cloudcix.api.Membership.transaction_type.<method>``
 

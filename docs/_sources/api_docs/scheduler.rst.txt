@@ -34,7 +34,7 @@ Supported Transactions
     - Account Sale Invoices
         - cloudcix.api.Financial.account_sale_invoice
     - Warrantor Tickets
-        - cloudcix.api.Helpdesk.ticket
+        - cloudcix.api.Support.ticket
         - transaction_type_id=40000
 
 

@@ -1,0 +1,653 @@
+The Support application is both a ticketing system, and a returns management system
+
+.. note:: **Ticketing System**
+
+    A Ticketing System has two parties, each with a different role.
+
+    A Warrantor offers support, and a Client requires support
+
+.. note:: **Returns Management**
+
+    If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved
+
+**Basic Usage**: ``cloudcix.api.Support.<service>.<method>``
+
+Services
+--------
+
+IRIS Condition
+^^^^^^^^^^^^^^
+This service allows the User to handle its IRIS Condition codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_condition.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_condition.list``
+        - This method allows the User to get a list of IRIS Condition codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_condition.create``
+        - This method allows the User to create an IRIS Condition code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Condition Translation`` service
+    - ``cloudcix.api.Support.iris_condition.read``
+        - This method returns an IRIS Condition Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_condition.update``
+        - This method allows the User to update some details of an IRIS Condition code
+        - To add translations, you must use the ``IRIS Condition Translation`` service
+    - ``cloudcix.api.Support.iris_condition.delete``
+        - This method allows the User to delete an IRIS Condition code and all its translations
+        - The IRIS Condition code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Condition Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Condition codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_condition_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_condition_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Condition code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_condition_translation.create``
+        - This method allows the User to create a translation for an IRIS Condition code for its Member
+    - ``cloudcix.api.Support.iris_condition_translation.read``
+        - This method returns the translation for an IRIS Condition Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Codes
+    - ``cloudcix.api.Support.iris_condition_translation.update``
+        - This method allows the User to update some details for an IRIS Condition Translation
+    - ``cloudcix.api.Support.iris_condition_translation.delete``
+        - This method allows the User to delete an IRIS Condition Translation record.
+
+IRIS Defect
+^^^^^^^^^^^
+This service allows the User to handle its IRIS Defect Codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_defect.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_defect.list``
+        - This method allows the User to get a list of IRIS Defect codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_defect.create``
+        - This method allows the User to create an IRIS Defect code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Defect Translation`` service
+    - ``cloudcix.api.Support.iris_defect.read``
+        - This method returns an IRIS Defect Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_defect.update``
+        - This method allows the User to update some details of an IRIS Defect code
+        - To add translations, you must use the ``IRIS Defect Translation`` service
+    - ``cloudcix.api.Support.iris_defect.delete``
+        - This method allows the User to delete an IRIS Defect code and all its translations
+        - The IRIS Defect code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Defect Translation
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Defect codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_defect_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_defect_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Defect code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_defect_translation.create``
+        - This method allows the User to create an IRIS Defect code for its Member
+    - ``cloudcix.api.Support.iris_defect_translation.read``
+        - This method returns the translation for an IRIS Defect Code in the requested language
+        -- Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_defect_translation.update``
+        - This method allows the User to update some details for an IRIS Defect Translation
+    - ``cloudcix.api.Support.iris_defect_translation.delete``
+        - This method allows the User to delete an IRIS Defect Translation record.
+
+IRIS Extended Condition
+^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle its IRIS Extended Condition codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_extended_condition.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_extended_condition.list``
+        - This method allows the User to get a list of IRIS Extended Condition codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_extended_condition.create``
+        - This method allows the User to create an IRIS Extended Condition code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Extended Condition Translation`` service
+    - ``cloudcix.api.Support.iris_extended_condition.read``
+        - This method returns an IRIS Extended Condition Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_extended_condition.update``
+        - This method allows the User to update some details of an IRIS Extended Condition code
+        - To add translations, you must use the ``IRIS Extended Condition Translation`` service
+    - ``cloudcix.api.Support.iris_extended_condition.delete``
+        - This method allows the User to delete an IRIS Extended Condition code and all its translations
+        - The IRIS Extended Condition code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Extended Condition Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Extended Condition codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_extended_condition_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_extended_condition_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Extended Condition code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_extended_condition_translation.create``
+        - This method allows the User to create an IRIS Extended Condition code for its Member
+    - ``cloudcix.api.Support.iris_extended_condition_translation.read``
+        - This method returns the translation for an IRIS Extended Condition Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_extended_condition_translation.update``
+        - This method allows the User to update some details for an IRIS Extended Condition Translation
+    - ``cloudcix.api.Support.iris_extended_condition_translation.delete``
+        - This method allows the User to delete an IRIS Extended Condition Translation record.
+
+IRIS NTF
+^^^^^^^^
+This service allows the User to handle its IRIS NTF codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_ntf.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_ntf.list``
+        - This method allows the User to get a list of IRIS NTF codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_ntf.create``
+        - This method allows the User to create an IRIS NTF code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS NTF Translation`` service
+    - ``cloudcix.api.Support.iris_ntf.read``
+        - This method returns an IRIS NTF Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_ntf.update``
+        - This method allows the User to update some details of an IRIS NTF code
+        - To add translations, you must use the ``IRIS NTF Translation`` service
+    - ``cloudcix.api.Support.iris_ntf.delete``
+        - This method allows the User to delete an IRIS NTF code and all its translations
+        - The IRIS NTF code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS NTF Translation
+^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS NTF codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_ntf_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_ntf_translation.list``
+        - This method allows the User to get a list of translations for an IRIS NTF code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_ntf_translation.create``
+        - This method allows the User to create an IRIS NTF code for its Member
+    - ``cloudcix.api.Support.iris_ntf_translation.read``
+        - This method returns the translation for an IRIS NTF Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_ntf_translation.update``
+        - This method allows the User to update some details for an IRIS NTF Translation
+    - ``cloudcix.api.Support.iris_ntf_translation.delete``
+        - This method allows the User to delete an IRIS NTF Translation record.
+
+IRIS Repair
+^^^^^^^^^^^
+This service allows the User to handle its IRIS NTF codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_repair.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_repair.list``
+        - This method allows the User to get a list of IRIS Repair codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_repair.create``
+        - This method allows the User to create an IRIS Repair code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Repair Translation`` service
+    - ``cloudcix.api.Support.iris_repair.read``
+        - This method returns an IRIS Repair Code 
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_repair.update``
+        - This method allows the User to update some details of an IRIS Repair code
+        - To add translations, you must use the ``IRIS Repair Translation`` service
+    - ``cloudcix.api.Support.iris_repair.delete``
+        - This method allows the User to delete an IRIS Repair code and all its translations
+        - The IRIS Repair code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Repair Translation
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Repair codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_repair_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_repair_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Repair code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_repair_translation.create``
+        - This method allows the User to create an IRIS Repair code for its Member
+    - ``cloudcix.api.Support.iris_repair_translation.read``
+        - This method returns the translation for an IRIS Repair Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_repair_translation.update``
+        - This method allows the User to update some details for an IRIS Repair Translation
+    - ``cloudcix.api.Support.iris_repair_translation.delete``
+        - This method allows the User to delete an IRIS Repair Translation record
+
+IRIS Section
+^^^^^^^^^^^^
+This service allows the User to handle its IRIS Section codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_section.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_section.list``
+        - This method allows the User to get a list of IRIS Section codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_section.create``
+        - This method allows the User to create an IRIS Section code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Section Translation`` service
+    - ``cloudcix.api.Support.iris_section.read``
+        - This method returns an IRIS Section Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_section.update``
+        - This method allows the User to update some details of an IRIS Section code
+        - To add translations, you must use the ``IRIS Section Translation`` service
+    - ``cloudcix.api.Support.iris_section.delete``
+        - This method allows the User to delete an IRIS Section code and all its translations
+        - The IRIS Section code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Section Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Section codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_section_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_section_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Section code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_section_translation.create``
+        - This method allows the User to create an IRIS Section code for its Member
+    - ``cloudcix.api.Support.iris_section_translation.read``
+        - This method returns the translation for an IRIS Section Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_section_translation.update``
+        - This method allows the User to update some details for an IRIS Section Translation
+    - ``cloudcix.api.Support.iris_section_translation.delete``
+        - This method allows the User to delete an IRIS Section Translation record
+
+IRIS Symptom
+^^^^^^^^^^^^
+This service allows the User to handle its IRIS Symptom codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_symptom.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_symptom.list``
+        - This method allows the User to get a list of IRIS Symptom codes for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_symptom.create``
+        - This method allows the User to create an IRIS Symptom code for its Member
+        - The description parameter must be in the English language
+        - To add translations, you must use the ``IRIS Symptom Translation`` service
+    - ``cloudcix.api.Support.iris_symptom.read``
+        - This method returns an IRIS Symptom Code
+        - Codes can be read by the owner and by linked Members
+    - ``cloudcix.api.Support.iris_symptom.update``
+        - This method allows the User to update some details of an IRIS Symptom code
+        - To add translations, you must use the ``IRIS Symptom Translation`` service
+    - ``cloudcix.api.Support.iris_symptom.delete``
+        - This method allows the User to delete an IRIS Symptom code and all its translations
+        - The IRIS Symptom code cannot be deleted if it is used (i.e. assigned to an item)
+
+IRIS Symptom Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle the Translations for IRIS Symptom codes
+
+**Basic Usage**: ``cloudcix.api.Support.iris_symptom_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.iris_symptom_translation.list``
+        - This method allows the User to get a list of translations for an IRIS Symptom code for the selected linked Member, or the User's own Member by default
+    - ``cloudcix.api.Support.iris_symptom_translation.create``
+        - This method allows the User to create an IRIS Symptom code for its Member
+    - ``cloudcix.api.Support.iris_symptom_translation.read``
+        - This method returns the translation for an IRIS Symptom Code in the requested language
+        - Translations can be read by the owner and by linked Members of the Code.
+    - ``cloudcix.api.Support.iris_symptom_translation.update``
+        - This method allows the User to update some details for an IRIS Symptom Translation
+    - ``cloudcix.api.Support.iris_symptom_translation.delete``
+        - This method allows the User to delete an IRIS Symptom Translation record
+
+Item
+^^^^
+Every Ticket can have a set of Items
+
+This service allows the User to manage those Items
+
+**Basic Usage**: ``cloudcix.api.Support.item.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.item.list``
+        - This method allows the User to get a list of Items associated with a Ticket
+        - Items can only be read by the Warrantor, Client or Service Centre associated with the Ticket
+    - ``cloudcix.api.Support.item.create``
+        - This method allows the User to add an Item to a Ticket
+        - Depending on the SKU Type, the serial number, batch number, date of manufacture and date of purchase may be required
+        - Items can only be added by the Warrantor, Client or Service Centre associated with the Ticket
+        - When an Item is added, the fields with "Initial" are automatically taken from the initial values in the passed in fields, including the questions' initial answers
+        - An Item History is automatically created by the system to reflect who added the Item, along with the current and initial values
+        - A Warrantor can set up any of the Users associated with the Ticket
+        - A Client can only manage its associated Users
+    - ``cloudcix.api.Support.item.read``
+        - This method allows the User to read an Item associated with a Ticket
+        - Items can only be read by the Warrantor, Client or Service Centre associated with the Ticket
+    - ``cloudcix.api.Support.item.update``
+        - This method allows the User to update an Item associated with a Ticket
+        - Depending on the SKU Type, the serial number, batch number, date of manufacture and date of purchase may be required
+        - Items can only be added by the Warrantor, Client or Service Centre associated with the Ticket
+        - When an Item is added, the fields with "Initial" are automatically taken from the initial values in the passed in fields, including the questions' initial answers
+        - An Item History is automatically created by the system to reflect who added the Item, along with the current and initial values
+        - A Warrantor can set up any of the Users associated with the Ticket
+        - A Client can only manage its associated Users
+
+Item History
+^^^^^^^^^^^^
+Every Ticket can have a set of Items, and every Item has its own History log
+
+This service allows the Users to handle the History log for their Items
+
+**Basic Usage**: ``cloudcix.api.Support.item_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.item_history.list``
+        - This method allows the User to get a list of History logs for the given Item in the selected Transaction
+    - ``cloudcix.api.Support.item_history.create``
+        - This method allows the User to create a new History log for the given Item in a Ticket
+        - Only Users under the addresses involved in the Ticket can create these logs
+        - There are two log types;
+            - **Note**: A standard history log is generated
+            - **Email**: A standard history log is generated and is sent by email to these specified in the ``to`` and ``cc`` fields.
+              Emails will always be sent by CloudCIX Notifications, and the sender will be specified in the body of the email.
+              Reply-To will be the User's email unless it is set.
+
+Item Status
+^^^^^^^^^^^
+This service allows the Users to determine the at what stage of the customer service process an Item is
+
+**Basic Usage**: ``cloudcix.api.Support.item_status.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.item_status.list``
+        - This method allows the User to get a list of Item Statuses in the selected language for any Items it has
+        - If there's no translation for an Item, the English version will be returned instead
+
+Part Used
+^^^^^^^^^^
+Every Ticket can have a set of Items, and every Item can have a set of Parts Used to fix an issue
+
+This service allows the Users to handle the Parts Used for their Items
+
+**Basic Usage**: ``cloudcix.api.Support.part_used.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.part_used.list``
+        - This method allows the User to get a list of the Parts Used to fix an Item
+        - Only Users belonging to the Addresses involved in the Ticket can list these objects
+    - ``cloudcix.api.Support.part_used.read``
+        - This method returns a Part Used to fix an Item, along with its details
+        - Only Users belonging to the Addresses involved in the Ticket can read this object
+
+Reason For Return
+^^^^^^^^^^^^^^^^^
+This service allows the User to handle the different Reasons For Return that can be associated with Items in a Ticket
+
+**Basic Usage**: ``cloudcix.api.Support.reason_for_return.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.reason_for_return.list``
+        - This method allows the User to get a list of Reasons For Return.
+    - ``cloudcix.api.Support.reason_for_return.create``
+        - This method allows the User to create a new Reason For Return
+        - This method creates the default English Reason For Return
+        - To create a Reason For Return in a different language, use the ``Reason For Return Translation`` service
+    - ``cloudcix.api.Support.reason_for_return.read``
+        - This method allows the User to get a Reason For Return.
+    - ``cloudcix.api.Support.reason_for_return.update``
+        - This method allows the User to update some of the details of a Reason For Return
+    - ``cloudcix.api.Support.reason_for_return.delete``
+        - This method allows the User to delete a Reason For Return and all its translations
+        - If a Reason For Returns is currently in use (i.e. assigned to an Item) then it cannot be deleted
+
+Reason For Return Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to handle translations for Reason For Return descriptions
+
+**Basic Usage**: ``cloudcix.api.Support.reason_for_return_translation.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.reason_for_return_translation.list``
+        - This method allows the User to get a list of translations for a Reason For Return
+    - ``cloudcix.api.Support.reason_for_return_translation.create``
+        - This method allows the User to add a translation for a Reason For Return
+    - ``cloudcix.api.Support.reason_for_return_translation.read``
+        - This method allows the User to get a Reason For Return in a particular language
+    - ``cloudcix.api.Support.reason_for_return_translation.update``
+        - This method allows the User to update a Reason For Return translation
+    - ``cloudcix.api.Support.reason_for_return_translation.delete``
+        - This method allows the User to delete a translation for a Reason For Return
+
+Service Centre Logic
+^^^^^^^^^^^^^^^^^^^^
+This service allows the Service Centre to specify the Business Logic for one of its Addresses
+
+Only Administrators can create or modify the Business Logic
+
+If the User is acting as Global, the ``address_id`` can be specified in the request
+
+Otherwise, the local Address will be used
+
+**Basic Usage**: ``cloudcix.api.Support.service_centre_logic.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.service_centre_logic.create``
+        - This method allows the User to create a default Business Logic for a specific Address
+        - This method can only be run by an Administrator
+        - Only Addresses belonging to the User's Member can be managed
+    - ``cloudcix.api.Support.service_centre_logic.read``
+        - This method returns the default Business Logic for a Service Centre Address
+        - Users can only read the default Business Logic for Addresses in their Member
+    - ``cloudcix.api.Support.service_centre_logic.update``
+        - This method allows the User to update the default Business Logic for a given Address
+        - This method can only be run by an Administrator
+        - Only Addresses belonging to the User's Member can be managed
+    - ``cloudcix.api.Support.service_centre_logic.delete``
+        - This method allows the User to delete the default Business Logic for a given Address
+        - This method can only be run by an Administrator
+        - Only Addresses belonging to the User's Member can be managed
+
+Service Centre Warrantor
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to specify the Business Logic between a Service Centre's Address and a Warrantor's Address
+
+Only Administrators can create or modify the Business Logic
+
+If the User is acting as Global, the ``address_id`` can be specified in the request
+
+Otherwise, the local Address will be used
+
+Only Addresses belonging to the User's Member can be managed
+
+**Basic Usage**: ``cloudcix.api.Support.service_centre_warrantor.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.service_centre_warrantor.list``
+        - This method allows the User to get a list of associations between a Service Centre's Address and many Warrantor Addresses
+    - ``cloudcix.api.Support.service_centre_warrantor.create``
+        - This method allows the User to create an association between a Service Centre's Address and a Warrantor's Address
+        - Even if the Warrantor created the link in the first place, this method must be used to store the Service Centre's values in the link
+        - If there are already values in the Service Centre's side, an exception will be raised and ``update`` will need to be used instead
+    - ``cloudcix.api.Support.service_centre_warrantor.read``
+        - This method allows the User to get the details of an association between a Service Centre's Address and a Warrantor's Address
+    - ``cloudcix.api.Support.service_centre_warrantor.update``
+        - This method allows the User to update an association between a Service Centre's Address and a Warrantor's Address
+    - ``cloudcix.api.Support.service_centre_warrantor.delete``
+        - This method allows the User to delete an association between a Service Centre's Address and a Warrantor's Address
+        - The Service Centre values will be set to null
+        - If both the Warrantor and Service Centre values are null, the link will be marked for deletion
+
+Status
+^^^^^^
+The Status service denotes at what stage of the customer service process a ticket is
+
+**Basic Usage**: ``cloudcix.api.Support.status.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.status.list``
+        - This method allows the User to get a list of available Statuses in the selected language, or in English if there's no translation available
+
+Ticket
+^^^^^^
+A Ticket is a set of instructions from a Customer
+
+A Ticket has a Transaction Type, that can have one of the following values depending on who created it
+
++---------------------+----------------+
+| transaction_type_id |   Created By   |
++=====================+================+
+|       40000         |   Warrantor    |
++---------------------+----------------+
+|       41000         |     Client     |
++---------------------+----------------+
+|       42000         | Service Centre |
++---------------------+----------------+
+
+When reading a Ticket, the User must specify if they are a Client, Warrantor, or Service Centre, and the corresponding ``address_id``
+
+**Basic Usage**: ``cloudcix.api.Support.ticket.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.ticket.list``
+        - This method allows the User to get a list of Tickets
+    - ``cloudcix.api.Support.ticket.create``
+        - This method allows the User to create a Ticket
+        - A Warrantor can set up any of the Users associated with a Ticket
+        - A Client and a Service Centre can only managed their associated Users
+    - ``cloudcix.api.Support.ticket.read``
+        - This method allows the User to get a Ticket
+    - ``cloudcix.api.Support.ticket.update``
+        - This method allows the User to update some details of a Ticket
+        - A Warrantor can set up any of the Users associated with a Ticket
+        - A Client and a Service Centre can only managed their associated Users
+
+Ticket History
+^^^^^^^^^^^^^^
+The Ticket History service allows the User to create separate snippets of information on a ticket relating to the customer query/issue
+
+**Basic Usage**: ``cloudcix.api.Support.ticket_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.ticket_history.list``
+        - Thie method allows the User to get a list of history logs for a given Transaction
+    - ``cloudcix.api.Support.ticket_history.create``
+        - This method allows the User to create a new history log for the given Ticket
+        - Only Users under the Addresses involved in the Ticket can create these logs
+        - There are two log types;
+            - **Note**: A standard history log is generated
+            - **Email**: A standard history log is generated and is sent by email to these specified in the ``to`` and ``cc`` fields.
+              Emails will always be sent by CloudCIX Notifications, and the sender will be specified in the body of the email.
+              Reply-To will be the User's email unless it is set.
+
+Ticket Question
+^^^^^^^^^^^^^^^
+Every Ticket can have a set of questions defined by default
+
+This service allows the users to handle these questions
+
+**Basic Usage**: ``cloudcix.api.Support.ticket_question.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.ticket_question.list``
+        - This method allows the User to get a list of Ticket Questions for a given Ticket
+    - ``cloudcix.api.Support.ticket_question.create``
+        - This method allows the User to create a Ticket Question
+    - ``cloudcix.api.Support.ticket_question.read``
+        - This method allows the User to get a Ticket Question and its details
+    - ``cloudcix.api.Support.ticket_question.update``
+        - This method allows the User to update some details of a Ticket Question
+        - .. note:: When a Question is updated, Questions that are already associated to Tickets won't change
+    - ``cloudcix.api.Support.ticket_question.delete``
+        - This method allows the User to delete a Ticket Question
+        - Associations with Ticket Types will be deleted
+        - .. note:: If this Question was already associated with a Ticket, this won't be deleted in the Ticket
+
+Ticket Type
+^^^^^^^^^^^
+Every Ticket can have a type defined by default
+
+If a Ticket Type has questions associated with it at the time a Ticket with that Type is created, those questions will be associated with the Ticket
+
+This service allows the User to manage the different Ticket Types
+
+**Basic Usage**: ``cloudcix.api.Support.ticket_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.ticket_type.list``
+        - This method allows the User to get a list of Ticket Types available for the Warrantor
+    - ``cloudcix.api.Support.ticket_type.create``
+        - This method allows the User to create a new Ticket Type
+    - ``cloudcix.api.Support.ticket_type.read``
+        - This method allows the User to get a Ticket Type and its details
+    - ``cloudcix.api.Support.ticket_type.update``
+        - This method allows the User to update some of the details of a Ticket Type
+    - ``cloudcix.api.Support.ticket_type.delete``
+        - This method allows the User to delete a Ticket Type
+        - A Ticket Type can only be deleted if there are no Tickets associated with it
+
+Warrantor Logic
+^^^^^^^^^^^^^^^
+This service allows the Warrantor to specify the Business Logic for one of its Addresses
+
+Only Administrators can create or modify the Business Logic
+
+If the User is acting as Global, the ``address_id`` can be specified in the request
+
+Otherwise, the local Address will be used
+
+Only Addresses belonging to the User's Member can be managed
+
+**Basic Usage**: ``cloudcix.api.Support.warrantor_logic.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.warrantor_logic.create``
+        - This method allows the User to create a default Business Logic for a specified Address
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Support.warrantor_logic.read``
+        - This method allows the User to get a default Business Logic for a Warrantor Address
+        - Users can only read the default Business Logic for Addresses belonging to their Member
+    - ``cloudcix.api.Support.warrantor_logic.update``
+        - This method allows the User to update some of the details of a default Business Logic for a given Address
+        - This method can only be run by an Administrator
+    - ``cloudcix.api.Support.warrantor_logic.delete``
+        - This method allows the User to delete a default Business Logic for a given Address
+        - This method can only be run by an Administrator
+
+Warrantor Service Centre
+^^^^^^^^^^^^^^^^^^^^^^^^
+This service allows the User to specify the Business Logic between a Warrantor's Address and a Service Centre's Address
+
+Only Administrators can create or modify the Business Logic
+
+If the User is acting as Global, the ``address_id`` can be specified in the request
+
+Otherwise, the local Address will be used
+
+Only Addresses belonging to the User's Member can be managed
+
+**Basic Usage**: ``cloudcix.api.Support.warrantor_service_centre.<method>``
+
+Available Methods
+    - ``cloudcix.api.Support.warrantor_service_centre.list``
+        - This method allows the User to get a list of associations between a Warrantor's Address and many Service Centre Addresses
+    - ``cloudcix.api.Support.warrantor_service_centre.create``
+        - This method allows the User to create an association between a Warrantor's Address and a Service Centre's Address
+        - Even if the Service Centre created the link in the first place, this method must be used to store the Warrantor's values in the link
+        - If there are already values in the Warrantor's side, an exception will be raised and ``update`` must be used instead
+    - ``cloudcix.api.Support.warrantor_service_centre.read``
+        - This method allows the User to get the details between a Warrantor's Address and a Service Centre's Address
+    - ``cloudcix.api.Support.warrantor_service_centre.update``
+        - This method allows the User to update an association between a Warrantor's Address and a Service Centre's Address
+    - ``cloudcix.api.Support.warrantor_service_centre.delete``
+        - This method allows the User to delete an association between a Warrantor's Address and a Service Centre's Address
+        - The Warrantor values will be set to null
+        - If both the Warrantor and Service Centre values are null, the link will be marked for deletion
