@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Examples &mdash; CloudCIX API Python Library 0.9.0 documentation</title>
+  <title>Examples &mdash; CloudCIX API Python Library 0.9.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
           </a>
               <div class="version">
-                0.9.0
+                0.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -87,7 +87,8 @@
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
 <p>All examples in this page assume you have the following settings file correctly set up;</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com/&#39;</span>
-<span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;me@gmail.com&#39;</span>
+<span class="n">CLOUDCIX_API_V2_URL</span> <span class="o">=</span> <span class="n">CLOUDCIX_API_URL</span>
+<span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;user@example.com&#39;</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;my_password&#39;</span>
 <span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;abcde...&#39;</span>
 <span class="n">CLOUDCIX_API_VERSION</span> <span class="o">=</span> <span class="mi">2</span>
@@ -126,7 +127,7 @@
 
 <span class="c1"># NOTE: environ variables must be set before importing cloudcix</span>
 
-<span class="kn">from</span> <span class="nn">cloudcix</span> <span class="kn">import</span> <span class="n">api</span>
+<span class="kn">from</span> <span class="nn">cloudcix.api</span> <span class="kn">import</span> <span class="n">Membership</span>
 
 <span class="c1"># Get a util function to get a session using the credentials in your settings file</span>
 <span class="kn">from</span> <span class="nn">cloudcix.auth</span> <span class="kn">import</span> <span class="n">get_admin_token</span>
@@ -138,7 +139,7 @@
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
 
 <span class="c1"># Get a list of the countries from the Membership Application passing your token for authentication</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">Membership</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
 
 <span class="c1"># Print out the json of the response data</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># {&#39;content&#39;: [...], &#39;_metadata&#39;: {...}}</span>

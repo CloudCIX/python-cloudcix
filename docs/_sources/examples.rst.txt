@@ -6,7 +6,8 @@ All examples in this page assume you have the following settings file correctly 
 .. code:: python
 
     CLOUDCIX_API_URL = 'https://api.cloudcix.com/'
-    CLOUDCIX_API_USERNAME = 'me@gmail.com'
+    CLOUDCIX_API_V2_URL = CLOUDCIX_API_URL
+    CLOUDCIX_API_USERNAME = 'user@example.com'
     CLOUDCIX_API_PASSWORD = 'my_password'
     CLOUDCIX_API_KEY = 'abcde...'
     CLOUDCIX_API_VERSION = 2
@@ -48,7 +49,7 @@ All examples in this page assume you have the following settings file correctly 
 
     # NOTE: environ variables must be set before importing cloudcix
 
-    from cloudcix import api
+    from cloudcix.api import Membership
 
     # Get a util function to get a session using the credentials in your settings file
     from cloudcix.auth import get_admin_token
@@ -60,7 +61,7 @@ All examples in this page assume you have the following settings file correctly 
     params = {'limit': 10}
 
     # Get a list of the countries from the Membership Application passing your token for authentication
-    response = api.Membership.country.list(token=token, params=params)
+    response = Membership.country.list(token=token, params=params)
 
     # Print out the json of the response data
     print(response.json())  # {'content': [...], '_metadata': {...}}

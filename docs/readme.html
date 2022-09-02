@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; CloudCIX API Python Library 0.9.0 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.9.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
           </a>
               <div class="version">
-                0.9.0
+                0.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -147,7 +147,10 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <p>The variables required are as follows:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
-- The base url of the api
+- The base url of the Python2 API
+- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_V2_URL</span></code>
+- The API name is prepended to this url after the <a class="reference external" href="https://">https://</a> for the Python3 API.
 - Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_VERSION</span></code> = 2
 - The version of the api</p></li>
@@ -165,7 +168,8 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In my_project/my_settings.py</span>
-<span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com&#39;</span>
+<span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com/&#39;</span>
+<span class="n">CLOUDCIX_API_V2_URL</span> <span class="o">=</span> <span class="n">CLOUDCIX_API_URL</span>
 <span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;EMAIL&#39;</span>               <span class="c1"># CloudCIX login</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;PASSWORD&#39;</span>            <span class="c1"># CloudCIX password</span>
 <span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;NUMBER/CHARACTER STRING&#39;</span>  <span class="c1"># CloudCIX api key</span>
