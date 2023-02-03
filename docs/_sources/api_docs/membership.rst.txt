@@ -131,6 +131,19 @@ Available Methods
         - Allows the User to verify their email confirmation using the URL sent by email
 
 
+Franchise Logic
+^^^^^^^^^^^^^^^^
+This service returns the franchise logic between for sent `builder_address_id`, `distributor_address_id` and
+CloudCIX. 
+
+**Basic Usage**: ``cloudcix.api.Membership.franchise_logic.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.franchise_logic.read``
+        - Allows the User to get the franchise logic details set up between `builder_address_id`, `distributor_address_id` and CloudCIX.
+        - This method is only available to administrators in Member 1
+
+
 Language
 ^^^^^^^^
 This service allows the User to get information about the languages that are available for use in CloudCIX
@@ -220,6 +233,32 @@ Available Methods
         - Members can update Profiles for other Linked Members if the Linked Member is not Self Managed
         - Profiles can only be deleted when they are not assigned to any User
         - This method can only be run by an Administrator
+
+Public Key
+^^^^^^^^^^^^
+The Public Key service allows for a user to store multiple Public Keys in CloudCIX Membership.
+
+**Basic Usage**: ``cloudcix.api.Membership.public_key.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.public_key.list``
+        - Allows the User to get a list of Public Keys.
+        - An Administrator can list Public Keys for users in their Member.
+        - Non Administrator Users can list Public Keys for their own User.
+    - ``cloudcix.api.Membership.public_key.create``
+        - Allows the User to create a new Public Key record for a User. 
+        - An Administrator can create a Public Key record for another User in their Member.
+        - Non Administrator Users can create a Public Key record for their own User.
+    - ``cloudcix.api.Membership.public_key.read``
+        - Allows the User to get the details of a given Public Key.
+    - ``cloudcix.api.Membership.public_key.update``
+        - Allows the User to update the details of a given Public Key.
+        - An Administrator can update a Public Key record for another User in their Member.
+        - Non Administrator Users can update a Public Key record for their own User.
+    - ``cloudcix.api.Membership.public_key.delete``
+        - Allows the User to delete a given Public Key.
+        - An Administrator can delete a Public Key record for another User in their Member.
+        - Non Administrator Users can delete a Public Key record for their own User.
 
 Subdivision
 ^^^^^^^^^^^

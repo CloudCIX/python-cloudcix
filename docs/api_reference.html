@@ -1,38 +1,77 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.9.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+  <title>API Reference &mdash; CloudCIX API Python Library 0.9.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Auth" href="auth.html" />
     <link rel="prev" title="Overview" href="readme.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> CloudCIX API Python Library
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
-                0.9.1
+                0.9.2
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -40,7 +79,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
@@ -172,6 +222,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#asn">ASN</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backup-history">Backup History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#capacity">Capacity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-blacklist">CIX Blacklist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-whitelist">CIX Whitelist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cloud">Cloud</a></li>
@@ -215,11 +266,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#currency">Currency</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#department">Department</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#email-confirmation">Email Confirmation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#franchise-logic">Franchise Logic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language">Language</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#member">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#member-link">Member Link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#notification">Notification</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#profile">Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#public-key">Public Key</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#subdivision">Subdivision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#team">Team</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#territory">Territory</a></li>
@@ -238,8 +291,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pat">PAT</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id15">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pod">Pod</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#export">Export</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#package">Package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#report">Report</a></li>
@@ -249,13 +309,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#application">Application</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto">DTO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto-parameter">DTO Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exception-code">Exception Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language-exception-code">Language Exception Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">Member</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-parameter">Method Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#service">Service</a></li>
@@ -264,7 +324,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scheduler">Scheduler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id18">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task-log">Task Log</a></li>
 </ul>
@@ -272,7 +332,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scm">SCM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id19">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#agreed-price">Agreed Price</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin">Bin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin-sku">Bin SKU</a></li>
@@ -298,7 +358,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id20">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#security-event">Security Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#security-event-logout">Security Event Logout</a></li>
 </ul>
@@ -306,7 +366,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#support">Support</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id21">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition">IRIS Condition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition-translation">IRIS Condition Translation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-defect">IRIS Defect</a></li>
@@ -341,7 +401,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#training">Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id22">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#student">Student</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syllabus">Syllabus</a></li>
@@ -350,7 +410,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#vault">Vault</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id23">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bucket">Bucket</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#region">Region</a></li>
@@ -373,32 +433,73 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">CloudCIX API Python Library</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li>API Reference</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="_sources/api_reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="api-reference">
-<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h1>
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">¶</a></h1>
 <p>Wrapper around the python requests module for ease of interaction with all CloudCIX services</p>
 <p>Basic usage: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.&lt;application&gt;.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <p>More detailed usage information will be available under each of the above terms</p>
@@ -412,15 +513,15 @@
 a full representation of the object, only the fields that need updating</p>
 </div>
 <section id="app-manager">
-<h2>App Manager<a class="headerlink" href="#app-manager" title="Permalink to this heading"></a></h2>
+<h2>App Manager<a class="headerlink" href="#app-manager" title="Permalink to this heading">¶</a></h2>
 <p>The App Manager Application is a software system that manages CloudCIX Apps</p>
 <p>It allows Users to select and use apps, and allows Administrators to select
 which apps to deploy and give permissions to other Users.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
-<h3>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#services" title="Permalink to this heading">¶</a></h3>
 <section id="app">
-<h4>App<a class="headerlink" href="#app" title="Permalink to this heading"></a></h4>
+<h4>App<a class="headerlink" href="#app" title="Permalink to this heading">¶</a></h4>
 <p>An App is a web Application available through CloudCIX website</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager.app.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -445,7 +546,7 @@ method has the App associated</p></li>
 </dl>
 </section>
 <section id="app-member-link">
-<h4>App Member Link<a class="headerlink" href="#app-member-link" title="Permalink to this heading"></a></h4>
+<h4>App Member Link<a class="headerlink" href="#app-member-link" title="Permalink to this heading">¶</a></h4>
 <p>An App Member Link is an association between a Member and an App they are
 allowed to use</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager.app_member.&lt;method&gt;</span></code></p>
@@ -474,7 +575,7 @@ selected App</p></li>
 </dl>
 </section>
 <section id="menu-item">
-<h4>Menu Item<a class="headerlink" href="#menu-item" title="Permalink to this heading"></a></h4>
+<h4>Menu Item<a class="headerlink" href="#menu-item" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods to interact with an App’s Menu Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager.app_menu.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -500,7 +601,7 @@ User making the request</p></li>
 </dl>
 </section>
 <section id="menu-item-user-link">
-<h4>Menu Item User Link<a class="headerlink" href="#menu-item-user-link" title="Permalink to this heading"></a></h4>
+<h4>Menu Item User Link<a class="headerlink" href="#menu-item-user-link" title="Permalink to this heading">¶</a></h4>
 <p>An App Menu Item User Link is an association between a User and a Menu Item
 they’re allowed to use/see</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.AppManager.menu_item_user.&lt;method&gt;</span></code></p>
@@ -533,22 +634,22 @@ me</p></li>
 </section>
 </section>
 <section id="asset">
-<h2>Asset<a class="headerlink" href="#asset" title="Permalink to this heading"></a></h2>
+<h2>Asset<a class="headerlink" href="#asset" title="Permalink to this heading">¶</a></h2>
 <p>The Asset Application enables the management of Assets owned by a Member.</p>
 <p>Examples of Assets are buildings, machinery, furniture, vehicles, etc.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id1">
-<h3>Services<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <section id="id2">
-<h4>Asset<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<h4>Asset<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h4>
 <p>This service handles the Assets of a Member</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset.Asset.&lt;method&gt;</span></code></p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset.asset.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset.asset.list</span></code></dt><dd><ul>
-<li><p>Returns a list of Assets owned by the acting Address of
-the User who makes the request</p></li>
+<li><p>Returns a list of Assets owned by the acting Address of the User
+who makes the request</p></li>
 </ul>
 </dd>
 </dl>
@@ -579,7 +680,7 @@ the User who makes the request</p></li>
 </dl>
 </section>
 <section id="asset-transaction">
-<h4>Asset Transaction<a class="headerlink" href="#asset-transaction" title="Permalink to this heading"></a></h4>
+<h4>Asset Transaction<a class="headerlink" href="#asset-transaction" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create relationships between Assets and
 Financial Transactions</p>
 <p>An Asset Transaction describes an operation or transaction on an Asset, which
@@ -620,7 +721,7 @@ no transaction will be specified</p></li>
 </dl>
 </section>
 <section id="depreciation-type">
-<h4>Depreciation Type<a class="headerlink" href="#depreciation-type" title="Permalink to this heading"></a></h4>
+<h4>Depreciation Type<a class="headerlink" href="#depreciation-type" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to generate Depreciation Types for their Assets</p>
 <p>A Depreciation Type is the percentage of value an Asset will lose for a period
 of time expressed in years until a certain date</p>
@@ -670,7 +771,7 @@ associated with any Asset</p></li>
 </dl>
 </section>
 <section id="off-rent">
-<h4>Off Rent<a class="headerlink" href="#off-rent" title="Permalink to this heading"></a></h4>
+<h4>Off Rent<a class="headerlink" href="#off-rent" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage rentable Assets and return them from
 customers</p>
 <p>The Asset must be set up as rentable in order to use this method.</p>
@@ -716,7 +817,7 @@ transaction</p></li>
 </dl>
 </section>
 <section id="off-test">
-<h4>Off Test<a class="headerlink" href="#off-test" title="Permalink to this heading"></a></h4>
+<h4>Off Test<a class="headerlink" href="#off-test" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Users to manage their returned rentable Assets and take
 them out of the “for test” status</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Asset.off_test.&lt;method&gt;</span></code></p>
@@ -749,7 +850,7 @@ finished testing and can be made rentable again</p></li>
 </dl>
 </section>
 <section id="rent">
-<h4>Rent<a class="headerlink" href="#rent" title="Permalink to this heading"></a></h4>
+<h4>Rent<a class="headerlink" href="#rent" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Users to manage rentable Assets and assign them to
 customers</p>
 <p>The Asset must be set up as rentable in order to use this method</p>
@@ -797,13 +898,13 @@ associated Assets is still on rent.</p></li>
 </section>
 </section>
 <section id="circuit">
-<h2>Circuit<a class="headerlink" href="#circuit" title="Permalink to this heading"></a></h2>
+<h2>Circuit<a class="headerlink" href="#circuit" title="Permalink to this heading">¶</a></h2>
 <p>The Circuit Application allows for the management of circuits and devices.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id4">
-<h3>Services<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <section id="id5">
-<h4>Circuit<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h4>
+<h4>Circuit<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to manage their Circuits</p>
 <p>A Circuit is a device installed in your active Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit.&lt;method&gt;</span></code></p>
@@ -857,7 +958,7 @@ it in the list, it should be updated with a decommission date</p></li>
 </dl>
 </section>
 <section id="circuit-class">
-<h4>Circuit Class<a class="headerlink" href="#circuit-class" title="Permalink to this heading"></a></h4>
+<h4>Circuit Class<a class="headerlink" href="#circuit-class" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for the management of Circuit Classes</p>
 <p>A Circuit Class is a classification for the Circuits</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.circuit_class.&lt;method&gt;</span></code></p>
@@ -900,7 +1001,7 @@ renamed</p></li>
 </dl>
 </section>
 <section id="property-type">
-<h4>Property Type<a class="headerlink" href="#property-type" title="Permalink to this heading"></a></h4>
+<h4>Property Type<a class="headerlink" href="#property-type" title="Permalink to this heading">¶</a></h4>
 <p>This service is in place to offer a list of the supported Property Types</p>
 <p>A Property Type is an identification of the expected input value for a given
 property.</p>
@@ -921,16 +1022,16 @@ property.</p>
 </section>
 </section>
 <section id="contacts">
-<h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this heading"></a></h2>
+<h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this heading">¶</a></h2>
 <p>The Contacts Application is a CRM application that exposes a REST API to
 manage a shared address book between Users in the same Member</p>
 <p>Contacts can be used as a sales and marketing tool or just as a general
 purpose address book.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id6">
-<h3>Services<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <section id="activity">
-<h4>Activity<a class="headerlink" href="#activity" title="Permalink to this heading"></a></h4>
+<h4>Activity<a class="headerlink" href="#activity" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the user to manage the various Activities</p>
 <p>An Activity is a sub category of an Activity Type</p>
 <p>Each Activity has only one ActivityType but an ActivityType may have many
@@ -985,7 +1086,7 @@ associated with it</p></li>
 </dl>
 </section>
 <section id="activity-type">
-<h4>Activity Type<a class="headerlink" href="#activity-type" title="Permalink to this heading"></a></h4>
+<h4>Activity Type<a class="headerlink" href="#activity-type" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage Activity Types</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1033,7 +1134,7 @@ Activities linked to the Activity Type</p></li>
 </dl>
 </section>
 <section id="campaign">
-<h4>Campaign<a class="headerlink" href="#campaign" title="Permalink to this heading"></a></h4>
+<h4>Campaign<a class="headerlink" href="#campaign" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for management of Campaigns</p>
 <p>Campaigns are a many to many classification of Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.&lt;method&gt;</span></code></p>
@@ -1082,7 +1183,7 @@ the links between the Campaign and any Contacts.</p></li>
 </dl>
 </section>
 <section id="campaign-activity">
-<h4>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Permalink to this heading"></a></h4>
+<h4>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Permalink to this heading">¶</a></h4>
 <p>This service manages Campaign Activities related to a Campaign and an Activity</p>
 <p>The Campaign Activity allows Users to organize Activities into further
 subcategories</p>
@@ -1132,7 +1233,7 @@ and one Activity</p></li>
 </dl>
 </section>
 <section id="campaign-contact">
-<h4>Campaign Contact<a class="headerlink" href="#campaign-contact" title="Permalink to this heading"></a></h4>
+<h4>Campaign Contact<a class="headerlink" href="#campaign-contact" title="Permalink to this heading">¶</a></h4>
 <p>This service manages the many to many links between Campaigns and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1166,7 +1267,7 @@ Contact</p></li>
 </dl>
 </section>
 <section id="contact">
-<h4>Contact<a class="headerlink" href="#contact" title="Permalink to this heading"></a></h4>
+<h4>Contact<a class="headerlink" href="#contact" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for management of Contacts</p>
 <p>Contacts are people that are potential customers</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.&lt;method&gt;</span></code></p>
@@ -1215,7 +1316,7 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dl>
 </section>
 <section id="group">
-<h4>Group<a class="headerlink" href="#group" title="Permalink to this heading"></a></h4>
+<h4>Group<a class="headerlink" href="#group" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for management of Groups</p>
 <p>Groups are many to many classifications of Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.&lt;method&gt;</span></code></p>
@@ -1263,7 +1364,7 @@ between that Group and any Contact</p></li>
 </dl>
 </section>
 <section id="group-contact">
-<h4>Group Contact<a class="headerlink" href="#group-contact" title="Permalink to this heading"></a></h4>
+<h4>Group Contact<a class="headerlink" href="#group-contact" title="Permalink to this heading">¶</a></h4>
 <p>This service manages the many to many links between Groups and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1289,7 +1390,7 @@ Contact</p></li>
 </dl>
 </section>
 <section id="opportunity">
-<h4>Opportunity<a class="headerlink" href="#opportunity" title="Permalink to this heading"></a></h4>
+<h4>Opportunity<a class="headerlink" href="#opportunity" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for the management of Opportunity records</p>
 <p>Opportunities are the estimated chances of getting into business with one more
 Contacts with its possible marketing value</p>
@@ -1338,7 +1439,7 @@ record</p></li>
 </dl>
 </section>
 <section id="opportunity-contact">
-<h4>Opportunity Contact<a class="headerlink" href="#opportunity-contact" title="Permalink to this heading"></a></h4>
+<h4>Opportunity Contact<a class="headerlink" href="#opportunity-contact" title="Permalink to this heading">¶</a></h4>
 <p>This service manages the many to many links between Opportunities and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1364,7 +1465,7 @@ and a Contact</p></li>
 </dl>
 </section>
 <section id="opportunity-history">
-<h4>Opportunity History<a class="headerlink" href="#opportunity-history" title="Permalink to this heading"></a></h4>
+<h4>Opportunity History<a class="headerlink" href="#opportunity-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to log updates on an Opportunity, as well as sending
 emails to the associated Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_history.&lt;method&gt;</span></code></p>
@@ -1392,7 +1493,7 @@ Opportunity</p></li>
 </section>
 </section>
 <section id="financial">
-<h2>Financial<a class="headerlink" href="#financial" title="Permalink to this heading"></a></h2>
+<h2>Financial<a class="headerlink" href="#financial" title="Permalink to this heading">¶</a></h2>
 <p>The Financial Application exposes a suite of services that together implement a full accounting system based on double
 entry bookkeeping</p>
 <div class="admonition seealso">
@@ -1402,9 +1503,9 @@ entry bookkeeping</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id8">
-<h3>Services<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
 <section id="account-purchase-adjustment">
-<h4>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read Account Purchase Adjustments</p>
 <p>An Account Purchase Adjustment (10005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
 <p>A set of nominal accounts will be debited and credited</p>
@@ -1432,7 +1533,7 @@ entry bookkeeping</p>
 </dl>
 </section>
 <section id="account-purchase-adjustment-contra">
-<h4>Account Purchase Adjustment Contra<a class="headerlink" href="#account-purchase-adjustment-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Adjustment Contra<a class="headerlink" href="#account-purchase-adjustment-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Purchase Adjustment from an Account Sale Adjustment created
 by the target Address</p>
 <p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -1469,7 +1570,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-purchase-debit-note">
-<h4>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Debit Note<a class="headerlink" href="#account-purchase-debit-note" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Account Purchase Debit Notes</p>
 <p>An Account Purchase Debit Note (10003) is a transaction in which a purchase has not been immediately debited</p>
 <p>The debit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -1503,7 +1604,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="account-purchase-debit-note-contra">
-<h4>Account Purchase Debit Note Contra<a class="headerlink" href="#account-purchase-debit-note-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Debit Note Contra<a class="headerlink" href="#account-purchase-debit-note-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Purchase Debit Note from an Account Sale Credit Note created
 by the target Address</p>
 <p>The debit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -1540,7 +1641,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-purchase-invoice">
-<h4>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Invoice<a class="headerlink" href="#account-purchase-invoice" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Account Purchase Invoices</p>
 <p>An Account Purchase Invoice (10002) is a transaction in which a purchase has not been paid immediately</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -1574,7 +1675,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="account-purchase-invoice-contra">
-<h4>Account Purchase Invoice Contra<a class="headerlink" href="#account-purchase-invoice-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Invoice Contra<a class="headerlink" href="#account-purchase-invoice-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Purchase Invoice from an Account Sale Invoice created by
 the target Address</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -1611,7 +1712,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-purchase-payment">
-<h4>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Payment<a class="headerlink" href="#account-purchase-payment" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read Account Purchase Payments</p>
 <p>An Account Purchase Payment (10004) is a transaction in which a purchase is being paid</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -1642,7 +1743,7 @@ the Nominal Account which will be credited</p>
 </dl>
 </section>
 <section id="account-purchase-payment-contra">
-<h4>Account Purchase Payment Contra<a class="headerlink" href="#account-purchase-payment-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Purchase Payment Contra<a class="headerlink" href="#account-purchase-payment-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Purchase Payment from an Account Sale Payment created by the
 target Address</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -1676,7 +1777,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-sale-adjustment">
-<h4>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Adjustment<a class="headerlink" href="#account-sale-adjustment" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read Account Sale Adjustments</p>
 <p>An Account Sale Adjustment (11005) is a transaction with the purpose of adjusting and conciliating nominal accounts</p>
 <p>A set of nominal accounts will be debited and credited</p>
@@ -1704,7 +1805,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="account-sale-adjustment-contra">
-<h4>Account Sale Adjustment Contra<a class="headerlink" href="#account-sale-adjustment-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Adjustment Contra<a class="headerlink" href="#account-sale-adjustment-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Sale Adjustment from an Account Purchase Adjustment created
 by the target Address</p>
 <p>The adjustment has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -1741,7 +1842,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-sale-credit-note">
-<h4>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Credit Note<a class="headerlink" href="#account-sale-credit-note" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Account Sale Credit Notes</p>
 <p>An Account Sale Credit Note (11003) is a transaction in which a sale has not been credited immediately</p>
 <p>The credit note has an unallocated balance until it has been fully allocated through the Allocation service</p>
@@ -1775,7 +1876,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="account-sale-credit-note-contra">
-<h4>Account Sale Credit Note Contra<a class="headerlink" href="#account-sale-credit-note-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Credit Note Contra<a class="headerlink" href="#account-sale-credit-note-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read an Account Sale Credit Note transaction from an Account Purchase Debit
 Note created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_credit_note_contra.&lt;method&gt;</span></code></p>
@@ -1811,7 +1912,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-sale-invoice">
-<h4>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Invoice<a class="headerlink" href="#account-sale-invoice" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Account Sale Invoices</p>
 <p>An Account Sale Invoice (11002) is a transaction in which a sale has not been paid immediately</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -1845,7 +1946,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="account-sale-invoice-contra">
-<h4>Account Sale Invoice Contra<a class="headerlink" href="#account-sale-invoice-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Invoice Contra<a class="headerlink" href="#account-sale-invoice-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read an Account Sale Invoice from an Account Purchase Invoice created by
 the target Address</p>
 <p>The invoice has an unallocated balance until the invoice has been fully allocated through the Allocation service</p>
@@ -1882,7 +1983,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="account-sale-payment">
-<h4>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Payment<a class="headerlink" href="#account-sale-payment" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read Account Sale Payments</p>
 <p>An Account Sale Payment (11004) is a transaction in which a sale is being paid</p>
 <p>The payment has an unallocated balance until the payment has been fully allocated through the Allocation service</p>
@@ -1913,7 +2014,7 @@ the Nominal Account which will be debited</p>
 </dl>
 </section>
 <section id="account-sale-payment-contra">
-<h4>Account Sale Payment Contra<a class="headerlink" href="#account-sale-payment-contra" title="Permalink to this heading"></a></h4>
+<h4>Account Sale Payment Contra<a class="headerlink" href="#account-sale-payment-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and read an Account Sale Payment from an Account Purchase Payment transaction
 created by the target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.account_sale_payment_contra.&lt;method&gt;</span></code></p>
@@ -1946,7 +2047,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="allocation">
-<h4>Allocation<a class="headerlink" href="#allocation" title="Permalink to this heading"></a></h4>
+<h4>Allocation<a class="headerlink" href="#allocation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Allocations</p>
 <p>An Allocation is a set of Transactions allocating a certain amount of Debits and Credits against each other</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.allocation.&lt;method&gt;</span></code></p>
@@ -1985,7 +2086,7 @@ Unallocated Balances restored by the allocated amount</p></li>
 </dl>
 </section>
 <section id="balance-sheet">
-<h4>Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permalink to this heading"></a></h4>
+<h4>Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to generate a Balance Sheet</p>
 <p>The Balance Sheet presents a company’s Financial position at the end of a specified date
 Therefore, it is a list of Nominal Accounts with their total Debits, Credits and balance at a given date</p>
@@ -2007,7 +2108,7 @@ Addresses in its Member</p></li>
 </dl>
 </section>
 <section id="cash-purchase-debit-note">
-<h4>Cash Purchase Debit Note<a class="headerlink" href="#cash-purchase-debit-note" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Debit Note<a class="headerlink" href="#cash-purchase-debit-note" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Purchase Debit Notes.</p>
 <p>A Cash Purchase Debit Note (10001) is a transaction in which a purchase has been debited in cash</p>
 <div class="admonition note">
@@ -2045,7 +2146,7 @@ get the Nominal Account which will be debited</p>
 </dl>
 </section>
 <section id="cash-purchase-debit-note-contra">
-<h4>Cash Purchase Debit Note Contra<a class="headerlink" href="#cash-purchase-debit-note-contra" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Debit Note Contra<a class="headerlink" href="#cash-purchase-debit-note-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read a Cash Purchase Debit Note from a Cash Sale Credit Note created by the
 target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_debit_note_contra.&lt;method&gt;</span></code></p>
@@ -2081,7 +2182,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="cash-purchase-invoice">
-<h4>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Invoice<a class="headerlink" href="#cash-purchase-invoice" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Purchase Inovoices</p>
 <p>A Cash Purchase Invoice (10000) is a transaction in which a purchase has been paid in cash</p>
 <div class="admonition note">
@@ -2119,7 +2220,7 @@ the Nominal Account which will be credited</p>
 </dl>
 </section>
 <section id="cash-purchase-invoice-contra">
-<h4>Cash Purchase Invoice Contra<a class="headerlink" href="#cash-purchase-invoice-contra" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Invoice Contra<a class="headerlink" href="#cash-purchase-invoice-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read a Cash Purchase Invoice from a Cash Sale Invoice created by the target
 Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_invoice_contra.&lt;method&gt;</span></code></p>
@@ -2155,7 +2256,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="cash-purchase-receipts">
-<h4>Cash Purchase Receipts<a class="headerlink" href="#cash-purchase-receipts" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Receipts<a class="headerlink" href="#cash-purchase-receipts" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Purchase Receipts</p>
 <p>A Cash Purchase Receipt (10006) is a transaction in which a purchase has been credited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_receipt.&lt;method&gt;</span></code></p>
@@ -2188,7 +2289,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="cash-purchase-refund">
-<h4>Cash Purchase Refund<a class="headerlink" href="#cash-purchase-refund" title="Permalink to this heading"></a></h4>
+<h4>Cash Purchase Refund<a class="headerlink" href="#cash-purchase-refund" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Purchase Refunds</p>
 <p>A Cash Purchase Refund (10007) is a transaction in which a purchase has been debited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_purchase_refund.&lt;method&gt;</span></code></p>
@@ -2221,7 +2322,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="cash-sale-credit-note">
-<h4>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Credit Note<a class="headerlink" href="#cash-sale-credit-note" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Sale Credit Notes</p>
 <p>A Cash Sale Credit Note (11001) is a transaction in which a sale has been credited in cash</p>
 <div class="admonition note">
@@ -2259,7 +2360,7 @@ the Nominal Account which will be credited</p>
 </dl>
 </section>
 <section id="cash-sale-credit-note-contra">
-<h4>Cash Sale Credit Note Contra<a class="headerlink" href="#cash-sale-credit-note-contra" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Credit Note Contra<a class="headerlink" href="#cash-sale-credit-note-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read a Cash Sale Credit Note from a Cash Purchase Debit Note created by the
 target Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_credit_note_contra.&lt;method&gt;</span></code></p>
@@ -2295,7 +2396,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="cash-sale-invoice">
-<h4>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Invoice<a class="headerlink" href="#cash-sale-invoice" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Sale Invoices</p>
 <p>A Cash Sale Invoice (11000) is a transaction in which a sale has been paid in cash</p>
 <div class="admonition note">
@@ -2333,7 +2434,7 @@ get the Nominal Account which will be debited</p>
 </dl>
 </section>
 <section id="cash-sale-invoice-contra">
-<h4>Cash Sale Invoice Contra<a class="headerlink" href="#cash-sale-invoice-contra" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Invoice Contra<a class="headerlink" href="#cash-sale-invoice-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create or read a Cash Sale Invoice from a Cash Purchase Invoice created by the target
 Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_invoice_contra.&lt;method&gt;</span></code></p>
@@ -2369,7 +2470,7 @@ the id of the Address where the transaction should be read from.</p>
 </div>
 </section>
 <section id="cash-sale-receipts">
-<h4>Cash Sale Receipts<a class="headerlink" href="#cash-sale-receipts" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Receipts<a class="headerlink" href="#cash-sale-receipts" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Sale Receipts</p>
 <p>A Cash Sale Receipt (11006) is a transaction in which a sale has been debited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_receipt.&lt;method&gt;</span></code></p>
@@ -2402,7 +2503,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="cash-sale-refund">
-<h4>Cash Sale Refund<a class="headerlink" href="#cash-sale-refund" title="Permalink to this heading"></a></h4>
+<h4>Cash Sale Refund<a class="headerlink" href="#cash-sale-refund" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to create and manage Cash Sale Refunds</p>
 <p>A Cash sale Refund (11007) is a transaction in which a sale has been credited in cash and does not take a contra address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.cash_sale_refund.&lt;method&gt;</span></code></p>
@@ -2435,7 +2536,7 @@ the id of the Address where the transaction should be read from.</p>
 </dl>
 </section>
 <section id="credit-limit">
-<h4>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this heading"></a></h4>
+<h4>Credit Limit<a class="headerlink" href="#credit-limit" title="Permalink to this heading">¶</a></h4>
 <p>This service allows a User to read or list Credit Limits for their customers</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.credit_limit.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2461,7 +2562,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-account-history">
-<h4>Creditor Account History<a class="headerlink" href="#creditor-account-history" title="Permalink to this heading"></a></h4>
+<h4>Creditor Account History<a class="headerlink" href="#creditor-account-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Transactions for a given Creditor</p>
 <p>It also returns the Creditor’s current balance</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_history.&lt;method&gt;</span></code></p>
@@ -2479,7 +2580,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-account-statement">
-<h4>Creditor Account Statement<a class="headerlink" href="#creditor-account-statement" title="Permalink to this heading"></a></h4>
+<h4>Creditor Account Statement<a class="headerlink" href="#creditor-account-statement" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to see a Statement for a given Address</p>
 <p>A Statement is a list of unallocated transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_account_statement.&lt;method&gt;</span></code></p>
@@ -2498,7 +2599,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-ledger">
-<h4>Creditor Ledger<a class="headerlink" href="#creditor-ledger" title="Permalink to this heading"></a></h4>
+<h4>Creditor Ledger<a class="headerlink" href="#creditor-ledger" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Creditors who are owed money by the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2516,7 +2617,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-ledger-aged">
-<h4>Creditor Ledger Aged<a class="headerlink" href="#creditor-ledger-aged" title="Permalink to this heading"></a></h4>
+<h4>Creditor Ledger Aged<a class="headerlink" href="#creditor-ledger-aged" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Creditors with their current balance, as well as their balances at 30, 60,
 90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_aged.&lt;method&gt;</span></code></p>
@@ -2534,7 +2635,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-ledger-contra-transaction">
-<h4>Creditor Ledger Contra Transaction<a class="headerlink" href="#creditor-ledger-contra-transaction" title="Permalink to this heading"></a></h4>
+<h4>Creditor Ledger Contra Transaction<a class="headerlink" href="#creditor-ledger-contra-transaction" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Creditor Contra Transactions</p>
 <p>A Contra Transaction is a Transaction created by the Creditor for the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_contra_transaction.&lt;method&gt;</span></code></p>
@@ -2552,7 +2653,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="creditor-ledger-transaction">
-<h4>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this heading"></a></h4>
+<h4>Creditor Ledger Transaction<a class="headerlink" href="#creditor-ledger-transaction" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Creditor Transactions for their acting Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.creditor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2570,7 +2671,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-account-history">
-<h4>Debtor Account History<a class="headerlink" href="#debtor-account-history" title="Permalink to this heading"></a></h4>
+<h4>Debtor Account History<a class="headerlink" href="#debtor-account-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Transactions for a given Debtor</p>
 <p>It also returns the Debtor’s current balance</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_history.&lt;method&gt;</span></code></p>
@@ -2588,7 +2689,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-account-statement">
-<h4>Debtor Account Statement<a class="headerlink" href="#debtor-account-statement" title="Permalink to this heading"></a></h4>
+<h4>Debtor Account Statement<a class="headerlink" href="#debtor-account-statement" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to see a Statement for a given Address</p>
 <p>A Statement is a list of unallocated Transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_account_statement.&lt;method&gt;</span></code></p>
@@ -2607,7 +2708,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-ledger">
-<h4>Debtor Ledger<a class="headerlink" href="#debtor-ledger" title="Permalink to this heading"></a></h4>
+<h4>Debtor Ledger<a class="headerlink" href="#debtor-ledger" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Debtors who owe money to the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2625,7 +2726,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-ledger-aged">
-<h4>Debtor Ledger Aged<a class="headerlink" href="#debtor-ledger-aged" title="Permalink to this heading"></a></h4>
+<h4>Debtor Ledger Aged<a class="headerlink" href="#debtor-ledger-aged" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Debtors with their current balance, as well as their balances at 30, 60,
 90, 120 days and older</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_aged.&lt;method&gt;</span></code></p>
@@ -2643,7 +2744,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-ledger-contra-transaction">
-<h4>Debtor Ledger Contra Transaction<a class="headerlink" href="#debtor-ledger-contra-transaction" title="Permalink to this heading"></a></h4>
+<h4>Debtor Ledger Contra Transaction<a class="headerlink" href="#debtor-ledger-contra-transaction" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Debtor Contra Transactions</p>
 <p>A Contra Transaction is a Transaction created by the Debtor for the User’s Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction_contra.&lt;method&gt;</span></code></p>
@@ -2661,7 +2762,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="debtor-ledger-transaction">
-<h4>Debtor Ledger Transaction<a class="headerlink" href="#debtor-ledger-transaction" title="Permalink to this heading"></a></h4>
+<h4>Debtor Ledger Transaction<a class="headerlink" href="#debtor-ledger-transaction" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Debtor Transactions for their acting Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.debtor_ledger_transaction.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2679,7 +2780,7 @@ they are linked to</p></li>
 </dl>
 </section>
 <section id="global-nominal-account">
-<h4>Global Nominal Account<a class="headerlink" href="#global-nominal-account" title="Permalink to this heading"></a></h4>
+<h4>Global Nominal Account<a class="headerlink" href="#global-nominal-account" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Global Nominal Accounts.</p>
 <p>A Nominal Account stores accounting Transactions for a fiscal year.</p>
 <p>A Member can have a set of Global Nominal Accounts.</p>
@@ -2754,7 +2855,7 @@ within the Member.</p></li>
 </dl>
 </section>
 <section id="journal-entry">
-<h4>Journal Entry<a class="headerlink" href="#journal-entry" title="Permalink to this heading"></a></h4>
+<h4>Journal Entry<a class="headerlink" href="#journal-entry" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Nominal Ledger’s Journal Entries</p>
 <p>A Journal Entry (12000) is an internal transaction with the purpose of adjusting Nominal Accounts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.journal_entry.&lt;method&gt;</span></code></p>
@@ -2794,7 +2895,7 @@ within the Member.</p></li>
 </dl>
 </section>
 <section id="nominal-account-history">
-<h4>Nominal Account History<a class="headerlink" href="#nominal-account-history" title="Permalink to this heading"></a></h4>
+<h4>Nominal Account History<a class="headerlink" href="#nominal-account-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a Nominal Account balance in a given period of time, as well as the list of
 transactions in which the Account has been used</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_history.&lt;method&gt;</span></code></p>
@@ -2812,7 +2913,7 @@ transactions in which the Account has been used</p>
 </dl>
 </section>
 <section id="nominal-account-type">
-<h4>Nominal Account Type<a class="headerlink" href="#nominal-account-type" title="Permalink to this heading"></a></h4>
+<h4>Nominal Account Type<a class="headerlink" href="#nominal-account-type" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of supported Nominal Account Types</p>
 <p>Nominal Accounts are classified within different Types</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.nominal_account_type.&lt;method&gt;</span></code></p>
@@ -2830,7 +2931,7 @@ transactions in which the Account has been used</p>
 </dl>
 </section>
 <section id="nominal-contra">
-<h4>Nominal Contra<a class="headerlink" href="#nominal-contra" title="Permalink to this heading"></a></h4>
+<h4>Nominal Contra<a class="headerlink" href="#nominal-contra" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Nominal Contra Accounts</p>
 <p>A Nominal Contra Account is an association between a Transaction Type, a Payment Method and a Nominal Account</p>
 <p>The Nominal Contra is used in conjunction with the Payment Method and Transaction Type to determine with Nominal Account
@@ -2897,7 +2998,7 @@ the lines of Debits or Credits will be matched with</p>
 </dl>
 </section>
 <section id="payment-method">
-<h4>Payment Method<a class="headerlink" href="#payment-method" title="Permalink to this heading"></a></h4>
+<h4>Payment Method<a class="headerlink" href="#payment-method" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Payment Methods</p>
 <p>A Payment Method is one of the ways to pay for a Transaction</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.payment_method.&lt;method&gt;</span></code></p>
@@ -2947,7 +3048,7 @@ the lines of Debits or Credits will be matched with</p>
 </dl>
 </section>
 <section id="period-end">
-<h4>Period End<a class="headerlink" href="#period-end" title="Permalink to this heading"></a></h4>
+<h4>Period End<a class="headerlink" href="#period-end" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Period End Transactions</p>
 <p>A Period End Transaction (12001) calculates the balance from the previous Period End (or the oldest Transaction if none
 exists) and the given transaction date</p>
@@ -2991,7 +3092,7 @@ transaction date</p>
 </dl>
 </section>
 <section id="profit-loss">
-<h4>Profit &amp; Loss<a class="headerlink" href="#profit-loss" title="Permalink to this heading"></a></h4>
+<h4>Profit &amp; Loss<a class="headerlink" href="#profit-loss" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to generate a Profit &amp; Loss account</p>
 <p>The Profit &amp; Loss shows the company’s revenues and expenses during a particular period</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.profit_loss.&lt;method&gt;</span></code></p>
@@ -3012,7 +3113,7 @@ its Addresses</p></li>
 </dl>
 </section>
 <section id="purchases-analysis">
-<h4>Purchases Analysis<a class="headerlink" href="#purchases-analysis" title="Permalink to this heading"></a></h4>
+<h4>Purchases Analysis<a class="headerlink" href="#purchases-analysis" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to view the total Purchased from their partner Addresses</p>
 <p>For each Address the service will calculate the total amount Purchased through Invoices less Debit Notes.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_analysis.&lt;method&gt;</span></code></p>
@@ -3030,7 +3131,7 @@ its Addresses</p></li>
 </dl>
 </section>
 <section id="purchases-by-country">
-<h4>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this heading"></a></h4>
+<h4>Purchases By Country<a class="headerlink" href="#purchases-by-country" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Purchases for each in a period
 of time</p>
 <p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
@@ -3049,7 +3150,7 @@ of time</p>
 </dl>
 </section>
 <section id="purchases-by-territory">
-<h4>Purchases By Territory<a class="headerlink" href="#purchases-by-territory" title="Permalink to this heading"></a></h4>
+<h4>Purchases By Territory<a class="headerlink" href="#purchases-by-territory" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Addresses in the given Territory</p>
 <p>Each Address will have the total value of goods purchased from them</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.purchases_by_territory.&lt;method&gt;</span></code></p>
@@ -3067,7 +3168,7 @@ of time</p>
 </dl>
 </section>
 <section id="rtd-return-of-trading-details">
-<h4>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this heading"></a></h4>
+<h4>RTD (Return of Trading Details)<a class="headerlink" href="#rtd-return-of-trading-details" title="Permalink to this heading">¶</a></h4>
 <p>This service aggregates all the transactions in an Address for a year and calculates the total Sales, Purchases from
 the EU (excluding Ireland), Purchases for Resale, and Purchases not for Resale. Each of these totals are broken down
 according to the percentage tax that were applied to the transactions.</p>
@@ -3088,7 +3189,7 @@ their Address</p></li>
 </dl>
 </section>
 <section id="sales-analysis">
-<h4>Sales Analysis<a class="headerlink" href="#sales-analysis" title="Permalink to this heading"></a></h4>
+<h4>Sales Analysis<a class="headerlink" href="#sales-analysis" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to view the total Sales made to their Addresses</p>
 <p>For each Address the service will calculate the total amount sold through Invoices less Credit Notes.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_analysis.&lt;method&gt;</span></code></p>
@@ -3106,7 +3207,7 @@ their Address</p></li>
 </dl>
 </section>
 <section id="sales-by-country">
-<h4>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this heading"></a></h4>
+<h4>Sales By Country<a class="headerlink" href="#sales-by-country" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Countries along with the amounts spent in Sales for each in a period of
 time</p>
 <p>Each Country will have the total amount excluding VAT, and the total amount of VAT spent</p>
@@ -3125,7 +3226,7 @@ time</p>
 </dl>
 </section>
 <section id="sales-by-territory">
-<h4>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this heading"></a></h4>
+<h4>Sales By Territory<a class="headerlink" href="#sales-by-territory" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of Addresses in the given Territory</p>
 <p>Each Address will have the total value of goods sold to them</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.sales_by_territory.&lt;method&gt;</span></code></p>
@@ -3143,7 +3244,7 @@ time</p>
 </dl>
 </section>
 <section id="statement">
-<h4>Statement<a class="headerlink" href="#statement" title="Permalink to this heading"></a></h4>
+<h4>Statement<a class="headerlink" href="#statement" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to issue Statements to each of their debtors.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3161,7 +3262,7 @@ time</p>
 </dl>
 </section>
 <section id="statement-log">
-<h4>Statement Log<a class="headerlink" href="#statement-log" title="Permalink to this heading"></a></h4>
+<h4>Statement Log<a class="headerlink" href="#statement-log" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to see a list of Statement Logs.</p>
 <p>A Statement Log is a record that gets generated every time a statement is requested to be sent automatically by the
 system</p>
@@ -3180,7 +3281,7 @@ system</p>
 </dl>
 </section>
 <section id="statement-settings">
-<h4>Statement Settings<a class="headerlink" href="#statement-settings" title="Permalink to this heading"></a></h4>
+<h4>Statement Settings<a class="headerlink" href="#statement-settings" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Statement Settings</p>
 <p>The Statement Settings define the paramaters for if and when a Statement will be sent to an Address’s Debtors</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.statement_settings.&lt;method&gt;</span></code></p>
@@ -3205,7 +3306,7 @@ system</p>
 </dl>
 </section>
 <section id="tax-rate">
-<h4>Tax Rate<a class="headerlink" href="#tax-rate" title="Permalink to this heading"></a></h4>
+<h4>Tax Rate<a class="headerlink" href="#tax-rate" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Tax Rates</p>
 <p>In a tax system, the Tax Rate describes a ratio (usually expressed as a percentage) at which a business or person is
 taxed</p>
@@ -3256,7 +3357,7 @@ taxed</p>
 </dl>
 </section>
 <section id="trial-balance">
-<h4>Trial Balance<a class="headerlink" href="#trial-balance" title="Permalink to this heading"></a></h4>
+<h4>Trial Balance<a class="headerlink" href="#trial-balance" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to generate a Trial Balance</p>
 <p>A Trial Balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a
 business</p>
@@ -3280,7 +3381,7 @@ Addresses in its Member</p></li>
 </dl>
 </section>
 <section id="vat3">
-<h4>VAT3<a class="headerlink" href="#vat3" title="Permalink to this heading"></a></h4>
+<h4>VAT3<a class="headerlink" href="#vat3" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to generate the data for a VAT3 report</p>
 <p>A VAT3 report is a summary of all VAT incurred by an Address on all Sales and Purchases for a given date range</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.vat3.&lt;method&gt;</span></code></p>
@@ -3299,7 +3400,7 @@ Sales, and EU Purchases</p></li>
 </dl>
 </section>
 <section id="vies-purchases">
-<h4>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this heading"></a></h4>
+<h4>VIES Purchases<a class="headerlink" href="#vies-purchases" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of VIES Purchases</p>
 <p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
 registration of companies registered in the EU</p>
@@ -3323,7 +3424,7 @@ was zero and return the total amount spent in Purchases.</p></li>
 </dl>
 </section>
 <section id="vies-sales">
-<h4>VIES Sales<a class="headerlink" href="#vies-sales" title="Permalink to this heading"></a></h4>
+<h4>VIES Sales<a class="headerlink" href="#vies-sales" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get a list of VIES Sales</p>
 <p>The VAT Information Exchange System (VIES) is an electronic means of transmitting information relating to VAT
 registration of companies registered in the EU</p>
@@ -3347,7 +3448,7 @@ was zero and return the total amount spent in Sales</p></li>
 </dl>
 </section>
 <section id="year-end">
-<h4>Year End<a class="headerlink" href="#year-end" title="Permalink to this heading"></a></h4>
+<h4>Year End<a class="headerlink" href="#year-end" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage its Year End transactions</p>
 <p>A Year End Transaction (12002) is a transaction which will calculate the balance between the previous Year End (or the
 oldest transaction if none exists) and the given transaction date</p>
@@ -3393,13 +3494,13 @@ oldest transaction if none exists) and the given transaction date</p>
 </section>
 </section>
 <section id="iaas">
-<h2>IAAS<a class="headerlink" href="#iaas" title="Permalink to this heading"></a></h2>
+<h2>IAAS<a class="headerlink" href="#iaas" title="Permalink to this heading">¶</a></h2>
 <p>The IaaS application provides services that allow for management of IP Addresses, Subnets, and DNS records, along with accessing black and whitelists generated by CloudCIX. It also provides services that allow for interaction with the CloudCIX system to deploy Projects and Virtual Machines.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id10">
-<h3>Services<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
 <section id="id11">
-<h4>Allocation<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h4>
+<h4>Allocation<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h4>
 <p>An Allocation is an IP address range that was assigned to an ASN by an RIR such as RIPE.</p>
 <p>Allocations can be freely managed by the Member that owns a particular ASN.</p>
 <div class="admonition note">
@@ -3453,7 +3554,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="asn">
-<h4>ASN<a class="headerlink" href="#asn" title="Permalink to this heading"></a></h4>
+<h4>ASN<a class="headerlink" href="#asn" title="Permalink to this heading">¶</a></h4>
 <p>Autonomous System Numbers (ASNs) are assigned in blocks by the Internet Assigned Numbers Authority (IANA) to Regional Internet Registries (RIRs).</p>
 <p>The appropriate RIR then assigns ASNs to entities within its designated area from the block assigned to them by the IANA.</p>
 <p>ASNs can be assigned to a CloudCIX Member who then becomes the owner of the ASN and is granted the ability to manage its contents.</p>
@@ -3508,7 +3609,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="backup">
-<h4>Backup<a class="headerlink" href="#backup" title="Permalink to this heading"></a></h4>
+<h4>Backup<a class="headerlink" href="#backup" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a Backup of a VM.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3546,7 +3647,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="backup-history">
-<h4>Backup History<a class="headerlink" href="#backup-history" title="Permalink to this heading"></a></h4>
+<h4>Backup History<a class="headerlink" href="#backup-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to retrieve the History for their Backup.</p>
 <p>Backup History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.backup_history.&lt;method&gt;</span></code></p>
@@ -3563,8 +3664,26 @@ oldest transaction if none exists) and the given transaction date</p>
 </dd>
 </dl>
 </section>
+<section id="capacity">
+<h4>Capacity<a class="headerlink" href="#capacity" title="Permalink to this heading">¶</a></h4>
+<p>This service lets a User list the VMs with the largest capacity that they can build in a region, grouped by Server type
+(KVM, HyperV), and Storage Type (HDD, SSD). The user must be a customer of a region to list the specs of VMs they can build.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.capacity.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.capacity.list</span></code></dt><dd><ul>
+<li><p>This method lists the VMs with the largest combination of compute resources in the region</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="cix-blacklist">
-<h4>CIX Blacklist<a class="headerlink" href="#cix-blacklist" title="Permalink to this heading"></a></h4>
+<h4>CIX Blacklist<a class="headerlink" href="#cix-blacklist" title="Permalink to this heading">¶</a></h4>
 <p>CIX Blacklist is a storage for CIDRs that are recognised by CIX as malicious.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.blacklist.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3588,7 +3707,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="cix-whitelist">
-<h4>CIX Whitelist<a class="headerlink" href="#cix-whitelist" title="Permalink to this heading"></a></h4>
+<h4>CIX Whitelist<a class="headerlink" href="#cix-whitelist" title="Permalink to this heading">¶</a></h4>
 <p>CIX Whitelist is a storage for CIDRs that are recognised by CIX as trustworthy.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.whitelist.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3612,7 +3731,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="cloud">
-<h4>Cloud<a class="headerlink" href="#cloud" title="Permalink to this heading"></a></h4>
+<h4>Cloud<a class="headerlink" href="#cloud" title="Permalink to this heading">¶</a></h4>
 <p>The Cloud Service is a one stop endpoint to safely create an entire cloud Project in a single request, instead of interacting with the various other services individually.</p>
 <p>The biggest benefit of this approach is that nothing will be created in hardware unless the entire request is successful, which would not be possible via the individual services themselves.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.cloud.&lt;method&gt;</span></code></p>
@@ -3644,7 +3763,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="domain">
-<h4>Domain<a class="headerlink" href="#domain" title="Permalink to this heading"></a></h4>
+<h4>Domain<a class="headerlink" href="#domain" title="Permalink to this heading">¶</a></h4>
 <p>Any CloudCIX Member is able to create a Domain and manage its DNS records through the API.</p>
 <p>CIX uses the Rage4 DNS Service to propogate DNS records to DNS servers.</p>
 <div class="admonition note">
@@ -3696,7 +3815,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="image">
-<h4>Image<a class="headerlink" href="#image" title="Permalink to this heading"></a></h4>
+<h4>Image<a class="headerlink" href="#image" title="Permalink to this heading">¶</a></h4>
 <p>This service provides access to a list of Images or Operating Systems that we can currently provide in deployed VMs.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.image.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3720,7 +3839,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="interface">
-<h4>Interface<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h4>
+<h4>Interface<a class="headerlink" href="#interface" title="Permalink to this heading">¶</a></h4>
 <p>This service provides information regarding physical interfaces on Servers.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.interface.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3767,7 +3886,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="ip-address">
-<h4>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this heading"></a></h4>
+<h4>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this heading">¶</a></h4>
 <p>CloudCIX allows its Users to organise IP Addresses by creating a clean structure of <code class="docutils literal notranslate"><span class="pre">ASN</span> <span class="pre">&gt;</span> <span class="pre">Allocation</span> <span class="pre">&gt;</span> <span class="pre">Subnet</span> <span class="pre">&gt;</span> <span class="pre">IPAddress</span></code>.</p>
 <p>Additionally, IP Addresses are used to organise Reverse DNS records.</p>
 <p>An IP Address can only be managed by the Member who owns the Subnet that contains it.</p>
@@ -3814,7 +3933,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="ip-validator">
-<h4>IP Validator<a class="headerlink" href="#ip-validator" title="Permalink to this heading"></a></h4>
+<h4>IP Validator<a class="headerlink" href="#ip-validator" title="Permalink to this heading">¶</a></h4>
 <p>A utility service that can validate any number of address ranges and/or ip addresses.</p>
 <p>It provides various details about the supplied parameters.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_validator.&lt;method&gt;</span></code></p>
@@ -3837,7 +3956,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="metrics">
-<h4>Metrics<a class="headerlink" href="#metrics" title="Permalink to this heading"></a></h4>
+<h4>Metrics<a class="headerlink" href="#metrics" title="Permalink to this heading">¶</a></h4>
 <p>This service provides metric information about a given region.</p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -3855,7 +3974,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="policy-log">
-<h4>Policy Log<a class="headerlink" href="#policy-log" title="Permalink to this heading"></a></h4>
+<h4>Policy Log<a class="headerlink" href="#policy-log" title="Permalink to this heading">¶</a></h4>
 <p>Retrieves the logs for a Virtual Router for a specified Project.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.policy_log.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -3872,7 +3991,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="project">
-<h4>Project<a class="headerlink" href="#project" title="Permalink to this heading"></a></h4>
+<h4>Project<a class="headerlink" href="#project" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a Project.</p>
 <p>This service differs from the <code class="docutils literal notranslate"><span class="pre">Cloud</span></code> service because this service deals only with Project records, whereas Cloud deals with every other record related to a Project at once.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.project.&lt;method&gt;</span></code></p>
@@ -3911,7 +4030,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="ptr-record">
-<h4>PTR Record<a class="headerlink" href="#ptr-record" title="Permalink to this heading"></a></h4>
+<h4>PTR Record<a class="headerlink" href="#ptr-record" title="Permalink to this heading">¶</a></h4>
 <p>The PTR Record service is used to manage PTR type DNS Records, also known as Reverse DNS records.</p>
 <p>The User is required to provide an IPAddress that the Record will target, and the content that should be stored with the Record.</p>
 <p>The service will select the correct reverse domain correctly based on the IP Address and will automatically populate the name field of the record which will be the reversed IP Address.</p>
@@ -3962,15 +4081,11 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="record">
-<h4>Record<a class="headerlink" href="#record" title="Permalink to this heading"></a></h4>
+<h4>Record<a class="headerlink" href="#record" title="Permalink to this heading">¶</a></h4>
 <p>The Record service is used to manage Forward DNS entries that are tied to Domains.</p>
 <p>Records for a particular Domain can only be managed by the Member that owns that Domain.</p>
 <p><strong>Record Types</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 76%" />
-<col style="width: 24%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Record Type</p></th>
 <th class="head"><p>ID</p></th>
@@ -4060,7 +4175,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="region-image">
-<h4>Region Image<a class="headerlink" href="#region-image" title="Permalink to this heading"></a></h4>
+<h4>Region Image<a class="headerlink" href="#region-image" title="Permalink to this heading">¶</a></h4>
 <p>This service allows a user in a region to add/remove supported images to their region.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.region_image.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4084,7 +4199,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="router">
-<h4>Router<a class="headerlink" href="#router" title="Permalink to this heading"></a></h4>
+<h4>Router<a class="headerlink" href="#router" title="Permalink to this heading">¶</a></h4>
 <p>This service provides information regarding Routers.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.server.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4124,7 +4239,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="run-robot">
-<h4>Run Robot<a class="headerlink" href="#run-robot" title="Permalink to this heading"></a></h4>
+<h4>Run Robot<a class="headerlink" href="#run-robot" title="Permalink to this heading">¶</a></h4>
 <p>This service provides information on wether there has been any changes to a region and infrastructure should be built or updated.</p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -4147,7 +4262,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="server">
-<h4>Server<a class="headerlink" href="#server" title="Permalink to this heading"></a></h4>
+<h4>Server<a class="headerlink" href="#server" title="Permalink to this heading">¶</a></h4>
 <p>This service provides information regarding Servers.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.server.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4187,7 +4302,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="server-type">
-<h4>Server Type<a class="headerlink" href="#server-type" title="Permalink to this heading"></a></h4>
+<h4>Server Type<a class="headerlink" href="#server-type" title="Permalink to this heading">¶</a></h4>
 <p>This service provides access to a list of Server Type options that we can currently provide as Servers.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.server_type.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4211,7 +4326,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="snapshot">
-<h4>Snapshot<a class="headerlink" href="#snapshot" title="Permalink to this heading"></a></h4>
+<h4>Snapshot<a class="headerlink" href="#snapshot" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a Snapshot of a VM.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4249,7 +4364,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="snapshot-history">
-<h4>Snapshot History<a class="headerlink" href="#snapshot-history" title="Permalink to this heading"></a></h4>
+<h4>Snapshot History<a class="headerlink" href="#snapshot-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to retrieve the History for their Snapshots.</p>
 <p>Snapshot History records are created whenever there are state changes. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot_history.&lt;method&gt;</span></code></p>
@@ -4267,7 +4382,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="snapshot-tree">
-<h4>Snapshot Tree<a class="headerlink" href="#snapshot-tree" title="Permalink to this heading"></a></h4>
+<h4>Snapshot Tree<a class="headerlink" href="#snapshot-tree" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a Snapshot Tree of a VM.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.snapshot_tree.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4284,7 +4399,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="storage">
-<h4>Storage<a class="headerlink" href="#storage" title="Permalink to this heading"></a></h4>
+<h4>Storage<a class="headerlink" href="#storage" title="Permalink to this heading">¶</a></h4>
 <p>Provides information regading Storage for a VM.</p>
 <p>Storages can be created and managed by the owners of the Project.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.storage.&lt;method&gt;</span></code></p>
@@ -4317,7 +4432,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="storage-type">
-<h4>Storage Type<a class="headerlink" href="#storage-type" title="Permalink to this heading"></a></h4>
+<h4>Storage Type<a class="headerlink" href="#storage-type" title="Permalink to this heading">¶</a></h4>
 <p>This service provides access to a list of Storage options that we can currently provide for VMs to be built in.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.storage_type.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4341,7 +4456,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="subnet">
-<h4>Subnet<a class="headerlink" href="#subnet" title="Permalink to this heading"></a></h4>
+<h4>Subnet<a class="headerlink" href="#subnet" title="Permalink to this heading">¶</a></h4>
 <p>The IaaS Application allows for the modelling of a one level network setup, and for the storage of information about subnets and machines located at specific IP Addresses.</p>
 <p>Subnets can be created by ASN owners and managed by either ASN owners or their clients.</p>
 <p>Once a Subnet is created for a customer of the ASN owner, both the Customer and the ASN Owner can manage it.</p>
@@ -4390,7 +4505,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="subnet-space">
-<h4>Subnet Space<a class="headerlink" href="#subnet-space" title="Permalink to this heading"></a></h4>
+<h4>Subnet Space<a class="headerlink" href="#subnet-space" title="Permalink to this heading">¶</a></h4>
 <p>This service will return a list of existing and free subnets avialable for a particular Allocation.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.subnet_space.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4407,7 +4522,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="virtual-router">
-<h4>Virtual Router<a class="headerlink" href="#virtual-router" title="Permalink to this heading"></a></h4>
+<h4>Virtual Router<a class="headerlink" href="#virtual-router" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a Virtual Router.</p>
 <p>A Virtual Router is a software based Router built specifically for a Cloud Project.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.virtual_router.&lt;method&gt;</span></code></p>
@@ -4439,7 +4554,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="vm">
-<h4>VM<a class="headerlink" href="#vm" title="Permalink to this heading"></a></h4>
+<h4>VM<a class="headerlink" href="#vm" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a VM.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.vm.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4477,7 +4592,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="vm-history">
-<h4>VM History<a class="headerlink" href="#vm-history" title="Permalink to this heading"></a></h4>
+<h4>VM History<a class="headerlink" href="#vm-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to retrieve the History for their VMs.</p>
 <p>VM History records are created whenever important details about the VM are changed, like the VM’s state for example. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.vm_history.&lt;method&gt;</span></code></p>
@@ -4495,7 +4610,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="vpn">
-<h4>VPN<a class="headerlink" href="#vpn" title="Permalink to this heading"></a></h4>
+<h4>VPN<a class="headerlink" href="#vpn" title="Permalink to this heading">¶</a></h4>
 <p>This service provides methods used to manage a VPN.</p>
 <p>A VPN record is used to create a VPN between the User’s local network(s) and a local network in a Project.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.vpn.&lt;method&gt;</span></code></p>
@@ -4541,7 +4656,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="vpn-history">
-<h4>VPN History<a class="headerlink" href="#vpn-history" title="Permalink to this heading"></a></h4>
+<h4>VPN History<a class="headerlink" href="#vpn-history" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to retrieve the History for their VPNs.</p>
 <p>VPN History records are created whenever important details about the VPN are changed, like when the VPN is built for example. These records have a user attached to them, so that all changes can be traced back to the User that made them.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.vpn_history.&lt;method&gt;</span></code></p>
@@ -4559,7 +4674,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="vpn-status">
-<h4>VPN Status<a class="headerlink" href="#vpn-status" title="Permalink to this heading"></a></h4>
+<h4>VPN Status<a class="headerlink" href="#vpn-status" title="Permalink to this heading">¶</a></h4>
 <p>Retrieves the vpn status for a specified VPN.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.vpn_status.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4578,7 +4693,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </section>
 </section>
 <section id="membership">
-<h2>Membership<a class="headerlink" href="#membership" title="Permalink to this heading"></a></h2>
+<h2>Membership<a class="headerlink" href="#membership" title="Permalink to this heading">¶</a></h2>
 <p>Membership is a CloudCIX Application that exposes a REST API capable of managing CloudCIX Members and relationships between those Members</p>
 <p>It is the cornerstone of CloudCIX</p>
 <p>It controls Membership, and manages both secure login and granular access</p>
@@ -4586,9 +4701,9 @@ oldest transaction if none exists) and the given transaction date</p>
 <p>For more information on the key aspects of this Application, see <strong>Member</strong>, <strong>Address</strong>, and <strong>User</strong></p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id12">
-<h3>Services<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h3>
 <section id="address">
-<h4>Address<a class="headerlink" href="#address" title="Permalink to this heading"></a></h4>
+<h4>Address<a class="headerlink" href="#address" title="Permalink to this heading">¶</a></h4>
 <p>An Address points to a physical location where an organisation conducts their business</p>
 <p>Each Member can have one or more Addresses</p>
 <p>Trading transactions occur between a Supplier and Customer Address, while some other transactions occur at a single Address, e.g. depreciation</p>
@@ -4635,7 +4750,7 @@ oldest transaction if none exists) and the given transaction date</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.verbose_address.list</span></code></p>
 </section>
 <section id="address-link">
-<h4>Address Link<a class="headerlink" href="#address-link" title="Permalink to this heading"></a></h4>
+<h4>Address Link<a class="headerlink" href="#address-link" title="Permalink to this heading">¶</a></h4>
 <p>An Address Link object represents a link between two Addresses, which allows transactions to be performed between them</p>
 <p>Addresses must be linked in order to conduct business between them</p>
 <p>The link allows each Address to have particular details about the Contra Address (the Address to which the Link is to)</p>
@@ -4673,7 +4788,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </div>
 </section>
 <section id="country">
-<h4>Country<a class="headerlink" href="#country" title="Permalink to this heading"></a></h4>
+<h4>Country<a class="headerlink" href="#country" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get Country information in accordance with ISO 3166-1</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.country.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4697,7 +4812,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="currency">
-<h4>Currency<a class="headerlink" href="#currency" title="Permalink to this heading"></a></h4>
+<h4>Currency<a class="headerlink" href="#currency" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get information about the different Currencies supported by CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.currency.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4721,7 +4836,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="department">
-<h4>Department<a class="headerlink" href="#department" title="Permalink to this heading"></a></h4>
+<h4>Department<a class="headerlink" href="#department" title="Permalink to this heading">¶</a></h4>
 <p>A Department is a specialized division of a large organisation that groups Users together</p>
 <p>Example Departments can include:
 - Design
@@ -4776,7 +4891,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="email-confirmation">
-<h4>Email Confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this heading"></a></h4>
+<h4>Email Confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this heading">¶</a></h4>
 <p>Email Confirmation allows the user to verify their email</p>
 <p>This service provides methods to verify a users email</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.email_confirmation.&lt;method&gt;</span></code></p>
@@ -4793,8 +4908,27 @@ oldest transaction if none exists) and the given transaction date</p>
 </dd>
 </dl>
 </section>
+<section id="franchise-logic">
+<h4>Franchise Logic<a class="headerlink" href="#franchise-logic" title="Permalink to this heading">¶</a></h4>
+<p>This service returns the franchise logic between for sent <cite>builder_address_id</cite>, <cite>distributor_address_id</cite> and
+CloudCIX.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.franchise_logic.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.franchise_logic.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the franchise logic details set up between <cite>builder_address_id</cite>, <cite>distributor_address_id</cite> and CloudCIX.</p></li>
+<li><p>This method is only available to administrators in Member 1</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="language">
-<h4>Language<a class="headerlink" href="#language" title="Permalink to this heading"></a></h4>
+<h4>Language<a class="headerlink" href="#language" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to get information about the languages that are available for use in CloudCIX</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.language.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4818,7 +4952,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="member">
-<h4>Member<a class="headerlink" href="#member" title="Permalink to this heading"></a></h4>
+<h4>Member<a class="headerlink" href="#member" title="Permalink to this heading">¶</a></h4>
 <p>A Member can be a company, brand, multinational corporation or a sole trader, but a Member is always a business</p>
 <p>A Member may be Self Managed or not</p>
 <p>A Self Managed Member is run by an Administrator inside the Member and is responsible for themselves</p>
@@ -4863,7 +4997,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="member-link">
-<h4>Member Link<a class="headerlink" href="#member-link" title="Permalink to this heading"></a></h4>
+<h4>Member Link<a class="headerlink" href="#member-link" title="Permalink to this heading">¶</a></h4>
 <p>A Member Link represents a Link between two Members</p>
 <p>This service provides a method to see if the User’s Member is linked to another Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.member_link.&lt;method&gt;</span></code></p>
@@ -4882,7 +5016,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="notification">
-<h4>Notification<a class="headerlink" href="#notification" title="Permalink to this heading"></a></h4>
+<h4>Notification<a class="headerlink" href="#notification" title="Permalink to this heading">¶</a></h4>
 <p>A Notification record takes account of all the Users in an Address who should be notified about transactions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.notification.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -4899,7 +5033,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="profile">
-<h4>Profile<a class="headerlink" href="#profile" title="Permalink to this heading"></a></h4>
+<h4>Profile<a class="headerlink" href="#profile" title="Permalink to this heading">¶</a></h4>
 <p>A Profile can be a group of nurses (Users) in a hospital (Member).</p>
 <p>Profiles are a custom or default classification for a User for a particular Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.profile.&lt;method&gt;</span></code></p>
@@ -4951,8 +5085,61 @@ oldest transaction if none exists) and the given transaction date</p>
 </dd>
 </dl>
 </section>
+<section id="public-key">
+<h4>Public Key<a class="headerlink" href="#public-key" title="Permalink to this heading">¶</a></h4>
+<p>The Public Key service allows for a user to store multiple Public Keys in CloudCIX Membership.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of Public Keys.</p></li>
+<li><p>An Administrator can list Public Keys for users in their Member.</p></li>
+<li><p>Non Administrator Users can list Public Keys for their own User.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Public Key record for a User.</p></li>
+<li><p>An Administrator can create a Public Key record for another User in their Member.</p></li>
+<li><p>Non Administrator Users can create a Public Key record for their own User.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a given Public Key.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given Public Key.</p></li>
+<li><p>An Administrator can update a Public Key record for another User in their Member.</p></li>
+<li><p>Non Administrator Users can update a Public Key record for their own User.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.public_key.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a given Public Key.</p></li>
+<li><p>An Administrator can delete a Public Key record for another User in their Member.</p></li>
+<li><p>Non Administrator Users can delete a Public Key record for their own User.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="subdivision">
-<h4>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this heading"></a></h4>
+<h4>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this heading">¶</a></h4>
 <p>The Subdivision service contains methods to get data about Subdivisions in accordance with ISO 3166-2</p>
 <p>An example of a Subdivision is a County in Ireland</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.subdivision.&lt;method&gt;</span></code></p>
@@ -4977,7 +5164,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="team">
-<h4>Team<a class="headerlink" href="#team" title="Permalink to this heading"></a></h4>
+<h4>Team<a class="headerlink" href="#team" title="Permalink to this heading">¶</a></h4>
 <p>A Team is a tag describing a group of Users in a Member</p>
 <p>For example, a Team can be a group of Users working on a particular project</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.team.&lt;method&gt;</span></code></p>
@@ -5031,7 +5218,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="territory">
-<h4>Territory<a class="headerlink" href="#territory" title="Permalink to this heading"></a></h4>
+<h4>Territory<a class="headerlink" href="#territory" title="Permalink to this heading">¶</a></h4>
 <p>A Territory is a classification or tag that a Member can use for grouping their business partners</p>
 <p>For example, a Member can group partners be location or by what product they sell/purchase</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.territory.&lt;method&gt;</span></code></p>
@@ -5080,7 +5267,7 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </section>
 <section id="token">
-<h4>Token<a class="headerlink" href="#token" title="Permalink to this heading"></a></h4>
+<h4>Token<a class="headerlink" href="#token" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to validate credentials, or generate a token used to access the rest of the API.</p>
 <p>If just an email and password are supplied, the credentials will simply be validated, and return either a status 200 if they are valid, or a 400 if not.
 If an api_key is supplied alongside the email and password, if the email and password are valid, the service will attempt to generate a token for the user in the scope of the Member that owns the supplied api_key</p>
@@ -5133,7 +5320,7 @@ If an api_key is supplied alongside the email and password, if the email and pas
 </div>
 </section>
 <section id="transaction-type">
-<h4>Transaction Type<a class="headerlink" href="#transaction-type" title="Permalink to this heading"></a></h4>
+<h4>Transaction Type<a class="headerlink" href="#transaction-type" title="Permalink to this heading">¶</a></h4>
 <p>The TransactionType service contains methods that give information about the types of transactions supported by CloudCIX</p>
 <p>Most services in CloudCIX work using transactions;
 - <code class="docutils literal notranslate"><span class="pre">Financial.account_sale_invoice</span></code>
@@ -5163,7 +5350,7 @@ If an api_key is supplied alongside the email and password, if the email and pas
 </dl>
 </section>
 <section id="user">
-<h4>User<a class="headerlink" href="#user" title="Permalink to this heading"></a></h4>
+<h4>User<a class="headerlink" href="#user" title="Permalink to this heading">¶</a></h4>
 <p>A User record represents a person located at an Address of a Member that can log in to the CloudCIX system</p>
 <p>A User can either be Local to one Address, or Global within a Member, and Global Users can choose to act as a Local or Global at any time
 - When acting as a Global User, they see all data from each Address in the Member simultaneously
@@ -5218,12 +5405,12 @@ These fields can only be updated by an Administrator</p>
 </section>
 </section>
 <section id="otp">
-<h2>OTP<a class="headerlink" href="#otp" title="Permalink to this heading"></a></h2>
+<h2>OTP<a class="headerlink" href="#otp" title="Permalink to this heading">¶</a></h2>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id13">
-<h3>Services<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<h3>Services<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h3>
 <section id="id14">
-<h4>OTP<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h4>
+<h4>OTP<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h4>
 <p>This service is used in the OTP authentication to save the OTP details and validate them
 <strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -5238,7 +5425,7 @@ These fields can only be updated by an Administrator</p>
 </dl>
 </section>
 <section id="otpauth">
-<h4>OTPAuth<a class="headerlink" href="#otpauth" title="Permalink to this heading"></a></h4>
+<h4>OTPAuth<a class="headerlink" href="#otpauth" title="Permalink to this heading">¶</a></h4>
 <p>This service is used in the OTP authentication to save the OTP details and validate them
 <strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp_auth.&lt;method&gt;</span></code></p>
 <dl>
@@ -5255,14 +5442,48 @@ These fields can only be updated by an Administrator</p>
 </section>
 </section>
 </section>
+<section id="pat">
+<h2>PAT<a class="headerlink" href="#pat" title="Permalink to this heading">¶</a></h2>
+<p>The PAT Application exposes a REST API capable of managing Pod
+records</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<section id="id15">
+<h3>Services<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h3>
+<section id="pod">
+<h4>Pod<a class="headerlink" href="#pod" title="Permalink to this heading">¶</a></h4>
+<p>This services allows for the management of Pod records.</p>
+<p>A Pod represents a logical unit of hardware and functionality in a cloud. A Pod is fully defined by a <cite>config.json</cite> file, which can be read using this Pod endpoint.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.pod.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.pod.list</span></code></dt><dd><ul>
+<li><p>Return a list of all pods</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.pod.read</span></code></dt><dd><ul>
+<li><p>Returns the selected pod</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+</section>
 <section id="report-engine">
-<h2>Report Engine<a class="headerlink" href="#report-engine" title="Permalink to this heading"></a></h2>
+<h2>Report Engine<a class="headerlink" href="#report-engine" title="Permalink to this heading">¶</a></h2>
 <p>The Reporting Engine is a powerful service allowing users to generate HTML and PDF documents from templates</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id15">
-<h3>Services<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<section id="id16">
+<h3>Services<a class="headerlink" href="#id16" title="Permalink to this heading">¶</a></h3>
 <section id="export">
-<h4>Export<a class="headerlink" href="#export" title="Permalink to this heading"></a></h4>
+<h4>Export<a class="headerlink" href="#export" title="Permalink to this heading">¶</a></h4>
 <p>This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.export.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -5304,7 +5525,7 @@ These fields can only be updated by an Administrator</p>
 </dl>
 </section>
 <section id="package">
-<h4>Package<a class="headerlink" href="#package" title="Permalink to this heading"></a></h4>
+<h4>Package<a class="headerlink" href="#package" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to create Packages of Reports and download a single file instead of a large number of files</p>
 <p>The workflow for this method is as follows:
 1. Create a Package
@@ -5357,7 +5578,7 @@ These fields can only be updated by an Administrator</p>
 </dl>
 </section>
 <section id="report">
-<h4>Report<a class="headerlink" href="#report" title="Permalink to this heading"></a></h4>
+<h4>Report<a class="headerlink" href="#report" title="Permalink to this heading">¶</a></h4>
 <p>This service is used to create PDF or HTML documents from existing Templates by passing in the data to populate the Template</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -5398,7 +5619,7 @@ These fields can only be updated by an Administrator</p>
 </dl>
 </section>
 <section id="report-template">
-<h4>Report Template<a class="headerlink" href="#report-template" title="Permalink to this heading"></a></h4>
+<h4>Report Template<a class="headerlink" href="#report-template" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to manage the Templates that they can use to generate HTML or PDF documents</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.report_template.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -5445,7 +5666,7 @@ These fields can only be updated by an Administrator</p>
 </section>
 </section>
 <section id="repository">
-<h2>Repository<a class="headerlink" href="#repository" title="Permalink to this heading"></a></h2>
+<h2>Repository<a class="headerlink" href="#repository" title="Permalink to this heading">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This application is private and can only be used by Users
@@ -5454,10 +5675,10 @@ within the CloudCIX company</p>
 <p>The Repository Application is a software system that manages CloudCIX Software Projects</p>
 <p>Projects in the Repository are grouped by the owning Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id16">
-<h3>Services<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<section id="id17">
+<h3>Services<a class="headerlink" href="#id17" title="Permalink to this heading">¶</a></h3>
 <section id="application">
-<h4>Application<a class="headerlink" href="#application" title="Permalink to this heading"></a></h4>
+<h4>Application<a class="headerlink" href="#application" title="Permalink to this heading">¶</a></h4>
 <p>Every Member can have their own set of Applications</p>
 <p>An Application contains one or more Services</p>
 <p>This service allows the User to manage Applications</p>
@@ -5504,7 +5725,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="dto">
-<h4>DTO<a class="headerlink" href="#dto" title="Permalink to this heading"></a></h4>
+<h4>DTO<a class="headerlink" href="#dto" title="Permalink to this heading">¶</a></h4>
 <p>A DTO, or Data Transfer Object, can be used as both Request and Response objects</p>
 <p>DTOs are used to build complex objects</p>
 <p>This service allows the User to manage DTO instances</p>
@@ -5551,7 +5772,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="dto-parameter">
-<h4>DTO Parameter<a class="headerlink" href="#dto-parameter" title="Permalink to this heading"></a></h4>
+<h4>DTO Parameter<a class="headerlink" href="#dto-parameter" title="Permalink to this heading">¶</a></h4>
 <p>A DTO has one or more parameters</p>
 <p>This service allows the User to manage parameters belonging to different DTOs</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.dto_parameter.&lt;method&gt;</span></code></p>
@@ -5597,7 +5818,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="exception-code">
-<h4>Exception Code<a class="headerlink" href="#exception-code" title="Permalink to this heading"></a></h4>
+<h4>Exception Code<a class="headerlink" href="#exception-code" title="Permalink to this heading">¶</a></h4>
 <p>An Exception Code is a mapping of an error code to an error message</p>
 <p>Error codes are returned by a Method when an error occurs, and this service provides a mapping of an error code to its message</p>
 <p>This service allows the User to manage Exception Codes</p>
@@ -5640,7 +5861,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="language-exception-code">
-<h4>Language Exception Code<a class="headerlink" href="#language-exception-code" title="Permalink to this heading"></a></h4>
+<h4>Language Exception Code<a class="headerlink" href="#language-exception-code" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage translations for existing Exception Codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.language_exception_code.&lt;method&gt;</span></code></p>
 <dl>
@@ -5691,8 +5912,8 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dd>
 </dl>
 </section>
-<section id="id17">
-<h4>Member<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h4>
+<section id="id18">
+<h4>Member<a class="headerlink" href="#id18" title="Permalink to this heading">¶</a></h4>
 <p>Every Member can have their own set of Applications</p>
 <p>Only one <code class="docutils literal notranslate"><span class="pre">Repository.Application</span></code> should exist for every <code class="docutils literal notranslate"><span class="pre">membership.Member</span></code></p>
 <div class="admonition note">
@@ -5722,14 +5943,10 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="method">
-<h4>Method<a class="headerlink" href="#method" title="Permalink to this heading"></a></h4>
+<h4>Method<a class="headerlink" href="#method" title="Permalink to this heading">¶</a></h4>
 <p>Every Service has one or more methods</p>
 <p>This methods are an HTTP verb mapped to CRUDL:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 47%" />
-<col style="width: 53%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>CRUDL Method</p></th>
 <th class="head"><p>HTTP Verb(s)</p></th>
@@ -5803,7 +6020,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="method-parameter">
-<h4>Method Parameter<a class="headerlink" href="#method-parameter" title="Permalink to this heading"></a></h4>
+<h4>Method Parameter<a class="headerlink" href="#method-parameter" title="Permalink to this heading">¶</a></h4>
 <p>Every Method has a set of parameters which conform the Request and Response objects</p>
 <p>This service allows the User to manage the Parameters for a Method</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.method_parameter.&lt;method&gt;</span></code></p>
@@ -5849,7 +6066,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="service">
-<h4>Service<a class="headerlink" href="#service" title="Permalink to this heading"></a></h4>
+<h4>Service<a class="headerlink" href="#service" title="Permalink to this heading">¶</a></h4>
 <p>An Application has one or more Services</p>
 <p>A Service has an endpoint which is defined to tell other developers the path to consume it</p>
 <p>This service allows the User to manage Service records</p>
@@ -5898,7 +6115,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </section>
 </section>
 <section id="scheduler">
-<h2>Scheduler<a class="headerlink" href="#scheduler" title="Permalink to this heading"></a></h2>
+<h2>Scheduler<a class="headerlink" href="#scheduler" title="Permalink to this heading">¶</a></h2>
 <p>The Scheduler application allows the User to define tasks for duplicating
 existing transactions. A task contains information regarding when and how
 often it should be repeated. This can be used for monthly invoicing for
@@ -5907,10 +6124,10 @@ other software to read and execute the tasks from the Scheduler API. CloudCIX
 uses its own software for this called Routine which relies on Celery for
 creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id18">
-<h3>Services<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+<section id="id19">
+<h3>Services<a class="headerlink" href="#id19" title="Permalink to this heading">¶</a></h3>
 <section id="task">
-<h4>Task<a class="headerlink" href="#task" title="Permalink to this heading"></a></h4>
+<h4>Task<a class="headerlink" href="#task" title="Permalink to this heading">¶</a></h4>
 <p>The Task service allows Users to manage their recurring transactions.</p>
 <p>A Task is a recurring transaction that will run from time to time according to
 a set of rules defined by the User.</p>
@@ -5968,7 +6185,7 @@ a set of rules defined by the User.</p>
 </dl>
 </section>
 <section id="task-log">
-<h4>Task Log<a class="headerlink" href="#task-log" title="Permalink to this heading"></a></h4>
+<h4>Task Log<a class="headerlink" href="#task-log" title="Permalink to this heading">¶</a></h4>
 <p>The TaskLog service allows the User to get all the details about processed
 recurring transactions</p>
 <p>Every time a recurring task is processed, a log is created.</p>
@@ -5992,14 +6209,14 @@ specific Task.</p></li>
 </section>
 </section>
 <section id="scm">
-<h2>SCM<a class="headerlink" href="#scm" title="Permalink to this heading"></a></h2>
+<h2>SCM<a class="headerlink" href="#scm" title="Permalink to this heading">¶</a></h2>
 <p>SCM is an Application to manage the planning, procurement, storage,
 distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id19">
-<h3>Services<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
+<section id="id20">
+<h3>Services<a class="headerlink" href="#id20" title="Permalink to this heading">¶</a></h3>
 <section id="agreed-price">
-<h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this heading"></a></h4>
+<h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage the agreed prices for SKUs between
 addresses they are linked to</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.agreed_price.&lt;method&gt;</span></code></p>
@@ -6057,7 +6274,7 @@ Price</p></li>
 </dl>
 </section>
 <section id="bin">
-<h4>Bin<a class="headerlink" href="#bin" title="Permalink to this heading"></a></h4>
+<h4>Bin<a class="headerlink" href="#bin" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Users to manage their Bins. A Bin is a classification
 for SKUs used to manage their inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin.&lt;method&gt;</span></code></p>
@@ -6119,7 +6336,7 @@ associated</p></li>
 </dl>
 </section>
 <section id="bin-sku">
-<h4>Bin SKU<a class="headerlink" href="#bin-sku" title="Permalink to this heading"></a></h4>
+<h4>Bin SKU<a class="headerlink" href="#bin-sku" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to associate their SKUs with their Bins</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.bin_sku.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6145,7 +6362,7 @@ between one or several SKUs with a Bin</p></li>
 </dl>
 </section>
 <section id="brand">
-<h4>Brand<a class="headerlink" href="#brand" title="Permalink to this heading"></a></h4>
+<h4>Brand<a class="headerlink" href="#brand" title="Permalink to this heading">¶</a></h4>
 <p>A Brand is an optional classification for a SKU</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.brand.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6195,7 +6412,7 @@ its Member</p></li>
 </dl>
 </section>
 <section id="critical-bom">
-<h4>Critical BOM<a class="headerlink" href="#critical-bom" title="Permalink to this heading"></a></h4>
+<h4>Critical BOM<a class="headerlink" href="#critical-bom" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage an SKU’s Bill of Materials (BOM)</p>
 <p>A BOM is a list of the raw materials, sub-assemblies, intermediate assemblies,
 sub-components, parts, and the quantities of each needed to manufacture an end
@@ -6259,7 +6476,7 @@ an SKU and sub-components.</p></li>
 </dl>
 </section>
 <section id="critical-bom-for-member">
-<h4>Critical BOM (For Member)<a class="headerlink" href="#critical-bom-for-member" title="Permalink to this heading"></a></h4>
+<h4>Critical BOM (For Member)<a class="headerlink" href="#critical-bom-for-member" title="Permalink to this heading">¶</a></h4>
 <p>This service provides a method to list all BOM records belonging to the Member
 of the User making the request</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.critical_bom_for_member.&lt;method&gt;</span></code></p>
@@ -6278,7 +6495,7 @@ the User making the request</p></li>
 </dl>
 </section>
 <section id="manufactured-item">
-<h4>Manufactured Item<a class="headerlink" href="#manufactured-item" title="Permalink to this heading"></a></h4>
+<h4>Manufactured Item<a class="headerlink" href="#manufactured-item" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to manage Manufactured Items</p>
 <p>A Manufactured Item is an SKU with a serial number</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.manufactured_item.&lt;method&gt;</span></code></p>
@@ -6341,7 +6558,7 @@ create a Manufactured Item.</p></li>
 </dl>
 </section>
 <section id="purchase-order">
-<h4>Purchase Order<a class="headerlink" href="#purchase-order" title="Permalink to this heading"></a></h4>
+<h4>Purchase Order<a class="headerlink" href="#purchase-order" title="Permalink to this heading">¶</a></h4>
 <p>This is a record of a request made to another Address for stock elements.</p>
 <p>Purchase Orders can be used to maintain records of stock quantities of SKUs
 that were ordered.</p>
@@ -6385,7 +6602,7 @@ specified Purchase Order</p></li>
 </dl>
 </section>
 <section id="return-question">
-<h4>Return Question<a class="headerlink" href="#return-question" title="Permalink to this heading"></a></h4>
+<h4>Return Question<a class="headerlink" href="#return-question" title="Permalink to this heading">¶</a></h4>
 <p>Every SKU Category can have a set of questions defined by default and used for
 certain transactions</p>
 <p>This service allows the Users to handle these questions</p>
@@ -6434,7 +6651,7 @@ to be read</p></li>
 </dl>
 </section>
 <section id="return-question-field-type">
-<h4>Return Question Field Type<a class="headerlink" href="#return-question-field-type" title="Permalink to this heading"></a></h4>
+<h4>Return Question Field Type<a class="headerlink" href="#return-question-field-type" title="Permalink to this heading">¶</a></h4>
 <p>A Return Question supports several types for its answer</p>
 <p>This service will have a list method to return all supported types</p>
 <div class="admonition note">
@@ -6457,7 +6674,7 @@ field types for the Return Question answers</p></li>
 </dl>
 </section>
 <section id="sales-order">
-<h4>Sales Order<a class="headerlink" href="#sales-order" title="Permalink to this heading"></a></h4>
+<h4>Sales Order<a class="headerlink" href="#sales-order" title="Permalink to this heading">¶</a></h4>
 <p>A Sales Order is a record of an order of stock elements by a certain Address.</p>
 <p>Sales Orders can be used to create Invoices, and maintain records of price and
 quantities of SKUs that were ordered.</p>
@@ -6501,7 +6718,7 @@ Sales Order</p></li>
 </dl>
 </section>
 <section id="service-group">
-<h4>Service Group<a class="headerlink" href="#service-group" title="Permalink to this heading"></a></h4>
+<h4>Service Group<a class="headerlink" href="#service-group" title="Permalink to this heading">¶</a></h4>
 <p>Service Groups are used to put Model Numbers into groups with the same repair
 complexity and therefore cost</p>
 <p>Service Groups facilitate the simplification of contracts between Warrantors
@@ -6560,7 +6777,7 @@ have no assigned Service Group after the deletion</p></li>
 </dl>
 </section>
 <section id="sku">
-<h4>SKU<a class="headerlink" href="#sku" title="Permalink to this heading"></a></h4>
+<h4>SKU<a class="headerlink" href="#sku" title="Permalink to this heading">¶</a></h4>
 <p>A Stock Keeping Unit (SKU) is the unit by which stock is managed.</p>
 <p>Two manufactured items of the same SKU are identical in every way (with the
 possible exception of a label containing a unique serial number)</p>
@@ -6620,7 +6837,7 @@ Member</p></li>
 </dl>
 </section>
 <section id="sku-category">
-<h4>SKU Category<a class="headerlink" href="#sku-category" title="Permalink to this heading"></a></h4>
+<h4>SKU Category<a class="headerlink" href="#sku-category" title="Permalink to this heading">¶</a></h4>
 <p>An SKU Category is a classification for an SKU</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6672,7 +6889,7 @@ or within the same Master Category</p></li>
 </dl>
 </section>
 <section id="sku-category-return-question">
-<h4>SKU Category Return Question<a class="headerlink" href="#sku-category-return-question" title="Permalink to this heading"></a></h4>
+<h4>SKU Category Return Question<a class="headerlink" href="#sku-category-return-question" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to associate Return Questions with SKU Categories</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_category_return_question.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6698,7 +6915,7 @@ a Return Question</p></li>
 </dl>
 </section>
 <section id="sku-stock">
-<h4>SKU Stock<a class="headerlink" href="#sku-stock" title="Permalink to this heading"></a></h4>
+<h4>SKU Stock<a class="headerlink" href="#sku-stock" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to see SKU Stock values</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_stock.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6730,7 +6947,7 @@ requesting User, a link between the Members must exist</p></li>
 </dl>
 </section>
 <section id="sku-stock-adjustment">
-<h4>SKU Stock Adjustment<a class="headerlink" href="#sku-stock-adjustment" title="Permalink to this heading"></a></h4>
+<h4>SKU Stock Adjustment<a class="headerlink" href="#sku-stock-adjustment" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to manage their SKU Stock by making adjustments to it</p>
 <p>A SKU Stock Adjustment Transaction allows Users to adjust the SKU inventory by
 increasing or decreasing the amount of items or volume in stock</p>
@@ -6774,7 +6991,7 @@ Adjustment Transaction</p></li>
 </dl>
 </section>
 <section id="sku-value">
-<h4>SKU Value<a class="headerlink" href="#sku-value" title="Permalink to this heading"></a></h4>
+<h4>SKU Value<a class="headerlink" href="#sku-value" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to manage the values for an SKU on each class</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.sku_value.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6838,7 +7055,7 @@ Update it</p></li>
 </dl>
 </section>
 <section id="validate-purchase-order">
-<h4>Validate Purchase Order<a class="headerlink" href="#validate-purchase-order" title="Permalink to this heading"></a></h4>
+<h4>Validate Purchase Order<a class="headerlink" href="#validate-purchase-order" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to validate data before submitting it to modify a Purchase Order</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.validate_purchase_order.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6855,7 +7072,7 @@ Update it</p></li>
 </dl>
 </section>
 <section id="validate-sale-order">
-<h4>Validate Sale Order<a class="headerlink" href="#validate-sale-order" title="Permalink to this heading"></a></h4>
+<h4>Validate Sale Order<a class="headerlink" href="#validate-sale-order" title="Permalink to this heading">¶</a></h4>
 <p>This service allows Users to validate data before submitting it to modify a Sales Order</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.validate_sales_order.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6874,17 +7091,17 @@ Update it</p></li>
 </section>
 </section>
 <section id="security">
-<h2>Security<a class="headerlink" href="#security" title="Permalink to this heading"></a></h2>
+<h2>Security<a class="headerlink" href="#security" title="Permalink to this heading">¶</a></h2>
 <p>Security is a service whose main function is to manage visitors and staff
 entering and exiting a building.</p>
 <p>Users will be able to see where they went and when.</p>
 <p>Administrators will be able to see where their Users went and when, as well
 as visitors to their own Addresses</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id20">
-<h3>Services<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<section id="id21">
+<h3>Services<a class="headerlink" href="#id21" title="Permalink to this heading">¶</a></h3>
 <section id="security-event">
-<h4>Security Event<a class="headerlink" href="#security-event" title="Permalink to this heading"></a></h4>
+<h4>Security Event<a class="headerlink" href="#security-event" title="Permalink to this heading">¶</a></h4>
 <p>A Security Event is a transaction that occurs when a person enters or exits a
 building.</p>
 <p>This service is used to track Users arriving at an Address</p>
@@ -6913,7 +7130,7 @@ arrival to an Address</p></li>
 </dl>
 </section>
 <section id="security-event-logout">
-<h4>Security Event Logout<a class="headerlink" href="#security-event-logout" title="Permalink to this heading"></a></h4>
+<h4>Security Event Logout<a class="headerlink" href="#security-event-logout" title="Permalink to this heading">¶</a></h4>
 <p>A Security Event is a transaction that occurs when a person enters or exits a
 building.</p>
 <p>This service is used to track Users leaving an Address</p>
@@ -6940,7 +7157,7 @@ force log out a User currently visiting the Address</p></li>
 </section>
 </section>
 <section id="support">
-<h2>Support<a class="headerlink" href="#support" title="Permalink to this heading"></a></h2>
+<h2>Support<a class="headerlink" href="#support" title="Permalink to this heading">¶</a></h2>
 <p>The Support application is both a ticketing system, and a returns management system</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6954,10 +7171,10 @@ force log out a User currently visiting the Address</p></li>
 <p>If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id21">
-<h3>Services<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+<section id="id22">
+<h3>Services<a class="headerlink" href="#id22" title="Permalink to this heading">¶</a></h3>
 <section id="iris-condition">
-<h4>IRIS Condition<a class="headerlink" href="#iris-condition" title="Permalink to this heading"></a></h4>
+<h4>IRIS Condition<a class="headerlink" href="#iris-condition" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_condition.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7007,7 +7224,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-condition-translation">
-<h4>IRIS Condition Translation<a class="headerlink" href="#iris-condition-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Condition Translation<a class="headerlink" href="#iris-condition-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_condition_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7053,7 +7270,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-defect">
-<h4>IRIS Defect<a class="headerlink" href="#iris-defect" title="Permalink to this heading"></a></h4>
+<h4>IRIS Defect<a class="headerlink" href="#iris-defect" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS Defect Codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_defect.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7103,7 +7320,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-defect-translation">
-<h4>IRIS Defect Translation<a class="headerlink" href="#iris-defect-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Defect Translation<a class="headerlink" href="#iris-defect-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Defect codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_defect_translation.&lt;method&gt;</span></code></p>
 <dl>
@@ -7149,7 +7366,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-extended-condition">
-<h4>IRIS Extended Condition<a class="headerlink" href="#iris-extended-condition" title="Permalink to this heading"></a></h4>
+<h4>IRIS Extended Condition<a class="headerlink" href="#iris-extended-condition" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS Extended Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_extended_condition.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7199,7 +7416,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-extended-condition-translation">
-<h4>IRIS Extended Condition Translation<a class="headerlink" href="#iris-extended-condition-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Extended Condition Translation<a class="headerlink" href="#iris-extended-condition-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Extended Condition codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_extended_condition_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7245,7 +7462,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-ntf">
-<h4>IRIS NTF<a class="headerlink" href="#iris-ntf" title="Permalink to this heading"></a></h4>
+<h4>IRIS NTF<a class="headerlink" href="#iris-ntf" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS NTF codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_ntf.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7295,7 +7512,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-ntf-translation">
-<h4>IRIS NTF Translation<a class="headerlink" href="#iris-ntf-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS NTF Translation<a class="headerlink" href="#iris-ntf-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS NTF codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_ntf_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7341,7 +7558,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-repair">
-<h4>IRIS Repair<a class="headerlink" href="#iris-repair" title="Permalink to this heading"></a></h4>
+<h4>IRIS Repair<a class="headerlink" href="#iris-repair" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS NTF codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_repair.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7391,7 +7608,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-repair-translation">
-<h4>IRIS Repair Translation<a class="headerlink" href="#iris-repair-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Repair Translation<a class="headerlink" href="#iris-repair-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Repair codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_repair_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7437,7 +7654,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-section">
-<h4>IRIS Section<a class="headerlink" href="#iris-section" title="Permalink to this heading"></a></h4>
+<h4>IRIS Section<a class="headerlink" href="#iris-section" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS Section codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_section.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7487,7 +7704,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-section-translation">
-<h4>IRIS Section Translation<a class="headerlink" href="#iris-section-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Section Translation<a class="headerlink" href="#iris-section-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Section codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_section_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7533,7 +7750,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-symptom">
-<h4>IRIS Symptom<a class="headerlink" href="#iris-symptom" title="Permalink to this heading"></a></h4>
+<h4>IRIS Symptom<a class="headerlink" href="#iris-symptom" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle its IRIS Symptom codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_symptom.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7583,7 +7800,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="iris-symptom-translation">
-<h4>IRIS Symptom Translation<a class="headerlink" href="#iris-symptom-translation" title="Permalink to this heading"></a></h4>
+<h4>IRIS Symptom Translation<a class="headerlink" href="#iris-symptom-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the Translations for IRIS Symptom codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.iris_symptom_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7629,7 +7846,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="item">
-<h4>Item<a class="headerlink" href="#item" title="Permalink to this heading"></a></h4>
+<h4>Item<a class="headerlink" href="#item" title="Permalink to this heading">¶</a></h4>
 <p>Every Ticket can have a set of Items</p>
 <p>This service allows the User to manage those Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.item.&lt;method&gt;</span></code></p>
@@ -7682,7 +7899,7 @@ force log out a User currently visiting the Address</p></li>
 </dl>
 </section>
 <section id="item-history">
-<h4>Item History<a class="headerlink" href="#item-history" title="Permalink to this heading"></a></h4>
+<h4>Item History<a class="headerlink" href="#item-history" title="Permalink to this heading">¶</a></h4>
 <p>Every Ticket can have a set of Items, and every Item has its own History log</p>
 <p>This service allows the Users to handle the History log for their Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.item_history.&lt;method&gt;</span></code></p>
@@ -7718,7 +7935,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="item-status">
-<h4>Item Status<a class="headerlink" href="#item-status" title="Permalink to this heading"></a></h4>
+<h4>Item Status<a class="headerlink" href="#item-status" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Users to determine the at what stage of the customer service process an Item is</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.item_status.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7736,7 +7953,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="part-used">
-<h4>Part Used<a class="headerlink" href="#part-used" title="Permalink to this heading"></a></h4>
+<h4>Part Used<a class="headerlink" href="#part-used" title="Permalink to this heading">¶</a></h4>
 <p>Every Ticket can have a set of Items, and every Item can have a set of Parts Used to fix an issue</p>
 <p>This service allows the Users to handle the Parts Used for their Items</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.part_used.&lt;method&gt;</span></code></p>
@@ -7763,7 +7980,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="reason-for-return">
-<h4>Reason For Return<a class="headerlink" href="#reason-for-return" title="Permalink to this heading"></a></h4>
+<h4>Reason For Return<a class="headerlink" href="#reason-for-return" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle the different Reasons For Return that can be associated with Items in a Ticket</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.reason_for_return.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7811,7 +8028,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="reason-for-return-translation">
-<h4>Reason For Return Translation<a class="headerlink" href="#reason-for-return-translation" title="Permalink to this heading"></a></h4>
+<h4>Reason For Return Translation<a class="headerlink" href="#reason-for-return-translation" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to handle translations for Reason For Return descriptions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.reason_for_return_translation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7856,7 +8073,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="service-centre-logic">
-<h4>Service Centre Logic<a class="headerlink" href="#service-centre-logic" title="Permalink to this heading"></a></h4>
+<h4>Service Centre Logic<a class="headerlink" href="#service-centre-logic" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Service Centre to specify the Business Logic for one of its Addresses</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> can be specified in the request</p>
@@ -7904,7 +8121,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="service-centre-warrantor">
-<h4>Service Centre Warrantor<a class="headerlink" href="#service-centre-warrantor" title="Permalink to this heading"></a></h4>
+<h4>Service Centre Warrantor<a class="headerlink" href="#service-centre-warrantor" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to specify the Business Logic between a Service Centre’s Address and a Warrantor’s Address</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> can be specified in the request</p>
@@ -7957,7 +8174,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="status">
-<h4>Status<a class="headerlink" href="#status" title="Permalink to this heading"></a></h4>
+<h4>Status<a class="headerlink" href="#status" title="Permalink to this heading">¶</a></h4>
 <p>The Status service denotes at what stage of the customer service process a ticket is</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.status.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -7974,14 +8191,10 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="ticket">
-<h4>Ticket<a class="headerlink" href="#ticket" title="Permalink to this heading"></a></h4>
+<h4>Ticket<a class="headerlink" href="#ticket" title="Permalink to this heading">¶</a></h4>
 <p>A Ticket is a set of instructions from a Customer</p>
 <p>A Ticket has a Transaction Type, that can have one of the following values depending on who created it</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 57%" />
-<col style="width: 43%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>transaction_type_id</p></th>
 <th class="head"><p>Created By</p></th>
@@ -8040,7 +8253,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="ticket-history">
-<h4>Ticket History<a class="headerlink" href="#ticket-history" title="Permalink to this heading"></a></h4>
+<h4>Ticket History<a class="headerlink" href="#ticket-history" title="Permalink to this heading">¶</a></h4>
 <p>The Ticket History service allows the User to create separate snippets of information on a ticket relating to the customer query/issue</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.ticket_history.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -8075,7 +8288,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="ticket-question">
-<h4>Ticket Question<a class="headerlink" href="#ticket-question" title="Permalink to this heading"></a></h4>
+<h4>Ticket Question<a class="headerlink" href="#ticket-question" title="Permalink to this heading">¶</a></h4>
 <p>Every Ticket can have a set of questions defined by default</p>
 <p>This service allows the users to handle these questions</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.ticket_question.&lt;method&gt;</span></code></p>
@@ -8132,7 +8345,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="ticket-type">
-<h4>Ticket Type<a class="headerlink" href="#ticket-type" title="Permalink to this heading"></a></h4>
+<h4>Ticket Type<a class="headerlink" href="#ticket-type" title="Permalink to this heading">¶</a></h4>
 <p>Every Ticket can have a type defined by default</p>
 <p>If a Ticket Type has questions associated with it at the time a Ticket with that Type is created, those questions will be associated with the Ticket</p>
 <p>This service allows the User to manage the different Ticket Types</p>
@@ -8180,7 +8393,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="warrantor-logic">
-<h4>Warrantor Logic<a class="headerlink" href="#warrantor-logic" title="Permalink to this heading"></a></h4>
+<h4>Warrantor Logic<a class="headerlink" href="#warrantor-logic" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the Warrantor to specify the Business Logic for one of its Addresses</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> can be specified in the request</p>
@@ -8226,7 +8439,7 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </dl>
 </section>
 <section id="warrantor-service-centre">
-<h4>Warrantor Service Centre<a class="headerlink" href="#warrantor-service-centre" title="Permalink to this heading"></a></h4>
+<h4>Warrantor Service Centre<a class="headerlink" href="#warrantor-service-centre" title="Permalink to this heading">¶</a></h4>
 <p>This service allows the User to specify the Business Logic between a Warrantor’s Address and a Service Centre’s Address</p>
 <p>Only Administrators can create or modify the Business Logic</p>
 <p>If the User is acting as Global, the <code class="docutils literal notranslate"><span class="pre">address_id</span></code> can be specified in the request</p>
@@ -8281,14 +8494,14 @@ Reply-To will be the User’s email unless it is set.</p></li>
 </section>
 </section>
 <section id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this heading"></a></h2>
+<h2>Training<a class="headerlink" href="#training" title="Permalink to this heading">¶</a></h2>
 <p>The Training Application exposes a REST API capable of managing Training
 records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id22">
-<h3>Services<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+<section id="id23">
+<h3>Services<a class="headerlink" href="#id23" title="Permalink to this heading">¶</a></h3>
 <section id="class">
-<h4>Class<a class="headerlink" href="#class" title="Permalink to this heading"></a></h4>
+<h4>Class<a class="headerlink" href="#class" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Class records.</p>
 <p>A Class record represents a Class in a Syllabus, and each one has a trainer
 assigned, as well as both a start and end date</p>
@@ -8335,7 +8548,7 @@ assigned, as well as both a start and end date</p>
 </dl>
 </section>
 <section id="student">
-<h4>Student<a class="headerlink" href="#student" title="Permalink to this heading"></a></h4>
+<h4>Student<a class="headerlink" href="#student" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for the management of Student records.</p>
 <p>Students are Users that are enrolled for one or more Classes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.student.&lt;method&gt;</span></code></p>
@@ -8384,7 +8597,7 @@ themselves</p></li>
 </dl>
 </section>
 <section id="syllabus">
-<h4>Syllabus<a class="headerlink" href="#syllabus" title="Permalink to this heading"></a></h4>
+<h4>Syllabus<a class="headerlink" href="#syllabus" title="Permalink to this heading">¶</a></h4>
 <p>This service allows for the management of Syllabus records.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.syllabus.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -8432,14 +8645,14 @@ Student</p></li>
 </section>
 </section>
 <section id="vault">
-<h2>Vault<a class="headerlink" href="#vault" title="Permalink to this heading"></a></h2>
+<h2>Vault<a class="headerlink" href="#vault" title="Permalink to this heading">¶</a></h2>
 <p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
 available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id23">
-<h3>Services<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
+<section id="id24">
+<h3>Services<a class="headerlink" href="#id24" title="Permalink to this heading">¶</a></h3>
 <section id="bucket">
-<h4>Bucket<a class="headerlink" href="#bucket" title="Permalink to this heading"></a></h4>
+<h4>Bucket<a class="headerlink" href="#bucket" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Buckets in the MinIO object store.</p>
 <p>For each method request the following paramaters must be sent:
 - <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
@@ -8500,7 +8713,7 @@ available to addresses linked to a Vault Cloud Region where a MinIO instance has
 </div>
 </section>
 <section id="object">
-<h4>Object<a class="headerlink" href="#object" title="Permalink to this heading"></a></h4>
+<h4>Object<a class="headerlink" href="#object" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Objects in the MinIO object store.</p>
 <p>For each method request the following paramaters must be sent:
 - <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
@@ -8594,7 +8807,7 @@ available to addresses linked to a Vault Cloud Region where a MinIO instance has
 </div>
 </section>
 <section id="region">
-<h4>Region<a class="headerlink" href="#region" title="Permalink to this heading"></a></h4>
+<h4>Region<a class="headerlink" href="#region" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Regions in the Vault Application.</p>
 <p>A Region is a public cloud address that has a MinIO instance set up for
 linked addresses to utilize.</p>
@@ -8613,7 +8826,7 @@ linked addresses to utilize.</p>
 </dl>
 </section>
 <section id="share">
-<h4>Share<a class="headerlink" href="#share" title="Permalink to this heading"></a></h4>
+<h4>Share<a class="headerlink" href="#share" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Shares in the Vault Application.</p>
 <p>A Share record holds the permission an address can have on a path in your MinIO bucket or to a specific object. A Share
 allows an Address to access Objects owned by another Address. By default an address is granted read permissions.</p>
@@ -8665,7 +8878,7 @@ specified path.</p></li>
 </dl>
 </section>
 <section id="shared-bucket">
-<h4>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Permalink to this heading"></a></h4>
+<h4>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Shared Buckets in the MinIO object store.</p>
 <p>A user can read and delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
 bucket has given them.</p>
@@ -8721,7 +8934,7 @@ bucket has given them.</p>
 </div>
 </section>
 <section id="shared-object">
-<h4>Shared Object<a class="headerlink" href="#shared-object" title="Permalink to this heading"></a></h4>
+<h4>Shared Object<a class="headerlink" href="#shared-object" title="Permalink to this heading">¶</a></h4>
 <p>This services allows for the management of Shared Objects in the MinIO object store.</p>
 <p>A user can read, upload or delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
 Object has given them.</p>
@@ -8825,30 +9038,46 @@ Object has given them.</p>
 
 
            </div>
+           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2019, CloudCIX.</p>
-  </div>
+    <p>
+        &#169; Copyright 2019, CloudCIX.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

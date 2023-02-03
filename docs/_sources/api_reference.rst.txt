@@ -58,6 +58,11 @@ OTP
 
 .. include:: api_docs/otp.rst
 
+PAT
+~~~
+
+.. include:: api_docs/pat.rst
+
 Report Engine
 ~~~~~~~~~~~~~
 

@@ -87,6 +87,17 @@ Available Methods
     - ``cloudcix.api.IAAS.backup_history.list``
         - This method retrieves a list of History records for a user's address Backups.
 
+Capacity
+^^^^^^^^
+This service lets a User list the VMs with the largest capacity that they can build in a region, grouped by Server type
+(KVM, HyperV), and Storage Type (HDD, SSD). The user must be a customer of a region to list the specs of VMs they can build.
+
+**Basic Usage**: ``cloudcix.api.IAAS.capacity.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.capacity.list``
+        - This method lists the VMs with the largest combination of compute resources in the region
+
 CIX Blacklist
 ^^^^^^^^^^^^^
 CIX Blacklist is a storage for CIDRs that are recognised by CIX as malicious.

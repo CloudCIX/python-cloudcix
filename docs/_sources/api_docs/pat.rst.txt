@@ -1,0 +1,22 @@
+The PAT Application exposes a REST API capable of managing Pod
+records
+
+**Basic Usage**: ``cloudcix.api.PAT.<service>.<method>``
+
+Services
+--------
+
+Pod
+^^^^^
+This services allows for the management of Pod records.
+
+A Pod represents a logical unit of hardware and functionality in a cloud. A Pod is fully defined by a `config.json` file, which can be read using this Pod endpoint.
+
+**Basic Usage**: ``cloudcix.api.PAT.pod.<method>``
+
+Available Methods
+    - ``cloudcix.api.PAT.pod.list``
+        - Return a list of all pods
+    - ``cloudcix.api.PAT.pod.read``
+        - Returns the selected pod
+

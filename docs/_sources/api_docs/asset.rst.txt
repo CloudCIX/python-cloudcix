@@ -11,12 +11,12 @@ Asset
 ^^^^^
 This service handles the Assets of a Member
 
-**Basic Usage**: ``cloudcix.api.Asset.Asset.<method>``
+**Basic Usage**: ``cloudcix.api.Asset.asset.<method>``
 
 Available Methods
     - ``cloudcix.api.Asset.asset.list``
-        - Returns a list of Assets owned by the acting Address of
-          the User who makes the request
+        - Returns a list of Assets owned by the acting Address of the User 
+          who makes the request
     - ``cloudcix.api.Asset.asset.create``
         - Allows a User to create a new Asset for its acting Address
     - ``cloudcix.api.Asset.asset.read``
