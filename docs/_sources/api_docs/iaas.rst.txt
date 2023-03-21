@@ -138,6 +138,35 @@ Available Methods
     - ``cloudcix.api.IAAS.cloud.update``
         - This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request.
 
+Device
+^^^^^^
+This service provides information regarding Devices.
+
+**Basic Usage**: ``cloudcix.api.IAAS.device.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.device.list``
+        - This method allows the User to list Devices for a Server in their region.
+        - If the requesting user is global active they will able to list all Devices for all Server in their regions.
+    - ``cloudcix.api.IAAS.device.create``
+        - This method allows the User to create a Device for a Server in their region.
+    - ``cloudcix.api.IAAS.device.read``
+        - This method allows the User to to retrieve the information of a particular Device for a Server in their region.
+        - If the requesting user is global active they will able to retrieve the information for a Device for a Server in another region.
+    - ``cloudcix.api.IAAS.device.update``
+        - This method allows the User to update a Device of a Server in their region.
+
+Device Type
+^^^^^^^^^^^
+This service provides access to a list of Device Type options that we can currently provide as Devices.
+
+**Basic Usage**: ``cloudcix.api.IAAS.device_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.device_type.list``
+        - This method allows the User to list Device Types available.
+
+
 Domain
 ^^^^^^
 Any CloudCIX Member is able to create a Domain and manage its DNS records through the API.
