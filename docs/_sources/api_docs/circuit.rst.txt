@@ -29,7 +29,6 @@ Available Methods
         - Allows the User to update a Circuit
     - ``cloudcix.api.Circuit.circuit.delete``
         - Allows the User to delete a Circuit
-        - Note that the Circuit will no longer be available to update.
         - If a Circuit has been removed but the User wants to maintain
           it in the list, it should be updated with a decommission date
 
