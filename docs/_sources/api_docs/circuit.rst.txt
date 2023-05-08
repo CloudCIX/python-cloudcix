@@ -67,3 +67,15 @@ property.
 Available Methods
     - ``cloudcix.api.Circuit.property_type.list``
         - Returns a list of Property Types
+
+Property Value
+^^^^^^^^^^^^
+This service allows to search Circuit objects properties dictionaries by the value sent in the request. 
+
+**Basic Usage**: ``cloudcix.api.Circuit.property_value.<method>``
+
+Available Methods
+  - ``cloudcix.api.Circuit.property_value.list``
+    - Allows the User to list all properties of their Circuits where the queries `search_term` is included. 
+    -  It will return a list of objects for each property value the term was included in, with reference keys to identify the Circuit. 
+    - This list will be alphabetical based on the value of the property. 

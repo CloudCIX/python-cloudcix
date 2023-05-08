@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.9.5 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.9.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.9.5
+                0.9.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -74,6 +74,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#id5">Circuit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#circuit-class">Circuit Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#property-type">Property Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#property-value">Property Value</a></li>
 </ul>
 </li>
 </ul>
@@ -927,6 +928,20 @@ property.</p>
 </dd>
 </dl>
 </li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="property-value">
+<h4>Property Value<a class="headerlink" href="#property-value" title="Permalink to this heading"></a></h4>
+<p>This service allows to search Circuit objects properties dictionaries by the value sent in the request.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.property_value.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Circuit.property_value.list</span></code>
+- Allows the User to list all properties of their Circuits where the queries <cite>search_term</cite> is included.
+-  It will return a list of objects for each property value the term was included in, with reference keys to identify the Circuit.
+- This list will be alphabetical based on the value of the property.</p></li>
 </ul>
 </dd>
 </dl>
