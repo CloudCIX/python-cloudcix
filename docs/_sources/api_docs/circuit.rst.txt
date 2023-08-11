@@ -1,4 +1,5 @@
 The Circuit Application allows for the management of circuits and devices.
+This Applicaton will be deprecated for DCIM. 
 
 **Basic Usage**: ``cloudcix.api.Circuit.<service>.<method>``
 

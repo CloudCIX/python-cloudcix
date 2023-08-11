@@ -1,0 +1,14 @@
+
+**Basic Usage**: ``cloudcix.api.NLP.<service>.<method>``
+
+Services
+--------
+
+Embedding
+^^^^^^^^^
+This service is used in the NLP application to contact a NN Model and return the embeddings for the sent chunks.
+**Basic Usage**: ``cloudcix.api.NLP.embedding.<method>``
+
+Available Methods
+    - ``cloudcix.api.NLP.embedding.create``  
+        -This method creates a list of embeddings from the sent list of chucks in request.data

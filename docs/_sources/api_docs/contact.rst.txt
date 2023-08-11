@@ -1,0 +1,300 @@
+The Contact Application is a CRM application that exposes a REST API to
+manage a shared address book between Users in the same Member
+
+contact can be used as a sales and marketing tool or just as a general
+purpose address book.
+
+It is also a management system for the management of your CloudCIX Chatbots
+
+**Basic Usage**: ``cloudcix.api.Contact.<service>.<method>``
+
+Services
+--------
+
+Activity
+^^^^^^^^
+This service allows the user to manage the various Activities
+
+An Activity is a sub category of an Activity Type
+
+Each Activity has only one ActivityType but an ActivityType may have many
+Activities
+
+**Basic Usage**: ``cloudcix.api.contact.activity.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.activity.list``
+        - Returns a list of all Activities in your Member
+        - If no Activities exist, a default list will be created and
+          returned
+    - ``cloudcix.api.contact.activity.create``
+        - Creates one new Activity record for the selected Activity
+          Type
+    - ``cloudcix.api.contact.activity.read``
+        - Returns an Activity with all its details
+    - ``cloudcix.api.contact.activity.update``
+        - Updates an Activity record for the selected Activity Type
+        - The properties can only be updated if there are no Campaign
+          records associated with the Activity
+    - ``cloudcix.api.contact.activity.delete``
+        - Deletes an Activity record for the selected Activity Type
+        - An Activity can only be deleted if there are no Campaigns
+          associated with it
+
+Activity Type
+^^^^^^^^^^^^^
+This service allows the User to manage Activity Types
+
+**Basic Usage**: ``cloudcix.api.contact.activity_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.activity_type.list``
+        - Returns a list of supported Activity Types
+    - ``cloudcix.api.contact.activity_type.create``
+        - Allows the User to create a new Activity Type record
+    - ``cloudcix.api.contact.activity_type.read``
+        - Returns the selected Activity Type with all its details
+    - ``cloudcix.api.contact.activity_type.update``
+        - Allows the User to update the details of an Activity Type
+          record
+    - ``cloudcix.api.contact.activity_type.delete``
+        - Allows the User to delete one Activity Type record.
+        - An Activity Type can only be deleted if there are no
+          Activities linked to the Activity Type
+
+Campaign
+^^^^^^^^
+This service allows for management of Campaigns
+
+Campaigns are a many to many classification of contact
+
+**Basic Usage**: ``cloudcix.api.contact.campaign.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.campaign.list``
+        - Returns a list of all Campaigns associated with the Member of
+          the User calling this method
+    - ``cloudcix.api.contact.campaign.create``
+        - Allows the User to create a new Campaign record
+    - ``cloudcix.api.contact.campaign.read``
+        - Returns the details of one Campaign, including a list of
+          contact belonging to that Campaign
+    - ``cloudcix.api.contact.campaign.update``
+        - Allows the User to update a Campaign record
+    - ``cloudcix.api.contact.campaign.delete``
+        - Allows the User to delete one Campaign record, which includes
+          the links between the Campaign and any contact.
+
+Campaign Activity
+^^^^^^^^^^^^^^^^^
+This service manages Campaign Activities related to a Campaign and an Activity
+
+The Campaign Activity allows Users to organize Activities into further
+subcategories
+
+**Basic Usage**: ``cloudcix.api.contact.campaign_activity.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.campaign_activity.list``
+        - Return a list of Activities associated with a Campaign
+    - ``cloudcix.api.contact.campaign_activity.create``
+        - Allows the User to create an Activity related to a Campaign
+          and an Activity Type.
+    - ``cloudcix.api.contact.campaign_activity.read``
+        - Returns the details of a relation between a Campaign and an
+          Activity
+    - ``cloudcix.api.contact.campaign_activity.update``
+        - Allows the User to update the relation between one Campaign
+          and one Activity
+    - ``cloudcix.api.contact.campaign_activity.delete``
+        - Allows the User to delete an Activity related to a Campaign
+
+Campaign Contact
+^^^^^^^^^^^^^^^^
+This service manages the many to many links between Campaigns and contact
+
+**Basic Usage**: ``cloudcix.api.contact.campaign_contact.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.campaign_contact.create``
+        - Allows the User to create a relation between a Campaign and
+          a Contact
+    - ``cloudcix.api.contact.campaign_contact.update``
+        - Allows the User to update the details of a relation between
+          a Campaign and a Contact
+    - ``cloudcix.api.contact.campaign_contact.delete``
+        - Allows the User to delete a relation between a Campaign and a
+          Contact
+
+Chatbot
+^^^^^^^
+This service allows for the management of your Members CloudCIX Chatbots
+
+**Basic Usage**: ``cloudcix.api.contact.chatbot.<method>``
+
+Available Methods
+    - None
+
+Contact
+^^^^^^^
+This service allows for management of contact
+
+contact are people that are potential customers
+
+**Basic Usage**: ``cloudcix.api.contact.contact.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.contact.list``
+        - Returns a list of all contact associated with the Member of
+          the User calling the method
+    - ``cloudcix.api.contact.contact.create``
+        - Allows the User to create a new Contact record
+    - ``cloudcix.api.contact.contact.read``
+        - Returns the details of a given Contact record including a
+          list of Campaigns and Groups to which that Contact belongs
+    - ``cloudcix.api.contact.contact.update``
+        - Allows the User to update a Contact record
+    - ``cloudcix.api.contact.contact.delete``
+        - Allows the User to delete a Contact record, including any
+          links between that Contact and any Campaigns or Groups
+
+Conversation
+^^^^^^^^^^^^^
+This service allows for the review of conversations clients have had with a Chatbot
+
+**Basic Usage**: ``cloudcix.api.contact.conversation.<method>``
+
+Available Methods
+    - None
+
+Corpus
+^^^^^^^
+A Corpus is a collection of data sources.  
+
+A Chatbot will draw information from one Corpus when generating answers for Users
+
+The corpus is utilised to generate the embeddings for a Chatbot.
+
+**Basic Usage**: ``cloudcix.api.contact.corpus.<method>``
+
+Available Methods
+    - None
+
+Corpus Data
+^^^^^^^^^^^^
+This service is a hyperlink for a Corpus Data record in a Corpus. 
+
+**Basic Usage**: ``cloudcix.api.contact.corpus_data.<method>``
+
+Available Methods
+    - None
+
+Group
+^^^^^
+This service allows for management of Groups
+
+Groups are many to many classifications of contact
+
+**Basic Usage**: ``cloudcix.api.contact.group.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.group.list``
+        - Returns a list of all Groups belonging to the Member of the
+          User calling the method
+    - ``cloudcix.api.contact.group.create``
+        - Allows the User to create a new Group record
+    - ``cloudcix.api.contact.group.read``
+        - Returns a Group record with all its details
+    - ``cloudcix.api.contact.group.update``
+        - Allows the User to update the details of a Group record
+    - ``cloudcix.api.contact.group.delete``
+        - Allows the User to delete a Group record, including any links
+          between that Group and any Contact
+
+Group Contact
+^^^^^^^^^^^^^
+This service lets a User assign Contacts to any number of Groups
+
+**Basic Usage**: ``cloudcix.api.contact.group_contact.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.group_contact.create``
+        - Allows the User to create a relation between a Group and a
+          Contact
+    - ``cloudcix.api.contact.group_contact.delete``
+        - Allows the User to delete a relation between a Group and a
+          Contact
+
+Opportunity
+^^^^^^^^^^^
+This service allows for the management of Opportunity records
+
+Opportunities are the estimated chances of getting into business with one more
+contact with its possible marketing value
+
+**Basic Usage**: ``cloudcix.api.contact.opportunity.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.opportunity.list``
+        - Return a list of all Opportunity records associated with the
+          User calling the method
+    - ``cloudcix.api.contact.opportunity.create``
+        - Allows the User to create a new Opportunity record
+    - ``cloudcix.api.contact.opportunity.read``
+        - Returns an Opportunity record along with all its details
+    - ``cloudcix.api.contact.opportunity.update``
+        - Allows the User to update the details of an Opportunity
+          record
+    - ``cloudcix.api.contact.opportunity.delete``
+        - Allows the User to delete an Opportunity record
+
+Opportunity Contact
+^^^^^^^^^^^^^^^^^^^
+This service allows Users to manage links between Opportunities and Contacts
+
+There is a many-to-many relation between Opportunities and Contacts
+
+**Basic Usage**: ``cloudcix.api.contact.opportunity_contact.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.opportunity_contact.create``
+        - Allows the User to create a relation between an Opportunity
+          and a Contact
+    - ``cloudcix.api.contact.opportunity_contact.delete``
+        - Allows the User to delete a relation between an Opportunity
+          and a Contact
+
+Opportunity History
+^^^^^^^^^^^^^^^^^^^
+This service allows Users to log updates on an Opportunity, as well as sending
+emails to the associated contact
+
+**Basic Usage**: ``cloudcix.api.contact.opportunity_history.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.opportunity_history.list``
+        - Returns a list of history log entries for an Opportunity
+    - ``cloudcix.api.contact.opportunity_history.create``
+        - Allows the User to create a new history log for an
+          Opportunity
+
+Q and A
+^^^^^^^
+A q_and_a record contains one question asked by a user and the response generated by a Chatbot.
+
+An ordered collection of q_and_a records form a Conversation
+
+**Basic Usage**: ``cloudcix.api.contact.q_and_a.<method>``
+
+Available Methods
+    - None
+
+Reference
+^^^^^^^^^^
+This service records what data sources from the Corpus were used to construct the answer part of q_and_a records.
+
+**Basic Usage**: ``cloudcix.api.contact.reference.<method>``
+
+Available Methods
+    - None
+
