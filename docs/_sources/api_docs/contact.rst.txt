@@ -62,6 +62,16 @@ Available Methods
         - An Activity Type can only be deleted if there are no
           Activities linked to the Activity Type
 
+Auth
+^^^^^^^
+This service allows a user to authenticate a Contact in their Member to login to their Chatbots.
+
+**Basic Usage**: ``cloudcix.api.contact.auth.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.auth.create``
+        - Returns a 200 if sent email and password are valid, otherwise a 400 status code is returned.
+
 Campaign
 ^^^^^^^^
 This service allows for management of Campaigns

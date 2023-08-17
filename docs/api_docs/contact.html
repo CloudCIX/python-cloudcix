@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.2 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.3 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.2
+                0.10.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -184,6 +184,23 @@ record</p></li>
 <li><p>Allows the User to delete one Activity Type record.</p></li>
 <li><p>An Activity Type can only be deleted if there are no
 Activities linked to the Activity Type</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="auth">
+<h2>Auth<a class="headerlink" href="#auth" title="Permalink to this heading"></a></h2>
+<p>This service allows a user to authenticate a Contact in their Member to login to their Chatbots.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.auth.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.auth.create</span></code></dt><dd><ul>
+<li><p>Returns a 200 if sent email and password are valid, otherwise a 400 status code is returned.</p></li>
 </ul>
 </dd>
 </dl>
