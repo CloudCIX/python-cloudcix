@@ -32,10 +32,20 @@ Circuit
 
 .. include:: api_docs/circuit.rst
 
+Contact
+~~~~~~~~
+
+.. include:: api_docs/contact.rst
+
 Contacts
 ~~~~~~~~
 
 .. include:: api_docs/contacts.rst
+
+DCIM
+~~~~~
+
+.. include:: api_docs/dcim.rst
 
 Financial
 ~~~~~~~~~
@@ -52,6 +62,11 @@ Membership
 ~~~~~~~~~~
 
 .. include:: api_docs/membership.rst
+
+NLP
+~~~~~
+
+.. include:: api_docs/nlp.rst
 
 OTP
 ~~~
