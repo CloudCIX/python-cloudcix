@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.4 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.4
+                0.10.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -85,9 +85,9 @@
 available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h1>
+<h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
 <section id="bucket">
-<h2>Bucket<a class="headerlink" href="#bucket" title="Permalink to this heading"></a></h2>
+<h2>Bucket<a class="headerlink" href="#bucket" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Buckets in the MinIO object store.</p>
 <p>For each method request the following paramaters must be sent:
 - <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
@@ -148,7 +148,7 @@ available to addresses linked to a Vault Cloud Region where a MinIO instance has
 </div>
 </section>
 <section id="object">
-<h2>Object<a class="headerlink" href="#object" title="Permalink to this heading"></a></h2>
+<h2>Object<a class="headerlink" href="#object" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Objects in the MinIO object store.</p>
 <p>For each method request the following paramaters must be sent:
 - <code class="docutils literal notranslate"><span class="pre">region_name</span></code></p>
@@ -242,7 +242,7 @@ available to addresses linked to a Vault Cloud Region where a MinIO instance has
 </div>
 </section>
 <section id="region">
-<h2>Region<a class="headerlink" href="#region" title="Permalink to this heading"></a></h2>
+<h2>Region<a class="headerlink" href="#region" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Regions in the Vault Application.</p>
 <p>A Region is a public cloud address that has a MinIO instance set up for
 linked addresses to utilize.</p>
@@ -261,7 +261,7 @@ linked addresses to utilize.</p>
 </dl>
 </section>
 <section id="share">
-<h2>Share<a class="headerlink" href="#share" title="Permalink to this heading"></a></h2>
+<h2>Share<a class="headerlink" href="#share" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Shares in the Vault Application.</p>
 <p>A Share record holds the permission an address can have on a path in your MinIO bucket or to a specific object. A Share
 allows an Address to access Objects owned by another Address. By default an address is granted read permissions.</p>
@@ -313,7 +313,7 @@ specified path.</p></li>
 </dl>
 </section>
 <section id="shared-bucket">
-<h2>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Permalink to this heading"></a></h2>
+<h2>Shared Bucket<a class="headerlink" href="#shared-bucket" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Shared Buckets in the MinIO object store.</p>
 <p>A user can read and delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
 bucket has given them.</p>
@@ -369,7 +369,7 @@ bucket has given them.</p>
 </div>
 </section>
 <section id="shared-object">
-<h2>Shared Object<a class="headerlink" href="#shared-object" title="Permalink to this heading"></a></h2>
+<h2>Shared Object<a class="headerlink" href="#shared-object" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Shared Objects in the MinIO object store.</p>
 <p>A user can read, upload or delete a linked addresses MinIO’s Bucket based on the Share record the owner of the MinIO
 Object has given them.</p>

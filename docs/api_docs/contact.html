@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.4 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.4
+                0.10.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -88,9 +88,9 @@ purpose address book.</p>
 <p>It is also a management system for the management of your CloudCIX Chatbots</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contact.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h1>
+<h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
 <section id="activity">
-<h2>Activity<a class="headerlink" href="#activity" title="Permalink to this heading"></a></h2>
+<h2>Activity<a class="headerlink" href="#activity" title="Link to this heading"></a></h2>
 <p>This service allows the user to manage the various Activities</p>
 <p>An Activity is a sub category of an Activity Type</p>
 <p>Each Activity has only one ActivityType but an ActivityType may have many
@@ -145,7 +145,7 @@ associated with it</p></li>
 </dl>
 </section>
 <section id="activity-type">
-<h2>Activity Type<a class="headerlink" href="#activity-type" title="Permalink to this heading"></a></h2>
+<h2>Activity Type<a class="headerlink" href="#activity-type" title="Link to this heading"></a></h2>
 <p>This service allows the User to manage Activity Types</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -193,7 +193,7 @@ Activities linked to the Activity Type</p></li>
 </dl>
 </section>
 <section id="auth">
-<h2>Auth<a class="headerlink" href="#auth" title="Permalink to this heading"></a></h2>
+<h2>Auth<a class="headerlink" href="#auth" title="Link to this heading"></a></h2>
 <p>This service allows a user to authenticate a Contact in their Member to login to their Chatbots.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.auth.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -210,7 +210,7 @@ Activities linked to the Activity Type</p></li>
 </dl>
 </section>
 <section id="campaign">
-<h2>Campaign<a class="headerlink" href="#campaign" title="Permalink to this heading"></a></h2>
+<h2>Campaign<a class="headerlink" href="#campaign" title="Link to this heading"></a></h2>
 <p>This service allows for management of Campaigns</p>
 <p>Campaigns are a many to many classification of contact</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign.&lt;method&gt;</span></code></p>
@@ -259,7 +259,7 @@ the links between the Campaign and any contact.</p></li>
 </dl>
 </section>
 <section id="campaign-activity">
-<h2>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Permalink to this heading"></a></h2>
+<h2>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Link to this heading"></a></h2>
 <p>This service manages Campaign Activities related to a Campaign and an Activity</p>
 <p>The Campaign Activity allows Users to organize Activities into further
 subcategories</p>
@@ -309,7 +309,7 @@ and one Activity</p></li>
 </dl>
 </section>
 <section id="campaign-contact">
-<h2>Campaign Contact<a class="headerlink" href="#campaign-contact" title="Permalink to this heading"></a></h2>
+<h2>Campaign Contact<a class="headerlink" href="#campaign-contact" title="Link to this heading"></a></h2>
 <p>This service manages the many to many links between Campaigns and contact</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -343,7 +343,7 @@ Contact</p></li>
 </dl>
 </section>
 <section id="chatbot">
-<h2>Chatbot<a class="headerlink" href="#chatbot" title="Permalink to this heading"></a></h2>
+<h2>Chatbot<a class="headerlink" href="#chatbot" title="Link to this heading"></a></h2>
 <p>This service allows for the management of your Members CloudCIX Chatbots</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -354,7 +354,7 @@ Contact</p></li>
 </dl>
 </section>
 <section id="contact">
-<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this heading"></a></h2>
+<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading"></a></h2>
 <p>This service allows for management of contact</p>
 <p>contact are people that are potential customers</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.contact.&lt;method&gt;</span></code></p>
@@ -403,7 +403,7 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dl>
 </section>
 <section id="conversation">
-<h2>Conversation<a class="headerlink" href="#conversation" title="Permalink to this heading"></a></h2>
+<h2>Conversation<a class="headerlink" href="#conversation" title="Link to this heading"></a></h2>
 <p>This service allows for the review of conversations clients have had with a Chatbot</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -414,7 +414,7 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dl>
 </section>
 <section id="corpus">
-<h2>Corpus<a class="headerlink" href="#corpus" title="Permalink to this heading"></a></h2>
+<h2>Corpus<a class="headerlink" href="#corpus" title="Link to this heading"></a></h2>
 <p>A Corpus is a collection of data sources.</p>
 <p>A Chatbot will draw information from one Corpus when generating answers for Users</p>
 <p>The corpus is utilised to generate the embeddings for a Chatbot.</p>
@@ -427,7 +427,7 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dl>
 </section>
 <section id="corpus-data">
-<h2>Corpus Data<a class="headerlink" href="#corpus-data" title="Permalink to this heading"></a></h2>
+<h2>Corpus Data<a class="headerlink" href="#corpus-data" title="Link to this heading"></a></h2>
 <p>This service is a hyperlink for a Corpus Data record in a Corpus.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus_data.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -438,7 +438,7 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dl>
 </section>
 <section id="group">
-<h2>Group<a class="headerlink" href="#group" title="Permalink to this heading"></a></h2>
+<h2>Group<a class="headerlink" href="#group" title="Link to this heading"></a></h2>
 <p>This service allows for management of Groups</p>
 <p>Groups are many to many classifications of contact</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.group.&lt;method&gt;</span></code></p>
@@ -486,7 +486,7 @@ between that Group and any Contact</p></li>
 </dl>
 </section>
 <section id="group-contact">
-<h2>Group Contact<a class="headerlink" href="#group-contact" title="Permalink to this heading"></a></h2>
+<h2>Group Contact<a class="headerlink" href="#group-contact" title="Link to this heading"></a></h2>
 <p>This service lets a User assign Contacts to any number of Groups</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.group_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -512,7 +512,7 @@ Contact</p></li>
 </dl>
 </section>
 <section id="opportunity">
-<h2>Opportunity<a class="headerlink" href="#opportunity" title="Permalink to this heading"></a></h2>
+<h2>Opportunity<a class="headerlink" href="#opportunity" title="Link to this heading"></a></h2>
 <p>This service allows for the management of Opportunity records</p>
 <p>Opportunities are the estimated chances of getting into business with one more
 contact with its possible marketing value</p>
@@ -561,7 +561,7 @@ record</p></li>
 </dl>
 </section>
 <section id="opportunity-contact">
-<h2>Opportunity Contact<a class="headerlink" href="#opportunity-contact" title="Permalink to this heading"></a></h2>
+<h2>Opportunity Contact<a class="headerlink" href="#opportunity-contact" title="Link to this heading"></a></h2>
 <p>This service allows Users to manage links between Opportunities and Contacts</p>
 <p>There is a many-to-many relation between Opportunities and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.opportunity_contact.&lt;method&gt;</span></code></p>
@@ -588,7 +588,7 @@ and a Contact</p></li>
 </dl>
 </section>
 <section id="opportunity-history">
-<h2>Opportunity History<a class="headerlink" href="#opportunity-history" title="Permalink to this heading"></a></h2>
+<h2>Opportunity History<a class="headerlink" href="#opportunity-history" title="Link to this heading"></a></h2>
 <p>This service allows Users to log updates on an Opportunity, as well as sending
 emails to the associated contact</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.opportunity_history.&lt;method&gt;</span></code></p>
@@ -614,7 +614,7 @@ Opportunity</p></li>
 </dl>
 </section>
 <section id="q-and-a">
-<h2>Q and A<a class="headerlink" href="#q-and-a" title="Permalink to this heading"></a></h2>
+<h2>Q and A<a class="headerlink" href="#q-and-a" title="Link to this heading"></a></h2>
 <p>A q_and_a record contains one question asked by a user and the response generated by a Chatbot.</p>
 <p>An ordered collection of q_and_a records form a Conversation</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.&lt;method&gt;</span></code></p>
@@ -626,7 +626,7 @@ Opportunity</p></li>
 </dl>
 </section>
 <section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this heading"></a></h2>
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
 <p>This service records what data sources from the Corpus were used to construct the answer part of q_and_a records.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.reference.&lt;method&gt;</span></code></p>
 <dl class="simple">

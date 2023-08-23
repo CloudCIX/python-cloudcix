@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.4 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.4
+                0.10.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -90,9 +90,9 @@ within the CloudCIX company</p>
 <p>Projects in the Repository are grouped by the owning Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h1>
+<h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
 <section id="application">
-<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading"></a></h2>
+<h2>Application<a class="headerlink" href="#application" title="Link to this heading"></a></h2>
 <p>Every Member can have their own set of Applications</p>
 <p>An Application contains one or more Services</p>
 <p>This service allows the User to manage Applications</p>
@@ -139,7 +139,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="dto">
-<h2>DTO<a class="headerlink" href="#dto" title="Permalink to this heading"></a></h2>
+<h2>DTO<a class="headerlink" href="#dto" title="Link to this heading"></a></h2>
 <p>A DTO, or Data Transfer Object, can be used as both Request and Response objects</p>
 <p>DTOs are used to build complex objects</p>
 <p>This service allows the User to manage DTO instances</p>
@@ -186,7 +186,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="dto-parameter">
-<h2>DTO Parameter<a class="headerlink" href="#dto-parameter" title="Permalink to this heading"></a></h2>
+<h2>DTO Parameter<a class="headerlink" href="#dto-parameter" title="Link to this heading"></a></h2>
 <p>A DTO has one or more parameters</p>
 <p>This service allows the User to manage parameters belonging to different DTOs</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.dto_parameter.&lt;method&gt;</span></code></p>
@@ -232,7 +232,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="exception-code">
-<h2>Exception Code<a class="headerlink" href="#exception-code" title="Permalink to this heading"></a></h2>
+<h2>Exception Code<a class="headerlink" href="#exception-code" title="Link to this heading"></a></h2>
 <p>An Exception Code is a mapping of an error code to an error message</p>
 <p>Error codes are returned by a Method when an error occurs, and this service provides a mapping of an error code to its message</p>
 <p>This service allows the User to manage Exception Codes</p>
@@ -275,7 +275,7 @@ within the CloudCIX company</p>
 </dl>
 </section>
 <section id="language-exception-code">
-<h2>Language Exception Code<a class="headerlink" href="#language-exception-code" title="Permalink to this heading"></a></h2>
+<h2>Language Exception Code<a class="headerlink" href="#language-exception-code" title="Link to this heading"></a></h2>
 <p>This service allows the User to manage translations for existing Exception Codes</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.language_exception_code.&lt;method&gt;</span></code></p>
 <dl>
@@ -327,7 +327,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="member">
-<h2>Member<a class="headerlink" href="#member" title="Permalink to this heading"></a></h2>
+<h2>Member<a class="headerlink" href="#member" title="Link to this heading"></a></h2>
 <p>Every Member can have their own set of Applications</p>
 <p>Only one <code class="docutils literal notranslate"><span class="pre">Repository.Application</span></code> should exist for every <code class="docutils literal notranslate"><span class="pre">membership.Member</span></code></p>
 <div class="admonition note">
@@ -357,7 +357,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="method">
-<h2>Method<a class="headerlink" href="#method" title="Permalink to this heading"></a></h2>
+<h2>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h2>
 <p>Every Service has one or more methods</p>
 <p>This methods are an HTTP verb mapped to CRUDL:</p>
 <table class="docutils align-default">
@@ -434,7 +434,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="method-parameter">
-<h2>Method Parameter<a class="headerlink" href="#method-parameter" title="Permalink to this heading"></a></h2>
+<h2>Method Parameter<a class="headerlink" href="#method-parameter" title="Link to this heading"></a></h2>
 <p>Every Method has a set of parameters which conform the Request and Response objects</p>
 <p>This service allows the User to manage the Parameters for a Method</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.method_parameter.&lt;method&gt;</span></code></p>
@@ -480,7 +480,7 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dl>
 </section>
 <section id="service">
-<h2>Service<a class="headerlink" href="#service" title="Permalink to this heading"></a></h2>
+<h2>Service<a class="headerlink" href="#service" title="Link to this heading"></a></h2>
 <p>An Application has one or more Services</p>
 <p>A Service has an endpoint which is defined to tell other developers the path to consume it</p>
 <p>This service allows the User to manage Service records</p>
