@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="../_static/documentation_options.js?v=ed973197"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.5
+                0.10.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -194,7 +194,7 @@ Activities linked to the Activity Type</p></li>
 </section>
 <section id="auth">
 <h2>Auth<a class="headerlink" href="#auth" title="Link to this heading"></a></h2>
-<p>This service allows a user to authenticate a Contact in their Member to login to their Chatbots.</p>
+<p>This service allows a User to authenticate a Contact in their Member to login to their Chatbots.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.auth.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -348,7 +348,35 @@ Contact</p></li>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Chatbots associated with the Member of
+the User calling the method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update a Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -404,35 +432,82 @@ links between that Contact and any Campaigns or Groups</p></li>
 </section>
 <section id="conversation">
 <h2>Conversation<a class="headerlink" href="#conversation" title="Link to this heading"></a></h2>
-<p>This service allows for the review of conversations clients have had with a Chatbot</p>
+<p>This service allows for the review of conversations the User’s Member Contacts have
+had with their Chatbot</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Converstaions that the User’s Member’s Contact has
+had with their Chatbot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.create</span></code></dt><dd><ul>
+<li><p>Allows the Chatbot Agent User to create a new Conversation record the Contact
+started with their Chatbot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Conversation record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="corpus">
 <h2>Corpus<a class="headerlink" href="#corpus" title="Link to this heading"></a></h2>
-<p>A Corpus is a collection of data sources.</p>
-<p>A Chatbot will draw information from one Corpus when generating answers for Users</p>
-<p>The corpus is utilised to generate the embeddings for a Chatbot.</p>
+<p>This service represents a URL pointing to a public resource for a Corpus record in a Chatbot.</p>
+<p>The Corpora of a Chatbot will be be converted to vector embeddings before being used by
+the Chatbot.</p>
+<p>The Chatbot will draw information from the Corpora embeddings when generating answers for Contacts.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Corpora belonging to a Chatbot in a Users Member.</p></li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="corpus-data">
-<h2>Corpus Data<a class="headerlink" href="#corpus-data" title="Link to this heading"></a></h2>
-<p>This service is a hyperlink for a Corpus Data record in a Corpus.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus_data.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Corpus record for the specified Chatbot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.read</span></code></dt><dd><ul>
+<li><p>Returns a Corpus record with all its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a Corpus record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a Corpus record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -615,23 +690,35 @@ Opportunity</p></li>
 </section>
 <section id="q-and-a">
 <h2>Q and A<a class="headerlink" href="#q-and-a" title="Link to this heading"></a></h2>
-<p>A q_and_a record contains one question asked by a user and the response generated by a Chatbot.</p>
-<p>An ordered collection of q_and_a records form a Conversation</p>
+<p>A q_and_a record contains one question asked by a Contact and the response generated by a Chatbot
+as the answer in a Conversation.</p>
+<p>An ordered collection of q_and_a records form a Conversation the Contact had with a specific Chatbot.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Question and Answers that a Contact had in the speciified
+Conversation with a Chatbot</p></li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
-<p>This service records what data sources from the Corpus were used to construct the answer part of q_and_a records.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.reference.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.create</span></code></dt><dd><ul>
+<li><p>Allows the Chatbot Agent User to create a new QandA record to record the question asked
+and the answer given, including references if any</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given QandA record including the references</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>

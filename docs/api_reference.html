@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.10.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="_static/documentation_options.js?v=ed973197"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.5
+                0.10.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -93,14 +93,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#id7">Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#conversation">Conversation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#corpus">Corpus</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#corpus-data">Corpus Data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#group">Group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#group-contact">Group Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opportunity">Opportunity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opportunity-contact">Opportunity Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opportunity-history">Opportunity History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#q-and-a">Q and A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
 </ul>
@@ -209,12 +207,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#id28">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id29">Allocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#asn">ASN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attach">Attach</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backup-history">Backup History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#capacity">Capacity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ceph">Ceph</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-blacklist">CIX Blacklist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cix-whitelist">CIX Whitelist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cloud">Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detach">Detach</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#device">Device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#device-type">Device Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#domain">Domain</a></li>
@@ -1107,7 +1108,7 @@ Activities linked to the Activity Type</p></li>
 </section>
 <section id="auth">
 <h4>Auth<a class="headerlink" href="#auth" title="Link to this heading"></a></h4>
-<p>This service allows a user to authenticate a Contact in their Member to login to their Chatbots.</p>
+<p>This service allows a User to authenticate a Contact in their Member to login to their Chatbots.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.auth.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
@@ -1261,7 +1262,35 @@ Contact</p></li>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Chatbots associated with the Member of
+the User calling the method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.chatbot.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update a Chatbot record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -1317,35 +1346,82 @@ links between that Contact and any Campaigns or Groups</p></li>
 </section>
 <section id="conversation">
 <h4>Conversation<a class="headerlink" href="#conversation" title="Link to this heading"></a></h4>
-<p>This service allows for the review of conversations clients have had with a Chatbot</p>
+<p>This service allows for the review of conversations the User’s Member Contacts have
+had with their Chatbot</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Converstaions that the User’s Member’s Contact has
+had with their Chatbot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.create</span></code></dt><dd><ul>
+<li><p>Allows the Chatbot Agent User to create a new Conversation record the Contact
+started with their Chatbot</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.conversation.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Conversation record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="corpus">
 <h4>Corpus<a class="headerlink" href="#corpus" title="Link to this heading"></a></h4>
-<p>A Corpus is a collection of data sources.</p>
-<p>A Chatbot will draw information from one Corpus when generating answers for Users</p>
-<p>The corpus is utilised to generate the embeddings for a Chatbot.</p>
+<p>This service represents a URL pointing to a public resource for a Corpus record in a Chatbot.</p>
+<p>The Corpora of a Chatbot will be be converted to vector embeddings before being used by
+the Chatbot.</p>
+<p>The Chatbot will draw information from the Corpora embeddings when generating answers for Contacts.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Corpora belonging to a Chatbot in a Users Member.</p></li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="corpus-data">
-<h4>Corpus Data<a class="headerlink" href="#corpus-data" title="Link to this heading"></a></h4>
-<p>This service is a hyperlink for a Corpus Data record in a Corpus.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus_data.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Corpus record for the specified Chatbot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.read</span></code></dt><dd><ul>
+<li><p>Returns a Corpus record with all its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a Corpus record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a Corpus record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -1528,23 +1604,35 @@ Opportunity</p></li>
 </section>
 <section id="q-and-a">
 <h4>Q and A<a class="headerlink" href="#q-and-a" title="Link to this heading"></a></h4>
-<p>A q_and_a record contains one question asked by a user and the response generated by a Chatbot.</p>
-<p>An ordered collection of q_and_a records form a Conversation</p>
+<p>A q_and_a record contains one question asked by a Contact and the response generated by a Chatbot
+as the answer in a Conversation.</p>
+<p>An ordered collection of q_and_a records form a Conversation the Contact had with a specific Chatbot.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Question and Answers that a Contact had in the speciified
+Conversation with a Chatbot</p></li>
 </ul>
 </dd>
 </dl>
-</section>
-<section id="reference">
-<h4>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h4>
-<p>This service records what data sources from the Corpus were used to construct the answer part of q_and_a records.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.reference.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><p>None</p></li>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.create</span></code></dt><dd><ul>
+<li><p>Allows the Chatbot Agent User to create a new QandA record to record the question asked
+and the answer given, including references if any</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given QandA record including the references</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -4275,6 +4363,23 @@ oldest transaction if none exists) and the given transaction date</p>
 </dd>
 </dl>
 </section>
+<section id="attach">
+<h4>Attach<a class="headerlink" href="#attach" title="Link to this heading"></a></h4>
+<p>This service lets a user link two Resources that they own</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.attach.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.attach.update</span></code></dt><dd><ul>
+<li><p>The User must supply the IDs of two Resources that will be linked. The virtual infrastructure will then be visible to each other.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="backup">
 <h4>Backup<a class="headerlink" href="#backup" title="Link to this heading"></a></h4>
 <p>This service provides methods used to manage a Backup of a VM.</p>
@@ -4341,6 +4446,44 @@ oldest transaction if none exists) and the given transaction date</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.capacity.list</span></code></dt><dd><ul>
 <li><p>This method lists the VMs with the largest combination of compute resources in the region</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="ceph">
+<h4>Ceph<a class="headerlink" href="#ceph" title="Link to this heading"></a></h4>
+<p>This service lets a User manage Ceph Drives for network-attached storage.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to list all the Ceph Drives that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Ceph Drive in a Project that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve the information of a given Ceph Drive.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a given Ceph Drive.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4421,6 +4564,23 @@ oldest transaction if none exists) and the given transaction date</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.cloud.update</span></code></dt><dd><ul>
 <li><p>This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="detach">
+<h4>Detach<a class="headerlink" href="#detach" title="Link to this heading"></a></h4>
+<p>This service lets a user un-link two Resources that they own</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.detach.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.detach.update</span></code></dt><dd><ul>
+<li><p>The User must supply the ID of the Resources to detach</p></li>
 </ul>
 </dd>
 </dl>

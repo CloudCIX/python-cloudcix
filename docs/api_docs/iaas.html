@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.10.5 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.10.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=da6fbbfd"></script>
+        <script src="../_static/documentation_options.js?v=ed973197"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.5
+                0.10.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -194,6 +194,23 @@
 </dd>
 </dl>
 </section>
+<section id="attach">
+<h2>Attach<a class="headerlink" href="#attach" title="Link to this heading"></a></h2>
+<p>This service lets a user link two Resources that they own</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.attach.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.attach.update</span></code></dt><dd><ul>
+<li><p>The User must supply the IDs of two Resources that will be linked. The virtual infrastructure will then be visible to each other.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="backup">
 <h2>Backup<a class="headerlink" href="#backup" title="Link to this heading"></a></h2>
 <p>This service provides methods used to manage a Backup of a VM.</p>
@@ -260,6 +277,44 @@
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.capacity.list</span></code></dt><dd><ul>
 <li><p>This method lists the VMs with the largest combination of compute resources in the region</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="ceph">
+<h2>Ceph<a class="headerlink" href="#ceph" title="Link to this heading"></a></h2>
+<p>This service lets a User manage Ceph Drives for network-attached storage.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to list all the Ceph Drives that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new Ceph Drive in a Project that they own.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve the information of a given Ceph Drive.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ceph.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a given Ceph Drive.</p></li>
 </ul>
 </dd>
 </dl>
@@ -340,6 +395,23 @@
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.cloud.update</span></code></dt><dd><ul>
 <li><p>This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="detach">
+<h2>Detach<a class="headerlink" href="#detach" title="Link to this heading"></a></h2>
+<p>This service lets a user un-link two Resources that they own</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.detach.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.detach.update</span></code></dt><dd><ul>
+<li><p>The User must supply the ID of the Resources to detach</p></li>
 </ul>
 </dd>
 </dl>

@@ -59,6 +59,16 @@ Available Methods
         - ASNs can only be deleted when they are empty.
         - This method can only be run by CIX Users.
 
+Attach
+^^^^^^
+This service lets a user link two Resources that they own
+
+**Basic Usage**: ``cloudcix.api.IAAS.attach.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.attach.update``
+        - The User must supply the IDs of two Resources that will be linked. The virtual infrastructure will then be visible to each other.
+
 Backup
 ^^^^^^^^
 This service provides methods used to manage a Backup of a VM.
@@ -97,6 +107,22 @@ This service lets a User list the VMs with the largest capacity that they can bu
 Available Methods
     - ``cloudcix.api.IAAS.capacity.list``
         - This method lists the VMs with the largest combination of compute resources in the region
+
+Ceph
+^^^^
+This service lets a User manage Ceph Drives for network-attached storage.
+
+**Basic Usage**: ``cloudcix.api.IAAS.ceph.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.ceph.list``
+        - This method allows the User to list all the Ceph Drives that they own.
+    - ``cloudcix.api.IAAS.ceph.create``
+        - This method allows the User to create a new Ceph Drive in a Project that they own.
+    - ``cloudcix.api.IAAS.ceph.read``
+        - This method allows the User to retrieve the information of a given Ceph Drive.
+    - ``cloudcix.api.IAAS.ceph.update``
+        - This method allows the User to update the details of a given Ceph Drive.
 
 CIX Blacklist
 ^^^^^^^^^^^^^
@@ -137,6 +163,16 @@ Available Methods
         - This method returns all of the details for a Project, including all of the infrastructure available.
     - ``cloudcix.api.IAAS.cloud.update``
         - This method allows the User to update a Cloud Project, simultaneously updating existing infrastructure as well as adding new infrastructure to an existing Project, all in a single request.
+
+Detach
+^^^^^^
+This service lets a user un-link two Resources that they own
+
+**Basic Usage**: ``cloudcix.api.IAAS.detach.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.detach.update``
+        - The User must supply the ID of the Resources to detach
 
 Device
 ^^^^^^
