@@ -1,0 +1,74 @@
+Primitives Reference
+====================
+
+Wrapper around the python requests module for ease of interaction with all CloudCIX primitves
+
+Basic usage: ``cloudcix.primitives.<primitive>.<verb>``
+
+
+List of Supported Primitives
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - `podnet/global_network`             # ethernet configuration(/etc/netplan/00-master_network.yaml) on PodNet
+   - `podnet/global_firewall`            # nftables configuration(/etc/nftables.conf) on PodNet
+   - `podnet/namespace_network`          # netns namespace ip commands on PodNet
+   - `podnet/namespace_firewall`         # netns namespace nft config on PodNet
+   - `podnet/subnet_bridge`              # floating subnet bridge, on Podnet only
+   - `podnet/vpns2s`                     # strongswan site to site vpn setup on PodNet
+   - `podnet/vpndyn`                     # Wireguard dynamic vpn setup on PodNet
+   - `podnet/object`                     # Nftables Address objects defined on PodNet to use in Firewall rules
+   - `kvm/privatebridge`                 # vlan bridges, on KVM/KVM-GPU hosts only
+   - `kvm/vm`                            # KVM Linux Virtual Machines
+   - `kvm/ceph`                          # KVM Linux Virtual Machines's Ceph
+   - `kvm/gpu`                           # KVM Linux Virtual Machines's GPU
+   - `kvm/snapshot`                      # KVM Linux Virtual Machines's Snapshots
+   - `kvm/backup`                        # KVM Linux Virtual Machines's Backup
+   - `kvm/vlan_bridge`                   # VLAN tagged bridges for Private networks(Project networks)
+   - `hyperv/vm`                         # HyperV Windows Virtual Machines
+   - `hyperv/snapshot`                   # HyperV Windows Virtual Machines's Snapshots
+   - `hyperv/backup`                     # HyperV Windows Virtual Machines's Backup
+
+Primitive Verbs: Map seven progress states to seven main verbs with allowed extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   | State | Name                |           Verb            |
+   | ----- | ------------------- | ------------------------- |
+   | 2     | Building            | build                     |
+   | 11    | Updating Running    | update_running            |
+   | 12    | Quiescing           | quiesce                   |
+   | 13    | Restarting          | restart                   |
+   | 14    | Scrub Prep          | scrub_prep                |
+   | 16    | Updating Quiesced   | update_quiesced,          |
+   |       |                     | update_quiesced_attach,   |
+   |       |                     | update_quiesced_detach    |
+   | 17    | Scrubbing           | scrub                     |
+
+
+
+More detailed usage information will be available under each of the above terms
+
+To see more information about the various verbs (build, upadate, scrub, etc.), see the :doc:`client` page
+
+For examples of a call for each of these methods, see the :doc:`examples` page
+
+
+Firewall
+~~~~~~~~
+
+.. include:: primitives_docs/firewall_rule.rst
+
+
+Network
+~~~~~~~
+
+.. include:: primitives_docs/network.rst
+
+
+Subnet Bridge
+~~~~~~~~~~~~~
+
+.. include:: primitives_docs/subnet_bridge.rst
+
+
+VPN
+~~~
+
+.. include:: primitives_docs/vpns2s.rst

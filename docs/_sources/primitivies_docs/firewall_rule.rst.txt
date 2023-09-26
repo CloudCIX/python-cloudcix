@@ -1,0 +1,111 @@
+The Firewall Rule primitives configures nftables rules on PodNets.
+
+It supports the Global firewall rules ie the PodNet hardware rules and
+Namespace firewall rules ie the Project's
+
+Services
+--------
+
+Global Firewall
+^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.firewall_global.<verb>``
+
+Namespace Firewall
+^^^^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.firewall_namespace.<verb>``
+
+
+Firewall Rule Writing
+~~~~~~~~~~~~~~~~~~~~~~
+   .. code-block:: python
+
+      firewall_rules = [
+        {
+          'action': 'drop',                    # string
+          'description': 'Drop all',           # string
+          'destination': ['any'],              # list of strings
+          'interface': {'in': '', 'out': ''},  # dictionary
+          'order': 1,                          # int
+          'port': ['any'],                     # list of strings
+          'protocol': 'any',                   # string
+          'source': ['any'],                   # list of strings
+          'version': 6,                        # int
+        },
+      ]
+
+- `action` can be one of the following:
+
+  * `'accept'` for allowing the traffic
+
+  * `'drop'`   for dropping the traffic
+
+- `destination` can be:
+
+  * `['any']`                    for all IPs
+
+  * `['8.8.8.8', '91.103.1.3']`  for a list of IPs
+
+- Interface is a `dict` object, firewall rule is
+
+  -  Inbound if only `in` key in dict
+
+  .. code-block:: python
+
+    interface = {'in': 'public'}  # Inbound
+
+  -  Outbound if only `out` key in dict
+
+  .. code-block:: python
+
+    interface = {'out': 'management'}  # Outbound
+
+  -  Forward if both `in` and `out` keys are in dict
+
+  .. code-block:: python
+
+    interface = {'in': 'public', 'out': 'private'}  # Forward
+
+ -  Value names of the keys in dict can only be one of the following:
+
+    - `public`
+    - `management`
+    - `private`
+
+
+- `port` can be:
+
+  - `['any']`           any: for all Ports
+  - `['10-20', '22']`   for a list of Ports and Port ranges
+
+- `protocol` can be one of the following:
+
+  - `'tcp'`
+  - `'udp'`
+  - `'icmp4'`
+  - `'icmp6'`
+  - `'dns'`
+  - `'vpn'`
+  - `'any'`  or an empty string
+
+- `source` can be:
+
+  - `['any']`                      any: for all IPs
+  - `['8.8.8.8', '91.103.1.3']`    for a list of IPs
+
+- `version` can be:
+
+  - `4`   for IPv4
+  - `6`   for IPv6
+
+
+Global Services
+~~~~~~~~~~~~~~~
+These are the list of services applied common accross all the firewall rules.
+
+Supported service `robosoc`, is a CloudCIX inhouse developed security service that generates massive list of
+abusive IPs from various firewall system sources. To know more about RoboSOC Blocklist
+please visit https://robosoc.io
+
+  .. code-block:: python
+
+     global_services = ['robosoc']

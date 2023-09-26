@@ -1,0 +1,41 @@
+Services
+--------
+
+Global Network
+^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.network_global.<verb>``
+
+Namespace Network
+^^^^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.network_namespace.<verb>``
+
+
+PodNet interface's data format
+   .. code-block:: python
+
+      'podnet_public_interface' = {
+          'name': 'eth0',                                                   #  interface name as on the PodNet
+          'ips': [                                                          #  List of
+              {'network_address': '192.168.0.2', 'prefixlen': '24'},        #  ip address with network_address
+              {'network_address': '2a02:2078:9::142', 'prefixlen': '126'},  #  and prefixlen
+          ],
+          'routes': [
+              {'to': 'default', 'via': '192.168.0.1'},
+              {'to': '::/0', 'via': '2a02:2078::141'},
+          ]
+      }
+
+
+Namespace object structure
+
+   .. code-block:: python
+
+      namespace = {
+          'name': 'P123',                           #  :type str, name of the Namespace
+          'networks': [{                            #  :type list, List of all the Namespace networks
+               'name': 'prj1001'                    #  :type str, name of the private bridge for this network
+               'vlan': '1001',                      #  :type str, vlan number of the network in string
+               'address_range': '192.168.0.1/24',   #  :type str, subnet_ip/subnet_mask
+           },
+           ],
+      }

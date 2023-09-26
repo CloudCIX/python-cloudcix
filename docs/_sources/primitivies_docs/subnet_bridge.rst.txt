@@ -1,0 +1,16 @@
+Services
+--------
+
+Subnet Bridge
+^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.subnet_bridge.<verb>``
+
+IPv4 Public subnet bridge data for Namespace
+
+   .. code-block:: python
+
+      public_subnet = {
+          'name': 'B123',                           #  :type str, Namespace's Floating subnet bridge name
+          'address_range': '185.49.65.127/24',      #  :type str, network_ip/mask
+          'gateway': '185.49.65.1',                 #  :type str, gateway of Floating subnet
+      }

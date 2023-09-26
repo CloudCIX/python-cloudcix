@@ -1,0 +1,7 @@
+Services
+--------
+
+VPNs2s
+^^^^^^^^^^^^^^^
+**Basic Usage**: ``cloudcix.primitives.vpns2s.<verb>``
+
