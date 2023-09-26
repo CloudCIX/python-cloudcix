@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; CloudCIX API Python Library 0.10.8 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.11.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=a1f5164c"></script>
+        <script src="_static/documentation_options.js?v=f3b36f1a"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.10.8
+                0.11.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -54,7 +54,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#required-settings">Required settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#primitives">Primitives</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
@@ -185,6 +188,149 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
 <p>See <a class="reference external" href="https://cloudcix.github.io/python-cloudcix/examples.html">here</a> for examples on how to use this library.</p>
+<section id="primitives">
+<h3>Primitives<a class="headerlink" href="#primitives" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>Naming</dt><dd><p>Driver name:   &lt;Resource&gt;.&lt;Verb&gt;
+Primitive name: &lt;Hardware&gt;[_Hardware].&lt;Verb&gt;
+-   Any Hardware naming cannot have underscore (_)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>List of Primitives:</dt><dd><ul class="simple">
+<li><p>podnet/global_network             # ethernet configuration(/etc/netplan/00-master_network.yaml) on PodNet</p></li>
+<li><p>podnet/global_firewall            # nftables configuration(/etc/nftables.conf) on PodNet</p></li>
+<li><p>podnet/namespace_network          # netns namespace ip commands on PodNet</p></li>
+<li><p>podnet/namespace_firewall         # netns namespace nft config on PodNet</p></li>
+<li><p>podnet/subnet_bridge              # floating subnet bridge, on Podnet only</p></li>
+<li><p>podnet/vpns2s                     # strongswan site to site vpn setup on PodNet</p></li>
+<li><p>podnet/vpndyn                     # Wireguard dynamic vpn setup on PodNet</p></li>
+<li><p>podnet/object                     # Nftables Address objects defined on PodNet to use in Firewall rules</p></li>
+<li><p>kvm/privatebridge                 # vlan bridges, on KVM/KVM-GPU hosts only</p></li>
+<li><p>kvm/vm                            # KVM Linux Virtual Machines</p></li>
+<li><p>kvm/ceph                          # KVM Linux Virtual Machines’s Ceph</p></li>
+<li><p>kvm/gpu                           # KVM Linux Virtual Machines’s GPU</p></li>
+<li><p>kvm/snapshot                      # KVM Linux Virtual Machines’s Snapshots</p></li>
+<li><p>kvm/backup                        # KVM Linux Virtual Machines’s Backup</p></li>
+<li><p>kvm/vlan_bridge                   # VLAN tagged bridges for Private networks(Project networks)</p></li>
+<li><p>hyperv/vm                         # HyperV Windows Virtual Machines</p></li>
+<li><p>hyperv/snapshot                   # HyperV Windows Virtual Machines’s Snapshots</p></li>
+<li><p>hyperv/backup                     # HyperV Windows Virtual Machines’s Backup</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Primitive Verbs: Map seven progress states to seven main verbs with allowed extensions</p>
+<blockquote>
+<div><p>2       Building              build
+11      Updating Running      update_running
+12      Quiescing             quiesce
+13      Restarting            restart
+14      Scrub Prep            scrub_prep
+16      Updating Quiesced     update_quiesced,</p>
+<blockquote>
+<div><p>update_quiesced_attach,
+update_quiesced_detach</p>
+</div></blockquote>
+<p>17      Scrubbing             scrub</p>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Firewall Rule Writing</dt><dd><dl class="simple">
+<dt>rule = {</dt><dd><p>‘action’: ‘drop’,                    # string
+‘description’: ‘Drop all’,           # string
+‘destination’: [‘any’],              # list of strings
+‘interface’: {‘in’: ‘’, ‘out’: ‘’},  # dictionary
+‘order’: 1,                          # int
+‘port’: [‘22’],                      # list of strings
+‘protocol’: ‘tcp’,                   # string
+‘source’: [‘any’],                   # list of strings
+‘version’: 6,                        # int</p>
+</dd>
+</dl>
+<p>}</p>
+<dl class="simple">
+<dt>action = ‘accept’  # for allowing the traffic</dt><dd><p>= ‘drop’    # for dropping the traffic</p>
+</dd>
+<dt>destination = []   # empty list for NO destination</dt><dd><p>= [‘any’]  # for all IPs
+= [‘8.8.8.8’, ‘91.103.1.3’]  # for list of IPs</p>
+</dd>
+</dl>
+<p># interface names can only be ‘public’, ‘management’ or ‘private’
+interface = {‘in’: ‘public’}  # Inbound</p>
+<blockquote>
+<div><p>= {‘out’: ‘management’}  # Outbound
+= {‘in’: ‘public’, ‘out’: ‘private’}  # Forward</p>
+</div></blockquote>
+<dl class="simple">
+<dt>port = [‘any’]          # any: for all Ports</dt><dd><p>= [‘10-20’, ‘22’]  # for list of Ports and Port ranges</p>
+</dd>
+</dl>
+<p>protocol = ‘tcp’ or ‘udp’ or ‘icmp4’ or ‘icmp6’ or ‘dns’ or ‘vpn’ or ‘any’ or ‘’</p>
+<dl class="simple">
+<dt>source = [‘any’]                    # any: for all IPs</dt><dd><p>= [‘8.8.8.8’, ‘91.103.1.3’]  # for list of IPs</p>
+</dd>
+<dt>version = 4   # IPv4</dt><dd><p>= 6  # IPv6</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>PodNet interface’s data format in validated.json files</dt><dd><dl>
+<dt>‘podnet_public_interface’ = {</dt><dd><p>‘name’: ‘eth0’,                                                   #  interface name as on the PodNet
+‘ips’: [                                                          #  List of</p>
+<blockquote>
+<div><p>{‘network_address’: ‘192.168.0.2’, ‘prefixlen’: ‘24’},        #  ip address with network_address
+{‘network_address’: ‘2a02:2078:9::142’, ‘prefixlen’: ‘126’},  #  and prefixlen</p>
+</div></blockquote>
+<p>],
+‘routes’: [</p>
+<blockquote>
+<div><p>{‘to’: ‘default’, ‘via’: ‘192.168.0.1’},
+{‘to’: ‘::/0’, ‘via’: ‘2a02:2078::141’},</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</li>
+<li><dl>
+<dt>Namespace data structure</dt><dd><dl>
+<dt>namespace = {</dt><dd><p>‘name’: ‘P123’,                           #  :type str, name of the Namespace
+‘networks’: [{                            #  :type list, List of all the Namespace networks</p>
+<blockquote>
+<div><blockquote>
+<div><p>‘name’: ‘prj1001’                    #  :type str, name of the private bridge for this network
+‘vlan’: ‘1001’,                      #  :type str, vlan number of the network in string
+‘address_range’: ‘192.168.0.1/24’,   #  :type str, subnet_ip/subnet_mask</p>
+</div></blockquote>
+<p>},
+],</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>IPv4 Public subnet bridge data for Namespace</dt><dd><dl class="simple">
+<dt>public_subnet = {</dt><dd><p>‘name’: ‘B123’,                           #  :type str, Namespace’s Floating subnet bridge name
+‘address_range’: ‘185.49.65.127/24’,      #  :type str, network_ip/mask
+‘gateway’: ‘185.49.65.1’,                 #  :type str, gateway of Floating subnet</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
 </section>
 </section>
 
