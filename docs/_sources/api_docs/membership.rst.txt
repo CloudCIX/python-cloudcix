@@ -64,6 +64,26 @@ Available Methods
 
 .. note:: Based on how the URLs for ``read`` and ``update`` are structured, it is required you pass ``pk=None`` to both of these methods
 
+API Key
+^^^^^^^^^^^^
+The API Key service allows for an Address to store multiple API Keys in CloudCIX Membership.
+
+**Basic Usage**: ``cloudcix.api.Membership.api_key.<method>``
+
+Available Methods
+    - ``cloudcix.api.Membership.api_key.list``
+        - Allows the User to get a list of API Keys.
+        - Local Users can list Public Keys for their own Address.
+        - A Global User can list API Keys for Addresses in their Member.
+    - ``cloudcix.api.Membership.api_key.create``
+        - Allows the User to create a new API Key record for their Address. 
+    - ``cloudcix.api.Membership.api_key.read``
+        - Allows the User to get the details of a given API Key.
+    - ``cloudcix.api.Membership.api_key.update``
+        - Allows the User to update the details of a given API Key in their Address.
+    - ``cloudcix.api.Membership.api_key.delete``
+        - Allows the User to delete a given API Key in their address.
+
 Country
 ^^^^^^^
 This service allows the User to get Country information in accordance with ISO 3166-1

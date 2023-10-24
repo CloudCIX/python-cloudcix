@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.12.11 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.12.12 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7152123b"></script>
+        <script src="../_static/documentation_options.js?v=46aa9851"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -33,7 +33,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.12.11
+                0.12.12
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -174,6 +174,53 @@
 <p class="admonition-title">Note</p>
 <p>Based on how the URLs for <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code> are structured, it is required you pass <code class="docutils literal notranslate"><span class="pre">pk=None</span></code> to both of these methods</p>
 </div>
+</section>
+<section id="api-key">
+<h2>API Key<a class="headerlink" href="#api-key" title="Link to this heading"></a></h2>
+<p>The API Key service allows for an Address to store multiple API Keys in CloudCIX Membership.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.list</span></code></dt><dd><ul>
+<li><p>Allows the User to get a list of API Keys.</p></li>
+<li><p>Local Users can list Public Keys for their own Address.</p></li>
+<li><p>A Global User can list API Keys for Addresses in their Member.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new API Key record for their Address.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.read</span></code></dt><dd><ul>
+<li><p>Allows the User to get the details of a given API Key.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of a given API Key in their Address.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.api_key.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete a given API Key in their address.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
 </section>
 <section id="country">
 <h2>Country<a class="headerlink" href="#country" title="Link to this heading"></a></h2>
