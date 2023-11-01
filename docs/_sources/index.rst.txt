@@ -12,7 +12,6 @@ CloudCIX API Python Module Documentation
 
    readme
    api_reference
-   primitives_reference
    auth
    client
    conf
