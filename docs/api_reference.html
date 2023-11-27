@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.1 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.2 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=b4617fb1"></script>
+        <script src="_static/documentation_options.js?v=8399f5db"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.1
+                0.13.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -83,11 +83,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id6">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#activity">Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#activity-type">Activity Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#auth">Auth</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#campaign">Campaign</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#campaign-activity">Campaign Activity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#campaign-contact">Campaign Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#chatbot">Chatbot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id7">Contact</a></li>
@@ -105,33 +102,33 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#contacts">Contacts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id8">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">Activity Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">Campaign</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">Campaign Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">Campaign Contact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">Contact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">Group</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">Group Contact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">Opportunity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">Opportunity Contact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">Opportunity History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#activity">Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#activity-type">Activity Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Campaign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#campaign-activity">Campaign Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Campaign Contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Group Contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Opportunity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Opportunity Contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Opportunity History</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#dcim">DCIM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id20">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id21">Circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22">Circuit Class</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id23">Property Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id24">Property Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Circuit Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Property Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Property Value</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#financial">Financial</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id26">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#account-purchase-adjustment">Account Purchase Adjustment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#account-purchase-adjustment-contra">Account Purchase Adjustment Contra</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#account-purchase-debit-note">Account Purchase Debit Note</a></li>
@@ -204,8 +201,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#iaas">IAAS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id28">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id29">Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">Allocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#asn">ASN</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#attach">Attach</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backup">Backup</a></li>
@@ -251,7 +248,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#membership">Membership</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id30">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id27">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#address">Address</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#address-link">Address Link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#api-key">API Key</a></li>
@@ -277,29 +274,29 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#nlp">NLP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id31">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#embedding-use">Embedding USE</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#otp">OTP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id32">Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id33">OTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id30">OTP</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#otpauth">OTPAuth</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pat">PAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id34">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id31">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pod">Pod</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id35">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id32">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#export">Export</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#package">Package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#report">Report</a></li>
@@ -309,13 +306,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id36">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#application">Application</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto">DTO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto-parameter">DTO Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exception-code">Exception Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language-exception-code">Language Exception Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id37">Member</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-parameter">Method Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#service">Service</a></li>
@@ -324,7 +321,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scheduler">Scheduler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id38">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id35">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task-log">Task Log</a></li>
 </ul>
@@ -332,7 +329,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scm">SCM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id39">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id36">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#agreed-price">Agreed Price</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin">Bin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin-sku">Bin SKU</a></li>
@@ -358,7 +355,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id40">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id37">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#security-event">Security Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#security-event-logout">Security Event Logout</a></li>
 </ul>
@@ -366,7 +363,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#support">Support</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id41">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id38">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition">IRIS Condition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition-translation">IRIS Condition Translation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-defect">IRIS Defect</a></li>
@@ -401,7 +398,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#training">Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id42">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#student">Student</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syllabus">Syllabus</a></li>
@@ -410,7 +407,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#vault">Vault</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id43">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id40">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bucket">Bucket</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#region">Region</a></li>
@@ -1004,109 +1001,6 @@ purpose address book.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contact.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id6">
 <h3>Services<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
-<section id="activity">
-<h4>Activity<a class="headerlink" href="#activity" title="Link to this heading"></a></h4>
-<p>This service allows the user to manage the various Activities</p>
-<p>An Activity is a sub category of an Activity Type</p>
-<p>Each Activity has only one ActivityType but an ActivityType may have many
-Activities</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.list</span></code></dt><dd><ul>
-<li><p>Returns a list of all Activities in your Member</p></li>
-<li><p>If no Activities exist, a default list will be created and
-returned</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.create</span></code></dt><dd><ul>
-<li><p>Creates one new Activity record for the selected Activity
-Type</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.read</span></code></dt><dd><ul>
-<li><p>Returns an Activity with all its details</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.update</span></code></dt><dd><ul>
-<li><p>Updates an Activity record for the selected Activity Type</p></li>
-<li><p>The properties can only be updated if there are no Campaign
-records associated with the Activity</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity.delete</span></code></dt><dd><ul>
-<li><p>Deletes an Activity record for the selected Activity Type</p></li>
-<li><p>An Activity can only be deleted if there are no Campaigns
-associated with it</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="activity-type">
-<h4>Activity Type<a class="headerlink" href="#activity-type" title="Link to this heading"></a></h4>
-<p>This service allows the User to manage Activity Types</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.list</span></code></dt><dd><ul>
-<li><p>Returns a list of supported Activity Types</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.create</span></code></dt><dd><ul>
-<li><p>Allows the User to create a new Activity Type record</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.read</span></code></dt><dd><ul>
-<li><p>Returns the selected Activity Type with all its details</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.update</span></code></dt><dd><ul>
-<li><p>Allows the User to update the details of an Activity Type
-record</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.activity_type.delete</span></code></dt><dd><ul>
-<li><p>Allows the User to delete one Activity Type record.</p></li>
-<li><p>An Activity Type can only be deleted if there are no
-Activities linked to the Activity Type</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</section>
 <section id="auth">
 <h4>Auth<a class="headerlink" href="#auth" title="Link to this heading"></a></h4>
 <p>This service allows a User to authenticate a Contact in their Member to login to their Chatbots.</p>
@@ -1165,56 +1059,6 @@ contact belonging to that Campaign</p></li>
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign.delete</span></code></dt><dd><ul>
 <li><p>Allows the User to delete one Campaign record, which includes
 the links between the Campaign and any contact.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</section>
-<section id="campaign-activity">
-<h4>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Link to this heading"></a></h4>
-<p>This service manages Campaign Activities related to a Campaign and an Activity</p>
-<p>The Campaign Activity allows Users to organize Activities into further
-subcategories</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.&lt;method&gt;</span></code></p>
-<dl class="simple">
-<dt>Available Methods</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.list</span></code></dt><dd><ul>
-<li><p>Return a list of Activities associated with a Campaign</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.create</span></code></dt><dd><ul>
-<li><p>Allows the User to create an Activity related to a Campaign
-and an Activity Type.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.read</span></code></dt><dd><ul>
-<li><p>Returns the details of a relation between a Campaign and an
-Activity</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.update</span></code></dt><dd><ul>
-<li><p>Allows the User to update the relation between one Campaign
-and one Activity</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.campaign_activity.delete</span></code></dt><dd><ul>
-<li><p>Allows the User to delete an Activity related to a Campaign</p></li>
 </ul>
 </dd>
 </dl>
@@ -1649,8 +1493,8 @@ purpose address book.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id8">
 <h3>Services<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
-<section id="id9">
-<h4>Activity<a class="headerlink" href="#id9" title="Link to this heading"></a></h4>
+<section id="activity">
+<h4>Activity<a class="headerlink" href="#activity" title="Link to this heading"></a></h4>
 <p>This service allows the user to manage the various Activities</p>
 <p>An Activity is a sub category of an Activity Type</p>
 <p>Each Activity has only one ActivityType but an ActivityType may have many
@@ -1704,8 +1548,8 @@ associated with it</p></li>
 </dd>
 </dl>
 </section>
-<section id="id10">
-<h4>Activity Type<a class="headerlink" href="#id10" title="Link to this heading"></a></h4>
+<section id="activity-type">
+<h4>Activity Type<a class="headerlink" href="#activity-type" title="Link to this heading"></a></h4>
 <p>This service allows the User to manage Activity Types</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.activity_type.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1752,8 +1596,8 @@ Activities linked to the Activity Type</p></li>
 </dd>
 </dl>
 </section>
-<section id="id11">
-<h4>Campaign<a class="headerlink" href="#id11" title="Link to this heading"></a></h4>
+<section id="id9">
+<h4>Campaign<a class="headerlink" href="#id9" title="Link to this heading"></a></h4>
 <p>This service allows for management of Campaigns</p>
 <p>Campaigns are a many to many classification of Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign.&lt;method&gt;</span></code></p>
@@ -1801,8 +1645,8 @@ the links between the Campaign and any Contacts.</p></li>
 </dd>
 </dl>
 </section>
-<section id="id12">
-<h4>Campaign Activity<a class="headerlink" href="#id12" title="Link to this heading"></a></h4>
+<section id="campaign-activity">
+<h4>Campaign Activity<a class="headerlink" href="#campaign-activity" title="Link to this heading"></a></h4>
 <p>This service manages Campaign Activities related to a Campaign and an Activity</p>
 <p>The Campaign Activity allows Users to organize Activities into further
 subcategories</p>
@@ -1851,8 +1695,8 @@ and one Activity</p></li>
 </dd>
 </dl>
 </section>
-<section id="id13">
-<h4>Campaign Contact<a class="headerlink" href="#id13" title="Link to this heading"></a></h4>
+<section id="id10">
+<h4>Campaign Contact<a class="headerlink" href="#id10" title="Link to this heading"></a></h4>
 <p>This service manages the many to many links between Campaigns and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.campaign_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -1885,8 +1729,8 @@ Contact</p></li>
 </dd>
 </dl>
 </section>
-<section id="id14">
-<h4>Contact<a class="headerlink" href="#id14" title="Link to this heading"></a></h4>
+<section id="id11">
+<h4>Contact<a class="headerlink" href="#id11" title="Link to this heading"></a></h4>
 <p>This service allows for management of Contacts</p>
 <p>Contacts are people that are potential customers</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.contact.&lt;method&gt;</span></code></p>
@@ -1934,8 +1778,8 @@ links between that Contact and any Campaigns or Groups</p></li>
 </dd>
 </dl>
 </section>
-<section id="id15">
-<h4>Group<a class="headerlink" href="#id15" title="Link to this heading"></a></h4>
+<section id="id12">
+<h4>Group<a class="headerlink" href="#id12" title="Link to this heading"></a></h4>
 <p>This service allows for management of Groups</p>
 <p>Groups are many to many classifications of Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group.&lt;method&gt;</span></code></p>
@@ -1982,8 +1826,8 @@ between that Group and any Contact</p></li>
 </dd>
 </dl>
 </section>
-<section id="id16">
-<h4>Group Contact<a class="headerlink" href="#id16" title="Link to this heading"></a></h4>
+<section id="id13">
+<h4>Group Contact<a class="headerlink" href="#id13" title="Link to this heading"></a></h4>
 <p>This service manages the many to many links between Groups and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.group_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2008,8 +1852,8 @@ Contact</p></li>
 </dd>
 </dl>
 </section>
-<section id="id17">
-<h4>Opportunity<a class="headerlink" href="#id17" title="Link to this heading"></a></h4>
+<section id="id14">
+<h4>Opportunity<a class="headerlink" href="#id14" title="Link to this heading"></a></h4>
 <p>This service allows for the management of Opportunity records</p>
 <p>Opportunities are the estimated chances of getting into business with one more
 Contacts with its possible marketing value</p>
@@ -2057,8 +1901,8 @@ record</p></li>
 </dd>
 </dl>
 </section>
-<section id="id18">
-<h4>Opportunity Contact<a class="headerlink" href="#id18" title="Link to this heading"></a></h4>
+<section id="id15">
+<h4>Opportunity Contact<a class="headerlink" href="#id15" title="Link to this heading"></a></h4>
 <p>This service manages the many to many links between Opportunities and Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_contact.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2083,8 +1927,8 @@ and a Contact</p></li>
 </dd>
 </dl>
 </section>
-<section id="id19">
-<h4>Opportunity History<a class="headerlink" href="#id19" title="Link to this heading"></a></h4>
+<section id="id16">
+<h4>Opportunity History<a class="headerlink" href="#id16" title="Link to this heading"></a></h4>
 <p>This service allows Users to log updates on an Opportunity, as well as sending
 emails to the associated Contacts</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Contacts.opportunity_history.&lt;method&gt;</span></code></p>
@@ -2115,10 +1959,10 @@ Opportunity</p></li>
 <h2>DCIM<a class="headerlink" href="#dcim" title="Link to this heading"></a></h2>
 <p>The DCIM (Data Centre Infrastructure Management) Application allows for the management data centre infrastructure.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.DCIM.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id20">
-<h3>Services<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
-<section id="id21">
-<h4>Circuit<a class="headerlink" href="#id21" title="Link to this heading"></a></h4>
+<section id="id17">
+<h3>Services<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<section id="id18">
+<h4>Circuit<a class="headerlink" href="#id18" title="Link to this heading"></a></h4>
 <p>This service allows Users to manage their Circuits</p>
 <p>A Circuit is a device installed in your active Address</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.DCIM.circuit.&lt;method&gt;</span></code></p>
@@ -2170,8 +2014,8 @@ it in the list, it should be updated with a decommission date</p></li>
 </dd>
 </dl>
 </section>
-<section id="id22">
-<h4>Circuit Class<a class="headerlink" href="#id22" title="Link to this heading"></a></h4>
+<section id="id19">
+<h4>Circuit Class<a class="headerlink" href="#id19" title="Link to this heading"></a></h4>
 <p>This service allows for the management of Circuit Classes</p>
 <p>A Circuit Class is a classification for the Circuits</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.DCIM.circuit_class.&lt;method&gt;</span></code></p>
@@ -2213,8 +2057,8 @@ renamed</p></li>
 </dd>
 </dl>
 </section>
-<section id="id23">
-<h4>Property Type<a class="headerlink" href="#id23" title="Link to this heading"></a></h4>
+<section id="id20">
+<h4>Property Type<a class="headerlink" href="#id20" title="Link to this heading"></a></h4>
 <p>This service is in place to offer a list of the supported Property Types</p>
 <p>A Property Type is an identification of the expected input value for a given
 property.</p>
@@ -2232,8 +2076,8 @@ property.</p>
 </dd>
 </dl>
 </section>
-<section id="id24">
-<h4>Property Value<a class="headerlink" href="#id24" title="Link to this heading"></a></h4>
+<section id="id21">
+<h4>Property Value<a class="headerlink" href="#id21" title="Link to this heading"></a></h4>
 <p>This service allows to search Circuit objects properties dictionaries by the value sent in the request.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.DCIM.property_value.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -2258,8 +2102,8 @@ entry bookkeeping</p>
 <a class="reference external" href="https://docs.cloudcix.com/">HTTP API Reference</a></p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Financial.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id26">
-<h3>Services<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<section id="id23">
+<h3>Services<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
 <section id="account-purchase-adjustment">
 <h4>Account Purchase Adjustment<a class="headerlink" href="#account-purchase-adjustment" title="Link to this heading"></a></h4>
 <p>This service allows the User to create and read Account Purchase Adjustments</p>
@@ -4253,10 +4097,10 @@ oldest transaction if none exists) and the given transaction date</p>
 <h2>IAAS<a class="headerlink" href="#iaas" title="Link to this heading"></a></h2>
 <p>The IaaS application provides services that allow for management of IP Addresses, Subnets, and DNS records, along with accessing black and whitelists generated by CloudCIX. It also provides services that allow for interaction with the CloudCIX system to deploy Projects and Virtual Machines.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id28">
-<h3>Services<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
-<section id="id29">
-<h4>Allocation<a class="headerlink" href="#id29" title="Link to this heading"></a></h4>
+<section id="id25">
+<h3>Services<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<section id="id26">
+<h4>Allocation<a class="headerlink" href="#id26" title="Link to this heading"></a></h4>
 <p>An Allocation is an IP address range that was assigned to an ASN by an RIR such as RIPE.</p>
 <p>Allocations can be freely managed by the Member that owns a particular ASN.</p>
 <div class="admonition note">
@@ -5585,8 +5429,8 @@ oldest transaction if none exists) and the given transaction date</p>
 <p>The Membership Application also gives CloudCIX true multi-tenanted capability to allow you to transact, and securely share information, with your partner Members</p>
 <p>For more information on the key aspects of this Application, see <strong>Member</strong>, <strong>Address</strong>, and <strong>User</strong></p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Membership.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id30">
-<h3>Services<a class="headerlink" href="#id30" title="Link to this heading"></a></h3>
+<section id="id27">
+<h3>Services<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
 <section id="address">
 <h4>Address<a class="headerlink" href="#address" title="Link to this heading"></a></h4>
 <p>An Address points to a physical location where an organisation conducts their business</p>
@@ -6339,8 +6183,8 @@ These fields can only be updated by an Administrator</p>
 <section id="nlp">
 <h2>NLP<a class="headerlink" href="#nlp" title="Link to this heading"></a></h2>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.NLP.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id31">
-<h3>Services<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<section id="id28">
+<h3>Services<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
 <section id="embedding-use">
 <h4>Embedding USE<a class="headerlink" href="#embedding-use" title="Link to this heading"></a></h4>
 <p>This service is used in the NLP application to contact a NN Model and return the embeddings for the sent text.
@@ -6361,10 +6205,10 @@ These fields can only be updated by an Administrator</p>
 <section id="otp">
 <h2>OTP<a class="headerlink" href="#otp" title="Link to this heading"></a></h2>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id32">
-<h3>Services<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
-<section id="id33">
-<h4>OTP<a class="headerlink" href="#id33" title="Link to this heading"></a></h4>
+<section id="id29">
+<h3>Services<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
+<section id="id30">
+<h4>OTP<a class="headerlink" href="#id30" title="Link to this heading"></a></h4>
 <p>This service is used in the OTP authentication to save the OTP details and validate them
 <strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.OTP.otp.&lt;method&gt;</span></code></p>
 <dl class="simple">
@@ -6401,8 +6245,8 @@ These fields can only be updated by an Administrator</p>
 <p>The PAT Application exposes a REST API capable of managing Pod
 records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id34">
-<h3>Services<a class="headerlink" href="#id34" title="Link to this heading"></a></h3>
+<section id="id31">
+<h3>Services<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
 <section id="pod">
 <h4>Pod<a class="headerlink" href="#pod" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Pod records.</p>
@@ -6434,8 +6278,8 @@ records</p>
 <h2>Report Engine<a class="headerlink" href="#report-engine" title="Link to this heading"></a></h2>
 <p>The Reporting Engine is a powerful service allowing users to generate HTML and PDF documents from templates</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id35">
-<h3>Services<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
+<section id="id32">
+<h3>Services<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
 <section id="export">
 <h4>Export<a class="headerlink" href="#export" title="Link to this heading"></a></h4>
 <p>This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported</p>
@@ -6629,8 +6473,8 @@ within the CloudCIX company</p>
 <p>The Repository Application is a software system that manages CloudCIX Software Projects</p>
 <p>Projects in the Repository are grouped by the owning Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id36">
-<h3>Services<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<section id="id33">
+<h3>Services<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
 <section id="application">
 <h4>Application<a class="headerlink" href="#application" title="Link to this heading"></a></h4>
 <p>Every Member can have their own set of Applications</p>
@@ -6866,8 +6710,8 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dd>
 </dl>
 </section>
-<section id="id37">
-<h4>Member<a class="headerlink" href="#id37" title="Link to this heading"></a></h4>
+<section id="id34">
+<h4>Member<a class="headerlink" href="#id34" title="Link to this heading"></a></h4>
 <p>Every Member can have their own set of Applications</p>
 <p>Only one <code class="docutils literal notranslate"><span class="pre">Repository.Application</span></code> should exist for every <code class="docutils literal notranslate"><span class="pre">membership.Member</span></code></p>
 <div class="admonition note">
@@ -7078,8 +6922,8 @@ other software to read and execute the tasks from the Scheduler API. CloudCIX
 uses its own software for this called Routine which relies on Celery for
 creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id38">
-<h3>Services<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<section id="id35">
+<h3>Services<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
 <section id="task">
 <h4>Task<a class="headerlink" href="#task" title="Link to this heading"></a></h4>
 <p>The Task service allows Users to manage their recurring transactions.</p>
@@ -7167,8 +7011,8 @@ specific Task.</p></li>
 <p>SCM is an Application to manage the planning, procurement, storage,
 distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id39">
-<h3>Services<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
+<section id="id36">
+<h3>Services<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
 <section id="agreed-price">
 <h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Link to this heading"></a></h4>
 <p>This service allows the User to manage the agreed prices for SKUs between
@@ -8052,8 +7896,8 @@ entering and exiting a building.</p>
 <p>Administrators will be able to see where their Users went and when, as well
 as visitors to their own Addresses</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id40">
-<h3>Services<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
+<section id="id37">
+<h3>Services<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
 <section id="security-event">
 <h4>Security Event<a class="headerlink" href="#security-event" title="Link to this heading"></a></h4>
 <p>A Security Event is a transaction that occurs when a person enters or exits a
@@ -8125,8 +7969,8 @@ force log out a User currently visiting the Address</p></li>
 <p>If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id41">
-<h3>Services<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
+<section id="id38">
+<h3>Services<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
 <section id="iris-condition">
 <h4>IRIS Condition<a class="headerlink" href="#iris-condition" title="Link to this heading"></a></h4>
 <p>This service allows the User to handle its IRIS Condition codes</p>
@@ -9452,8 +9296,8 @@ Reply-To will be the User’s email unless it is set.</p></li>
 <p>The Training Application exposes a REST API capable of managing Training
 records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id42">
-<h3>Services<a class="headerlink" href="#id42" title="Link to this heading"></a></h3>
+<section id="id39">
+<h3>Services<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
 <section id="class">
 <h4>Class<a class="headerlink" href="#class" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Class records.</p>
@@ -9603,8 +9447,8 @@ Student</p></li>
 <p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
 available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id43">
-<h3>Services<a class="headerlink" href="#id43" title="Link to this heading"></a></h3>
+<section id="id40">
+<h3>Services<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
 <section id="bucket">
 <h4>Bucket<a class="headerlink" href="#bucket" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Buckets in the MinIO object store.</p>
