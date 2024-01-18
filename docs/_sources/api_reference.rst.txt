@@ -78,6 +78,12 @@ PAT
 
 .. include:: api_docs/pat.rst
 
+PLOT
+~~~~~
+
+.. include:: api_docs/plot.rst
+
+
 Report Engine
 ~~~~~~~~~~~~~
 

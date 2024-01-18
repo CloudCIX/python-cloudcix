@@ -1,0 +1,47 @@
+The Plot Application exposes a REST API capable of managing historical measurement data.
+
+**Basic Usage**: ``cloudcix.api.PAT.<service>.<method>``
+
+Services
+--------
+
+Catogory
+^^^^^^^^^^
+This services allows for the management of Category records.
+
+A Category represents a logical group name for Sources.
+
+**Basic Usage**: ``cloudcix.api.Plot.category.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.category.list``
+        - Return a list of all Categories.
+    - ``cloudcix.api.Plot.category.read``
+        - Returns the selected Category.
+
+Reading
+^^^^^^^^
+This services allows for the management of Reading records.
+
+A Reading represents the measurement of a source at a specic point in time. 
+
+**Basic Usage**: ``cloudcix.api.Plot.reading.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.reading.create``
+        - This method allows the User to create a Reading for a Source.
+
+
+Source
+^^^^^^^^
+This services allows for the management of Source records.
+
+A Source represents an item to group readings together for. 
+
+**Basic Usage**: ``cloudcix.api.Plot.source.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.source.list``
+        - Return a list of Sources.
+    - ``cloudcix.api.PAT.source.read``
+        - Returns the selected Source with it's Readings.

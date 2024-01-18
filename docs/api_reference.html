@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.2 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=8399f5db"></script>
+        <script src="_static/documentation_options.js?v=27e171c2"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.2
+                0.13.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -295,8 +297,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plot">PLOT</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id32">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#catogory">Catogory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading">Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-engine">Report Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#export">Export</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#package">Package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#report">Report</a></li>
@@ -306,13 +317,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id33">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id34">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#application">Application</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto">DTO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dto-parameter">DTO Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exception-code">Exception Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#language-exception-code">Language Exception Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id34">Member</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35">Member</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-parameter">Method Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#service">Service</a></li>
@@ -321,7 +332,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scheduler">Scheduler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id35">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id36">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#task-log">Task Log</a></li>
 </ul>
@@ -329,7 +340,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scm">SCM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id36">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id37">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#agreed-price">Agreed Price</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin">Bin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bin-sku">Bin SKU</a></li>
@@ -355,7 +366,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id37">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id38">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#security-event">Security Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#security-event-logout">Security Event Logout</a></li>
 </ul>
@@ -363,7 +374,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#support">Support</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id38">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition">IRIS Condition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-condition-translation">IRIS Condition Translation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#iris-defect">IRIS Defect</a></li>
@@ -398,7 +409,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#training">Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id39">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id40">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#class">Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#student">Student</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syllabus">Syllabus</a></li>
@@ -407,7 +418,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#vault">Vault</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id40">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id41">Services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bucket">Bucket</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#object">Object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#region">Region</a></li>
@@ -6274,12 +6285,88 @@ records</p>
 </section>
 </section>
 </section>
+<section id="plot">
+<h2>PLOT<a class="headerlink" href="#plot" title="Link to this heading"></a></h2>
+<p>The Plot Application exposes a REST API capable of managing historical measurement data.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.&lt;service&gt;.&lt;method&gt;</span></code></p>
+<section id="id32">
+<h3>Services<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
+<section id="catogory">
+<h4>Catogory<a class="headerlink" href="#catogory" title="Link to this heading"></a></h4>
+<p>This services allows for the management of Category records.</p>
+<p>A Category represents a logical group name for Sources.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.category.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.category.list</span></code></dt><dd><ul>
+<li><p>Return a list of all Categories.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.category.read</span></code></dt><dd><ul>
+<li><p>Returns the selected Category.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="reading">
+<h4>Reading<a class="headerlink" href="#reading" title="Link to this heading"></a></h4>
+<p>This services allows for the management of Reading records.</p>
+<p>A Reading represents the measurement of a source at a specic point in time.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.reading.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.reading.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a Reading for a Source.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source">
+<h4>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h4>
+<p>This services allows for the management of Source records.</p>
+<p>A Source represents an item to group readings together for.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source.list</span></code></dt><dd><ul>
+<li><p>Return a list of Sources.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.source.read</span></code></dt><dd><ul>
+<li><p>Returns the selected Source with it’s Readings.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+</section>
 <section id="report-engine">
 <h2>Report Engine<a class="headerlink" href="#report-engine" title="Link to this heading"></a></h2>
 <p>The Reporting Engine is a powerful service allowing users to generate HTML and PDF documents from templates</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Reporting.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id32">
-<h3>Services<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
+<section id="id33">
+<h3>Services<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
 <section id="export">
 <h4>Export<a class="headerlink" href="#export" title="Link to this heading"></a></h4>
 <p>This service is used to create a file in the desired format by passing in data that should be used to collect the data being exported</p>
@@ -6473,8 +6560,8 @@ within the CloudCIX company</p>
 <p>The Repository Application is a software system that manages CloudCIX Software Projects</p>
 <p>Projects in the Repository are grouped by the owning Member</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Repository.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id33">
-<h3>Services<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
+<section id="id34">
+<h3>Services<a class="headerlink" href="#id34" title="Link to this heading"></a></h3>
 <section id="application">
 <h4>Application<a class="headerlink" href="#application" title="Link to this heading"></a></h4>
 <p>Every Member can have their own set of Applications</p>
@@ -6710,8 +6797,8 @@ If you wish to delete all translations, use <code class="docutils literal notran
 </dd>
 </dl>
 </section>
-<section id="id34">
-<h4>Member<a class="headerlink" href="#id34" title="Link to this heading"></a></h4>
+<section id="id35">
+<h4>Member<a class="headerlink" href="#id35" title="Link to this heading"></a></h4>
 <p>Every Member can have their own set of Applications</p>
 <p>Only one <code class="docutils literal notranslate"><span class="pre">Repository.Application</span></code> should exist for every <code class="docutils literal notranslate"><span class="pre">membership.Member</span></code></p>
 <div class="admonition note">
@@ -6922,8 +7009,8 @@ other software to read and execute the tasks from the Scheduler API. CloudCIX
 uses its own software for this called Routine which relies on Celery for
 creating transactions on a schedule.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Scheduler.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id35">
-<h3>Services<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
+<section id="id36">
+<h3>Services<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
 <section id="task">
 <h4>Task<a class="headerlink" href="#task" title="Link to this heading"></a></h4>
 <p>The Task service allows Users to manage their recurring transactions.</p>
@@ -7011,8 +7098,8 @@ specific Task.</p></li>
 <p>SCM is an Application to manage the planning, procurement, storage,
 distribution, service and return of inventory</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.SCM.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id36">
-<h3>Services<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<section id="id37">
+<h3>Services<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
 <section id="agreed-price">
 <h4>Agreed Price<a class="headerlink" href="#agreed-price" title="Link to this heading"></a></h4>
 <p>This service allows the User to manage the agreed prices for SKUs between
@@ -7896,8 +7983,8 @@ entering and exiting a building.</p>
 <p>Administrators will be able to see where their Users went and when, as well
 as visitors to their own Addresses</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Security.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id37">
-<h3>Services<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
+<section id="id38">
+<h3>Services<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
 <section id="security-event">
 <h4>Security Event<a class="headerlink" href="#security-event" title="Link to this heading"></a></h4>
 <p>A Security Event is a transaction that occurs when a person enters or exits a
@@ -7969,8 +8056,8 @@ force log out a User currently visiting the Address</p></li>
 <p>If a ticket requires that a product is returned for repair, exchange, or credit, then a Service Centre also becomes involved</p>
 </div>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Support.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id38">
-<h3>Services<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<section id="id39">
+<h3>Services<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
 <section id="iris-condition">
 <h4>IRIS Condition<a class="headerlink" href="#iris-condition" title="Link to this heading"></a></h4>
 <p>This service allows the User to handle its IRIS Condition codes</p>
@@ -9296,8 +9383,8 @@ Reply-To will be the User’s email unless it is set.</p></li>
 <p>The Training Application exposes a REST API capable of managing Training
 records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Training.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id39">
-<h3>Services<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
+<section id="id40">
+<h3>Services<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
 <section id="class">
 <h4>Class<a class="headerlink" href="#class" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Class records.</p>
@@ -9447,8 +9534,8 @@ Student</p></li>
 <p>The Vault Application exposes a REST API capable of managing objects in MinIO and the ability to share. Vault is
 available to addresses linked to a Vault Cloud Region where a MinIO instance has been set up.</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Vault.&lt;service&gt;.&lt;method&gt;</span></code></p>
-<section id="id40">
-<h3>Services<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
+<section id="id41">
+<h3>Services<a class="headerlink" href="#id41" title="Link to this heading"></a></h3>
 <section id="bucket">
 <h4>Bucket<a class="headerlink" href="#bucket" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Buckets in the MinIO object store.</p>
