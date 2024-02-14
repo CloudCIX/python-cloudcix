@@ -28,6 +28,13 @@ A Reading represents the measurement of a source at a specic point in time.
 **Basic Usage**: ``cloudcix.api.Plot.reading.<method>``
 
 Available Methods
+    - ``cloudcix.api.Plot.reading.list``
+        - This method allows the User to list Readings.
+        - A User can list Readings for:
+            1. Sources whose Category is owned by their Address
+            2. If they are global, Sources whose Category is owned by Addresses in their Member
+            3. Sources that have a Source Share record with their Address
+            4. If they are global, Sources who have a Source Share record with Addresses in their Member
     - ``cloudcix.api.Plot.reading.create``
         - This method allows the User to create a Reading for a Source.
 
@@ -43,5 +50,27 @@ A Source represents an item to group readings together for.
 Available Methods
     - ``cloudcix.api.Plot.source.list``
         - Return a list of Sources.
+    - ``cloudcix.api.Plot.source.create``
+        - Create a Source.
     - ``cloudcix.api.PAT.source.read``
-        - Returns the selected Source with it's Readings.
+        - Returns the selected Source.
+    - ``cloudcix.api.Plot.source.update``
+        - Update a Source whose Category is owned by their Address.
+    - ``cloudcix.api.Plot.source.delete``
+        - Delete a Source whose Category is owned by their Adress.
+        - Deleting a Source will delete all Readings and Source Shares of the Source.
+
+
+Unit
+^^^^^^
+This services allows for the management of Unit records.
+
+A Unit represents the measurement of the Readings of the Source instance it is assigned to.
+
+**Basic Usage**: ``cloudcix.api.Plot.unit.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.unit.list``
+        - Return a list of all Units.
+    - ``cloudcix.api.Plot.unit.read``
+        - Returns the selected Unit.

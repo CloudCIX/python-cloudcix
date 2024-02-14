@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.13.3 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.13.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=27e171c2"></script>
+        <script src="../_static/documentation_options.js?v=ec68e10f"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.3
+                0.13.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -120,6 +120,23 @@
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.reading.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to list Readings.</p></li>
+<li><dl class="simple">
+<dt>A User can list Readings for:</dt><dd><ol class="arabic simple">
+<li><p>Sources whose Category is owned by their Address</p></li>
+<li><p>If they are global, Sources whose Category is owned by Addresses in their Member</p></li>
+<li><p>Sources that have a Source Share record with their Address</p></li>
+<li><p>If they are global, Sources who have a Source Share record with Addresses in their Member</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.reading.create</span></code></dt><dd><ul>
 <li><p>This method allows the User to create a Reading for a Source.</p></li>
 </ul>
@@ -145,8 +162,55 @@
 </dl>
 </li>
 <li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source.create</span></code></dt><dd><ul>
+<li><p>Create a Source.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.source.read</span></code></dt><dd><ul>
-<li><p>Returns the selected Source with it’s Readings.</p></li>
+<li><p>Returns the selected Source.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source.update</span></code></dt><dd><ul>
+<li><p>Update a Source whose Category is owned by their Address.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source.delete</span></code></dt><dd><ul>
+<li><p>Delete a Source whose Category is owned by their Adress.</p></li>
+<li><p>Deleting a Source will delete all Readings and Source Shares of the Source.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="unit">
+<h2>Unit<a class="headerlink" href="#unit" title="Link to this heading"></a></h2>
+<p>This services allows for the management of Unit records.</p>
+<p>A Unit represents the measurement of the Readings of the Source instance it is assigned to.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.unit.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.unit.list</span></code></dt><dd><ul>
+<li><p>Return a list of all Units.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.unit.read</span></code></dt><dd><ul>
+<li><p>Returns the selected Unit.</p></li>
 </ul>
 </dd>
 </dl>
