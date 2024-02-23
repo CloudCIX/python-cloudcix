@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.4 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=ec68e10f"></script>
+        <script src="_static/documentation_options.js?v=48106516"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.4
+                0.13.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -228,6 +228,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#ptr-record">PTR Record</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#record">Record</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#region-image">Region Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#region-storage-type">Region Storage Type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#router">Router</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-robot">Run Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#server">Server</a></li>
@@ -4929,8 +4930,32 @@ oldest transaction if none exists) and the given transaction date</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.router.update</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.region_image.update</span></code></dt><dd><ul>
 <li><p>This method allows the User to remove a supported image from their region.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="region-storage-type">
+<h4>Region Storage Type<a class="headerlink" href="#region-storage-type" title="Link to this heading"></a></h4>
+<p>This service allows a user in a region to add/remove supported storage types to their region.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.region_storage_type.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.region_storage_type.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to add a supported storage type to their region.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.region_storage_type.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to remove a supported storage type from their region.</p></li>
 </ul>
 </dd>
 </dl>

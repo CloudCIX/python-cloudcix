@@ -424,8 +424,20 @@ This service allows a user in a region to add/remove supported images to their r
 Available Methods
     - ``cloudcix.api.IAAS.region_image.create``
         - This method allows the User to add a supported image to their region.
-    - ``cloudcix.api.IAAS.router.update``
+    - ``cloudcix.api.IAAS.region_image.update``
         - This method allows the User to remove a supported image from their region.
+
+Region Storage Type
+^^^^^^^^^^^^^^^^^^^
+This service allows a user in a region to add/remove supported storage types to their region.
+
+**Basic Usage**: ``cloudcix.api.IAAS.region_storage_type.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.region_storage_type.create``
+        - This method allows the User to add a supported storage type to their region.
+    - ``cloudcix.api.IAAS.region_storage_type.update``
+        - This method allows the User to remove a supported storage type from their region.
 
 Router
 ^^^^^^
