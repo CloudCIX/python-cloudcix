@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.6 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7fe8ef7c"></script>
+        <script src="_static/documentation_options.js?v=db906b65"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.6
+                0.13.7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -293,6 +293,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pat">PAT</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id31">Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#galaxy">Galaxy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pod">Pod</a></li>
 </ul>
 </li>
@@ -6285,6 +6286,38 @@ records</p>
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="id31">
 <h3>Services<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<section id="galaxy">
+<h4>Galaxy<a class="headerlink" href="#galaxy" title="Link to this heading"></a></h4>
+<p>This services allows for the management of Galaxy records.</p>
+<p>A Galaxy represents the PAT properties to support Pods it supports.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.galaxy.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.galaxy.create</span></code></dt><dd><ul>
+<li><p>Create a galaxy.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.galaxy.read</span></code></dt><dd><ul>
+<li><p>Returns the selected galaxy.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.galaxy.update</span></code></dt><dd><ul>
+<li><p>Update the specified galaxy.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="pod">
 <h4>Pod<a class="headerlink" href="#pod" title="Link to this heading"></a></h4>
 <p>This services allows for the management of Pod records.</p>
@@ -6295,6 +6328,13 @@ records</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.pod.list</span></code></dt><dd><ul>
 <li><p>Return a list of all pods</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.pod.create</span></code></dt><dd><ul>
+<li><p>Create a Pod.</p></li>
 </ul>
 </dd>
 </dl>

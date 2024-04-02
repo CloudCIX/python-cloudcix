@@ -6,6 +6,23 @@ records
 Services
 --------
 
+Galaxy
+^^^^^^^^^^
+This services allows for the management of Galaxy records.
+
+A Galaxy represents the PAT properties to support Pods it supports.
+
+**Basic Usage**: ``cloudcix.api.PAT.galaxy.<method>``
+
+Available Methods
+    - ``cloudcix.api.PAT.galaxy.create``
+        - Create a galaxy. 
+    - ``cloudcix.api.PAT.galaxy.read``
+        - Returns the selected galaxy.
+    - ``cloudcix.api.PAT.galaxy.update``
+        - Update the specified galaxy.
+ 
+
 Pod
 ^^^^^
 This services allows for the management of Pod records.
@@ -17,6 +34,9 @@ A Pod represents a logical unit of hardware and functionality in a cloud. A Pod 
 Available Methods
     - ``cloudcix.api.PAT.pod.list``
         - Return a list of all pods
+    - ``cloudcix.api.PAT.pod.create``
+        - Create a Pod.
     - ``cloudcix.api.PAT.pod.read``
         - Returns the selected pod
 
+   
