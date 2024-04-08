@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.7 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.8 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=db906b65"></script>
+        <script src="_static/documentation_options.js?v=338ac8a7"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.7
+                0.13.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -98,6 +98,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#opportunity-contact">Opportunity Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opportunity-history">Opportunity History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#q-and-a">Q and A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question">Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#question-set">Question Set</a></li>
 </ul>
 </li>
 </ul>
@@ -1489,6 +1491,73 @@ and the answer given, including references if any</p></li>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.q_and_a.read</span></code></dt><dd><ul>
 <li><p>Returns the details of a given QandA record including the references</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="question">
+<h4>Question<a class="headerlink" href="#question" title="Link to this heading"></a></h4>
+<p>A question record contains question_set record as a foreign key in order to know
+the question_set it belongs to.</p>
+<p>An ordered collection of question records from Contact with in a question_set.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Questions that a Contact had in a speciified Question Set</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Question record in a Question Set</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Question record including the ground_truth, question
+asked and language of the question asked in.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="question-set">
+<h4>Question Set<a class="headerlink" href="#question-set" title="Link to this heading"></a></h4>
+<p>A question_set record used to group the questions</p>
+<p>An ordered collection of question_set records from Contact</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question_set.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question_set.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Question Sets that a Contact had in requesting users member
+along with global question sets</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Question Set record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.question.read</span></code></dt><dd><ul>
+<li><p>Returns the details of a given Question Set record including the questions it contains</p></li>
 </ul>
 </dd>
 </dl>

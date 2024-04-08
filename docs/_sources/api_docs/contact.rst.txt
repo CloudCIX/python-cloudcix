@@ -248,3 +248,38 @@ Available Methods
           and the answer given, including references if any
     - ``cloudcix.api.contact.q_and_a.read``
         - Returns the details of a given QandA record including the references
+
+Question
+^^^^^^^^^^
+A question record contains question_set record as a foreign key in order to know
+the question_set it belongs to.
+
+An ordered collection of question records from Contact with in a question_set.
+
+**Basic Usage**: ``cloudcix.api.contact.question.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.question.list``
+        - Returns a list of all Questions that a Contact had in a speciified Question Set
+    - ``cloudcix.api.contact.question.create``
+        - Allows the User to create a new Question record in a Question Set
+    - ``cloudcix.api.contact.question.read``
+        - Returns the details of a given Question record including the ground_truth, question
+          asked and language of the question asked in.
+
+Question Set
+^^^^^^^^^^^^^^
+A question_set record used to group the questions
+
+An ordered collection of question_set records from Contact
+
+**Basic Usage**: ``cloudcix.api.contact.question_set.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.question_set.list``
+        - Returns a list of all Question Sets that a Contact had in requesting users member
+          along with global question sets
+    - ``cloudcix.api.contact.question.create``
+        - Allows the User to create a new Question Set record
+    - ``cloudcix.api.contact.question.read``
+        - Returns the details of a given Question Set record including the questions it contains
