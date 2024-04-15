@@ -23,6 +23,21 @@ Available Methods
         - Update the specified galaxy.
  
 
+Main Firewall Rules
+^^^^^^^^^^^^^^^^^^^^^
+This services allows for the management the Main Firewall Rules for a Pod.
+
+
+**Basic Usage**: ``cloudcix.api.PAT.main_firewall_rules.<method>``
+
+Available Methods
+    - ``cloudcix.api.PAT.main_firewall_rules.create``
+        - `pod_id` is required in the method. This represents the POD the rules are for.
+        - Sending a List of rules in this request will remove the current rules if they exist and save the rules in the request
+    - ``cloudcix.api.PAT.main_firewall_rules.list``
+        - Returns the current list of the Main Firewall Rules for the specified `pod_id`
+
+
 Pod
 ^^^^^
 This services allows for the management of Pod records.
