@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.13.10 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.13.11 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -15,8 +15,8 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=c7ecaa38"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/documentation_options.js?v=63942e21"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -35,7 +35,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.10
+                0.13.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -87,6 +87,24 @@
 <p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.PAT.&lt;service&gt;.&lt;method&gt;</span></code></p>
 <section id="services">
 <h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
+<section id="alert">
+<h2>Alert<a class="headerlink" href="#alert" title="Link to this heading"></a></h2>
+<p>This service helps to get alerts based on the Reading records</p>
+<p>An Alert represents either a red or an amber alert of a Source’s Latest Reading</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.alert.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.alert.list</span></code></dt><dd><ul>
+<li><p>Return a list of all red or amber alerts of sources based on source’s latest readings</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="catogory">
 <h2>Catogory<a class="headerlink" href="#catogory" title="Link to this heading"></a></h2>
 <p>This services allows for the management of Category records.</p>

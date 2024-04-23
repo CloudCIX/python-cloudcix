@@ -5,6 +5,18 @@ The Plot Application exposes a REST API capable of managing historical measureme
 Services
 --------
 
+Alert
+^^^^^^^
+This service helps to get alerts based on the Reading records
+
+An Alert represents either a red or an amber alert of a Source's Latest Reading
+
+**Basic Usage**: ``cloudcix.api.Plot.alert.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.alert.list``
+        - Return a list of all red or amber alerts of sources based on source's latest readings
+
 Catogory
 ^^^^^^^^^^
 This services allows for the management of Category records.
