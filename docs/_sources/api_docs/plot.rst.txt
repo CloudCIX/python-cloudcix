@@ -72,8 +72,8 @@ Available Methods
         - Delete a Source whose Category is owned by their Address.
         - Deleting a Source will delete all Readings and Source Shares of the Source.
 
-SourceShare
-^^^^^^^^^^^^
+Source Share
+^^^^^^^^^^^^^^
 This services allows for the management of Source Share records.
 
 A Source Share represents an Address with who the Readings of a Source you own will be shared with. 
@@ -90,6 +90,25 @@ Available Methods
     - ``cloudcix.api.Plot.source_share.delete``
         - Delete a Source Share.
 
+Source Summary
+^^^^^^^^^^^^^^
+This services allows to view the summary of Readings of a Source.
+
+A Source Summary is a summary of the Readings for a Source for a specific period and defined interval.
+
+**Basic Usage**: ``cloudcix.api.Plot.source_summary.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.source_summary.list``
+        - Return a summary of Readings for a source.
+        - Required params are:
+            - `'search[start_date]'`: The date the summary report will start from.
+            - `'search[end_date]'`: The date the summary report will end at.
+            - `'search[interval]'`: The interval to group the readings by. This is required to be a string starting with a number followed by one of the following characters, `d`, `m`, `q`, `y`
+                - `d`: day e.g. `'search[interval]': '2d'` Interval is two days
+                - `m`: month e.g. `'search[interval]': '4m'` Interval is four months
+                - `q`: quarter e.g. `'search[interval]': '1q'` Interval is one quarter
+                - `y`: year e.g. `'search[interval]': '1y'` Interval is one year
 
 Unit
 ^^^^^^
