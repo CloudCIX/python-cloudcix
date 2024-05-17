@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.12 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.13 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=546ca44b"></script>
+        <script src="_static/documentation_options.js?v=f0142052"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.12
+                0.13.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -309,6 +309,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#reading">Reading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#source">Source</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#source-share">Source Share</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-group-summary">Source Group Summary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#source-summary">Source Summary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unit">Unit</a></li>
 </ul>
@@ -6611,6 +6612,45 @@ records</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source_share.delete</span></code></dt><dd><ul>
 <li><p>Delete a Source Share.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="source-group-summary">
+<h4>Source Group Summary<a class="headerlink" href="#source-group-summary" title="Link to this heading"></a></h4>
+<p>This services allows to view the summary of Readings for a group of Sources.</p>
+<p>A Source Group Summary is a summary of the Readings for a group of Source for a specific period and defined interval.</p>
+<p>A group of Sources is defined by the <cite>source</cite> parameter in the endpoint and the <cite>unit_id</cite> and <cite>accumulating</cite> search parameters</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source_group_summary.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.Plot.source_group_summary.list</span></code></dt><dd><ul>
+<li><p>Return a summary of Readings for a source.</p></li>
+<li><dl class="simple">
+<dt>Required params are:</dt><dd><ul>
+<li><p><cite>‘search[accumulating]’</cite>: A flag stating if the sources should be grouped by acculating values.</p></li>
+<li><p><cite>‘search[unit_id]’</cite>: The ID of the unit the sources should be grouped by.</p></li>
+<li><p><cite>‘search[start_date]’</cite>: The date the summary report will start from.</p></li>
+<li><p><cite>‘search[end_date]’</cite>: The date the summary report will end at.</p></li>
+<li><dl class="simple">
+<dt><cite>‘search[interval]’</cite>: The interval to group the readings by. This is required to be a string starting with a number followed by one of the following characters, <cite>d</cite>, <cite>m</cite>, <cite>q</cite>, <cite>y</cite></dt><dd><ul>
+<li><p><cite>d</cite>: day e.g. <cite>‘search[interval]’: ‘2d’</cite> Interval is two days</p></li>
+<li><p><cite>m</cite>: month e.g. <cite>‘search[interval]’: ‘4m’</cite> Interval is four months</p></li>
+<li><p><cite>q</cite>: quarter e.g. <cite>‘search[interval]’: ‘1q’</cite> Interval is one quarter</p></li>
+<li><p><cite>y</cite>: year e.g. <cite>‘search[interval]’: ‘1y’</cite> Interval is one year</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>

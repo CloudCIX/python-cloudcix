@@ -90,6 +90,30 @@ Available Methods
     - ``cloudcix.api.Plot.source_share.delete``
         - Delete a Source Share.
 
+Source Group Summary
+^^^^^^^^^^^^^^^^^^^^^
+This services allows to view the summary of Readings for a group of Sources.
+
+A Source Group Summary is a summary of the Readings for a group of Source for a specific period and defined interval.
+
+A group of Sources is defined by the `source` parameter in the endpoint and the `unit_id` and `accumulating` search parameters
+
+**Basic Usage**: ``cloudcix.api.Plot.source_group_summary.<method>``
+
+Available Methods
+    - ``cloudcix.api.Plot.source_group_summary.list``
+        - Return a summary of Readings for a source.
+        - Required params are:
+            - `'search[accumulating]'`: A flag stating if the sources should be grouped by acculating values.
+            - `'search[unit_id]'`: The ID of the unit the sources should be grouped by.
+            - `'search[start_date]'`: The date the summary report will start from.
+            - `'search[end_date]'`: The date the summary report will end at.
+            - `'search[interval]'`: The interval to group the readings by. This is required to be a string starting with a number followed by one of the following characters, `d`, `m`, `q`, `y`
+                - `d`: day e.g. `'search[interval]': '2d'` Interval is two days
+                - `m`: month e.g. `'search[interval]': '4m'` Interval is four months
+                - `q`: quarter e.g. `'search[interval]': '1q'` Interval is one quarter
+                - `y`: year e.g. `'search[interval]': '1y'` Interval is one year
+
 Source Summary
 ^^^^^^^^^^^^^^
 This services allows to view the summary of Readings of a Source.
