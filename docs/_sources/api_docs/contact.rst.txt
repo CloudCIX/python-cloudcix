@@ -140,7 +140,26 @@ Available Methods
         - Allows the User to update the details of a Corpus record
     - ``cloudcix.api.contact.corpus.delete``
         - Allows the User to delete a Corpus record
-  
+
+Exclusion
+^^^^^^^^^^
+This service allows to manage excluding elements in an HTML Document
+
+**Basic Usage**: ``cloudcix.api.contact.<method>``
+
+Available Methods
+    - ``cloudcix.api.contact.exclusion.list``
+        - Returns a list of all Exclusions belonging to the Member of the
+          User calling the method
+    - ``cloudcix.api.contact.exclusion.create``
+        - Allows the User to create a new Exclusion record
+    - ``cloudcix.api.contact.exclusion.read``
+        - Returns an Exclusion record with all its details
+    - ``cloudcix.api.contact.exclusion.update``
+        - Allows the User to update the details of an Exclusion record
+    - ``cloudcix.api.contact.exclusion.delete``
+        - Allows the User to delete an Exclusion record
+
 Group
 ^^^^^
 This service allows for management of Groups

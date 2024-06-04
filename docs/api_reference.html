@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; CloudCIX API Python Library 0.13.13 documentation</title>
+  <title>API Reference &mdash; CloudCIX API Python Library 0.13.14 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=f0142052"></script>
+        <script src="_static/documentation_options.js?v=3b9db09f"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             CloudCIX API Python Library
           </a>
               <div class="version">
-                0.13.13
+                0.13.14
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -92,6 +92,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#id7">Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#conversation">Conversation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#corpus">Corpus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exclusion">Exclusion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#group">Group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#group-contact">Group Contact</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#opportunity">Opportunity</a></li>
@@ -1284,6 +1285,52 @@ the Chatbot.</p>
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.corpus.delete</span></code></dt><dd><ul>
 <li><p>Allows the User to delete a Corpus record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="exclusion">
+<h4>Exclusion<a class="headerlink" href="#exclusion" title="Link to this heading"></a></h4>
+<p>This service allows to manage excluding elements in an HTML Document</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.exclusion.list</span></code></dt><dd><ul>
+<li><p>Returns a list of all Exclusions belonging to the Member of the
+User calling the method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.exclusion.create</span></code></dt><dd><ul>
+<li><p>Allows the User to create a new Exclusion record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.exclusion.read</span></code></dt><dd><ul>
+<li><p>Returns an Exclusion record with all its details</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.exclusion.update</span></code></dt><dd><ul>
+<li><p>Allows the User to update the details of an Exclusion record</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.contact.exclusion.delete</span></code></dt><dd><ul>
+<li><p>Allows the User to delete an Exclusion record</p></li>
 </ul>
 </dd>
 </dl>
