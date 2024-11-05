@@ -5,8 +5,8 @@ All examples in this page assume you have the following settings file correctly 
 
 .. code:: python
 
-    CLOUDCIX_API_URL = 'https://api.cloudcix.com/'
-    CLOUDCIX_API_V2_URL = CLOUDCIX_API_URL
+    CLOUDCIX_API_URL = 'https://legacyapi.api.cloudcix.com/'
+    CLOUDCIX_API_V2_URL = 'https://api.cloudcix.com/'
     CLOUDCIX_API_USERNAME = 'user@example.com'
     CLOUDCIX_API_PASSWORD = 'my_password'
     CLOUDCIX_API_KEY = 'abcde...'

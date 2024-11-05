@@ -1,23 +1,21 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; CloudCIX API Python Library 0.13.14 documentation</title>
+  <title>Overview &mdash; CloudCIX API Python Library 0.15.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=3b9db09f"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4befc426"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +34,6 @@
           <a href="index.html" class="icon icon-home">
             CloudCIX API Python Library
           </a>
-              <div class="version">
-                0.13.14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -97,7 +92,7 @@
   <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">cloudcix</span></code> is a Python client for the CloudCIX REST API for rapidly building secure, scalable CloudCIX applications.</p>
-<p>For more information about CloudCIX, see <a class="reference external" href="http://www.cix.ie/#/services/saas">here</a>.</p>
+<p>For more information about CloudCIX, see <a class="reference external" href="https://www.cloudcix.com/">here</a>.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <section id="prerequisites">
@@ -152,12 +147,10 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 <p>In order to run a project, the module requires some settings to exist.</p>
 <p>The variables required are as follows:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code>
-- The base url of the Python2 API
-- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_V2_URL</span></code>
-- The API name is prepended to this url after the <a class="reference external" href="https://">https://</a> for the Python3 API.
-- Usually <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code> but could change over time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_URL</span></code> = <code class="docutils literal notranslate"><span class="pre">https://legacyapi.api.cloudcix.com/</span></code>
+- The base url of the Python2 API</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_V2_URL</span></code> = <code class="docutils literal notranslate"><span class="pre">https://api.cloudcix.com/</span></code>
+- The API name is prepended to this url after the <a class="reference external" href="https://">https://</a> for the Python3 API.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_VERSION</span></code> = 2
 - The version of the api</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOUDCIX_API_USERNAME</span></code>
@@ -174,8 +167,8 @@ If you still use Python2 we recommend you upgrade to Python3 as support will be 
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In my_project/my_settings.py</span>
-<span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com/&#39;</span>
-<span class="n">CLOUDCIX_API_V2_URL</span> <span class="o">=</span> <span class="n">CLOUDCIX_API_URL</span>
+<span class="n">CLOUDCIX_API_URL</span> <span class="o">=</span> <span class="s1">&#39;https://legacyapi.api.cloudcix.com/&#39;</span>
+<span class="n">CLOUDCIX_API_V2_URL</span> <span class="o">=</span> <span class="s1">&#39;https://api.cloudcix.com/&#39;</span>
 <span class="n">CLOUDCIX_API_USERNAME</span> <span class="o">=</span> <span class="s1">&#39;EMAIL&#39;</span>               <span class="c1"># CloudCIX login</span>
 <span class="n">CLOUDCIX_API_PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;PASSWORD&#39;</span>            <span class="c1"># CloudCIX password</span>
 <span class="n">CLOUDCIX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;NUMBER/CHARACTER STRING&#39;</span>  <span class="c1"># CloudCIX api key</span>

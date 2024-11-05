@@ -1,23 +1,21 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; CloudCIX API Python Library 0.13.14 documentation</title>
+  <title>Services &mdash; CloudCIX API Python Library 0.15.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=3b9db09f"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4befc426"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -34,9 +32,6 @@
           <a href="../index.html" class="icon icon-home">
             CloudCIX API Python Library
           </a>
-              <div class="version">
-                0.13.14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -607,40 +602,88 @@
 <p>CloudCIX allows its Users to organise IP Addresses by creating a clean structure of <code class="docutils literal notranslate"><span class="pre">ASN</span> <span class="pre">&gt;</span> <span class="pre">Allocation</span> <span class="pre">&gt;</span> <span class="pre">Subnet</span> <span class="pre">&gt;</span> <span class="pre">IPAddress</span></code>.</p>
 <p>Additionally, IP Addresses are used to organise Reverse DNS records.</p>
 <p>An IP Address can only be managed by the Member who owns the Subnet that contains it.</p>
-<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.&lt;method&gt;</span></code></p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.&lt;method&gt;</span></code></p>
 <dl class="simple">
 <dt>Available Methods</dt><dd><ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.list</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.list</span></code></dt><dd><ul>
 <li><p>This method allows the User to retrieve a list of IP Addresses belonging to their Member.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.create</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.create</span></code></dt><dd><ul>
 <li><p>This method allows the User to create a new IP Address for their Member.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.read</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.read</span></code></dt><dd><ul>
 <li><p>This method allows the User to retrieve the details of a specific IP Address record.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.update</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.update</span></code></dt><dd><ul>
 <li><p>This method allows the User to update the details of a given IP Address record.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ipaddress.delete</span></code></dt><dd><ul>
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address.delete</span></code></dt><dd><ul>
 <li><p>This method allows the User to delete an IP Address record from the IaaS database.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="ip-address-group">
+<h2>IP Address Group<a class="headerlink" href="#ip-address-group" title="Link to this heading"></a></h2>
+<p>A service that allows Members manage a set of IP Networks in an IP Address Group.</p>
+<p>There are two types of IP Address Groups:
+1. Global: Managed by CloudCIX and are available to all Members to list or read.
+2. Member: Each Member can manage their own IP Address Groups and they are only available to Users in that Member.</p>
+<p><strong>Basic Usage</strong>: <code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.&lt;method&gt;</span></code></p>
+<dl class="simple">
+<dt>Available Methods</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.list</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve a list of IP Addresses Group, Global and belonging to their Member.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.create</span></code></dt><dd><ul>
+<li><p>This method allows the User to create a new IP Address Group for their Member.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.read</span></code></dt><dd><ul>
+<li><p>This method allows the User to retrieve the details of a specific IP Address Group record.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.update</span></code></dt><dd><ul>
+<li><p>This method allows the User to update the details of a given IP Address Group record.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloudcix.api.IAAS.ip_address_group.delete</span></code></dt><dd><ul>
+<li><p>This method allows the User to delete an IP Group Address record from the IaaS database.</p></li>
 </ul>
 </dd>
 </dl>

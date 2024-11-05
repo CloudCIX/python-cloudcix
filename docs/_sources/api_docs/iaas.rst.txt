@@ -267,19 +267,42 @@ Additionally, IP Addresses are used to organise Reverse DNS records.
 
 An IP Address can only be managed by the Member who owns the Subnet that contains it.
 
-**Basic Usage**: ``cloudcix.api.IAAS.ipaddress.<method>``
+**Basic Usage**: ``cloudcix.api.IAAS.ip_address.<method>``
 
 Available Methods
-    - ``cloudcix.api.IAAS.ipaddress.list``
+    - ``cloudcix.api.IAAS.ip_address.list``
         - This method allows the User to retrieve a list of IP Addresses belonging to their Member.
-    - ``cloudcix.api.IAAS.ipaddress.create``
+    - ``cloudcix.api.IAAS.ip_address.create``
         - This method allows the User to create a new IP Address for their Member.
-    - ``cloudcix.api.IAAS.ipaddress.read``
+    - ``cloudcix.api.IAAS.ip_address.read``
         - This method allows the User to retrieve the details of a specific IP Address record.
-    - ``cloudcix.api.IAAS.ipaddress.update``
+    - ``cloudcix.api.IAAS.ip_address.update``
         - This method allows the User to update the details of a given IP Address record.
-    - ``cloudcix.api.IAAS.ipaddress.delete``
+    - ``cloudcix.api.IAAS.ip_address.delete``
         - This method allows the User to delete an IP Address record from the IaaS database.
+
+
+IP Address Group
+^^^^^^^^^^^^^^^^^^^
+A service that allows Members manage a set of IP Networks in an IP Address Group. 
+
+There are two types of IP Address Groups: 
+1. Global: Managed by CloudCIX and are available to all Members to list or read. 
+2. Member: Each Member can manage their own IP Address Groups and they are only available to Users in that Member. 
+
+**Basic Usage**: ``cloudcix.api.IAAS.ip_address_group.<method>``
+
+Available Methods
+    - ``cloudcix.api.IAAS.ip_address_group.list``
+        - This method allows the User to retrieve a list of IP Addresses Group, Global and belonging to their Member.
+    - ``cloudcix.api.IAAS.ip_address_group.create``
+        - This method allows the User to create a new IP Address Group for their Member.
+    - ``cloudcix.api.IAAS.ip_address_group.read``
+        - This method allows the User to retrieve the details of a specific IP Address Group record.
+    - ``cloudcix.api.IAAS.ip_address_group.update``
+        - This method allows the User to update the details of a given IP Address Group record.
+    - ``cloudcix.api.IAAS.ip_address_group.delete``
+        - This method allows the User to delete an IP Group Address record from the IaaS database.
 
 IP Validator
 ^^^^^^^^^^^^
